@@ -1,11 +1,12 @@
-/* background */
+/* background/body */
 body {
+  margin: 0;
   display: flex;
+  align-items: center; /* Center vertically */
+  justify-content: center; /* Center horizontally */
   height: 100%;
   background-size: 100% 100%;
-
-  animation: gradient 0.2s linear infinite;
-
+  animation: gradient 2s linear infinite;
   background-size: 35px 35px;
   background-image: linear-gradient(
       to right,
@@ -72,10 +73,11 @@ a.lobby {
 
 /* titles */
 h1 {
-  letter-spacing: 12px;
+  letter-spacing: 0.5em;
   text-align: left;
   font-family: verdana;
-  font-size: 30px;
+  font-size: 2em;
+  margin: auto;
   color: #f5426c;
 }
 h2 {
@@ -94,17 +96,14 @@ h3 {
 }
 
 /* tables */
-table.info {
-  vertical-align: center;
-  margin-top: 50px;
-  margin-bottom: auto;
-  margin-left: 50px;
-  margin-right: auto;
-  width: 50%;
-  height: auto;
+table.about { 
+  vertical-align: middle; 
+  margin: 8rem;
+  width: calc(100vw - 16rem);
+  height: calc(100vh - 16rem);;
   background: rgb(235, 192, 204);
   background: rgba(235, 192, 204, 0.94);
-  padding: 40px;
+  padding: 1rem;
 }
 table.content {
   vertical-align: center;
@@ -154,32 +153,19 @@ table.menu {
 p.about {
   font-family: Lucida Console;
   font-size: 16px;
-  line-height: 1.18;
   color: blue;
   text-align: right;
-  margin-left: auto;
-  margin-right: auto;
+  margin: auto;
 }
+
 p.aboutButton {
   text-align: right;
   font-size: 12px;
 }
+
 p.content {
   font-family: Lucida Console;
   font-size: 16px;
-  line-height: 1.5;
-  color: blue;
-  text-align: justify;
-  margin-left: auto;
-  margin-right: auto;
-}
-@font-face {
-  font-family: Blazed;
-  src: url(./Blazed.ttf);
-}
-p.bingbong {
-  font-family: Blazed;
-  font-size: 24px;
   line-height: 1.5;
   color: blue;
   text-align: justify;
