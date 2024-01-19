@@ -1,2 +1,3 @@
-# PortfolioWebsite
-A website used to display my work!
+# WebPortfolio
+
+this is Maxime Perreault's portfolio!
