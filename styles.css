@@ -1,11 +1,13 @@
 /* background/body */
-body {
+html, body{
   margin: 0;
+  padding: 0;
+}
+body {
   display: flex;
-  align-items: center; /* Center vertically */
-  justify-content: center; /* Center horizontally */
+  align-items: center; 
+  justify-content: space-between;
   height: 100vh;
-  background-size: 100% 100%;
   animation: gradient 2s linear infinite;
   background-size: 35px 35px;
   background-image: linear-gradient(
@@ -25,50 +27,39 @@ body {
   }
 }
 
-/* buttons */
-button {
-  background-color: white;
-  padding: 5px;
-  padding-left: 8px;
-  padding-right: 8px;
-  border-radius: 5px;
+/* tables */
+table.base { 
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 5rem 0;
+  height: calc(100vh - 10rem);
+  background: rgba(235, 192, 204, 0.94);
 }
-button.text {
-  float: right;
-  background-color: white;
-  padding: 5px;
-  padding-left: 8px;
-  padding-right: 8px;
-  border-radius: 5px;
+table.left { 
+  width: 60%;
 }
-button.lobby {
-  background-color: white;
-  border-radius: 5px;
-  width: 100px;
-  height: 60px;
+table.right{ 
+  width: 20%;
+} 
+table.aboutMenu{
+  width: 10%; 
 }
-button.about {
-  background-color: white;
-  padding: 5px;
-  border-radius: 5px;
-  width: 90px;
+table.centerPiece{
+  display: flex;
+  width: 50%;
 }
-button:hover {
-  background-color: blue;
+table.right h3 {
+  display: flex;
+  flex-direction: column; 
+  align-items: center; 
+  justify-content: center; 
+  color: #f5426c;
 }
-
-/* button text */
-a {
-  color: #d64957;
-  vertical-align: center;
-  text-align: center;
-  font-size: 18px;
-}
-a.lobby {
-  color: #d64957;
-  vertical-align: center;
-  text-align: center;
-  font-size: 28px;
+button.right {
+  display: block;
+  margin: 0.5em;
 }
 
 /* titles */
@@ -88,57 +79,13 @@ h2 {
   color: #f5426c;
 }
 h3 {
-  letter-spacing: 10px;
-  text-align: center;
   font-family: verdana;
-  font-size: 30px;
+  text-align: center;
+  letter-spacing: 0.5em;
+  font-size: 2em;
   color: #f5426c;
 }
 
-/* tables */
-table.base { 
-  vertical-align: middle; 
-  margin: 8rem;
-  width: calc(100vw - 16rem);
-  height: calc(100vh - 16rem);
-  background: rgb(235, 192, 204);
-  background: rgba(235, 192, 204, 0.94);
-  padding: 1rem;
-}
-table.content {
-  vertical-align: center;
-  margin-top: 50px;
-  margin-bottom: auto;
-  margin-left: 50px;
-  margin-right: auto;
-  width: 55%;
-  height: auto;
-  background: rgb(235, 192, 204);
-  background: rgba(235, 192, 204, 0.94);
-  padding: 40px;
-}
-table.lobby {
-  vertical-align: center;
-  margin-top: 250px;
-  margin-bottom: auto;
-  margin-left: 50px;
-  margin-right: auto;
-  width: 60%;
-  height: 200px;
-  background: rgb(235, 192, 204);
-  background: rgba(235, 192, 204, 0.94);
-  padding: 40px;
-}
-table.enter {
-  margin-top: 250px;
-  margin-bottom: auto;
-  margin-left: auto;
-  margin-right: 50px;
-  width: 20%;
-  height: 200px;
-  background: rgb(235, 192, 204);
-  background: rgba(235, 192, 204, 0.94);
-}
 
 /* paragraphs */
 p.about {
@@ -163,42 +110,3 @@ p.content {
   margin-left: auto;
   margin-right: auto;
 }
-
-/* image */
-img {
-  height: auto;
-  padding-left: 10px;
-  padding-bottom: 5px;
-}
-img.text {
-  float: right;
-  height: auto;
-  padding-left: 10px;
-  padding-bottom: 5px;
-}
-img.special {
-  border-radius: 12px;
-  box-shadow: 10px 10px 5px #8b0000;
-}
-
-/* vertical right arrow*/
-.vertical-arrow {
-  margin: 8rem;
-  height: calc(100vh - 16rem);
-}
-
-.vertical-arrow a {
-  font-family: Lucida Console;
-  color: #f5426c; /* Black text color */
-  display: block; /* Make the links appear below each other */
-  padding: 12px; /* Add some padding */
-}
-
-.vertical-arrow a:hover {
-  background-color: red;
-}
-
-/* .vertical-arrow a.active {
-  background-color: blue; Add a green color to the "active/current" link
-  color: #f5426c;
-  } */
