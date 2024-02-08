@@ -1,3 +1,6 @@
+/* COLORS */
+
+
 /* background/body */
 html, body{
   margin: 0;
@@ -10,22 +13,9 @@ body {
   height: 100vh;
   animation: gradient 2s linear infinite;
   background-size: 35px 35px;
-  background-image: linear-gradient(
-      to right,
-      rgba(0, 0, 255, 0.95) 2px,
-      transparent 1px
-    ),
-    linear-gradient(to bottom, rgba(0, 0, 255, 1) 2px, transparent 1px),
-    linear-gradient(-45deg, #e3acbc, #d4e9ff);
+  background-color: #f5426c;
 }
-@keyframes gradient {
-  0% {
-    background-position: 0px;
-  }
-  100% {
-    background-position: 35px;
-  }
-}
+
 
 /* tables */
 table.base { 
