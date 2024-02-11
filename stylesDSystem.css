@@ -1,0 +1,30 @@
+:root{
+    /* colors */
+    --dark-neutral: #252616; /*dark-olive*/
+    --dark-vibrant: #29020b; /*blood-red*/
+    --med-neutral: #b5a086; /*beige*/
+    --med-vibrant: #246cff; /*Blue*/
+    --light-neutral: #e0ced9; /*gray-pink*/
+    --light-vibrant: #f5aedf; /*baby-pink*/
+
+    /* fonts */
+    --body-font: 'Spline Sans', sans-serif;
+    --display-font: 'Bricolage Grotesque', sans-serif;
+    --fine-font: 'Sofia Sans', sans-serif;
+}
+
+.type-body {
+    font-family: var(--body-font);
+    font-weight: 400;
+}
+
+.type-display {
+    font-family: var(--display-font);
+    font-weight: 600;
+}
+
+.type-fineprints {
+    font-family: var(--fine-font);
+    font-weight: 100;
+}
+
