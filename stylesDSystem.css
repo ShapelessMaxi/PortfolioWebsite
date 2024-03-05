@@ -9,6 +9,7 @@
 
     /* fonts */
     --body-font: 'Spline Sans', sans-serif;
+    --altbody-font: 'Crimson Text', serif;
     --display-font: 'Bricolage Grotesque', sans-serif;
     --fine-font: 'Sofia Sans', sans-serif;
 }
@@ -39,20 +40,125 @@
 
 
 
+* {
+    margin: 0;
+ }
+ 
 
+ /* type classes */
 
+ .type-display {
+    box-sizing: border-box;
+    background-color: rgba(255, 0, 0, 0.1);
+    font-family: var(--display-font);
+    font-weight: 600;
+    line-height: 2.6669rem;
+    padding: 0rem;
+}
 .type-body {
+    box-sizing: border-box;
+    background-color: rgba(255, 0, 0, 0.1);
     font-family: var(--body-font);
     font-weight: 400;
+    line-height: 2.6669rem;
+    padding: 0rem;
 }
-
-.type-display {
-    font-family: var(--display-font);
+.type-body b {
     font-weight: 600;
 }
 
-.type-fineprints {
-    font-family: var(--fine-font);
-    font-weight: 100;
+.type-altbody {
+    box-sizing: border-box;
+    background-color: rgba(255, 0, 0, 0.1);
+    font-family: var(--altbody-font);
+    font-weight: 400;
+    line-height: 2.6669rem;
+    padding: 0rem;
+}
+.type-altbody b {
+    font-weight: 700;
 }
 
+.type-fineprints {
+    box-sizing: border-box;
+    font-family: var(--fine-font);
+    font-weight: 100;
+    padding: 0rem;
+}
+
+cite {
+    font-family: var(--fine-font);
+    font-style: normal;
+    font-weight: 200;
+    text-decoration-thickness: 4%;
+    font-size: 1.1em;
+}
+
+a {
+    color:black;
+    font-family: var(--fine-font);
+    font-style: normal;
+    font-weight: 200;
+    text-decoration-thickness: 4%;
+    font-size: 1.1em;
+}
+
+/* button classes */
+
+.btn-img {
+    height: 1.1em;
+    width: 1.1em;
+}
+
+.btn-big {
+    box-sizing: border-box;
+    background-color: rgba(255, 0, 0, 0.1);
+    padding: 0rem;
+}
+
+.btn-big a {
+    color: white;
+    font-family: var(--display-font);
+    font-weight: 500;
+    text-decoration-thickness: 5%;
+}
+
+.btn-med {
+    box-sizing: border-box;
+    background-color: rgba(255, 0, 0, 0.1);
+    padding: 0rem;
+}
+
+.btn-med a {
+    color: white;
+    font-family: var(--display-font);
+    font-weight: 500;
+    line-height: auto;
+    text-decoration-thickness: 5%;
+}
+
+.btn-small {
+    box-sizing: border-box;
+    background-color: rgba(255, 0, 0, 0.1);
+    padding: 0rem;
+}
+
+.btn-small a {
+    color: white;
+    font-family: var(--display-font);
+    font-weight: 500;
+    line-height: auto;
+    text-decoration-thickness: 5%;
+}
+
+/* large-scale image classes */
+
+.logo-img {
+    width: 75%;
+}
+
+.nav-vertical {
+    background-color: #F66F8E;
+    height: 100vh;
+    width: 75%;
+  }
