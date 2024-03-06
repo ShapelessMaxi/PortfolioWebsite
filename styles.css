@@ -1,4 +1,52 @@
-table {
-    border: 1px solid;
-    width: 100%;
+html, body{
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding:0;
+    position: relative;
+  }
+* {
+    margin: 0;
+}
+.div {
+    margin: 0;
+    padding: 0; 
+}
+p {
+    margin: 0;
+    padding: 0;
+}
+.container{
+    margin: 0;
+    padding: 0;  
+    width: 100vw;
+    height: 100vh;
+}
+.container-fluid {
+    margin: 0;
+}
+.row {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+}
+
+#nav {
+    background-color: lightgrey;
+}
+
+#content {
+    background-color: white;
+}
+
+#footer {
+    background-color: grey;
+}
+
+/* rows */
+.top-margin-row {
+    height: 50vh;
+}
+.info-row {
+    height: 50vh;
 }
