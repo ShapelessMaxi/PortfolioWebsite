@@ -1,52 +1,128 @@
+:root {
+    --button-text-size-L: 1.8rem;
+    --button-img-size-L: 1.6em;
+  }
+  
+* {
+    margin: 0;
+}
 html, body{
     width: 100vw;
     height: 100vh;
     margin: 0;
-    padding:0;
-    position: relative;
-  }
-* {
-    margin: 0;
-}
-.div {
-    margin: 0;
-    padding: 0; 
-}
-p {
-    margin: 0;
     padding: 0;
-}
-.container{
-    margin: 0;
-    padding: 0;  
+  }
+
+a {
+    color: white;
+  }
+a:hover {
+    color: hotpink;
+  }
+
+  .wrapper {
     width: 100vw;
     height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-template-rows: repeat(8, 1fr);
 }
-.container-fluid {
-    margin: 0;
-}
-.row {
-    margin: 0;
-    padding: 0;
-    width: 100vw;
-}
-
 #nav {
-    background-color: lightgrey;
+    background: #e8e8e8;
+    grid-column: 1/9;
+    grid-row: 1/9;
+}
+#nav-shadow {
+    background-color: rgba(150, 100, 100, 0.3);
+    grid-column: 1/10;
+    grid-row: 1/9;
 }
 
 #content {
-    background-color: white;
+    background: #ffffff;
+    grid-column: 9/13;
+    grid-row: 1/9;
 }
 
 #footer {
-    background-color: grey;
+    background: #9c9c9c;
+    grid-column: 9/13;
+    grid-row: 3/5;
+    position: relative;
+}
+.info-name {
+    margin-right: 1.5rem;
+    margin-top: 1rem;
+}
+.info-name > p {
+    text-align: right;
+}
+.info-description {
+    margin-right: 1.5rem;
+    margin-bottom: 1rem;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+}
+.info-description > p {
+    text-align: right;
 }
 
-/* rows */
-.top-margin-row {
-    height: 50vh;
+#bunny {
+    border-style: solid;
+    border-width: 0.01rem;
+    grid-column: 1/8;
+    grid-row: 1/8;
 }
-.info-row {
-    height: 50vh;
+#bunny > p {
+    text-align: center;
+    padding: 250px 0;
+    vertical-align: middle;
 }
+
+#buttons-box {
+    border-style: dotted;
+    border-width: 0.01rem;
+    grid-column: 7/10;
+    grid-row: 6/7;
+}
+.button-grid {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    grid-gap: 0.5rem;
+}
+#button-component {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    
+    position: relative;
+}
+#button-component > p {
+    grid-column: 2/13;
+
+    position: absolute;
+    height: auto;
+    top: 50%;
+    margin-top: calc(var(--button-text-size-L) / 2 * -1);
+
+    font-size: var(--button-text-size-L);
+}
+#button-component > #fake-img {
+    grid-column: 1;
+
+    width: var(--button-img-size-L);
+    height: var(--button-img-size-L);
+
+    position: absolute;
+    top: 50%;
+    margin-top: calc(var(--button-img-size-L) / 2 * -1);
+
+    display: inline-block;
+    border-style: solid;
+    border-width: 0.01rem;
+    border-radius: 50%;
+    background-color: white;
+}
+
+
