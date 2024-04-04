@@ -2,7 +2,17 @@
 <html>
   <head>
     <!-- this links to css file containing styles -->
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="contact-style.css" />
+
+    <!-- Add your external google fonts here -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,400;12..96,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sofia+Sans:wght@200&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;700&display=swap" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 
     <!-- this line takes care of special characters in text -->
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -24,79 +34,120 @@
       </div>
 
       <!-- 'footer' box -->
-      <div id="contact-footer" class="footer">
-      </div>
-
-      <!-- shadow under nav -->
-      <div id="contact-nav-shadow" class="nav-shadow">
-        <!-- shawdow img? -->
+      <div class="footer">
       </div>
 
       <!-- 'navbar' box -->
       <div id="contact-nav" class="nav">
         <!-- pink background -->
       </div>
+      <!-- fluid img -->
+      <div id="fluid-img-box">
+        <img id="fluid-img" src="assets/fluid-img.png" alt="Fluid Image">
+      </div>
         
       <!-- 'bunny' box -->
       <div id="contact-bunny" class="bunny">
-        <p>bunny logo</p>
       </div>
 
       <!-- name + alias box -->
       <div id="contact-title-box">
-        <p>Maxime Perreault</p>
-        <p id="alias">hd.maxi</p>
+        <p class="type-altbody">Maxime Perreault</p>
+        <p class="type-display" id="alias">hd.maxi</p>
       </div>
 
       <!-- artist statement box -->
-      <div id="statement-box" class="">
-        <h1>Artist Statement</h1>
-        <p>
-          Rooted in queer theory and influenced by my own personal experiences as a queer subject, my work speaks of identity, embodiment, and visibility. Through the synthesis of art, technology, and humanities, I strive to push the boundaries of conventional artistic expression. 
-          My love for tattooing allows me to help people define their identity through iconography. It is wildly validating to have people trust me with such permanent decisions and motivates me to be a better artist and person. Tattoos are a huge inspiration in my digital media pieces, as they are closely tied to some of the recurrent themes I love to explore.
-        </p>
+      <div id="statement-button-box">
+        
+        <div id="contact-button-component" class="button-component">
+          <h1 id="textbox-menu-statement" class="textbox-title type-display">Statement</h1>
+          <div class="button-img-container">
+            <img class="button-img" src="assets\btn_blob01_left.png" alt="button">
+            <img class="button-img" src="assets\btn_blob01_center.png" alt="button">
+            <img class="button-img" src="assets\btn_blob01_right.png" alt="button">
+          </div>
+        </div>
+        
+        <div id="contact-button-component" class="button-component">
+          <h1 id="textbox-menu-bio" class="textbox-title type-display">Biography</h1>
+          <div class="button-img-container">
+            <img class="button-img" src="assets\btn_blob01_left.png" alt="button">
+            <img class="button-img" src="assets\btn_blob01_center.png" alt="button">
+            <img class="button-img" src="assets\btn_blob01_right.png" alt="button">
+          </div>
+        </div>
+      
+      </div>
+      <div id="statement-box">
+          
+          <p id="textbox-statement" class="type-body">
+            Rooted in queer theory and influenced by my own personal experiences as a queer subject, my work speaks of identity, embodiment, and visibility. Through the synthesis of art, technology, and humanities, I strive to push the boundaries of conventional artistic expression.
+            <br><br>Additionally, my love for tattooing allows me to help people define their identity through iconography. It is wildly validating to have people trust me with such permanent decisions and motivates me to be a better artist and person. Tattoos are a huge inspiration in my digital media pieces, as they are closely tied to some of the recurrent themes I love to talk explore.
+            <br><br>My overall goal as an artist is to challenge our preconceived notions of normalcy. To achieve this, I combine a variety of techniques, ranging from 3D animation and creative coding. I bring to life humanoid characters and otherworldly environments, I develop interactive installations, and I process images in experimental ways. With these eclectic tools, I offer a new perspective on the intersection of humanity and digital media.
+          </p>
+          <p id="textbox-bio" class="type-body">
+            Maxime Perreault was born in Quebec City, and now studies and work in Tiohtiá:ke (also known as Montreal). Maxi is an emerging multimedia digital artist, graduating from Concordia University with a Bachelor of Fine Arts specialized in Computation Arts in the spring of 2024. His dedication to his undergraduate studies made it possible for him to achieve excellent grades and create exciting art projects. Additionally, Maxi started a Bachelor of Industrial Design at Université de Montréal, completing two years before taking a year off from education to refocus on personal interests. The limited views on Design circulating in this environment did not align with Maxi’s personal values and were not conductive of his personal artistic needs. Although he did not complete this degree, it was still highly formative regarding design fundamentals. Finaly, before heading to university, he received a college degree in Humanities, prompting his interest in research and social issues.
+            <br><br>In parallel, from 2021 onwards, Maxime has been working as a tattoo artist under the alias of hd.maxi. This self-driven practice, built on an array of both self and community-learned skills, made it possible for him to integrate the tattoo industry of Montreal and make a name for himself.
+            <br><br>Throughout his life, Maxi has been learning about 3D animation and creative programming, allowing him to come up with novel and creative art pieces ranging from illustrations, animations, and interactive installations. Ultimately, his goal is to combine his various outlets in a research-based practice. His multidisciplinary approach, spanning visual arts, design, and tattooing, showcases a commitment to creativity and a need to explore diverse mediums and techniques.
+          </p>
+        
       </div>
 
       <!-- socials 'buttons' box -->
-      <div id="contact-button-box" class="button-box">
-        <div id="contact-button-grid" class="button-grid">
+      <div id="contact-button-box">
+        <div id="contact-button-grid">
           
           <div id="contact-button-component" class="button-component">
-            <span class="fake-img">
-              <!-- <img src="button.jpg" alt="button"> -->
-            </span>
-            <a target="_blank" href="https://www.instagram.com/hd.maxi/">@hd.maxi</a>
+            <img class="img-contact-button button-img" src="assets\btn_star02.png" alt="button">
+            <p class="text-contact-button">
+              <a target="_blank" href="https://www.instagram.com/hd.maxi/">@hd.maxi</a>
+            </p>
+          </div>
+          <div id="contact-button-component" class="button-component">
+            <img class="img-contact-button button-img" src="assets\btn_star02.png" alt="button">
+            <p class="text-contact-button">
+              <a target="_blank" href="https://www.youtube.com/channel/UCkyuI6l-z_J2U3KFNbo8jUQ">@hd___________maxi
+              </a>
+            </p>
+          </div>
+          
+          <div class="contact-button-space">
           </div>
 
           <div id="contact-button-component" class="button-component">
-            <span class="fake-img">
-              <!-- <img src="button.jpg" alt="button"> -->
-            </span>
-            <a target="_blank" href="mailto:maxime.perreault@hotmail.fr">maxime.perreault@hotmail.fr</a>
+            <img class="img-contact-button button-img" src="assets\btn_star02.png" alt="button">
+            <p class="text-contact-button">
+             <a target="_blank" href="mailto:maxime.perreault@hotmail.fr">maxime.perreault@hotmail.fr</a>
+            </p>
           </div>
 
           <div id="contact-button-component" class="button-component">
-            <span class="fake-img">
-              <!-- <img src="button.jpg" alt="button"> -->
-            </span>
+            <img class="img-contact-button button-img" src="assets\btn_star02.png" alt="button">
+            <p class="text-contact-button">
               <a target="_blank" href="2024cv_eng_Maxime Perreault.pdf">Resume/CV</a>
+            </p>
           </div>
           
         </div>
       </div>
 
       <!-- gallery button box -->
-      <div id="contact-gallery-button-box" class="button-box">
-        <div id="contact-button-grid" class="button-grid">
+      <div id="contact-gallery-button-box">
+        <div id="contact-button-grid">
           
           <div id="contact-button-component" class="button-component">
-            <span class="fake-img">
-              <!-- <img src="button.jpg" alt="button"> -->
-            </span>
-            <a href="gallery.html">Gallery</a>
+            <img id="img-contact-to-gallery" class="button-img" src="assets\btn_star02.png" alt="button">
+            <p id="text-contact-to-gallery">
+              <a href="gallery.html">Gallery</a>
+            </p>
           </div>
+      </div>
 
     </div>
     
+    <!-- this links to js file containing scripts -->
+    <script src="scripts.js"></script>
+  
   </body>
+
 </html>

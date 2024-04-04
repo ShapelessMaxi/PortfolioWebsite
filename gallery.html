@@ -2,7 +2,15 @@
 <html>
   <head>
     <!-- this links to css file containing styles -->
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="gallery-style.css" />
+    
+    <!-- Add your external google fonts here -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,400;12..96,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sofia+Sans:wght@200&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;700&display=swap" rel="stylesheet">
 
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 
@@ -27,8 +35,11 @@
 
       <!-- 'artwork' title boxes -->
       <div id="artwork-title">
-        <h1 id="artwork-title-main"></h1>
-        <h2 id="artwork-title-sub"></h2>
+        <h1 id="artwork-title-main" class="type-display"></h1>
+        <h2 id="artwork-title-sub" class="type-display"></h2>
+      </div>
+      <div class="artwork-text">
+        <p id="artwork-description" class="type-body"></p>
       </div>
 
       <!-- Modal Container (big/openable) -->
@@ -42,129 +53,138 @@
         </div>
 
         <div class="modal-left-viewer-button">
-          <span id="left-viewer-button" class="modal-artwork-button fake-img">
-            <!-- <img src="button.jpg" alt="button"> -->
-          </span>
-        </div>
+          <img id="left-viewer-button" class="modal-artwork-button button-img" src="assets\btn_arrowLeft.png" alt="button">
+          </div>
         <div class="modal-right-viewer-button">
-          <span id="right-viewer-button" class="modal-artwork-button fake-img">
-            <!-- <img src="button.jpg" alt="button"> -->
-          </span>
+          <img id="right-viewer-button" class="modal-artwork-button button-img" src="assets\btn_arrowRight.png" alt="button">
         </div>
 
       </div>
             
       <!-- artwork viewer (small) -->
-      <div id="artwork-viewer-bg"></div>
+      <div id="artwork-viewer-bg">
+      </div>
       <div class="artwork-viewer">
         <img id="artwork-viewer-img" src="" alt="art">
+        <!-- <iframe id="artwork-viewer-img" class="video-viewer" src="https://www.youtube.com/embed/IylWexG2-1Y?si=U5XP7VjFPVp1jhge" frameborder="0" allow="accelerometer; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen> -->
+        <!-- </iframe> -->
       </div>
 
       <div id="left-arrow-button" class="artwork-button-box">
-        <span id="left-viewer-button" class="artwork-button fake-img">
-          <!-- <img src="button.jpg" alt="button"> -->
-        </span>
+        <img id="left-viewer-button" class="artwork-button button-img" src="assets\btn_arrowLeft.png" alt="button">
       </div>
       <div id="right-arrow-button" class="artwork-button-box">
-        <span id="right-viewer-button" class="artwork-button fake-img">
-          <!-- <img src="button.jpg" alt="button"> -->
-        </span>
+        <img id="right-viewer-button" class="artwork-button button-img" src="assets\btn_arrowRight.png" alt="button">
       </div>
-
-      <div class="artwork-text">
-        <p id="artwork-description"></p>
-      </div>
-      
+         
       <!-- 'footer' box -->
       <div id="gallery-footer" class="footer">
       </div>
       <div class="artwork-footnote-box">
-        <p id="artwork-footnote"></p>
-      </div>
-
-       <!-- shadow under nav -->
-      <div id="gallery-nav-shadow" class="nav-shadow">
-        <!-- shawdow img? -->
+        <p id="artwork-footnote" class="type-footnote"></p>
       </div>
 
       <!-- 'navbar' box -->
       <div id="gallery-nav" class="nav">
         <!-- pink background -->
       </div>
+      <!-- fluid img -->
+      <div id="fluid-img-box">
+        <img id="fluid-img" src="assets/fluid-img.png" alt="Fluid Image">
+      </div>
         
       <!-- 'bunny' box -->
       <div id="gallery-bunny" class="bunny">
-        <p>bunny logo</p>
       </div>
 
       <!-- collapsible menu / 'buttons' box -->
       <div id="gallery-button-box" class="button-box">
-        <div id="gallery-button-grid" class="button-grid">
+        <div class="button-grid">
           
           <!-- 3D animation category -->
+          <!-- slice thing-->
           <div class="gallery-category-button-component button-component">
-            <span class="fake-img">
-              <!-- <img src="button.jpg" alt="button"> -->
-            </span>
             <p id="menu-category-3D" class="menu-category button-text">3D animations</p>
+            <div class="button-img-container">
+              <img class="button-img" src="assets\btn_blob01_left.png" alt="button">
+              <img class="button-img" src="assets\btn_blob01_center.png" alt="button">
+              <img class="button-img" src="assets\btn_blob01_right.png" alt="button">
+            </div>
           </div>
           <!-- 3D animation projects -->
           <div class="menu-3D gallery-content-button-component button-component">
-            <span class="fake-img">
-              <!-- <img src="button.jpg" alt="button"> -->
-            </span>
             <p class="menu-project button-text">Awakening of The Frog (2022)</p>        
+            <div class="button-img-container">
+              <img class="button-img" src="assets\btn_blob01_left.png" alt="button">
+              <img class="button-img" src="assets\btn_blob01_center.png" alt="button">
+              <img class="button-img" src="assets\btn_blob01_right.png" alt="button">
+            </div>
           </div>
           <div class="menu-3D gallery-content-button-component button-component">
-            <span class="fake-img">
-              <!-- <img src="button.jpg" alt="button"> -->
-            </span>
-              <p class="menu-project button-text">Post-Apocalyptic Hottie (2023)</p>
+            <p class="menu-project button-text">Post-Apocalyptic Hottie (2023)</p>
+            <div class="button-img-container">
+              <img class="button-img" src="assets\btn_blob01_left.png" alt="button">
+              <img class="button-img" src="assets\btn_blob01_center.png" alt="button">
+              <img class="button-img" src="assets\btn_blob01_right.png" alt="button">
+            </div>
           </div>
 
           <!-- interactive installations category -->
           <div class="gallery-category-button-component button-component">
-            <span class="fake-img">
-              <!-- <img src="button.jpg" alt="button"> -->
-            </span>
             <p id="menu-category-inter" class="menu-category button-text">Interactive installations</p>
+            <div class="button-img-container">
+              <img class="button-img" src="assets\btn_blob01_left.png" alt="button">
+              <img class="button-img" src="assets\btn_blob01_center.png" alt="button">
+              <img class="button-img" src="assets\btn_blob01_right.png" alt="button">
+            </div>
           </div>
           <!-- interactive installations projects -->
           <div class="menu-inter gallery-content-button-component button-component">
-            <span class="fake-img">
-              <!-- <img src="button.jpg" alt="button"> -->
-            </span>
+          </span>
             <p class="menu-project button-text">To Dissect/ To Stitch (2023)</p>
+            <div class="button-img-container">
+              <img class="button-img" src="assets\btn_blob01_left.png" alt="button">
+              <img class="button-img" src="assets\btn_blob01_center.png" alt="button">
+              <img class="button-img" src="assets\btn_blob01_right.png" alt="button">
+            </div>
           </div>
 
           <!-- Creative coding category -->
           <div class="gallery-category-button-component button-component">
-            <span class="fake-img">
-              <!-- <img src="button.jpg" alt="button"> -->
-            </span>
             <p id="menu-category-coding" class="menu-category button-text">Creative coding</p>
+            <div class="button-img-container">
+              <img class="button-img" src="assets\btn_blob01_left.png" alt="button">
+              <img class="button-img" src="assets\btn_blob01_center.png" alt="button">
+              <img class="button-img" src="assets\btn_blob01_right.png" alt="button">
+            </div>
           </div>
             <!-- Creative coding projects -->
             <div class="menu-coding gallery-content-button-component button-component">
-              <span class="fake-img">
-                <!-- <img src="button.jpg" alt="button"> -->
-              </span>
               <p class="menu-project button-text">bodymod (2021)</p>
+              <div class="button-img-container">
+                <img class="button-img" src="assets\btn_blob01_left.png" alt="button">
+                <img class="button-img" src="assets\btn_blob01_center.png" alt="button">
+                <img class="button-img" src="assets\btn_blob01_right.png" alt="button">
+              </div>
             </div>
 
           <!-- Tattoos category -->
           <div class="gallery-category-button-component button-component">
-            <span class="fake-img">
-              <!-- <img src="button.jpg" alt="button"> -->
-            </span>
             <p id="menu-category-tattoo" class="menu-category button-text">Tattoos</p>
+            <div class="button-img-container">
+              <img class="button-img" src="assets\btn_blob01_left.png" alt="button">
+              <img class="button-img" src="assets\btn_blob01_center.png" alt="button">
+              <img class="button-img" src="assets\btn_blob01_right.png" alt="button">
+            </div>
           </div>
             <!-- Tattoos projects -->
             <div class="menu-tattoo gallery-content-button-component button-component">
-              <span class="fake-img">
-                <!-- <img src="button.jpg" alt="button"> -->
-              </span>
               <p class="menu-project button-text">3D tiger (2023)</p>
+              <div class="button-img-container">
+                <img class="button-img" src="assets\btn_blob01_left.png" alt="button">
+                <img class="button-img" src="assets\btn_blob01_center.png" alt="button">
+                <img class="button-img" src="assets\btn_blob01_right.png" alt="button">
+              </div>
             </div>
           
         </div>
@@ -172,10 +192,8 @@
       <!-- contact button -->
       <div id="gallery-contact-button-box" class="button-grid">
         <div class="gallery-category-button-component button-component">
-          <span class="fake-img">
-            <!-- <img src="button.jpg" alt="button"> -->
-          </span>
-            <a href="contact.html"><p class="button-text">About me</p></a>
+          <img class="button-img" src="assets\btn_star02.png" alt="button">
+          <a href="contact.html"><p class="button-text">About me</p></a>
         </div>
       </div>
 

@@ -1,11 +1,28 @@
 /* root master oimniscient rules */
 :root {
-    --button-text-size-L: 1.4rem;
-    --button-img-size-L: 1.4em;
+    /* colors */
+    --main-color: #B7B7B7;
+    --nav-color: #F66F8E;
+    --footer-color: #515345;
+    
+    
+    /* fonts */
+    --body-font: 'Spline Sans', sans-serif;
+    --altbody-font: 'Crimson Text', serif;
+    --display-font: 'Bricolage Grotesque', sans-serif;
+    --fine-font: 'Sofia Sans', sans-serif;
+    
+    /* button colors */
+    --off-color: #FFFFFF;
+    --hover-color: #B7B7B7;
+    --on-color: #000000;
 
+
+    /* button sizes */
+    --button-text-size-L: 1.6rem;
+    --button-img-size-L: 2.6em;
     --button-text-size-M: 1.2rem;
     --button-img-size-M: 1.2em;
-
     --button-text-size-S: 1rem;
     --button-img-size-S: 1rem;
   }
@@ -22,12 +39,12 @@ html, body{
 
 /* common to all pages */
 a, .button-text {
-    color: black;
+    color: var(--off-color);
     text-decoration-line: underline;
     text-decoration-thickness: 5%;
 }
 a:hover, .button-text:hover {
-    color: hotpink;
+    color: var(--hover-color);
   }
 
 .wrapper {
@@ -40,18 +57,18 @@ a:hover, .button-text:hover {
 
 /* found in each pages, but with modifications */
 .bg {
-    background: #ffffff;
+    background: var(--main-color);
     grid-column: 1/25;
     grid-row: 1/13;
 }
 
 /* navigation */
 .nav {
-    background: #e8e8e8;
+    background: var(--nav-color);
     grid-row: 1/13;
 }
 .nav-shadow {
-    background-color: rgba(150, 100, 100, 0.3);
+    background-image: linear-gradient(to right, black, rgba(255, 255, 255, 0));
     grid-row: 1/13;
 }
 
@@ -59,7 +76,7 @@ a:hover, .button-text:hover {
         grid-column: 1/15;
     }
     #index-nav-shadow {
-        grid-column: 1/16;
+        grid-column: 13/16;
     }
 
         #contact-nav{
@@ -78,7 +95,7 @@ a:hover, .button-text:hover {
 
 /* footer or green block */
 .footer {
-    background: #9c9c9c;
+    background: var(--footer-color);
 }
     #index-footer {
         grid-column: 15/25;
@@ -95,18 +112,16 @@ a:hover, .button-text:hover {
 
 /* bunny logo */
 .bunny {
-    border-style: solid;
-    border-width: 0.01rem;
+    background-size: contain;
+    background-position: center;
+    background-image: url('assets/logo_bunny.png');
 }
-    .bunny > p {
-        text-align: center;
-        padding: 50px 0;
-        vertical-align: middle;
-    }
 
     #index-bunny {
         grid-column: 1/14;
         grid-row: 1/12;
+        background-size: 120%;
+        background-position: bottom right;
     }
         #contact-bunny {
             grid-column: 1/9;
@@ -118,16 +133,8 @@ a:hover, .button-text:hover {
             }
 
 /* buttons */
-.button-box {
-    border-style: dotted;
-    border-width: 0.01rem;
-}
 .button-grid {
     display: grid;
-}
-.button-grid > div {
-    border-style: dotted;
-    border-width: 0.01rem;
 }
 .button-component {
     display: grid;
@@ -160,17 +167,19 @@ a:hover, .button-text:hover {
         height: 100%;
     }
     #index-button-component {
+        align-items: center;
         grid-template-columns: repeat(10, 1fr); 
     }
         #index-button-component > p {
             grid-column: 2/11;
+            margin-left: 1rem;
             margin-top: calc(var(--button-text-size-L) / 2 * -1);
             font-size: var(--button-text-size-L);
         }
-        #index-button-component > .fake-img {
+        #index-button-component > .button-img {
+            justify-self: start;
             width: var(--button-img-size-L);
             height: var(--button-img-size-L);
-            margin-top: calc(var(--button-img-size-L) / 2 * -1);
         }
 
             #gallery-button-box{
@@ -231,6 +240,9 @@ a:hover, .button-text:hover {
                 #contact-gallery-button-box{
                     grid-column: 17/20;
                     grid-row: 11;
+                }
+                .contact-button-space {    
+                    height: 1rem;
                 }
                 #contact-button-grid {    
                     width: 100%;
@@ -325,8 +337,6 @@ a:hover, .button-text:hover {
 }
 
 #artwork-title {
-    border-style: dotted;
-    border-radius: 0.01rem;
     grid-column: 14/24;
     grid-row: 2/3;
 }
@@ -338,8 +348,6 @@ a:hover, .button-text:hover {
     }
 
 .artwork-viewer {
-        border-style: solid;
-        border-radius: 0.01rem;
         grid-column: 15/23;
         grid-row: 3/8;
         margin-top: 1rem;
@@ -368,8 +376,6 @@ a:hover, .button-text:hover {
     
 .artwork-button-box {
     position: relative;
-    border-style: dotted;
-    border-radius: 0.01rem;
     grid-row: 3/8;
 }
 .artwork-button {
@@ -408,8 +414,6 @@ a:hover, .button-text:hover {
         margin-left: calc(1.5rem / 2 * -1);
     }
 .artwork-text {
-    border-style: dotted;
-    border-radius: 0.01rem;
     grid-column: 14/24;
     grid-row: 8/12;
 }
@@ -417,8 +421,6 @@ a:hover, .button-text:hover {
     font-size: 0.9rem;
 }
 .artwork-footnote-box {
-    border-style: dotted;
-    border-radius: 0.01rem;
     grid-column: 14/24;
     grid-row: 12/13;
 }
@@ -477,23 +479,12 @@ a:hover, .button-text:hover {
 .modal-artwork-button:hover {
     cursor: pointer;
 }
-    .modal-left-viewer-button > .fake-img {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        text-align: center;
-
-        display: inline-block;
-        border-style: solid;
-        border-width: 0.01rem;
-        border-radius: 50%;
-        background-color: white;
-        width: 1.5rem;
-        height:  1.5rem;
-        margin-top: calc(1.5rem / 2 * -1);
-        margin-left: calc(1.5rem / 2 * -1);
+    .modal-left-viewer-button > .button-img {
+        justify-self: start;
+        width: var(--button-img-size-S);
+        height: var(--button-img-size-S);
     }    
-    .modal-right-viewer-button > .fake-img {
+    .modal-right-viewer-button > .button-img {
         position: absolute;
         top: 50%;
         left: 50%;

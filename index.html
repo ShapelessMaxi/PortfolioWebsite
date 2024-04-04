@@ -2,7 +2,15 @@
 <html>
   <head>
     <!-- this links to css file containing styles -->
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="index-style.css" />
+
+    <!-- Add your external google fonts here -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,300;12..96,400;12..96,600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Sofia+Sans:wght@200&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@400;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;700&display=swap" rel="stylesheet">
 
     <!-- this line takes care of special characters in text -->
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -22,50 +30,54 @@
       <div class="bg">
         <!-- empty -->
       </div>
-
+      
       <!-- 'footer' box -->
       <div id="index-footer" class="footer">
         <div class="info-name">
-          <p>Name</p>
-          <p>Alias</p>
+          <p class="type-altbody">Maxime Perreault</p>
+          <p class="type-display">hd.maxi</p>
         </div>
+      </div>
+      <div id="relative-pos">
         <div class="info-description">
-          <p>description</p>
+          <p class="type-body">
+            tattoo artist<br>
+            digital multimedia<br>
+            3D animation
+          </p>
         </div>
       </div>
-
-      <!-- shadow under nav -->
-      <div id="index-nav-shadow" class="nav-shadow">
-        <!-- shawdow img? -->
-      </div>
-
+      
       <!-- 'navbar' box -->
       <div id="index-nav" class="nav">
         <!-- pink background -->
       </div>
+      <!-- fluid img -->
+      <div id="fluid-img-box">
+        <img id="fluid-img" src="assets/fluid-img.png" alt="Fluid Image">
+      </div>
         
       <!-- 'bunny' box -->
       <div id="index-bunny" class="bunny">
-        <p>bunny logo</p>
       </div>
 
       <!-- 'buttons' box -->
-      <div id="index-button-box" class="button-box">
+      <div id="index-button-box">
+        
         <div id="index-button-grid" class="button-grid">
           
           <div id="index-button-component" class="button-component">
-            <span id="fake-img">
-              <!-- <img src="button.jpg" alt="button"> -->
-            </span>
-            <p>
+            <div class="animation-slice">
+              <img src="assets\new_button.png">
+            </div>
+            <img class="button-img" src="assets\new_button.png" alt="button">
+            <p class="button-text-anim">
               <a href="gallery.html">Gallery</a>
             </p>
           </div>
 
           <div id="index-button-component" class="button-component">
-            <span id="fake-img">
-              <!-- <img src="button.jpg" alt="button"> -->
-            </span>
+            <img class="button-img" src="assets\btn_star01.png" alt="button">
             <p>
               <a href="contact.html">About me</a>
             </p>

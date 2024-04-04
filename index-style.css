@@ -1,0 +1,207 @@
+/* root master oimniscient rules */
+:root {
+    /* colors */
+    --main-color: #B7B7B7;
+    --nav-color: #F66F8E;
+    --footer-color: #515345;
+    --shadow-color: #6b6b6b;
+    
+    /* fonts */
+    --body-font: 'Spline Sans', sans-serif;
+    --altbody-font: 'Crimson Text', serif;
+    --display-font: 'Bricolage Grotesque', sans-serif;
+    --fine-font: 'Sofia Sans', sans-serif;
+   
+    --info-text-size: 1.2rem;
+    --name-text-size: 1rem;
+
+    /* button colors */
+    --off-color: #FFFFFF;
+    --hover-color: #B7B7B7;
+    --on-color: #000000;
+
+    /* button sizes */
+    --button-text-size-L: 1.4rem;
+    --button-img-size-L: 2.4em;
+  }
+  
+* {
+    margin: 0;
+}
+html, body{
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+  }
+
+/* common to all pages */
+a, .button-text {
+    color: var(--off-color);
+    text-decoration-line: underline;
+    text-decoration-thickness: 5%;
+}
+a:hover, .button-text:hover {
+    color: var(--hover-color);
+  }
+p {
+    color: white;
+}
+
+.wrapper {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(24, 1fr);
+    grid-template-rows: repeat(12, 1fr);
+}
+
+/* font classes */
+.type-display {
+    font-family: var(--display-font);
+    font-weight: 600;
+}
+.type-body {
+    font-family: var(--body-font);
+    font-weight: 400;
+}
+.type-altbody {
+    font-family: var(--altbody-font);
+    font-weight: 400;
+}
+
+/* found in each pages, but with modifications */
+.bg {
+    background: var(--main-color);
+    grid-column: 1/25;
+    grid-row: 1/13;
+}
+
+/* navigation */
+.nav {
+    background: var(--nav-color);
+    box-shadow: 0rem 0rem 3rem 1rem var(--shadow-color);
+    grid-row: 1/13;
+}
+    #index-nav{
+        grid-column: 1/15;
+    }
+    #index-nav-shadow {
+        grid-column: 13/16;
+    }
+    #fluid-img-box{
+        grid-row: 1/13;
+        grid-column: 1/17;
+        overflow: hidden;
+        text-align: right; 
+    }
+    #fluid-img {
+        object-fit: contain; 
+        float: right;
+        height: 120%;
+        width: auto;
+    }
+
+/* footer or green block */
+.footer {
+    background: var(--footer-color);
+    box-shadow: 0rem 0rem 3rem 0.1rem var(--shadow-color);
+}
+    #index-footer {
+        grid-column: 15/25;
+        grid-row: 1/13;
+    }
+    #relative-pos {
+        position: relative;
+        grid-column: 15/25;
+        grid-row: 1/13;
+    }
+
+    /* infos */
+    .info-name {
+        font-size: var(--name-text-size);
+        margin-right: 1.5rem;
+        margin-top: 0.5rem;
+    }
+    .info-name > p {
+        text-align: right;
+    }
+    .info-description {
+        margin-right: 1.5rem;
+        margin-top: 4rem;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        margin-bottom: 0.5rem;
+    }
+    .info-description > p {
+        text-align: right;
+        font-size: var(--info-text-size);
+    }
+
+/* bunny logo */
+.bunny {
+    background-size: contain;
+    background-position: center;
+    background-image: url('assets/logo_bunny.png');
+    background-repeat: no-repeat;
+}
+    #index-bunny {
+        grid-column: 1/14;
+        grid-row: 1/12;
+        background-size: 110%;
+        background-position: bottom right;
+    }
+
+/* buttons */
+.button-grid {
+    display: grid;
+    grid-template-rows: auto 1fr;
+}
+.button-component {
+    display: grid;
+    position: relative;
+}
+.button-component > p, .button-component > a {
+    cursor: pointer;
+    position: absolute;
+    height: auto;
+    top: 50%;
+}
+    #index-button-box{
+        grid-column: 11/17;
+        grid-row: 9/11;
+    }
+    #index-button-grid {    
+        width: 100%;
+        height: 100%;
+    }
+    #index-button-component {
+        align-items: center;
+        grid-template-columns: auto 1fr;
+    }
+        #index-button-component > p {
+            font-family: var(--display-font);
+            grid-column: 2/11;
+            margin-left: 1rem;
+            margin-top: calc(var(--button-text-size-L) / 2 * -1);
+            font-size: var(--button-text-size-L);
+        }
+        #index-button-component > .button-img {
+            justify-self: start;
+            width: var(--button-img-size-L);
+            height: var(--button-img-size-L);
+        }
+
+/* div being revealed to animate*/
+.animation-slice {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    opacity: 100;
+    /* anim */
+    transform-origin: 0% 50%;
+}

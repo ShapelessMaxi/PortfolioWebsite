@@ -12,12 +12,17 @@ $(document).ready(function() {
     // Function to fetch images for a specific project
     function fetchImages(projectNames) {
         $.ajax({
-            url: 'http://localhost:5000/images/' + projectNames,
+          //  url: 'http://localhost:5000/images/' + projectNames,
+          url: "getImages.php",
+            type: "GET", //send it through get method
+            data: { 
+             projectNames: projectNames, 
+            },
             dataType: 'json',
             success: function(response) {
                 projectImages[projectNames] = response;
                 // Log projectImages here if needed
-                // console.log('List of images for ' + projectName + ':', response);
+                // console.log('List of images for ' + projectNames + ':', response);
             },
             error: function(xhr, status, error) {
                 console.error('Error fetching images for ' + projectNames + ':', error);
@@ -46,6 +51,7 @@ $(document).ready(function() {
         var modalImg = $('#modal-artwork-viewer-img');
         // Select the image array
         var imagesArray = projectImages[projectName];
+        // console.log(projectImages);
 
         // Increment/decrease the index
         if (direction){
@@ -72,6 +78,7 @@ $(document).ready(function() {
             dataType: 'html',
             cache: false,
             success: function(data) {
+                // console.log(data)
                 var title = $(data).filter("h1").html();
                 var subtitle = $(data).filter("h2").html();
                 var description = $(data).filter("p").html();
@@ -87,43 +94,6 @@ $(document).ready(function() {
             }
         });
     }
-
-    // collapsible gallery menu
-    $(".menu-category").click(function() {
-
-        // Remove the .active class from all category buttons
-        $('.menu-category').removeClass('menu-active');
-
-        // add the active class to the clicked element
-        $(this).addClass('menu-active');
-
-        // show/hide the projects
-        if ($(this).attr("id") === "menu-category-3D") {
-            $(".menu-3D").show();
-            $(".menu-inter").hide();
-            $(".menu-coding").hide();
-            $(".menu-tattoo").hide();
-        
-        } else if ($(this).attr("id") === "menu-category-inter") {
-            $(".menu-3D").hide();
-            $(".menu-inter").show();
-            $(".menu-coding").hide();
-            $(".menu-tattoo").hide();
-        
-        } else if ($(this).attr("id") === "menu-category-coding") {
-            $(".menu-3D").hide();
-            $(".menu-inter").hide();
-            $(".menu-coding").show();
-            $(".menu-tattoo").hide();
-        
-        } else if ($(this).attr("id") === "menu-category-tattoo") {
-            $(".menu-3D").hide();
-            $(".menu-inter").hide();
-            $(".menu-coding").hide();
-            $(".menu-tattoo").show();
-        };
-        
-    });
 
     // fetch and display project data from adjacent html file
     $(".menu-project").click(function() {
@@ -157,7 +127,7 @@ $(document).ready(function() {
         // find the displayed image index
         currentIndex = viewedImg.attr('src'); 
         currentIndex = currentIndex.replace(/\D/g, "");
-        currentIndex = parseInt(currentIndex) - 1   ;
+        currentIndex = parseInt(currentIndex) - 1;
 
         // find which project is currently being viewed
         var activeProject = [];
@@ -175,13 +145,13 @@ $(document).ready(function() {
         var direction = $(this).attr("id") === "left-viewer-button";
         displayNextImage(currentIndex, projectName, direction);
 
-        // make the image hoverable
+        // make the image 'hoverable'
         $('#artwork-viewer-img').hover(function() {
             $(this).css('cursor', 'pointer');
         });
     });
     
-    // Get the modal, and insert the viewed image in it
+    // open the modal, and insert the viewed image in it
     var modal = document.getElementById("myModal");
     var viewedImg = $('#artwork-viewer-img');
     $('#artwork-viewer-img').click(function(){
@@ -194,7 +164,178 @@ $(document).ready(function() {
     // close the modal by clicking on the image
     $('.close').click(function(){
         modal.style.display = "none";
-        $('#artwork-viewer-img').show;
+        $('#artwork-viewer-img').show();
     });
+
+    function hoverAnimation(selector, targetSelector) {
+        // Get all elements matching the selector
+        var elements = document.querySelectorAll(selector);
     
+        // For each element, attach mouseenter and mouseleave event listeners
+        elements.forEach(function(element) {
+            element.addEventListener('mouseenter', function() {
+                // Trigger animation when mouse enters the element
+                var targetElement = element.parentNode.querySelector(targetSelector);
+                if (targetElement) {
+                    targetElement.classList.add('hover-animation');
+                }
+            });
+    
+            element.addEventListener('mouseleave', function() {
+                // Remove animation when mouse leaves
+                var targetElement = element.parentNode.querySelector(targetSelector);
+                if (targetElement) {
+                    targetElement.classList.remove('hover-animation');
+                }
+            });
+        });
+    }
+    // Call hover animation function for different elements
+    hoverAnimation(".textbox-title", ".img-contact-button");
+    hoverAnimation(".text-contact-button", ".img-contact-button");
+    hoverAnimation("#text-contact-to-gallery", ".button-img");
+    // clicked animation
+    function clickedAnimation(buttons) {
+        buttons.forEach(function(button) {
+            button.addEventListener('click', function(event) {
+                // Find elements related to the clicked button
+                var imgContainer = button.nextElementSibling;
+                var middleChild = imgContainer ? imgContainer.children[1] : null;
+                var leftChild = imgContainer ? imgContainer.children[2] : null;
+                
+                // Reset the animation on all buttons
+                buttons.forEach(function(btn) {
+                    var btnImgContainer = btn.nextElementSibling;
+                    var btnMiddleChild = btnImgContainer ? btnImgContainer.children[1] : null;
+                    var btnLeftChild = btnImgContainer ? btnImgContainer.children[2] : null;
+                    
+                    if (btnMiddleChild) {
+                        btnMiddleChild.classList.remove('clicked-animation');
+                    }
+                    if (btnLeftChild) {
+                        btnLeftChild.classList.remove('translate-animation');
+                    }
+                    btn.classList.remove('menu-active'); // Remove active class from all buttons
+                });
+                
+                // Add active class to the clicked button
+                button.classList.add('menu-active');
+                
+                // Add the animation classes to the clicked button
+                var stretchAmount = Math.floor(Math.random() * (550 - 250) + 200);
+                var translateAmount = stretchAmount - 1;
+                // stretch middle portion
+                middleChild.style.setProperty('--stretch-amount', stretchAmount);
+                middleChild.classList.add('clicked-animation');
+                // translate left portion
+                leftChild.style.setProperty('--stretch-amount', translateAmount + 'px');
+                leftChild.classList.add('translate-animation');
+
+                // // hide/unhide the text
+                // if (button.classList.contains("menu-active")) {
+                //     console.log('boop')
+                // }
+            });
+        });
+               
+    }
+
+    // Select all category buttons and project buttons
+    var categoryButtons = document.querySelectorAll('.menu-category');
+    var projectButtons = document.querySelectorAll('.menu-project');
+    var contactButtons = document.querySelectorAll('.textbox-title');
+
+    // Call the clickedAnimation function for category buttons and project buttons
+    clickedAnimation(categoryButtons);
+    clickedAnimation(projectButtons);
+    clickedAnimation(contactButtons);
+    
+    // Check if any contact button has the class 'menu-active'
+    contactButtons.forEach(function(button) {
+        if (button.classList.contains("menu-active")) {
+            console.log("At least one contact button has the class 'menu-active'");
+        }
+    });
+
+    // collapsible gallery menu
+    document.querySelectorAll('.menu-category').forEach(function(categoryButton) {
+        categoryButton.addEventListener('click', function() {
+            // Get the ID of the clicked category button
+            var categoryId = categoryButton.getAttribute('id');
+
+            // Hide all project categories
+            document.querySelectorAll('.menu-3D, .menu-inter, .menu-coding, .menu-tattoo').forEach(function(projectCategory) {
+                projectCategory.style.display = 'none';
+            });
+
+            // Show the corresponding project category based on the clicked category button
+            switch (categoryId) {
+                case "menu-category-3D":
+                    document.querySelectorAll('.menu-3D').forEach(function(projectCategory) {
+                        projectCategory.style.display = 'block';
+                    });
+                    break;
+                case "menu-category-inter":
+                    document.querySelectorAll('.menu-inter').forEach(function(projectCategory) {
+                        projectCategory.style.display = 'block';
+                    });
+                    break;
+                case "menu-category-coding":
+                    document.querySelectorAll('.menu-coding').forEach(function(projectCategory) {
+                        projectCategory.style.display = 'block';
+                    });
+                    break;
+                case "menu-category-tattoo":
+                    document.querySelectorAll('.menu-tattoo').forEach(function(projectCategory) {
+                        projectCategory.style.display = 'block';
+                    });
+                    break;
+                default:
+                    break;
+            }
+        });
+    });
+
+    // hide the text
+    // Check if the statement-box element exists before manipulating it
+    var statementBox = document.getElementById('statement-box');
+    if (statementBox) {
+        document.getElementById('textbox-statement').style.display = 'none';
+        document.getElementById('textbox-bio').style.display = 'none';
+    }
+    
+    // collapsible contact text boxes
+    document.querySelectorAll('.textbox-title').forEach(function(textboxButton) {
+        textboxButton.addEventListener('click', function() {
+            // Get the ID of the clicked category button
+            var textboxId = textboxButton.getAttribute('id');
+
+            // Hide the text
+            document.querySelectorAll('#textbox-statement, #textbox-bio').forEach(function(projectCategory) {
+            projectCategory.style.display = 'none';
+            });
+
+            // Show the corresponding project category based on the clicked category button
+            switch (textboxId) {
+                case "textbox-menu-statement":
+                    document.querySelectorAll('#textbox-statement').forEach(function(projectCategory) {
+                        projectCategory.style.display = 'block';
+                        document.getElementById('statement-box').style.backgroundImage = 'linear-gradient(to bottom, var(--main-color) 95%, #919090 100%)';
+                        document.getElementById('statement-box').style.overflowY = 'scroll';
+                    });
+                    break;
+                case "textbox-menu-bio":
+                    document.querySelectorAll('#textbox-bio').forEach(function(projectCategory) {
+                        projectCategory.style.display = 'block';
+                        document.getElementById('statement-box').style.backgroundImage = 'linear-gradient(to bottom, var(--main-color) 95%, #919090 100%)';
+                        document.getElementById('statement-box').style.overflowY = 'scroll';
+                    });
+                    break;
+                default:
+                    break;
+            }
+        });
+    });
+
+
 }); // end of ready() function
