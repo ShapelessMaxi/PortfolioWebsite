@@ -2,9 +2,9 @@
 :root {
     /* colors */
     --main-color: #B7B7B7;
-    --nav-color: #F66F8E;
-    --footer-color: #515345;
-    --shadow-color: #6b6b6b;
+    --nav-color: #b8cae6;
+    --footer-color: #F66F8E;
+    --shadow-color: #a5a5a5;
     
     /* fonts */
     --body-font: 'Spline Sans', sans-serif;
@@ -21,12 +21,12 @@
     --button-text-size-L: 1.5rem;
     --button-img-size-L: 2.2em;
 
-    --button-text-size-M: 1.2rem;
-    --button-img-size-M: 1.3em;
+    --button-text-size-M: 1.5rem;
+    --button-img-size-M: 2.5rem;
     --button-img-size-M-hover: 1.6em;
 
-    --button-text-size-S: 0.9rem;
-    --button-img-size-S: 0.9rem;
+    --button-text-size-S: 1.3rem;
+    --button-img-size-S: 1.6rem;
 }
 
 * {
@@ -69,6 +69,7 @@ a:hover, .button-text:hover {
 .type-altbody {
     font-family: var(--altbody-font);
     font-weight: 500;
+    font-size: calc(var(--button-text-size-M) + 0.1rem);
 }
 
 /* found in each pages, but with modifications */
@@ -126,10 +127,7 @@ a:hover, .button-text:hover {
         
 /* buttons */
 .button-component {
-    display: block;
     position: relative;
-    width: fit-content;
-    overflow: visible;
     display: flex;
     align-items: left;
     vertical-align: center;
@@ -141,7 +139,7 @@ a:hover, .button-text:hover {
 }
     #contact-button-box{
         margin-bottom: 1rem;
-        grid-column: 10/15;
+        grid-column: 10/18;
         grid-row: 9/13;
     }
     .contact-button-space {    
@@ -160,7 +158,7 @@ a:hover, .button-text:hover {
     }
         .text-contact-button {
             font-family: var(--display-font);
-            margin-left: 2rem;
+            margin-left: calc(var(--button-img-size-M) + 1rem);
             margin-top: calc(var(--button-text-size-M) / 2 * -1);
             font-size: var(--button-text-size-M);
         }
@@ -189,7 +187,7 @@ a:hover, .button-text:hover {
 .button-img-container > img {
     display: block;
     width: auto;
-    height: var(--button-img-size-M);
+    height: var(--button-img-size-S);
 }
 .button-img-container > div {
     display: block;
@@ -211,10 +209,8 @@ a:hover, .button-text:hover {
 #statement-box {
     grid-column: 10/20;
     grid-row: 4/8;
-    /* overflow-y: scroll; */
     height: 100%;
     padding-right: 1rem;
-
 }
 #statement-box > p {
     margin-bottom: 1rem;
@@ -222,11 +218,12 @@ a:hover, .button-text:hover {
 #alias {
     text-align: right;
     font-weight: bold;
+    font-size: var(--button-text-size-M);
 }
 
 .textbox-title {
     /* selector for collapsible text box */
-    font-size: var(--button-text-size-M);
+    font-size: var(--button-text-size-S);
     margin-bottom: 0.5rem;
     margin-left: 1rem;
     color: white;
@@ -266,18 +263,9 @@ a:hover, .button-text:hover {
 
 /* animations */
 .menu-active{
-    color: var(--nav-color);
+    color: var(--footer-color);
 }
-.hover-animation {
-    animation-name: expand;
-    animation-duration: 500ms;
-    animation-iteration-count: infinite;
-    animation-direction: alternate;
-}
-@keyframes expand {
-    0% { transform: scale(1); }
-    100% { transform: scale(1.4); }
-}
+
 .clicked-animation {
     transform-origin: 0 center;
     animation-name: stretch;
@@ -297,4 +285,74 @@ a:hover, .button-text:hover {
 @keyframes translate {
     from {transform: translateX(0);}
     to {transform: translateX(var(--stretch-amount));}
+}
+.hover-animation {
+    animation-name: expand;
+    animation-duration: 500ms;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+@keyframes expand {
+    0% { transform: scaleX(1) scaleY(1); }
+    100% { transform: scaleX(1.5) scaleY(1.5); }
+}
+@keyframes expand-l {
+    0% { transform: scaleX(1) scaleY(1); }
+    100% { transform: scaleX(1.4) scaleY(1.3)}
+}
+@keyframes expand-r {
+    0% { transform: scaleX(1) scaleY(1); }
+    100% { transform: scaleX(1.4) scaleY(1.3)}
+    /* 100% { transform: scaleX(1.8) scaleY(1.2) translateX(3px);} */
+}
+@keyframes expand-m {
+    0% { transform: scaleX(1) scaleY(1); }
+    100% { transform: scaleX(1) scaleY(1.3);}
+}
+.hover-animation-l {
+    transform-origin: 1 center;
+    animation-name: expand-l;
+    animation-duration: 500ms;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+.hover-animation-m {
+    transform-origin: center center;
+    animation-name: expand-m;
+    animation-duration: 500ms;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}.hover-animation-r {
+    transform-origin: 0 center;
+    animation-name: expand-r;
+    animation-duration: 500ms;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+.loading-overlay {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: var(--main-color);
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.spinner {
+    width: 100px;
+    height: 100px;
+    animation-name: expand-load;
+    animation-duration: 150ms;
+    animation-iteration-count: infinite;
+    animation-direction: alternate; 
+}
+
+@keyframes expand-load {
+    0% { transform: scale(1); }
+    100% { transform: scale(1.1); }
 }

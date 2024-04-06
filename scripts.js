@@ -1,5 +1,27 @@
 $(document).ready(function() {
-    console.log("document ready");
+    var loadingOverlay = document.querySelector('.loading-overlay');
+    var theRest = document.querySelector('.wrapper');
+    function startLoadingAnimation() {
+        theRest.style.display = 'none';
+        loadingOverlay.style.display = 'flex';
+    }
+    startLoadingAnimation();
+    function hideLoading(){
+        theRest.style.display = 'grid';
+        loadingOverlay.style.display = 'none';
+    }
+    function hideLoadingAnimation(){
+        setTimeout(hideLoading, 600);
+    }
+
+    window.addEventListener('load', function() {
+        // This code will run when everything on the page has finished loading
+        console.log('Page fully loaded');
+
+        // Hide loading animation
+        hideLoadingAnimation();
+    });
+
 
     // hide the projects by default
     var projects = $(".menu-3D, .menu-inter, .menu-coding, .menu-tattoo");
@@ -167,56 +189,100 @@ $(document).ready(function() {
         $('#artwork-viewer-img').show();
     });
 
-    function hoverAnimation(selector, targetSelector) {
+    
+    function hoverAnimation(selector, targetSelector, sliced) {
         // Get all elements matching the selector
         var elements = document.querySelectorAll(selector);
-    
+
+        // Define animations array outside of event listeners to ensure it's accessible
+        var animations = ['hover-animation-l', 'hover-animation-m', 'hover-animation-r'];
+        
         // For each element, attach mouseenter and mouseleave event listeners
         elements.forEach(function(element) {
             element.addEventListener('mouseenter', function() {
                 // Trigger animation when mouse enters the element
-                var targetElement = element.parentNode.querySelector(targetSelector);
-                if (targetElement) {
-                    targetElement.classList.add('hover-animation');
+                var targetElements = element.parentNode.querySelectorAll(targetSelector);
+                if (sliced && targetElements && !element.classList.contains('menu-active')) {
+                    targetElements.forEach(function(targetElement, targetIndex) {
+                        if (targetIndex < animations.length) {
+                            targetElement.classList.add(animations[targetIndex]);
+                        }
+                    });
+                } else if (targetElements && !element.classList.contains('menu-active')) {
+                    targetElements.forEach(function(element) {
+                        element.classList.add('hover-animation');
+                    });
                 }
             });
     
             element.addEventListener('mouseleave', function() {
                 // Remove animation when mouse leaves
-                var targetElement = element.parentNode.querySelector(targetSelector);
-                if (targetElement) {
-                    targetElement.classList.remove('hover-animation');
+                var targetElements = element.parentNode.querySelectorAll(targetSelector);
+                if (sliced && targetElements) {
+                    targetElements.forEach(function(targetElement, targetIndex) {
+                        if (targetIndex < animations.length) {
+                            targetElement.classList.remove(animations[targetIndex]);
+                        }
+                    });
+                } else if (targetElements) {
+                    targetElements.forEach(function(element) {
+                        element.classList.remove('hover-animation');
+                    });
                 }
             });
         });
     }
     // Call hover animation function for different elements
-    hoverAnimation(".textbox-title", ".img-contact-button");
-    hoverAnimation(".text-contact-button", ".img-contact-button");
-    hoverAnimation("#text-contact-to-gallery", ".button-img");
+    function activateHover (){
+        // gallery page
+        hoverAnimation(".button-text", ".button-img", false);
+        hoverAnimation(".menu-category", ".button-img", true);
+        hoverAnimation(".menu-project", ".button-img", true);
+        hoverAnimation(".contact-btn-link", ".button-img", false);
+        // contact page
+        hoverAnimation(".textbox-title", ".button-img", false);
+        hoverAnimation(".text-contact-button", ".img-contact-button", false);
+        hoverAnimation("#text-contact-to-gallery", ".button-img", false);
+        // index page
+    }
+    activateHover();
+
     // clicked animation
     function clickedAnimation(buttons) {
         buttons.forEach(function(button) {
             button.addEventListener('click', function(event) {
                 // Find elements related to the clicked button
                 var imgContainer = button.nextElementSibling;
+                var rightChild = imgContainer ? imgContainer.children[0] : null;
                 var middleChild = imgContainer ? imgContainer.children[1] : null;
                 var leftChild = imgContainer ? imgContainer.children[2] : null;
                 
-                // Reset the animation on all buttons
                 buttons.forEach(function(btn) {
                     var btnImgContainer = btn.nextElementSibling;
-                    var btnMiddleChild = btnImgContainer ? btnImgContainer.children[1] : null;
-                    var btnLeftChild = btnImgContainer ? btnImgContainer.children[2] : null;
-                    
-                    if (btnMiddleChild) {
-                        btnMiddleChild.classList.remove('clicked-animation');
+                    if (btnImgContainer) {
+                        var btnLeftChild = btnImgContainer.children[0];
+                        var btnMiddleChild = btnImgContainer.children[1];
+                        var btnRightChild = btnImgContainer.children[2];
+                
+                        if (btnLeftChild) {
+                            btnLeftChild.classList.remove('hover-animation-l');
+                            btnLeftChild.classList.remove('hover-animation');
+                        }
+                        if (btnMiddleChild) {
+                            btnMiddleChild.classList.remove('hover-animation-m');
+                            btnMiddleChild.classList.remove('hover-animation');
+                            btnMiddleChild.classList.remove('clicked-animation');
+                        }
+                        if (btnRightChild) {
+                            btnRightChild.classList.remove('hover-animation-r');
+                            btnRightChild.classList.remove('hover-animation');
+                            btnRightChild.classList.remove('translate-animation');
+                        }
                     }
-                    if (btnLeftChild) {
-                        btnLeftChild.classList.remove('translate-animation');
-                    }
+                
                     btn.classList.remove('menu-active'); // Remove active class from all buttons
                 });
+                
                 
                 // Add active class to the clicked button
                 button.classList.add('menu-active');
@@ -231,20 +297,14 @@ $(document).ready(function() {
                 leftChild.style.setProperty('--stretch-amount', translateAmount + 'px');
                 leftChild.classList.add('translate-animation');
 
-                // // hide/unhide the text
-                // if (button.classList.contains("menu-active")) {
-                //     console.log('boop')
-                // }
             });
         });
                
     }
-
     // Select all category buttons and project buttons
     var categoryButtons = document.querySelectorAll('.menu-category');
     var projectButtons = document.querySelectorAll('.menu-project');
     var contactButtons = document.querySelectorAll('.textbox-title');
-
     // Call the clickedAnimation function for category buttons and project buttons
     clickedAnimation(categoryButtons);
     clickedAnimation(projectButtons);
@@ -320,14 +380,14 @@ $(document).ready(function() {
                 case "textbox-menu-statement":
                     document.querySelectorAll('#textbox-statement').forEach(function(projectCategory) {
                         projectCategory.style.display = 'block';
-                        document.getElementById('statement-box').style.backgroundImage = 'linear-gradient(to bottom, var(--main-color) 95%, #919090 100%)';
+                        document.getElementById('statement-box').style.backgroundImage = 'linear-gradient(to bottom, var(--main-color) 95%, #a1a1a1 100%)';
                         document.getElementById('statement-box').style.overflowY = 'scroll';
                     });
                     break;
                 case "textbox-menu-bio":
                     document.querySelectorAll('#textbox-bio').forEach(function(projectCategory) {
                         projectCategory.style.display = 'block';
-                        document.getElementById('statement-box').style.backgroundImage = 'linear-gradient(to bottom, var(--main-color) 95%, #919090 100%)';
+                        document.getElementById('statement-box').style.backgroundImage = 'linear-gradient(to bottom, var(--main-color) 95%, #a1a1a1 100%)';
                         document.getElementById('statement-box').style.overflowY = 'scroll';
                     });
                     break;

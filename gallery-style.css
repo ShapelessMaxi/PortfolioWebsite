@@ -2,9 +2,9 @@
 :root {
     /* colors */
     --main-color: #B7B7B7;
-    --nav-color: #F66F8E;
-    --footer-color: #515345;
-    --shadow-color: #6b6b6b;
+    --nav-color: #b8cae6;
+    --footer-color: #F66F8E;
+    --shadow-color: #a5a5a5;
         
     /* fonts */
     --body-font: 'Spline Sans', sans-serif;
@@ -13,7 +13,7 @@
     --fine-font: 'Sofia Sans', sans-serif;
     
     /* button colors */
-    --off-color: #FFFFFF;
+    --off-color: white;
     --hover-color: #B7B7B7;
     --on-color: #000000;
 
@@ -23,7 +23,7 @@
     --button-text-size-M: 1.1rem;
     --button-img-size-M: 1.5em;
     --button-text-size-S: 0.9rem;
-    --button-img-size-S: 0.9rem;
+    --button-img-size-S: 1.3em;
 
     /* animation properties */
     --stretch-amount: 350;
@@ -42,7 +42,7 @@ html, body{
 
 /* common to all pages */
 a, .button-text {
-    color: var(--off-color);
+    color: black;
     text-decoration-line: underline;
     text-decoration-thickness: 5%;
 }
@@ -53,7 +53,7 @@ a:hover, .button-text:hover {
 .wrapper {
     width: 100vw;
     height: 100vh;
-    display: grid;
+    display: none;
     grid-template-columns: repeat(24, 1fr);
     grid-template-rows: repeat(12, 1fr);
 }
@@ -140,10 +140,9 @@ a:hover, .button-text:hover {
     width: 100%;
 }
 .button-component {
-    display: block;
     height: 1.3rem;
     padding-bottom: 0.3rem;
-    /* display: grid; */
+    display: grid;
     position: relative;
 }
 .button-component > p, .button-component > a {
@@ -152,22 +151,26 @@ a:hover, .button-text:hover {
     height: auto;
     top: 50%;
     }
-    #gallery-button-box{
+    #gallery-button-box {
         grid-column: 2/11;
-        grid-row: 2/9;
+        grid-row: 2/8;
     }
     #gallery-contact-button-box {
         grid-column: 2/11;
-        grid-row: 8;
+        grid-row: 7/8;
     }
     .gallery-category-button-component {
         align-items: center;
+        grid-template-columns: auto 1fr; 
     }
-        .gallery-category-button-component > p, .gallery-category-button-component > a {
+        .gallery-category-button-component > p, .gallery-category-button-component > a{
             font-family: var(--display-font);
-            margin-left: calc(var(--button-text-size-M) + 1em);
-            margin-top: calc(var(--button-text-size-M) / 2 * -1);
             font-size: var(--button-text-size-M);
+            font-weight: 600;
+        }
+        .gallery-category-button-component .button-text {
+            margin-left: calc(var(--button-text-size-M) + 1rem);
+            margin-top: calc(var(--button-text-size-M) / 2 * -1);            
         }
         .gallery-category-button-component > .button-img {
             justify-self: start;
@@ -186,6 +189,7 @@ a:hover, .button-text:hover {
     }
     .gallery-content-button-component > p {
         font-family: var(--display-font);
+        font-weight: 600;
         margin-left: calc(var(--button-text-size-S) + 1em);
         margin-top: calc(var(--button-text-size-S) / 2 * -1);
         font-size: var(--button-text-size-S);
@@ -200,21 +204,36 @@ a:hover, .button-text:hover {
     width: fit-content;
     grid-template-columns: repeat(3, auto);
 }
+    .button-img-container-projects {
+        display: grid;
+        width: fit-content;
+        grid-template-columns: repeat(3, auto);
+    }   
 .button-img-container > img {
     display: block;
     width: auto;
     height: var(--button-img-size-M);
 }
+    .button-img-container-projects > img {
+        display: block;
+        width: auto;
+        height: var(--button-img-size-S);
+    }
 .button-img-container > div {
     display: block;
     width: auto;
-    height: var(--button-img-size-M);
+    height: var(--button-text-size-M);
 }
+    .button-img-container-projects > div {
+        display: block;
+        width: auto;
+        height: var(--button-text-size-S);
+    }  
 
 /* only in gallery */
 .menu-active{
     /* background-color: black; */
-    color: var(--nav-color);
+    color: var(--footer-color);
 }
 .menu-category{
     /* collapsible menu, class selector: categories */
@@ -449,4 +468,77 @@ a:hover, .button-text:hover {
 @keyframes translate {
     from {transform: translateX(0);}
     to {transform: translateX(var(--stretch-amount));}
+}
+.hover-animation {
+    animation-name: expand;
+    animation-duration: 500ms;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+@keyframes expand {
+    0% { transform: scaleX(1) scaleY(1); }
+    100% { transform: scaleX(1.5) scaleY(1.5); }
+}
+@keyframes expand-l {
+    0% { transform: scaleX(1) scaleY(1); }
+    100% { transform: scaleX(1.4) scaleY(1.3)}
+}
+@keyframes expand-r {
+    0% { transform: scaleX(1) scaleY(1); }
+    100% { transform: scaleX(1.4) scaleY(1.3)}
+    /* 100% { transform: scaleX(1.8) scaleY(1.2) translateX(3px);} */
+}
+@keyframes expand-m {
+    0% { transform: scaleX(1) scaleY(1); }
+    100% { transform: scaleX(1) scaleY(1.3);}
+}
+.hover-animation-l {
+    transform-origin: 1 center;
+    animation-name: expand-l;
+    animation-duration: 500ms;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+.hover-animation-m {
+    transform-origin: center center;
+    animation-name: expand-m;
+    animation-duration: 500ms;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}.hover-animation-r {
+    transform-origin: 0 center;
+    animation-name: expand-r;
+    animation-duration: 500ms;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+.contact-btn-link {
+    /* selector */
+}
+
+.loading-overlay {
+    width: 100vw;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: var(--main-color);
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.spinner {
+    width: 100px;
+    height: 100px;
+    animation-name: expand-load;
+    animation-duration: 150ms;
+    animation-iteration-count: infinite;
+    animation-direction: alternate; 
+}
+
+@keyframes expand-load {
+    0% { transform: scale(1);}
+    100% { transform: scale(1.2);}
 }

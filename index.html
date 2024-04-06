@@ -12,6 +12,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@400;600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;700&display=swap" rel="stylesheet">
 
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+
     <!-- this line takes care of special characters in text -->
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 
@@ -22,6 +24,10 @@
   </head>
 
   <body>
+    <!-- Loading Overlay -->
+    <div class="loading-overlay">
+      <img class="spinner" src="assets\btn_star01.png" alt="button<">
+    </div>
     
     <!-- grid/table container -->
     <div class="wrapper"> 
@@ -67,18 +73,15 @@
         <div id="index-button-grid" class="button-grid">
           
           <div id="index-button-component" class="button-component">
-            <div class="animation-slice">
-              <img src="assets\new_button.png">
-            </div>
-            <img class="button-img" src="assets\new_button.png" alt="button">
-            <p class="button-text-anim">
+            <img class="button-img" src="assets\btn_star02.png" alt="button">
+            <p class="button-text">
               <a href="gallery.html">Gallery</a>
             </p>
           </div>
 
           <div id="index-button-component" class="button-component">
             <img class="button-img" src="assets\btn_star01.png" alt="button">
-            <p>
+            <p class="button-text">
               <a href="contact.html">About me</a>
             </p>
           </div>
@@ -87,6 +90,9 @@
       </div>
 
     </div>
-    
+
+    <!-- this links to js file containing scripts -->
+    <script src="scripts.js"></script>
+
   </body>
 </html>
