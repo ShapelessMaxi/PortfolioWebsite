@@ -124,19 +124,19 @@ p {
     /* infos */
     .info-name {
         font-size: var(--name-text-size);
-        margin-right: 1.5rem;
-        margin-top: 0.5rem;
+        margin-right: 2rem;
+        margin-top: 2rem;
     }
     .info-name > p {
         text-align: right;
     }
     .info-description {
-        margin-right: 1.5rem;
+        margin-right: 2rem;
         margin-top: 4rem;
         position: absolute;
         bottom: 0;
         right: 0;
-        margin-bottom: 0.5rem;
+        margin-bottom: 2rem;
     }
     .info-description > p {
         text-align: right;

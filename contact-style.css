@@ -18,8 +18,8 @@
     --on-color: #000000;
 
     /* button sizes */
-    --button-text-size-L: 1.5rem;
-    --button-img-size-L: 2.2em;
+    --button-text-size-L: 1.2rem;
+    --button-img-size-L: 2rem;
 
     --button-text-size-M: 1.5rem;
     --button-img-size-M: 2.5rem;
@@ -54,7 +54,7 @@ a:hover, .button-text:hover {
     height: 100vh;
     display: grid;
     grid-template-columns: repeat(24, 1fr);
-    grid-template-rows: repeat(12, 1fr);
+    grid-template-rows: repeat(18, 1fr);
 }
 
 /* font classes */
@@ -76,21 +76,21 @@ a:hover, .button-text:hover {
 .bg {
     background: var(--main-color);
     grid-column: 1/25;
-    grid-row: 1/13;
+    grid-row: 1/19;
 }
 
 /* navigation */
 .nav {
     background: var(--nav-color);
-    grid-row: 1/13;
+    grid-row: 1/19;
+    grid-column: 23/25;
     box-shadow: 0rem 0rem 3rem 1rem var(--shadow-color);
 }
     #contact-nav{
-        grid-column: 23/25;
     }
     #fluid-img-box{
-        grid-row: 1/13;
-        grid-column: 21/25;
+        grid-row: 1/19;
+        grid-column: 22/25;
         overflow: hidden;
         text-align: right; 
     }
@@ -99,7 +99,7 @@ a:hover, .button-text:hover {
         float: left;
         height: 120%;
         width: auto;
-        transform: scaleX(-1);
+        transform: scaleU(-1);
     }
 
 /* footer or green block */
@@ -107,7 +107,7 @@ a:hover, .button-text:hover {
     background: var(--footer-color); 
     box-shadow: 0rem 0rem 1rem 0.1rem var(--shadow-color);
     grid-column: 1/25;
-    grid-row: 12/13;
+    grid-row: 18/19;
 }
 
 /* bunny logo */
@@ -120,7 +120,7 @@ a:hover, .button-text:hover {
 }
     #contact-bunny {
         grid-column: 2/9;
-        grid-row: 6/12;
+        grid-row: 10/18;
         background-position: top left;
         margin-bottom: 0.2rem;
     }
@@ -132,15 +132,15 @@ a:hover, .button-text:hover {
     align-items: left;
     vertical-align: center;
 }
-.button-component > p, .button-component > a {
+.button-component > p {
     cursor: pointer;
     position: absolute;
     top: 50%;
 }
     #contact-button-box{
         margin-bottom: 1rem;
-        grid-column: 10/18;
-        grid-row: 9/13;
+        grid-column: 10/20;
+        grid-row: 12/17;
     }
     .contact-button-space {    
         height: 1rem;
@@ -149,9 +149,10 @@ a:hover, .button-text:hover {
         display: grid;
     }
     #contact-gallery-button-box{
-        margin-bottom: 1rem;
-        grid-column: 4;
-        grid-row: 11;
+        margin-bottom: 2rem;
+        margin-top: 1rem;
+        grid-column: 10/20;
+        grid-row: 18;
     }
     #contact-button-component {
         /* grid-template-columns: auto 1fr;  */
@@ -169,14 +170,18 @@ a:hover, .button-text:hover {
             
     #text-contact-to-gallery {
         font-family: var(--display-font);
-        margin-left: calc(var(--button-text-size-L) + 1em);
-        margin-top: calc(var(--button-text-size-L) / 2 * -1);
-        font-size: var(--button-text-size-L);
+        margin-left: calc(var(--button-text-size-M) + 1.5rem);
+        margin-top: calc(var(--button-text-size-M) / 2 * -1);
+        font-size: var(--button-text-size-M);
+        cursor: pointer;
+        position: absolute;
+        top: 50%;
+        color: black;
     }
     #img-contact-to-gallery {
         justify-self: start;
-        width: var(--button-img-size-L);
-        height: var(--button-img-size-L);
+        width: var(--button-img-size-M);
+        height: var(--button-img-size-M);
     }
 .button-img-container {
     order: 1;
@@ -208,7 +213,7 @@ a:hover, .button-text:hover {
 }
 #statement-box {
     grid-column: 10/20;
-    grid-row: 4/8;
+    grid-row: 4/11;
     height: 100%;
     padding-right: 1rem;
 }
@@ -229,6 +234,8 @@ a:hover, .button-text:hover {
     color: white;
     order: 2;
     z-index: 1;
+    text-decoration: underline;
+    text-decoration-thickness: 0.05rem;
 }
 .textbox-title:hover {
     cursor: pointer;
@@ -303,7 +310,6 @@ a:hover, .button-text:hover {
 @keyframes expand-r {
     0% { transform: scaleX(1) scaleY(1); }
     100% { transform: scaleX(1.4) scaleY(1.3)}
-    /* 100% { transform: scaleX(1.8) scaleY(1.2) translateX(3px);} */
 }
 @keyframes expand-m {
     0% { transform: scaleX(1) scaleY(1); }

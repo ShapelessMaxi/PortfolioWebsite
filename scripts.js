@@ -25,14 +25,14 @@ $(document).ready(function() {
 
     // hide the projects by default
     var projects = $(".menu-3D, .menu-inter, .menu-coding, .menu-tattoo");
-    var uiElements = $("#artwork-viewer-bg, #artwork-title, .artwork-button-box, .artwork-viewer, .artwork-text, .artwork-footnote-box");
+    var uiElements = $("#artwork-viewer-vid-02, #artwork-viewer-bg, #artwork-title, .artwork-button-box, .artwork-viewer, .artwork-text, .artwork-footnote-box");
     projects.hide();
     uiElements.hide();
 
     // Object to store arrays of images for each project
     var projectImages = {};
     // Function to fetch images for a specific project
-    function fetchImages(projectNames) {
+    function fetchImages(projectNames, hasVideo) {
         $.ajax({
           //  url: 'http://localhost:5000/images/' + projectNames,
           url: "getImages.php",
@@ -43,6 +43,12 @@ $(document).ready(function() {
             dataType: 'json',
             success: function(response) {
                 projectImages[projectNames] = response;
+                if (hasVideo) {
+                    projectImages[projectNames].splice(1, 0, 'video_02');
+                    return
+                } else {
+                    return
+                } 
                 // Log projectImages here if needed
                 // console.log('List of images for ' + projectNames + ':', response);
             },
@@ -51,42 +57,74 @@ $(document).ready(function() {
             }
         });
     }
+
+        // change the code here to add videos to projects
+        // has video function
+        var PostApocalypticHottieVideoURL = 'https://www.youtube.com/embed/kZotRX9Zqgo?si=W-x68jLcYak3hMhs';
+        var AwakeningofTheFrogVideoURL = 'https://www.youtube.com/embed/zROBx7WUO-w?si=z9QLX9JEdaEhG0sH';
     // Function to create image arrays for each project
     function imageArrays() {
         var allProjects = $(".menu-project");
-
+        
         for (var i = 0; i < allProjects.length; i++) {
             var projectNames = $(allProjects[i]).text().replace(/[^\w]/g, '').replace(/\d/g, '');
-            fetchImages(projectNames);
-        }
+            
+            var hasVideo = false; 
+            var videoUrl;
+            // check which projects has videos (hardcoded for now....)
+            if (projectNames === "PostApocalypticHottie") {
+                hasVideo = true;
+                videoUrl = 'https://youtu.be/zROBx7WUO-w?si=1RMF4_3dejxu3FJQ';
+                } else if (projectNames === "AwakeningofTheFrog") {
+                hasVideo = true;
+                } else if (projectNames === "bodymod") {
+                    hasVideo = true;
+                // } else if (projectNames === "AwakeningofTheFrog") {
+                //     hasVideo = true;
+                } else {
+                    hasVideo = false;
+                };
+            // console.log(hasVideo);
+           
+            fetchImages(projectNames, hasVideo);
+        };
         // Log projectImages here if needed
-        // console.log(projectImages);
     }
     // Call the imageArrays function to start fetching images
     imageArrays();
 
     // Function to display the next image
-    var currentIndex = 0;
-    function displayNextImage(currentIndex, projectName, direction) {
-        // Select the image viewer where the image is displayed
-        var viewedImg = $('#artwork-viewer-img');
+    function displayNextImage(currentIndex, projectName, imagesArray) {
+
+        var youtubeFrame = $("#artwork-viewer-vid-02");
         var modalImg = $('#modal-artwork-viewer-img');
-        // Select the image array
-        var imagesArray = projectImages[projectName];
-        // console.log(projectImages);
+        var viewedImg = $('#artwork-viewer-img');
 
-        // Increment/decrease the index
-        if (direction){
-            var nextIndex = (currentIndex - 1 + imagesArray.length) % imagesArray.length;
+        var nextContent = imagesArray[currentIndex];
+        if (nextContent === 'video_02') {
+            // Display video
+            var videoURL;
+            if (projectName === "PostApocalypticHottie") {
+                videoURL = PostApocalypticHottieVideoURL;
+            } else if (projectName === "AwakeningofTheFrog") {
+                videoURL = AwakeningofTheFrogVideoURL;
+            }
+            youtubeFrame.attr('src', videoURL);
+            youtubeFrame.show();
+
+            // Hide image
+            if (viewedImg) {
+                viewedImg.hide();
+            }
+            viewedImg.attr('src', nextContent);
         } else {
-            var nextIndex = (currentIndex + 1) % imagesArray.length;
-        }
-
-        if (imagesArray.length > 0) {
-            var nextImage = imagesArray[nextIndex];
-            var imgFile = "project_data/" + projectName + "/" + nextImage;
+            // Hide video
+            youtubeFrame.hide();
+            // Display image
+            var imgFile = "project_data/" + projectName + "/" + nextContent;
             viewedImg.attr('src', imgFile);
-            modalImg.attr('src', imgFile);
+            viewedImg.show();
+            modalImg.attr('src', imgFile).show();
         }
     }
 
@@ -140,37 +178,66 @@ $(document).ready(function() {
         }
     });
 
-    // artwork viewer left and right button 
-    $('.artwork-button, .modal-artwork-button').click(function() {
-
-        // select the image viewer where the image is displayed
-        var viewedImg = $('#artwork-viewer-img');
-
-        // find the displayed image index
-        currentIndex = viewedImg.attr('src'); 
-        currentIndex = currentIndex.replace(/\D/g, "");
-        currentIndex = parseInt(currentIndex) - 1;
-
-        // find which project is currently being viewed
-        var activeProject = [];
-        $(".menu-project").each(function() {
-            if ($(this).hasClass('menu-active')) {
-                activeProject.push($(this).text());
+    function findProjectName(activeProject, projectName){
+        // find active project
+        var menuProjects = document.querySelectorAll('.menu-project');
+        menuProjects.forEach(function(project) {
+            if (project.classList.contains('menu-active')) {
+                activeProject.push(project.textContent);
             }
-        });
+        });               
         // find the correct project name
-        var projectName = activeProject[0];
+        projectName = activeProject[0];
         projectName = projectName.replace(/[^\w]/g, '').replace(/\d/g, '');
-        
-        // check which of the left or right button is clicked
-        // true-> right; false-> true
-        var direction = $(this).attr("id") === "left-viewer-button";
-        displayNextImage(currentIndex, projectName, direction);
 
-        // make the image 'hoverable'
-        $('#artwork-viewer-img').hover(function() {
-            $(this).css('cursor', 'pointer');
+        return projectName;
+    }
+    // define index variable
+    var currentIndex = 0;
+    //  new click event functon for left and right arrow
+    var arrows = document.querySelectorAll('.artwork-button');
+    arrows.forEach(function(arrow) {
+        arrow.addEventListener('click', function(event) {
+            
+            // $("#artwork-viewer-vid-02").hide();
+            // $("#artwork-viewer-img").show();
+            
+            var projectName = '';
+            var menuProjects = document.querySelectorAll('.menu-project');
+            menuProjects.forEach(function(project) {
+                if (project.classList.contains('menu-active')) {
+                    projectName = project.textContent.replace(/[^\w]|[\d\s]/g, '');
+                    console.log(projectName);
+                    $("#artwork-viewer-img").attr('src', projectName);
+                }
+            });
+
+            // // Get the current source of the viewed image
+            // var viewedImg = $('#artwork-viewer-img');
+            // var imgSrc = viewedImg.attr('src');
+                        
+            // Check which button is clicked
+            var direction = this.id === "left-viewer-button"; // true if left button, false otherwise
+            
+            var imagesArray = projectImages[projectName];
+            console.log(imagesArray)
+            if (imagesArray.length > 0) {
+                if (direction) {
+                    currentIndex = (currentIndex + imagesArray.length - 1) % imagesArray.length;
+                } else {
+                    currentIndex = (currentIndex + 1) % imagesArray.length;
+                }
+            }
+            // console.log(currentIndex);
+            
+            // Call the displayNextImage function with the appropriate direction
+            displayNextImage(currentIndex, projectName, imagesArray);
         });
+    });
+
+    // make the images 'hoverable'
+    $('#artwork-viewer-img').hover(function() {
+        $(this).css('cursor', 'pointer');
     });
     
     // open the modal, and insert the viewed image in it
@@ -240,7 +307,7 @@ $(document).ready(function() {
         hoverAnimation(".menu-project", ".button-img", true);
         hoverAnimation(".contact-btn-link", ".button-img", false);
         // contact page
-        hoverAnimation(".textbox-title", ".button-img", false);
+        hoverAnimation(".textbox-title", ".button-img", true);
         hoverAnimation(".text-contact-button", ".img-contact-button", false);
         hoverAnimation("#text-contact-to-gallery", ".button-img", false);
         // index page
@@ -251,6 +318,22 @@ $(document).ready(function() {
     function clickedAnimation(buttons) {
         buttons.forEach(function(button) {
             button.addEventListener('click', function(event) {
+
+                $("#artwork-viewer-vid-02").hide();
+                $("#artwork-viewer-img").show();
+                
+                var activeProject = [];
+                var projectName = '';
+                var menuProjects = document.querySelectorAll('.menu-project');
+                menuProjects.forEach(function(project) {
+                    if (project.classList.contains('menu-active')) {
+                        findProjectName(activeProject, projectName);
+                        currentIndex = 0;
+                        $("#artwork-viewer-img").attr('src', projectName[currentIndex]);
+                    }
+                });               
+                
+
                 // Find elements related to the clicked button
                 var imgContainer = button.nextElementSibling;
                 var rightChild = imgContainer ? imgContainer.children[0] : null;
@@ -396,6 +479,5 @@ $(document).ready(function() {
             }
         });
     });
-
 
 }); // end of ready() function

@@ -11,6 +11,9 @@
     --altbody-font: 'Crimson Text', serif;
     --display-font: 'Bricolage Grotesque', sans-serif;
     --fine-font: 'Sofia Sans', sans-serif;
+
+    --text-body-size: 1rem;
+    --text-footnote-size: 0.9rem;
     
     /* button colors */
     --off-color: white;
@@ -301,6 +304,14 @@ a:hover, .button-text:hover {
         top: 0;
         left: 0;
     }
+    #artwork-viewer-vid-02 {
+        width: 100%; 
+        height: 100%; 
+        object-fit: contain; 
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
     #artwork-viewer-img:hover {
         cursor: pointer;
     }
@@ -345,7 +356,7 @@ a:hover, .button-text:hover {
     margin-bottom: 1rem;
 }
 #artwork-description {
-    font-size: 0.9rem;
+    font-size: var( --text-body-size);
     overflow-y: scroll;
     height: 100%;
 }
@@ -354,7 +365,7 @@ a:hover, .button-text:hover {
     grid-row: 12/13;
 }
 #artwork-footnote {
-    font-size: 0.7rem;
+    font-size: var(--text-footnote-size);
 }
 
 
@@ -486,7 +497,6 @@ a:hover, .button-text:hover {
 @keyframes expand-r {
     0% { transform: scaleX(1) scaleY(1); }
     100% { transform: scaleX(1.4) scaleY(1.3)}
-    /* 100% { transform: scaleX(1.8) scaleY(1.2) translateX(3px);} */
 }
 @keyframes expand-m {
     0% { transform: scaleX(1) scaleY(1); }
@@ -533,12 +543,17 @@ a:hover, .button-text:hover {
     width: 100px;
     height: 100px;
     animation-name: expand-load;
-    animation-duration: 150ms;
+    animation-duration: 170ms;
     animation-iteration-count: infinite;
     animation-direction: alternate; 
 }
 
 @keyframes expand-load {
     0% { transform: scale(1);}
-    100% { transform: scale(1.2);}
+    100% { transform: scale(1.3);}
+}
+
+
+/* video viewer */
+.video-viewer {
 }
