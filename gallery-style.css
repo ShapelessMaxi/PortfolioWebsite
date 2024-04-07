@@ -29,8 +29,8 @@
     --button-img-size-S: 1.3em;
 
     /* animation properties */
-    --stretch-amount: 350;
-    --stretch-translate: var(--stretch-amount)px;
+    --stretch-amount: 0;
+    --translate-amount: 0;
   }
   
 * {
@@ -179,6 +179,7 @@ a:hover, .button-text:hover {
             justify-self: start;
             width: var(--button-img-size-M);
             height: var(--button-img-size-M);
+            left: 0;
         }
         .button-component > .button-text {
             z-index: 1;
@@ -461,24 +462,24 @@ a:hover, .button-text:hover {
 
 
 .clicked-animation {
-    transform-origin: 0 center;
+    transform-origin: left center;
     animation-name: stretch;
     animation-duration: 2s;
     animation-fill-mode: forwards;
 }
 @keyframes stretch {
-    from {scale: 0 1;}
-    to {scale: var(--stretch-amount) 1;}
+    from {transform: scaleX(0);}
+    to {transform: scaleX(var(--stretch-amount));}
 }
 .translate-animation {
-    transform-origin: 0 center;
+    transform-origin: left center;
     animation-name: translate;
     animation-duration: 2s;
     animation-fill-mode: forwards;
 }
 @keyframes translate {
     from {transform: translateX(0);}
-    to {transform: translateX(var(--stretch-amount));}
+    to {transform: translateX(var(--translate-amount));}
 }
 .hover-animation {
     animation-name: expand;
@@ -515,7 +516,8 @@ a:hover, .button-text:hover {
     animation-duration: 500ms;
     animation-iteration-count: infinite;
     animation-direction: alternate;
-}.hover-animation-r {
+}
+.hover-animation-r {
     transform-origin: 0 center;
     animation-name: expand-r;
     animation-duration: 500ms;
@@ -557,3 +559,4 @@ a:hover, .button-text:hover {
 /* video viewer */
 .video-viewer {
 }
+

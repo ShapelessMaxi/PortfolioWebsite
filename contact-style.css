@@ -328,7 +328,8 @@ a:hover, .button-text:hover {
     animation-duration: 500ms;
     animation-iteration-count: infinite;
     animation-direction: alternate;
-}.hover-animation-r {
+}
+.hover-animation-r {
     transform-origin: 0 center;
     animation-name: expand-r;
     animation-duration: 500ms;

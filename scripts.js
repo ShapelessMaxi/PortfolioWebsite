@@ -22,7 +22,6 @@ $(document).ready(function() {
         hideLoadingAnimation();
     });
 
-
     // hide the projects by default
     var projects = $(".menu-3D, .menu-inter, .menu-coding, .menu-tattoo");
     var uiElements = $("#artwork-viewer-vid-02, #artwork-viewer-bg, #artwork-title, .artwork-button-box, .artwork-viewer, .artwork-text, .artwork-footnote-box");
@@ -371,18 +370,19 @@ $(document).ready(function() {
                 button.classList.add('menu-active');
                 
                 // Add the animation classes to the clicked button
-                var stretchAmount = Math.floor(Math.random() * (550 - 250) + 200);
+                var stretchAmount = Math.floor(Math.random() * (550 - 250) + 250);
                 var translateAmount = stretchAmount - 1;
+
                 // stretch middle portion
                 middleChild.style.setProperty('--stretch-amount', stretchAmount);
                 middleChild.classList.add('clicked-animation');
-                // translate left portion
-                leftChild.style.setProperty('--stretch-amount', translateAmount + 'px');
-                leftChild.classList.add('translate-animation');
 
-            });
+                // translate left portion
+                // translate left portion horizontally
+                leftChild.style.setProperty('--translate-amount', translateAmount + 'px');
+                leftChild.classList.add('translate-animation');
         });
-               
+        });     
     }
     // Select all category buttons and project buttons
     var categoryButtons = document.querySelectorAll('.menu-category');
