@@ -179,7 +179,7 @@ a:hover, .button-text:hover {
             justify-self: start;
             width: var(--button-img-size-M);
             height: var(--button-img-size-M);
-            left: 0;
+            /* left: 0; */
         }
         .button-component > .button-text {
             z-index: 1;
@@ -205,7 +205,6 @@ a:hover, .button-text:hover {
     }
 .button-img-container {
     display: grid;
-    width: fit-content;
     grid-template-columns: repeat(3, auto);
 }
     .button-img-container-projects {
@@ -215,7 +214,7 @@ a:hover, .button-text:hover {
     }   
 .button-img-container > img {
     display: block;
-    width: auto;
+    /* width: auto; */
     height: var(--button-img-size-M);
 }
     .button-img-container-projects > img {
@@ -295,7 +294,7 @@ a:hover, .button-text:hover {
         margin-top: 1rem;
         margin-bottom: 1rem;
         position: relative; 
-        background-color: black;
+        background-color: grey;
     }
     #artwork-viewer-img {
         width: 100%; 
@@ -314,6 +313,18 @@ a:hover, .button-text:hover {
         left: 0;
     }
     #artwork-viewer-img:hover {
+        cursor: pointer;
+    }
+    #modal-artwork-viewer-vid-02 {
+        width: 100%; 
+        height: 100%; 
+        object-fit: contain; 
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: none;
+    }
+    #modal-artwork-viewer-img:hover {
         cursor: pointer;
     }
     
@@ -373,7 +384,7 @@ a:hover, .button-text:hover {
 /* The Modal (expanded viewer) */
 .modal {
     display: none; 
-    z-index: 2; /* Sit on top */
+    z-index: 5; /* Sit on top */
     left: 0;
     grid-column: 1/25;
     grid-row: 1/13;
@@ -403,6 +414,7 @@ a:hover, .button-text:hover {
         position: absolute;
         top: 0;
         left: 0;
+        z-index: 6;
     }
 
 .modal-left-viewer-button {
@@ -434,19 +446,6 @@ a:hover, .button-text:hover {
         height: var(--button-img-size-L);
     }
 
-.close {
-    position: absolute;
-    top: 15px;
-    right: 35px;
-    color: #f1f1f1;
-    font-size: 3rem;
-    font-weight: bold;
-}
-.close:hover, .close:focus {
-    color: #bbb;
-    text-decoration: none;
-    cursor: pointer;
-}
 
 /* scrollbar */
 ::-webkit-scrollbar {
@@ -461,7 +460,7 @@ a:hover, .button-text:hover {
 }
 
 
-.clicked-animation {
+/* .clicked-animation {
     transform-origin: left center;
     animation-name: stretch;
     animation-duration: 2s;
@@ -470,16 +469,18 @@ a:hover, .button-text:hover {
 @keyframes stretch {
     from {transform: scaleX(0);}
     to {transform: scaleX(var(--stretch-amount));}
-}
-.translate-animation {
+    /* from {transform: scaleX(0);}
+    to {transform: scaleX(var(--stretch-amount));} 
+}*/
+.clicked-animation {
     transform-origin: left center;
-    animation-name: translate;
+    animation-name: stretch;
     animation-duration: 2s;
     animation-fill-mode: forwards;
 }
-@keyframes translate {
-    from {transform: translateX(0);}
-    to {transform: translateX(var(--translate-amount));}
+@keyframes stretch {
+    from {width: 2px;}
+    to {width: var(--stretch-amount);}
 }
 .hover-animation {
     animation-name: expand;
@@ -560,3 +561,22 @@ a:hover, .button-text:hover {
 .video-viewer {
 }
 
+.button-img > img {
+    justify-self: start;
+    width: 2px;
+    left: 0;
+    object-fit: fill;
+}
+
+.center-project {
+    height: var(--button-img-size-S);
+}
+.center-project > img {
+    height: var(--button-img-size-S);
+}
+.center-category {
+    height: var(--button-img-size-M);
+}
+.center-category > img {
+    height: var(--button-img-size-M);
+}

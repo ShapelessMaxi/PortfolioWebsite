@@ -24,7 +24,7 @@ $(document).ready(function() {
 
     // hide the projects by default
     var projects = $(".menu-3D, .menu-inter, .menu-coding, .menu-tattoo");
-    var uiElements = $("#artwork-viewer-vid-02, #artwork-viewer-bg, #artwork-title, .artwork-button-box, .artwork-viewer, .artwork-text, .artwork-footnote-box");
+    var uiElements = $("#artwork-viewer-bg, #artwork-title, .artwork-button-box, .artwork-viewer, .artwork-text, .artwork-footnote-box");
     projects.hide();
     uiElements.hide();
 
@@ -48,8 +48,6 @@ $(document).ready(function() {
                 } else {
                     return
                 } 
-                // Log projectImages here if needed
-                // console.log('List of images for ' + projectNames + ':', response);
             },
             error: function(xhr, status, error) {
                 console.error('Error fetching images for ' + projectNames + ':', error);
@@ -61,6 +59,7 @@ $(document).ready(function() {
         // has video function
         var PostApocalypticHottieVideoURL = 'https://www.youtube.com/embed/kZotRX9Zqgo?si=W-x68jLcYak3hMhs';
         var AwakeningofTheFrogVideoURL = 'https://www.youtube.com/embed/zROBx7WUO-w?si=z9QLX9JEdaEhG0sH';
+        // var ProjectVideoURL = 'https://www.youtube.com/embed/zROBx7WUO-w?si=z9QLX9JEdaEhG0sH';
     // Function to create image arrays for each project
     function imageArrays() {
         var allProjects = $(".menu-project");
@@ -83,8 +82,6 @@ $(document).ready(function() {
                 } else {
                     hasVideo = false;
                 };
-            // console.log(hasVideo);
-           
             fetchImages(projectNames, hasVideo);
         };
         // Log projectImages here if needed
@@ -92,38 +89,52 @@ $(document).ready(function() {
     // Call the imageArrays function to start fetching images
     imageArrays();
 
-    // Function to display the next image
+    var modalViewer = document.getElementById('modal-artwork-viewer-img');
+    var modal = document.getElementById('myModal');
+    var modalYoutube = document.getElementById('modal-artwork-viewer-vid-02');
+    var viewedImg = document.getElementById('artwork-viewer-img');
+    var youtubeFrame = document.getElementById('artwork-viewer-vid-02');
+    // Function to display the next image or video
     function displayNextImage(currentIndex, projectName, imagesArray) {
-
-        var youtubeFrame = $("#artwork-viewer-vid-02");
-        var modalImg = $('#modal-artwork-viewer-img');
-        var viewedImg = $('#artwork-viewer-img');
+        var modalImg = document.getElementById('modal-artwork-viewer-img');
+        var viewedImg = document.getElementById('artwork-viewer-img');
 
         var nextContent = imagesArray[currentIndex];
         if (nextContent === 'video_02') {
-            // Display video
+            // Hide image
+            viewedImg.style.display = 'none';
+            modalImg.style.display = 'none';
+
+            // choose video url
             var videoURL;
             if (projectName === "PostApocalypticHottie") {
                 videoURL = PostApocalypticHottieVideoURL;
             } else if (projectName === "AwakeningofTheFrog") {
                 videoURL = AwakeningofTheFrogVideoURL;
             }
-            youtubeFrame.attr('src', videoURL);
-            youtubeFrame.show();
 
-            // Hide image
-            if (viewedImg) {
-                viewedImg.hide();
+            // Check if modalViewer is visible
+            if (modal.style.display === 'grid') {
+                console.log('yoo')
+                // Set the YouTube frame source and display it
+                modalYoutube.setAttribute('src', videoURL);
+                modalYoutube.style.display = 'block';
+            } else {
+                // Set the YouTube frame source and display it
+                youtubeFrame.setAttribute('src', videoURL);
+                youtubeFrame.style.display = 'block';
             }
-            viewedImg.attr('src', nextContent);
         } else {
             // Hide video
-            youtubeFrame.hide();
+            modalYoutube.style.display = 'none';
+            youtubeFrame.style.display = 'none';
+
             // Display image
             var imgFile = "project_data/" + projectName + "/" + nextContent;
-            viewedImg.attr('src', imgFile);
-            viewedImg.show();
-            modalImg.attr('src', imgFile).show();
+            viewedImg.setAttribute('src', imgFile);
+            viewedImg.style.display = 'block';
+            modalImg.setAttribute('src', imgFile);
+            modalImg.style.display = 'block';
         }
     }
 
@@ -137,7 +148,6 @@ $(document).ready(function() {
             dataType: 'html',
             cache: false,
             success: function(data) {
-                // console.log(data)
                 var title = $(data).filter("h1").html();
                 var subtitle = $(data).filter("h2").html();
                 var description = $(data).filter("p").html();
@@ -194,32 +204,23 @@ $(document).ready(function() {
     // define index variable
     var currentIndex = 0;
     //  new click event functon for left and right arrow
-    var arrows = document.querySelectorAll('.artwork-button');
+    var arrows = document.querySelectorAll('.artwork-button, .modal-artwork-button');
     arrows.forEach(function(arrow) {
         arrow.addEventListener('click', function(event) {
-            
-            // $("#artwork-viewer-vid-02").hide();
-            // $("#artwork-viewer-img").show();
             
             var projectName = '';
             var menuProjects = document.querySelectorAll('.menu-project');
             menuProjects.forEach(function(project) {
                 if (project.classList.contains('menu-active')) {
                     projectName = project.textContent.replace(/[^\w]|[\d\s]/g, '');
-                    console.log(projectName);
                     $("#artwork-viewer-img").attr('src', projectName);
                 }
             });
 
-            // // Get the current source of the viewed image
-            // var viewedImg = $('#artwork-viewer-img');
-            // var imgSrc = viewedImg.attr('src');
-                        
             // Check which button is clicked
             var direction = this.id === "left-viewer-button"; // true if left button, false otherwise
             
             var imagesArray = projectImages[projectName];
-            console.log(imagesArray)
             if (imagesArray.length > 0) {
                 if (direction) {
                     currentIndex = (currentIndex + imagesArray.length - 1) % imagesArray.length;
@@ -227,7 +228,6 @@ $(document).ready(function() {
                     currentIndex = (currentIndex + 1) % imagesArray.length;
                 }
             }
-            // console.log(currentIndex);
             
             // Call the displayNextImage function with the appropriate direction
             displayNextImage(currentIndex, projectName, imagesArray);
@@ -235,24 +235,49 @@ $(document).ready(function() {
     });
 
     // make the images 'hoverable'
-    $('#artwork-viewer-img').hover(function() {
+    $('#artwork-viewer-img, #artwork-viewer-vid-02, #modal-artwork-viewer-img, #modal-artwork-viewer-vid-02').hover(function() {
         $(this).css('cursor', 'pointer');
     });
     
-    // open the modal, and insert the viewed image in it
-    var modal = document.getElementById("myModal");
-    var viewedImg = $('#artwork-viewer-img');
-    $('#artwork-viewer-img').click(function(){
-        $(this).hide();
-        modal.style.display = "grid";
-        var viewedImgSrc = viewedImg.attr('src');
-        $('#modal-artwork-viewer-img').attr('src', viewedImgSrc);
+    // Open the modal and insert the viewed image in it
+    viewedImg.addEventListener('click', function(event) {
+        viewedImg.style.display = 'none';
+        if (modal) {
+            modal.style.display = 'grid';
+            var viewedImgSrc = viewedImg.getAttribute('src');
+            document.getElementById('modal-artwork-viewer-img').setAttribute('src', viewedImgSrc);
+        }
     });
 
-    // close the modal by clicking on the image
-    $('.close').click(function(){
-        modal.style.display = "none";
-        $('#artwork-viewer-img').show();
+    // Close the modal
+    var modal = document.getElementById('myModal');
+    if (modalViewer) {
+        var artworkViewerImg = document.getElementById('artwork-viewer-img');
+        modalViewer.addEventListener('click', function() {
+            if (modal && artworkViewerImg) {
+                modal.style.display = 'none';
+                artworkViewerImg.style.display = 'block';
+            }
+        });
+    } else {
+        console.log('Modal viewer element not found.');
+    }
+    // Event listener to close modal on escape key press
+    document.addEventListener('keydown', function(event) {
+        if (event.key === 'Escape' && modal.style.display === 'grid') {
+            modal.style.display = 'none';
+            var artworkViewerImg = document.getElementById('artwork-viewer-img');
+            
+            if (modalYoutube.style.display === 'block') {
+                var currentVid = modalYoutube.getAttribute('src');
+                youtubeFrame.setAttribute('src', currentVid);
+                youtubeFrame.style.display = 'block';
+                artworkViewerImg.style.display = 'none';
+            } else if (artworkViewerImg) {
+                youtubeFrame.style.display = 'none';
+                artworkViewerImg.style.display = 'block';
+            }
+        }
     });
 
     
@@ -332,12 +357,10 @@ $(document).ready(function() {
                     }
                 });               
                 
-
                 // Find elements related to the clicked button
                 var imgContainer = button.nextElementSibling;
-                var rightChild = imgContainer ? imgContainer.children[0] : null;
                 var middleChild = imgContainer ? imgContainer.children[1] : null;
-                var leftChild = imgContainer ? imgContainer.children[2] : null;
+                var middleChildImg = middleChild.querySelector('img');
                 
                 buttons.forEach(function(btn) {
                     var btnImgContainer = btn.nextElementSibling;
@@ -345,6 +368,7 @@ $(document).ready(function() {
                         var btnLeftChild = btnImgContainer.children[0];
                         var btnMiddleChild = btnImgContainer.children[1];
                         var btnRightChild = btnImgContainer.children[2];
+                        var middleChildImg = btnMiddleChild.querySelector('img');
                 
                         if (btnLeftChild) {
                             btnLeftChild.classList.remove('hover-animation-l');
@@ -354,11 +378,11 @@ $(document).ready(function() {
                             btnMiddleChild.classList.remove('hover-animation-m');
                             btnMiddleChild.classList.remove('hover-animation');
                             btnMiddleChild.classList.remove('clicked-animation');
+                            middleChildImg.classList.remove('clicked-animation');
                         }
                         if (btnRightChild) {
                             btnRightChild.classList.remove('hover-animation-r');
                             btnRightChild.classList.remove('hover-animation');
-                            btnRightChild.classList.remove('translate-animation');
                         }
                     }
                 
@@ -370,18 +394,17 @@ $(document).ready(function() {
                 button.classList.add('menu-active');
                 
                 // Add the animation classes to the clicked button
-                var stretchAmount = Math.floor(Math.random() * (550 - 250) + 250);
-                var translateAmount = stretchAmount - 1;
+                var maxStretch = 500;
+                var minStretch = 300;
+                var stretchAmount = Math.floor(Math.random() * (maxStretch - minStretch) + minStretch);
 
                 // stretch middle portion
-                middleChild.style.setProperty('--stretch-amount', stretchAmount);
+                middleChild.style.setProperty('--stretch-amount', stretchAmount + 'px');
                 middleChild.classList.add('clicked-animation');
+                middleChildImg.style.setProperty('--stretch-amount', stretchAmount + 'px');
+                middleChildImg.classList.add('clicked-animation');
 
-                // translate left portion
-                // translate left portion horizontally
-                leftChild.style.setProperty('--translate-amount', translateAmount + 'px');
-                leftChild.classList.add('translate-animation');
-        });
+            });
         });     
     }
     // Select all category buttons and project buttons
@@ -393,13 +416,6 @@ $(document).ready(function() {
     clickedAnimation(projectButtons);
     clickedAnimation(contactButtons);
     
-    // Check if any contact button has the class 'menu-active'
-    contactButtons.forEach(function(button) {
-        if (button.classList.contains("menu-active")) {
-            console.log("At least one contact button has the class 'menu-active'");
-        }
-    });
-
     // collapsible gallery menu
     document.querySelectorAll('.menu-category').forEach(function(categoryButton) {
         categoryButton.addEventListener('click', function() {
