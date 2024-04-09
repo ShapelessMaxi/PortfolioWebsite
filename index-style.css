@@ -18,6 +18,7 @@
     /* button colors */
     --off-color: #FFFFFF;
     --hover-color: #B7B7B7;
+    --hover01-color: #468dff;
     --on-color: #000000;
 
     /* button sizes */
@@ -41,15 +42,16 @@ html, body{
 
 /* common to all pages */
 a, .button-text {
-    color: black;
+    color: white;
     text-decoration-line: underline;
     text-decoration-thickness: 5%;
 }
 a:hover, .button-text:hover {
-    color: var(--hover-color);
+    color: var(--hover01-color);
   }
 p {
     color: black;
+    font-weight: 500;
 }
 
 .wrapper {
@@ -199,7 +201,8 @@ p {
 
 /* animation */
 .button-text {
-    /* selector */
+    color: white;
+    font-weight: 700;
 }
 .hover-animation {
     animation-name: expand;

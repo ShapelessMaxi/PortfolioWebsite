@@ -240,14 +240,19 @@ $(document).ready(function() {
     });
     
     // Open the modal and insert the viewed image in it
-    viewedImg.addEventListener('click', function(event) {
-        viewedImg.style.display = 'none';
-        if (modal) {
-            modal.style.display = 'grid';
-            var viewedImgSrc = viewedImg.getAttribute('src');
-            document.getElementById('modal-artwork-viewer-img').setAttribute('src', viewedImgSrc);
-        }
-    });
+    if (viewedImg) {
+        viewedImg.addEventListener('click', function(event) {
+            viewedImg.style.display = 'none';
+            var modal = document.getElementById('myModal');
+            if (modal) {
+                modal.style.display = 'grid';
+                var viewedImgSrc = viewedImg.getAttribute('src');
+                document.getElementById('modal-artwork-viewer-img').setAttribute('src', viewedImgSrc);
+            }
+        });
+    } else {
+        console.log('artwork-viewer-img element not found.');
+    }
 
     // Close the modal
     var modal = document.getElementById('myModal');
@@ -293,7 +298,11 @@ $(document).ready(function() {
             element.addEventListener('mouseenter', function() {
                 // Trigger animation when mouse enters the element
                 var targetElements = element.parentNode.querySelectorAll(targetSelector);
-                if (sliced && targetElements && !element.classList.contains('menu-active')) {
+                if (selector === targetSelector) {
+                    targetElements.forEach(function(element) {
+                        element.classList.add('hover-animation-arrow');
+                    });
+                } else if (sliced && targetElements && !element.classList.contains('menu-active')) {
                     targetElements.forEach(function(targetElement, targetIndex) {
                         if (targetIndex < animations.length) {
                             targetElement.classList.add(animations[targetIndex]);
@@ -318,6 +327,7 @@ $(document).ready(function() {
                 } else if (targetElements) {
                     targetElements.forEach(function(element) {
                         element.classList.remove('hover-animation');
+                        element.classList.remove('hover-animation-arrow');
                     });
                 }
             });
@@ -329,12 +339,13 @@ $(document).ready(function() {
         hoverAnimation(".button-text", ".button-img", false);
         hoverAnimation(".menu-category", ".button-img", true);
         hoverAnimation(".menu-project", ".button-img", true);
-        hoverAnimation(".contact-btn-link", ".button-img", false);
+        hoverAnimation(".artwork-button", ".artwork-button", false);
         // contact page
         hoverAnimation(".textbox-title", ".button-img", true);
         hoverAnimation(".text-contact-button", ".img-contact-button", false);
         hoverAnimation("#text-contact-to-gallery", ".button-img", false);
         // index page
+        hoverAnimation(".contact-btn-link", ".button-img", false);
     }
     activateHover();
 
