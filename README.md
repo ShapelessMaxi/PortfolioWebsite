@@ -1,3 +1,3 @@
 # WebPortfolio
 
-this is Maxime Perreault's portfolio!
+this is Maxime Perreault's updated portfolio!
