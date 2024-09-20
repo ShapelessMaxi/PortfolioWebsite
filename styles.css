@@ -1,10 +1,18 @@
 /* root master oimniscient rules */
 :root {
+    /* page divisions */
+    --page-rows: 24;
+    --page-cols: 32;
+
+    /* element fractionnal sizes */
+    --header-h: 2;
+    --navbar-w: 8;
+    --logo-home: 2;
+
     /* colors */
-    --main-color: #B7B7B7;
-    --nav-color: #b8cae6;
-    --footer-color: #F66F8E;
-    --shadow-color: #a5a5a5;
+    --bg-color: lightgrey;
+    --header-color: rgb(87, 87, 87);
+    --navbar-color: rgb(129, 129, 129);
         
     /* fonts */
     --body-font: 'Spline Sans', sans-serif;
@@ -12,33 +20,44 @@
     --display-font: 'Bricolage Grotesque', sans-serif;
     --fine-font: 'Sofia Sans', sans-serif;
 
-    --text-body-size: 1rem;
-    --text-footnote-size: 0.9rem;
-    
-    /* button colors */
-    --off-color: white;
-    --hover-color: #B7B7B7;
-    --on-color: #000000;
-
-    /* button sizes */
-    --button-text-size-L: 1.6rem;
-    --button-img-size-L: 2.6em;
-    --button-text-size-M: 1.2rem;
-    --button-img-size-M: 1.6em;
-    --button-text-size-S: 1rem;
-    --button-img-size-S: 1.3em;
-
-    /* animation properties */
-    --stretch-amount: 0;
-    --translate-amount: 0;
   }
-  
+
+/* page */
 * {
-    margin: 0;
+  margin: 0;
 }
-html, body{
-    width: 100vw;
-    height: 100vh;
-    margin: 0;
-    padding: 0;
-  }
+html, body {
+  width: 100vw;
+  height: 100vh;
+}
+
+/* containers */
+#home-container {
+  display: flex;
+  width: 100vw;
+  height: 100vh;
+}
+
+/* areas */
+header {
+  width: calc((var(--page-cols) - var(--navbar-w)) / var(--page-cols) * 100%);
+  height: calc((var(--header-h) / var(--page-rows)) * 100%);
+  background-color: var(--header-color);
+}
+#navbar {
+  display: flex;
+  width: calc((var(--navbar-w) / var(--page-cols)) * 100%);
+  height: 100%;
+  background-color: var(--navbar-color);
+  justify-content: center;
+}
+#navbar > #fake-header {
+  width: 100%;
+  height: calc((var(--header-h) / var(--page-rows)) * 100%);
+  background-color: rgb(92, 76, 76);
+}
+#navbar > #logo {
+  padding-top: calc((1 / var(--page-rows)) * 100%);
+  width: auto;
+  height: calc((var(--logo-home) / var(--page-rows)) * 100%);
+}

@@ -1,0 +1,64 @@
+{
+    "Projects": [
+        {
+        "Title": "Awakening-of-the-Frog",
+        "Year": "2022",
+        "Category": "3D animation",
+        "Gallery": [
+            {
+            "1": [
+                {
+                "dir": null,
+                "type": null,
+                }
+            ],
+            "2": [
+                {
+                "dir": null,
+                "type": null,
+                }
+            ],
+            "3": [
+                {
+                "dir": null,
+                "type": null,
+                }
+            ],
+            "4": [
+                {
+                "dir": null,
+                "type": null,
+                }
+            ],
+            "5": [
+                {
+                "dir": null,
+                "type": null,
+                }
+            ]
+            }
+        ],
+        "Keywords": [
+            {
+            "1": "Low Poly Modelling",
+            "2": "Particle Systems",
+            "3": "2D VFX",
+            "4": "Video Game Concept",
+            "5": "Visual Storytelling",
+            "6": null,
+            },
+        ],
+        "Description": "This is a low-poly diorama in tell the story of an adored demon toad. The animations are minimal, but still add to the rich story developed through the different animals and plants. The background was generated with Substance Designer, and the rest of the scene was modelled, textured, animated, and lit in Blender 3D.",
+        "Tools": [
+            {
+            "1": "Blender3D",
+            "2": "Substance Designer",
+            "3": "Adobe Premiere",
+            "4": null,
+            "5": null,
+            }
+        ],
+        "Documentation": null,
+    }
+    ]
+}
