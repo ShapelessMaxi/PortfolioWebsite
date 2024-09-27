@@ -85,7 +85,7 @@ html, body {
   overflow-y: scroll;
   overflow-x: hidden;
 }
-#project-list > .project {
+#project-list > .project-button {
   display: flex;
   flex-wrap: wrap-reverse;
   justify-content: space-between;
@@ -95,6 +95,14 @@ html, body {
   border-style: solid;
   border-color: black;
 }
+#project-list > .project-button:hover {
+    background: #e6e6e6;
+    cursor: pointer;
+}
+#project-list > .project-button.active {
+    background: #ff0000;
+  }
+
 #project-list > .project > .title {
   font-size: 1.2rem;
 }
@@ -154,6 +162,12 @@ html, body {
   background-color: antiquewhite;
   grid-column: 3 / calc(var(--page-cols) - 9);
   grid-row: 5 / span 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+#content > #gallery > img {
+  height: -webkit-fill-available;
 }
 #content > #keywords-box {
   overflow-y: hidden;
@@ -165,6 +179,11 @@ html, body {
   border: black 1px solid;
   grid-column: 5 / calc(var(--page-cols) - 11);
   grid-row: 16;
+}
+#content > #keywords-box > .keyword-title {
+  padding-left: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 600;
 }
 #content > #keywords-box > .keyword {
   padding-left: 0.5rem;

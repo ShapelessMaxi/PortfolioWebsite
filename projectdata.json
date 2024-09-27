@@ -1,10 +1,52 @@
 {
     "projects": [
         {
-            "Title": "Awakening-of-the-Frog",
-            "Year": "2022",
-            "Category": "3D animation",
-            "Gallery": [
+            "id": "awakeningofthefrog",
+            "title": "Awakening of the Frog",
+            "year": "2022",
+            "category": "3D animation",
+            "gallery": [
+                {
+                    "dir": "project_data\\AwakeningofTheFrog\\AwakeningofTheFrog_01.png",
+                    "type": "png"
+                },
+                {
+                    "dir": "project_data\\AwakeningofTheFrog\\AwakeningofTheFrog_03.png",
+                    "type": "png"
+                },
+                {
+                    "dir": "project_data\\AwakeningofTheFrog\\AwakeningofTheFrog_04.png",
+                    "type": "png"
+                },
+                {
+                    "dir": null,
+                    "type": null
+                },
+                {
+                    "dir": null,
+                    "type": null
+                }
+            ],
+            "keywords": [
+                "Low Poly Modelling;",
+                "Particle Systems;",
+                "2D VFX;",
+                "Video Game Concept;",
+                "Visual Storytelling"
+            ],
+            "description": "This is a low-poly diorama in tell the story of an adored demon toad. The animations are minimal, but still add to the rich story developed through the different animals and plants. The background was generated with Substance Designer, and the rest of the scene was modelled, textured, animated, and lit in Blender 3D.",
+            "tools": [
+                "Blender3D",
+                "Substance Designer",
+                "Adobe Premiere"
+            ],
+            "documentation": null
+        },
+        {
+            "title": "TEMPLATE",
+            "year": null,
+            "category": null,
+            "gallery": [
                 {
                     "1": [
                         {
@@ -38,23 +80,17 @@
                     ]
                 }
             ],
-            "Keywords": [
-                "Low Poly Modelling",
-                "Particle Systems",
-                "2D VFX",
-                "Video Game Concept",
-                "Visual Storytelling",
-                null
-            ],
-            "Description": "This is a low-poly diorama in tell the story of an adored demon toad. The animations are minimal, but still add to the rich story developed through the different animals and plants. The background was generated with Substance Designer, and the rest of the scene was modelled, textured, animated, and lit in Blender 3D.",
-            "Tools": [
-                "Blender3D",
-                "Substance Designer",
-                "Adobe Premiere",
+            "keywords": [
                 null,
                 null
             ],
-            "Documentation": null
+            "description": null,
+            "tools": [
+                null,
+                null
+            ],
+            "documentation": null
         }
     ]
+    
 }
