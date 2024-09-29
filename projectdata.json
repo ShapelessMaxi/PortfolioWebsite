@@ -1,7 +1,49 @@
 {
     "projects": [
         {
-            "id": "awakeningofthefrog",
+            "title": "To Dissect / To Stitch",
+            "year": 2023,
+            "category": "Interactive",
+            "gallery": [
+                {
+                    "dir": "project_data\\ToDissectToStitch\\ToDissectToStitch_01.png",
+                    "type": "png"
+                },
+                {
+                    "dir": "project_data\\ToDissectToStitch\\ToDissectToStitch_02.png",
+                    "type": "png"
+                },
+                                    {
+                    "dir": "project_data\\ToDissectToStitch\\ToDissectToStitch_03.png",
+                    "type": "png"
+                },
+                {
+                    "dir": "project_data\\ToDissectToStitch\\ToDissectToStitch_04.png",
+                    "type": "png"
+                },
+                {
+                    "dir": "project_data\\ToDissectToStitch\\ToDissectToStitch_05.png",
+                    "type": "png"
+                }
+            ],
+            "keywords": [
+                "Interactivity;",
+                "3D Scanning;",
+                "Body Politics;",
+                "Medical Gaze;",
+                "Creative writing"
+            ],
+            "description": "This interactive installation is a kind of puzzle made of my own 3D scanned body, inspired by academic literature in queer theory. The final piece acts as a manifesto regarding body-related and perception-based societal norms. In the end, I see it as a kind of auto-ethnographic process where I was able to analyze the external perception, as well as my own, of my body, both in a deconstructed and reconstructed state. With MediaPipe, a machine learning tool, the viewer in front of a visual composition of myself with heavy medical and 'objective' undertones can replace the pieces back in place using hand gestures. The experience is complete when the viewer sees the whole manifesto written in the place of a previously dry descriptions of each body parts.",
+            "tools": [
+                "TouchDesigner;",
+                "MediaPipe;",
+                "Kiri Engine;",
+                "Blender3D"                
+            ],
+            "documentation": null
+        },
+        
+        {
             "title": "Awakening of the Frog",
             "year": "2022",
             "category": "3D animation",
@@ -36,12 +78,14 @@
             ],
             "description": "This is a low-poly diorama in tell the story of an adored demon toad. The animations are minimal, but still add to the rich story developed through the different animals and plants. The background was generated with Substance Designer, and the rest of the scene was modelled, textured, animated, and lit in Blender 3D.",
             "tools": [
-                "Blender3D",
-                "Substance Designer",
+                "Blender3D;",
+                "Substance Designer;",
                 "Adobe Premiere"
             ],
             "documentation": null
         },
+   
+
         {
             "title": "TEMPLATE",
             "year": null,

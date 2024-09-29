@@ -39,36 +39,70 @@ window.onload = (event) => {
             projectButtons.push(currentButton);
           }
 
+          // display the latest project
+          // title and year
+          document.getElementById("title").innerText = projects[0].title;
+          document.getElementById("year").innerText = projects[0].year;
+          // display the first image
+          document.getElementById("gallery-img").src = projects[0].gallery[0].dir;
+          // keywords
+          for (let k = 0; k < projects[0].keywords.length; k++) {
+            let currentKeyword = document.createElement("span");
+            currentKeyword.classList.add("keyword");
+            currentKeyword.innerText = projects[0].keywords[k];
+            document.getElementById("keywords-box").appendChild(currentKeyword);
+          }
+          // tools
+          for (let t = 0; t < projects[0].tools.length; t++) {
+            let currentTool = document.createElement("span");
+            currentTool.classList.add("tool");
+            currentTool.innerText = projects[0].tools[t];
+            document.getElementById("tools-box").appendChild(currentTool);
+          }
+          // description
+          document.getElementById("description").innerText = projects[0].description;
+
           // project buttons interaction
           document.querySelectorAll('.project-button').forEach(button => {
             button.addEventListener('click', function() {
-                // Remove and add 'active' class from all buttons
-                document.querySelectorAll('.project-button').forEach(btn => btn.classList.remove('active'));
-                this.classList.add('active');
+              // Remove Keywords and tools
+              document.querySelectorAll('.keyword').forEach(keyword => keyword.remove());
+              document.querySelectorAll('.tool').forEach(tool => tool.remove());
 
-                // check which project is associated with the button
-                let currentTitle = this.childNodes[0].innerText;
-                for (let i = 0; i < projects.length; i++) {
-                  if (currentTitle === projects[i].title) {
-                    // change the content of the page
-                    // title and year
-                    document.getElementById("title").innerText = projects[i].title;
-                    document.getElementById("year").innerText = projects[i].year;
-                    // display the first image
-                    document.getElementById("gallery-img").src = projects[i].gallery[0].dir;
-                    // keywords
-                    for (let u = 0; u < projects[i].keywords.length; u++) {
-                      let currentKeyword = document.createElement("span");
-                      currentKeyword.classList.add("keyword");
-                      currentKeyword.innerText = projects[i].keywords[u];
-                      document.getElementById("keywords-box").appendChild(currentKeyword);
-                    }
-                    // description
-                    document.getElementById("description").innerText = projects[i].description;
+
+              // Remove and add 'active' class from all buttons
+              document.querySelectorAll('.project-button').forEach(btn => btn.classList.remove('active'));
+              this.classList.add('active');
+
+              // check which project is associated with the button
+              let currentTitle = this.childNodes[0].innerText;
+              for (let p = 0; p < projects.length; p++) {
+                if (currentTitle === projects[p].title) {
+                  // change the content of the page
+                  // title and year
+                  document.getElementById("title").innerText = projects[p].title;
+                  document.getElementById("year").innerText = projects[p].year;
+                  // display the first image
+                  document.getElementById("gallery-img").src = projects[p].gallery[0].dir;
+                  // keywords
+                  for (let k = 0; k < projects[p].keywords.length; k++) {
+                    let currentKeyword = document.createElement("span");
+                    currentKeyword.classList.add("keyword");
+                    currentKeyword.innerText = projects[p].keywords[k];
+                    document.getElementById("keywords-box").appendChild(currentKeyword);
                   }
+                  // tools
+                  for (let t = 0; t < projects[p].tools.length; t++) {
+                    let currentTool = document.createElement("span");
+                    currentTool.classList.add("tool");
+                    currentTool.innerText = projects[p].tools[t];
+                    document.getElementById("tools-box").appendChild(currentTool);
+                  }
+                  // description
+                  document.getElementById("description").innerText = projects[p].description;
                 }
+              }
             
-
             });
           });
 
