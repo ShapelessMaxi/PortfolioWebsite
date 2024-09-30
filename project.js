@@ -1,6 +1,5 @@
 class project {
     constructor(
-      id,
       title,
       year,
       category,
@@ -10,7 +9,6 @@ class project {
       tools,
       documentation
     ) {
-      this.id = id;
       this.title = title;
       this.year = year;
       this.category = category;

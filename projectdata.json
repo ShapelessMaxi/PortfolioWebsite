@@ -14,8 +14,8 @@
                     "type": "png"
                 },
                                     {
-                    "dir": "project_data\\ToDissectToStitch\\ToDissectToStitch_03.png",
-                    "type": "png"
+                    "dir": "project_data\\ToDissectToStitch\\ToDissectToStitch_03.gif",
+                    "type": "gif"
                 },
                 {
                     "dir": "project_data\\ToDissectToStitch\\ToDissectToStitch_04.png",
@@ -59,14 +59,6 @@
                 {
                     "dir": "project_data\\AwakeningofTheFrog\\AwakeningofTheFrog_04.png",
                     "type": "png"
-                },
-                {
-                    "dir": null,
-                    "type": null
-                },
-                {
-                    "dir": null,
-                    "type": null
                 }
             ],
             "keywords": [
