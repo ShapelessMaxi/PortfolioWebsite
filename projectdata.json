@@ -1,5 +1,37 @@
 {
     "projects": [
+        
+        {
+            "title": "Glitch Armor",
+            "year": 2024,
+            "category": "Interactive",
+            "gallery": [
+                {
+                    "dir": null,
+                    "type": "png"
+                }
+            ],
+            "keywords": [
+                "Character Design;",
+                "VFX;",
+                "Visibility;",
+                "Queer Storytelling;"
+            ],
+            "description": "Glitch Armor is a protective spell.",
+            "tools": [
+                "TouchDesigner;",
+                "Blender3D;",
+                "Substance Painter;",
+                "MediaPipe"
+            ],
+            "documentation": [
+                {
+                    "tag": "Web Documentation",
+                    "link": "https://hdmaxi411.wordpress.com"
+                }                    
+            ]
+        },
+       
         {
             "title": "To Dissect / To Stitch",
             "year": 2023,
@@ -13,7 +45,7 @@
                     "dir": "project_data\\ToDissectToStitch\\ToDissectToStitch_02.png",
                     "type": "png"
                 },
-                                    {
+                {
                     "dir": "project_data\\ToDissectToStitch\\ToDissectToStitch_03.gif",
                     "type": "gif"
                 },
@@ -40,7 +72,50 @@
                 "Kiri Engine;",
                 "Blender3D"                
             ],
-            "documentation": null
+            "documentation": [
+                {
+                    "tag": "Web Documentation",
+                    "link": "https://hdmaxi410.wordpress.com"
+                }                    
+            ]
+        },
+        
+        {
+            "title": "Post-Apocalyptic Hottie",
+            "year": 2023,
+            "category": "3D animation",
+            "gallery": [
+                {
+                    "dir": "project_data\\PostApocalypticHottie\\PostApocalypticHottie_01.png",
+                    "type": "png"
+                },
+                {
+                    "dir": "project_data\\PostApocalypticHottie\\PostApocalypticHottie_03.png",
+                    "type": "png"
+                },
+                {
+                    "dir": "project_data\\PostApocalypticHottie\\PostApocalypticHottie_04.png",
+                    "type": "png"
+                }
+            ],
+            "keywords": [
+                "Character Design;",
+                "Motion Capture;",
+                "High-Poly Modelling"
+            ],
+            "description": "This sculpted character is brought to life using Mixamo, a motion capture library. The textures are painted and generated with Substance Designer. With this one, I tell a futuristic story, where fashion is still a priority even after the environment became hostile.",
+            "tools": [
+                "Blender3d;",
+                "Substance Painter;",
+                "Substance Designer;",
+                "Adobe Premiere"
+            ],
+            "documentation": [
+                {
+                    "tag": "Full Animation",
+                    "link": "https://youtu.be/kZotRX9Zqgo"
+                }                    
+            ]
         },
         
         {
@@ -74,46 +149,60 @@
                 "Substance Designer;",
                 "Adobe Premiere"
             ],
-            "documentation": null
+            "documentation": [
+                {
+                    "tag": "Full Animation",
+                    "link": "https://youtu.be/zROBx7WUO-w"
+                }                    
+            ]
         },
    
+        {
+            "title": "bodymod",
+            "year": 2021,
+            "category": "Interactive",
+            "gallery": [
+                {
+                    "dir": "project_data\\bodymod\\bodymod_01.png",
+                    "type": "png"
+                },
+                {
+                    "dir": "project_data\\bodymod\\bodymod_04.png",
+                    "type": "png"
+                },
+                {
+                    "dir": "project_data\\bodymod\\bodymod_05.png",
+                    "type": "png"
+                }
+            ],
+            "keywords": [
+                "Creative coding;",
+                "Video Game;",
+                "Body Agency"
+            ],
+            "description": "This is a reflection about being a human with a body, a subject that I have been thinking about a lot. It also relates to my work as a tattoo artist. Everything was programmed in Javascript P5.",
+            "tools": [
+                "JavaScript;",
+                "p5.js;",
+                "HTML"
+            ],
+            "documentation": [
+                {
+                    "tag": "Game Files",
+                    "link": "https://github.com/ShapelessMaxi/cart253/tree/main/projects/mod"
+                }                    
+            ]
+        },
 
+    
         {
             "title": "TEMPLATE",
             "year": null,
             "category": null,
             "gallery": [
                 {
-                    "1": [
-                        {
-                            "dir": null,
-                            "type": null
-                        }
-                    ],
-                    "2": [
-                        {
-                            "dir": null,
-                            "type": null
-                        }
-                    ],
-                    "3": [
-                        {
-                            "dir": null,
-                            "type": null
-                        }
-                    ],
-                    "4": [
-                        {
-                            "dir": null,
-                            "type": null
-                        }
-                    ],
-                    "5": [
-                        {
-                            "dir": null,
-                            "type": null
-                        }
-                    ]
+                    "dir": "project_data\\ToDissectToStitch\\ToDissectToStitch_01.png",
+                    "type": "png"
                 }
             ],
             "keywords": [
@@ -125,7 +214,12 @@
                 null,
                 null
             ],
-            "documentation": null
+            "documentation": [
+                {
+                    "tag": "",
+                    "link": ""
+                }                    
+            ]
         }
     ]
     

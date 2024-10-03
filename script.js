@@ -67,6 +67,9 @@ window.onload = (event) => {
             }
             // description
             document.getElementById("description").innerText = currentProject.description;
+            // extra documentation
+            document.getElementById("doc-button-text").innerText = currentProject.documentation[0].tag;
+            document.getElementById("doc-button").setAttribute('href', currentProject.documentation[0].link);
 
             // project buttons interaction
             document.querySelectorAll('.project-button').forEach(button => {
@@ -110,6 +113,9 @@ window.onload = (event) => {
                     }
                     // description
                     document.getElementById("description").innerText = projects[p].description;
+                    // extra documentation
+                    document.getElementById("doc-button-text").innerText = projects[p].documentation[0].tag;
+                    document.getElementById("doc-button").setAttribute('href', projects[p].documentation[0].link);
                   }
                 }
               

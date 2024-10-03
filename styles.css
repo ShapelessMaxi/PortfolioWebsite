@@ -245,12 +245,15 @@ html, body {
 #content > #doc-button {
   overflow: hidden;
   display: flex;
-  justify-content: flex-end;
   align-items: center;
+  padding-left: 0.25rem;
   background-color: rgb(110 142 111);
   grid-column: 20 / calc(var(--page-cols) + 1 - 8 - 2);
   grid-row: 21;
+  text-decoration: none;
 }
 #content > #doc-button > #doc-button-text {
   color: white;
+  font-family: var(--body-font);
+  font-size: 1rem;
 }
