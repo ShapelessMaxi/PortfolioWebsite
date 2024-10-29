@@ -61,11 +61,11 @@ html, body {
 }
 #header > #name-box > #name {
   font-family: var(--altbody-font);
-  font-size: 2.25rem;
+  font-size: 1.25rem;
 }
 #header > #name-box > #alias {
   font-family: var(--display-font);
-  font-size: 2.2rem;
+  font-size: 1.2rem;
 }
 
 /* navbar */
@@ -117,12 +117,12 @@ html, body {
   flex-direction: column;
 }
 #content > #text-box > .titles {
-  padding-bottom: 1rem;
-  font-size: 2rem;
+  padding-bottom: 0.8rem;
+  font-size: 1.5rem;
   font-family: var(--display-font);
 }
 #content > #text-box > .paragraphs {
   padding-bottom: 3rem;
-  font-size: 1.3rem;
+  font-size: 1rem;
   font-family: var(--body-font);
 }
