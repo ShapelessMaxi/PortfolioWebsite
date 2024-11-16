@@ -7,8 +7,22 @@ window.onload = (event) => {
 
         // call different actions depending on which page is displayed
         switch (document.body.getAttribute("page")) {
-          case "home":
+          case "about":
 
+           // dropdown buttons interaction, reveal textboxes
+            document.querySelectorAll('.drop-button').forEach(button => {
+              button.addEventListener('click', function() {
+                textbox = button.nextElementSibling;
+                title = button.children[0];
+                if (textbox.classList.contains('active')){
+                  title.classList.remove('active');
+                  textbox.classList.remove('active');
+                } else {
+                  title.classList.add('active');
+                  textbox.classList.add('active');
+                }
+                });
+            });
 
             break;
             
@@ -20,7 +34,8 @@ window.onload = (event) => {
               let currentProject = new project(
                 data.projects[i].title,
                 data.projects[i].year,
-                data.projects[i].category,
+                data.projects[i].filters,
+                data.projects[i].isDone,
                 data.projects[i].gallery,
                 data.projects[i].keywords,
                 data.projects[i].description,
@@ -29,47 +44,63 @@ window.onload = (event) => {
               );
               projects.push(currentProject);
             }
-            let currentProject = projects[0]
+            let displayedProject = projects[0]
 
-            // create all project buttons
-            let projectButtons = [];
+            // create all finished project buttons
+            let finishedProjectButtons = [];
             for (let i = 0; i < data.projects.length; i++) {
-              let currentButton = new projectButton(
-                data.projects[i].title,
-                data.projects[i].year
-              );
-              projectButtons.push(currentButton);
+              if (data.projects[i].isDone == "True") {
+                let currentButton = new projectButton(
+                  data.projects[i].title,
+                  data.projects[i].year,
+                  data.projects[i].isDone
+                );
+                finishedProjectButtons.push(currentButton);
+              }
             }
+            // create all wip project buttons
+            let wipProjectButtons = [];
+            for (let i = 0; i < data.projects.length; i++) {
+              if (data.projects[i].isDone == "False") {
+                let currentButton = new projectButton(
+                  data.projects[i].title,
+                  data.projects[i].year,
+                  data.projects[i].isDone
+                );
+                wipProjectButtons.push(currentButton);
+              }
+            }
+
             // reset gallery buttons click counts
             let currentImgIndex = 0;
-            let imgCount = currentProject.gallery.length;
+            let imgCount = displayedProject.gallery.length;
 
             // display the latest project
             // title and year
-            document.getElementById("title").innerText = currentProject.title;
-            document.getElementById("year").innerText = currentProject.year;
+            document.getElementById("title").innerText = displayedProject.title;
+            document.getElementById("year").innerText = displayedProject.year;
             // display the first image
             let galleryElement = document.getElementById("gallery-img");
-            galleryElement.src =currentProject.gallery[0].dir;
+            galleryElement.src =displayedProject.gallery[0].dir;
             // keywords
-            for (let k = 0; k < currentProject.keywords.length; k++) {
+            for (let k = 0; k < displayedProject.keywords.length; k++) {
               let currentKeyword = document.createElement("span");
               currentKeyword.classList.add("keyword");
               currentKeyword.innerText = projects[0].keywords[k];
               document.getElementById("keywords-box").appendChild(currentKeyword);
             }
             // tools
-            for (let t = 0; t < currentProject.tools.length; t++) {
+            for (let t = 0; t < displayedProject.tools.length; t++) {
               let currentTool = document.createElement("span");
               currentTool.classList.add("tool");
               currentTool.innerText = projects[0].tools[t];
               document.getElementById("tools-box").appendChild(currentTool);
             }
             // description
-            document.getElementById("description").innerText = currentProject.description;
+            document.getElementById("description").innerText = displayedProject.description;
             // extra documentation
-            document.getElementById("doc-button-text").innerText = currentProject.documentation[0].tag;
-            document.getElementById("doc-button").setAttribute('href', currentProject.documentation[0].link);
+            document.getElementById("doc-button-text").innerText = displayedProject.documentation[0].tag;
+            document.getElementById("doc-button").setAttribute('href', displayedProject.documentation[0].link);
 
             // project buttons interaction
             document.querySelectorAll('.project-button').forEach(button => {
@@ -86,10 +117,10 @@ window.onload = (event) => {
                 let currentTitle = this.childNodes[0].innerText;
                 for (let p = 0; p < projects.length; p++) {
                   if (currentTitle === projects[p].title) {
-                    currentProject = projects[p];
+                    displayedProject = projects[p];
                     // reset gallery buttons click counts
                     currentImgIndex = 0;
-                    imgCount = currentProject.gallery.length;
+                    imgCount = displayedProject.gallery.length;
 
                     // change the content of the page
                     // title and year
@@ -128,7 +159,7 @@ window.onload = (event) => {
               // for each click, count up
               currentImgIndex ++;
               currentImgIndex = currentImgIndex % imgCount;
-              galleryElement.src = currentProject.gallery[currentImgIndex].dir;
+              galleryElement.src = displayedProject.gallery[currentImgIndex].dir;
             });
             // left button
             document.getElementById('left-gallery-button').addEventListener('click', function() {
@@ -137,10 +168,11 @@ window.onload = (event) => {
               if (currentImgIndex < 0) {
                 currentImgIndex = imgCount - 1;
               }
-              galleryElement.src = currentProject.gallery[currentImgIndex].dir;
+              galleryElement.src = displayedProject.gallery[currentImgIndex].dir;
             });
 
             break;
       }
+
     });
   }

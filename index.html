@@ -2,7 +2,7 @@
 <html>
   <head>
     <!-- this links to css file containing styles -->
-    <link rel="stylesheet" href="styles_index.css" />
+    <link rel="stylesheet" href="styles.css" />
 
     <!-- Add your external google fonts here -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -29,21 +29,63 @@
     </title>
   </head>
   
-  <body page="home">
+  <body page="gallery">
     <div id="home-container">
       
+      <div id="content">
+
+        <div id="title-box">
+          <span id="title"></span>
+          <span id="year"></span>
+        </div>
+        <img id="left-gallery-button" class="gallery-button" src="assets\btn_arrowLeft.png">
+        <img id="right-gallery-button" class="gallery-button" src="assets\btn_arrowRight.png">
+        <div id="gallery">
+          <img id="gallery-img" src="">
+        </div>
+        <div id="keywords-box">
+        <span class="keyword-title">Keywords:</span>
+        </div>
+        <div id="tools-box">
+          <span class="tool-title">Tools:</span>
+          </div>
+        <p id="description"></p>
+        <a id="doc-button" target="_blank" rel="noopener noreferrer" href="">
+          <span id="doc-button-text">
+          </span>
+        </a>
+
+      </div>
+
       <div id="navbar">
-        <img id="logo" src="assets\bunny.png" alt="logo">
+        <a id="logo">
+          <img src="assets/bunny.png" alt="logo">
+        </a>
+
+        <a id="about-button" target="" rel="noopener noreferrer" href="/about.html">
+          <span id="about-button-text">
+            about
+          </span>
+        </a>
         
+        <p id="finished-projects-title" class="keyword-title">Finished Projects</p>
+        <div id="project-list">
+          <!-- populated with script -->
+        </div>
+        <p id="wip-projects-title" class="keyword-title">WIP Projects</p>
+        <div id="wip-list">
+          <!-- populated with script -->
+        </div>
+
         <div id="socials">
           <a href="https://www.instagram.com/hd.maxi/" target=”_blank”>
             <img id="insta" src="assets\btn_insta.png" alt="logo">
           </a>
           <img id="youtube" src="assets\placeholderlogo.png" alt="logo">
-          <img id="mail" src="assets\placeholderlogo.png" alt="logo">
+          <a href="mailto:hd.maxi.tattoo@gmail.com" target=”_blank”>
+            <img id="mail" src="assets\placeholderlogo.png" alt="logo">
+          </a>
         </div>
-
-        <a id="to-gallery" href="/gallery.html">Gallery</a>
       </div>
 
       <div id="header">
@@ -53,26 +95,8 @@
         </div>
       </div>
 
-      <div id="content">
-        <div id="text-box">
-          <p class="titles">
-            Statement
-          </p>
-          </p>
-          <p class="paragraphs">
-            Rooted in queer theory and influenced by my own personal experiences as a queer subject, my work speaks of identity, embodiment, and visibility. Through the combination of art, technology, and humanities, I want to push the boundaries of conventional artistic expression.
-            Additionally, my love for tattooing allows me to help people define their identity through iconography. It is wildly validating to have people trust me with such permanent decisions and motivates me to be a better artist and person. Body modification serves as a huge inspiration for my digital media pieces, as it is closely tied to some of the recurrent themes I love to explore.
-            My overall goal as an artist is to challenge our preconceived notions of normalcy. To achieve this, I combine a variety of techniques ranging from 3D animation and creative programming. I bring humanoid characters and otherworldly environments to life, I develop interactive installations, and I process images in experimental ways.
-          </p>
-          <p class="titles">
-            Biography
-          </p>
-          <p class="paragraphs">
-            Maxime Perreault is an emerging digital multimedia artist from Quebec City and is now based in Tiohtiá:ke (Montreal). He holds a Bachelor of Fine Arts specialized in Computation Arts from Concordia University. Throughout his life, Maxime has been learning about 3D animation, programming, and creative technologies, allowing him to produce artwork ranging from illustrations, animations, and interactive installations. He is now working for Aboriginal Territories in Cyberspace as a workshop instructor and has started exhibiting his work in galleries. In parallel, from 2021 onwards, Maxime has been working as a tattoo artist under the alias of hd.maxi.
-          </p>
-        </div>
-      </div>
-        
+      
+
     </div>
 
   </body>

@@ -2,7 +2,8 @@ class project {
     constructor(
       title,
       year,
-      category,
+      filters,
+      isDone,
       gallery,
       keywords,
       description,
@@ -11,7 +12,8 @@ class project {
     ) {
       this.title = title;
       this.year = year;
-      this.category = category;
+      this.filters = filters;
+      this.isDone = isDone;
       this.gallery = gallery;
       this.keywords = keywords;
       this.description = description;

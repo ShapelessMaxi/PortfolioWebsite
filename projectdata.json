@@ -4,11 +4,20 @@
         {
             "title": "Glitch Armor",
             "year": 2024,
-            "category": "Interactive",
+            "filters": "Interactive",
+            "isDone": "True",
             "gallery": [
                 {
-                    "dir": null,
-                    "type": "png"
+                    "dir": "project_data\\GiltchArmor\\DSC00418.jpg",
+                    "type": "jpg"
+                },
+                {
+                    "dir": "project_data\\GiltchArmor\\DSC00446.jpg",
+                    "type": "jpg"
+                },
+                {
+                    "dir": "project_data\\GiltchArmor\\DSC00499.jpg",
+                    "type": "jpg"
                 }
             ],
             "keywords": [
@@ -31,11 +40,42 @@
                 }                    
             ]
         },
-       
+
+        {
+            "title": "Look Again",
+            "year": "2024",
+            "filters": "Interactive",
+            "isDone": "False",
+            "gallery": [
+                {
+                    "dir": "project_data\\LookAgain\\Proto01.jpg",
+                    "type": "jpg"
+                }
+            ],
+            "keywords": [
+                "Computer Vision;",
+                "Machine Personification;",
+                "Nostalgia;"
+            ],
+            "description": "",
+            "tools": [
+                "Python;",
+                "TouchDesigner;",
+                "OBS Studio;"
+            ],
+            "documentation": [
+                {
+                    "tag": "Log",
+                    "link": "project_data\\LookAgain\\log.txt"
+                }                    
+            ]
+        },
+
         {
             "title": "To Dissect / To Stitch",
-            "year": 2023,
-            "category": "Interactive",
+            "year": "2023",
+            "filters": "Interactive",
+            "isDone": "False",
             "gallery": [
                 {
                     "dir": "project_data\\ToDissectToStitch\\ToDissectToStitch_01.png",
@@ -83,7 +123,8 @@
         {
             "title": "Post-Apocalyptic Hottie",
             "year": 2023,
-            "category": "3D animation",
+            "filters": "3D animation",
+            "isDone": "True",
             "gallery": [
                 {
                     "dir": "project_data\\PostApocalypticHottie\\PostApocalypticHottie_01.png",
@@ -108,6 +149,7 @@
                 "Blender3d;",
                 "Substance Painter;",
                 "Substance Designer;",
+                "Mixamo;",
                 "Adobe Premiere"
             ],
             "documentation": [
@@ -121,7 +163,8 @@
         {
             "title": "Awakening of the Frog",
             "year": "2022",
-            "category": "3D animation",
+            "filters": "3D animation",
+            "isDone": "True",
             "gallery": [
                 {
                     "dir": "project_data\\AwakeningofTheFrog\\AwakeningofTheFrog_01.png",
@@ -156,11 +199,12 @@
                 }                    
             ]
         },
-   
+           
         {
             "title": "bodymod",
             "year": 2021,
-            "category": "Interactive",
+            "filters": "Interactive",
+            "isDone": "True",
             "gallery": [
                 {
                     "dir": "project_data\\bodymod\\bodymod_01.png",
@@ -193,26 +237,28 @@
                 }                    
             ]
         },
+        
 
     
         {
-            "title": "TEMPLATE",
-            "year": null,
-            "category": null,
+            "title": "",
+            "year": "",
+            "filters": "",
+            "isDone": "True",
             "gallery": [
                 {
-                    "dir": "project_data\\ToDissectToStitch\\ToDissectToStitch_01.png",
+                    "dir": "project_data\\project\\img.png",
                     "type": "png"
                 }
             ],
             "keywords": [
-                null,
-                null
+                ";",
+                ";"
             ],
-            "description": null,
+            "description": "",
             "tools": [
-                null,
-                null
+                ";",
+                ";"
             ],
             "documentation": [
                 {

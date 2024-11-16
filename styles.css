@@ -14,7 +14,8 @@
     /* colors */
     --bg-color: lightgrey;
     --header-color: rgb(87, 87, 87);
-    --navbar-color: rgb(129, 129, 129);
+    --navbar-color: rgb(193, 193, 193);
+    --green-c: rgb(110 142 111);
         
     /* fonts */
     --body-font: 'Spline Sans', sans-serif;
@@ -86,40 +87,96 @@ html, body {
 #navbar > #logo > img {
   height: 100%;
 }
+#navbar > #about-button {
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  padding-left: 0.25rem;
+  background-color: rgb(110 142 111);
+  grid-column: 1/9;
+  grid-row: 5;
+  text-decoration: none;
+}
+#navbar > #about-button > #about-button-text {
+  color: white;
+  font-family: var(--body-font);
+  font-size: 1rem;
+}
 
 #project-list {
-  grid-column: 1 / span 8;
-  grid-row: 5 / calc(var(--page-rows) - 2);
+  grid-column: 1 / -1;
+  grid-row: 7 / -9;
   width: 100%;
   overflow-y: scroll;
   overflow-x: hidden;
+  margin-right: 0.5rem;
 }
-#project-list > .project-button {
+#wip-list {
+  grid-column: 1 / -1;
+  grid-row: 18 / -5;
+  width: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  margin-right: 0.5rem;
+}
+#project-list > .project-button, 
+#wip-list > .project-button {
   display: flex;
   flex-wrap: wrap-reverse;
   justify-content: space-between;
   margin: 0.25rem 1rem 0.25rem 1rem;
-  padding: 1.2rem 1rem;
+  padding: 0.8rem 1rem;
   font-family: var(--body-font);
   color: black;
   background-color: rgb(91, 91, 91);
 }
-#project-list > .project-button:hover {
+#project-list > .project-button:hover, 
+#wip-list > .project-button:hover {
   background: #e6e6e6;
   cursor: pointer;
 }
-#project-list > .project-button.active {
+#project-list > .project-button.active, 
+#wip-list > .project-button.active {
   background: white;
   color: rgb(173, 173, 173);
   cursor: default;
   pointer-events: none;
-  }
-
-#project-list > .project > .title {
-  font-size: 1.2rem;
 }
-#project-list > .project > .year {
+#project-list > .project-button > .title, 
+#wip-list > .project-button > .title {
   font-size: 0.9rem;
+}
+#project-list > .project-button > .year, 
+#wip-list > .project-button > .year {
+  font-size: 0.8rem;
+}
+#project-list::-webkit-scrollbar, #wip-list::-webkit-scrollbar {
+  width: 0.5rem; 
+}
+#project-list::-webkit-scrollbar-track,
+#wip-list::-webkit-scrollbar-track {
+  background: var(--green-c);
+  margin-right: 0.25rem;;
+}
+#finished-projects-title,
+#wip-projects-title {
+  grid-column: 1 / -1;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-start;
+  width: 100%;
+  padding-bottom: 0.25rem;
+  padding-left: 1.5rem;
+  font-family: var(--body-font);
+  font-size: 0.9rem;
+  font-weight: 200;
+  color: var(--header-color)
+}
+#finished-projects-title {
+  grid-row: 6;
+}
+#wip-projects-title {
+  grid-row: 17;
 }
 
 #navbar > #socials {
@@ -130,17 +187,10 @@ html, body {
 }
 #navbar > #socials > a > #insta, #youtube, #mail {
   height: 100%;
-  padding: 0 0.25vw 0;
+  padding: 0 1.3vw 0;
 }
-#project-list > .project {
-  overflow-x: hidden;
-  display: flex;
-  flex-wrap: wrap-reverse;
-  justify-content: space-between;
-  margin: 0.25rem 1rem 0.25rem 1rem;
-  padding: 1.2rem 1rem;
-  align-items: self-start;
-}
+
+
 
 /* content */
 #content {
@@ -169,7 +219,7 @@ html, body {
   font-size: 1.5rem;
 }
 #content > #gallery {
-  background-color: rgb(68, 68, 68);
+  /* background-color: rgb(68, 68, 68); */
   grid-column: 5 / calc(var(--page-cols) + 1 - 8 - 4);
   grid-row: 5 / span 11;
   display: flex;
@@ -179,7 +229,7 @@ html, body {
 }
 #content > .gallery-button {
   grid-row: 10;
-  width: -webkit-fill-available;
+  width: 2.5rem;
   height: auto;
   cursor: pointer;
 }
@@ -187,7 +237,7 @@ html, body {
   grid-column: 3;
 }
 #content > #right-gallery-button {
-  grid-column: calc(var(--page-cols) + 1 - 8 - 3);
+  grid-column: -4;
 }
 #content > #gallery > img {
   padding: 0.25rem;
@@ -239,7 +289,8 @@ html, body {
   overflow-y: scroll;
   grid-column: 3 / span 12;
   grid-row:  17 / calc(var(--page-rows) - 2);
-  font-size: 1.1rem;
+  font-size: 0.9rem;
+  line-height: 1.3rem;
   font-family: var(--body-font);
 }
 #content > #doc-button {
