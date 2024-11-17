@@ -12,10 +12,10 @@
     --socials: 1;
 
     /* colors */
-    --bg-color: lightgrey;
-    --header-color: rgb(87, 87, 87);
-    --navbar-color: rgb(193, 193, 193);
+    --navbar-color: rgb(195,195,195);
     --green-c: rgb(110 142 111);
+    --pink-c: #f58daf;
+    --content-bg-c: rgb(245, 245, 245);
         
     /* fonts */
     --body-font: 'Spline Sans', sans-serif;
@@ -50,7 +50,7 @@ html, body {
   grid-template-rows: repeat(2, minmax(0, 1fr));
   grid-column: 1 / calc(var(--page-cols) + 1);
   grid-row: 1 / span 2;
-  background-color: var(--header-color);
+  background-color: var(--green-c);
 }
 #header > #name-box {
   grid-column: 11 / calc(var(--page-cols) + 1 - 2);
@@ -132,13 +132,13 @@ html, body {
 }
 #project-list > .project-button:hover, 
 #wip-list > .project-button:hover {
-  background: #e6e6e6;
+  background: var(--pink-c);
   cursor: pointer;
 }
 #project-list > .project-button.active, 
 #wip-list > .project-button.active {
   background: white;
-  color: rgb(173, 173, 173);
+  color: var(--pink-c);
   cursor: default;
   pointer-events: none;
 }
@@ -155,8 +155,13 @@ html, body {
 }
 #project-list::-webkit-scrollbar-track,
 #wip-list::-webkit-scrollbar-track {
-  background: var(--green-c);
+  background: white;
   margin-right: 0.25rem;;
+}
+#project-list::-webkit-scrollbar-thumb,
+#wip-list::-webkit-scrollbar-thumb{
+  background-color: var(--green-c);
+  margin-right: 0.25rem;
 }
 #finished-projects-title,
 #wip-projects-title {
@@ -170,7 +175,7 @@ html, body {
   font-family: var(--body-font);
   font-size: 0.9rem;
   font-weight: 200;
-  color: var(--header-color)
+  color: var(--green-c);
 }
 #finished-projects-title {
   grid-row: 6;
@@ -196,7 +201,7 @@ html, body {
 #content {
   grid-column: 9 /calc(var(--page-cols) + 1);
   grid-row: 3 / calc(var(--page-rows) + 1);
-  background-color: rgb(227, 227, 227);
+  background-color: var(--content-bg-c);
   display: grid;
   grid-template-columns: repeat(calc(var(--page-cols) - 8), minmax(0, 1fr));
   grid-template-rows: repeat(calc(var(--page-rows) - 2), minmax(0, 1fr));
@@ -292,6 +297,17 @@ html, body {
   font-size: 0.9rem;
   line-height: 1.3rem;
   font-family: var(--body-font);
+}
+#content > #description::-webkit-scrollbar {
+  width: 0.5rem;
+}
+#content > #description::-webkit-scrollbar-thumb{
+  background-color: var(--green-c);
+  margin-right: 0.25rem;
+}
+#content > #description::-webkit-scrollbar-track{
+  background: white;
+  margin-right: 0.25rem;
 }
 #content > #doc-button {
   overflow: hidden;
