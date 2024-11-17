@@ -1,0 +1,80 @@
+/* root master oimniscient rules */
+:root {
+
+    /* page divisions */
+    --page-rows: 4;
+    --page-cols: 32;
+
+    /* element fractionnal sizes */
+    --header-h: 2;
+    --navbar-w: 8;
+    --logo-home: 2;
+    --socials: 1;
+
+    /* colors */
+    --bg-color: rgb(25,25,25);
+    --txt-color: rgb(255,225,225);
+    --header-color: rgb(87, 87, 87);
+    --navbar-color: rgb(193, 193, 193);
+    --green-c: rgb(110 142 111);
+        
+    /* fonts */
+    --body-font: 'Spline Sans', sans-serif;
+    --altbody-font: 'Crimson Text', serif;
+    --display-font: 'Bricolage Grotesque', sans-serif;
+    --fine-font: 'Sofia Sans', sans-serif;
+
+  }
+
+/* page */
+* {
+  margin: 0;
+}
+html, body {
+  background-color: var(--bg-color);
+  width: 100vw;
+  height: 100vh;
+}
+
+/* containers */
+#log-container {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+}
+
+#content {
+    display: grid;
+    grid-template-columns: 80% 1fr;
+    gap: 2rem;
+  }
+#content > #textlog,
+#content > .doc-imgs {
+    padding: 10px;
+}
+#content > #textlog > h1,
+#content > #textlog > h2,
+#content > #textlog > p {
+    color: var(--txt-color);
+}
+#content > #textlog > p,
+#content > #textlog > h2 {
+    font-family: var(--fine-font);
+    font-size: 0.9rem;
+    font-weight: 100;
+    line-height: 1.1rem;
+    padding-left: 1rem;
+    padding-bottom: 0.25rem;
+}
+#content > #textlog > h1 {
+    font-family: var(--altbody-font);
+    font-size: 1rem;
+    padding-bottom: 0.25rem;
+    padding-top: 1.3rem;
+}
+#content > #textlog > h2 {
+    padding-top: 0.4rem;
+}
+#content > #textlog > p {
+    text-indent: 1rem;
+}
