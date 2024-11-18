@@ -1,44 +1,44 @@
-	TouchDesigner Prototype 01 - November 2024
-Scratch this pile of operators, I need a script that will do all the simple operations of this colorAnalyzeTOPs in a for loop. Also, there's probably a way to create operators and so I'll be able to change, modify, expand it easily ans faster.
-I'm starting to work with NumPy because basically, you can read an image as a really long 2D array populated by every pixel of the image. The pixels are an object. There's useful methods like split(), making it possible to digest the array by smaller areas, and variables, like the .r, .g and .b values of each pixels. In brief, the NumPy array and split into cells[x,y]. The RGB values of each pixels of each cells are averaged, basically smudging them all together. I export both an image, and a table containing all colors in written form (this was more for debugging purposes). Then, to create the visual, I am storing a 3Dspheres node system in a baseComp, and copying it a bunch as much times as the image is split. The colors of each sphere changes according to what's in front of the camera, and to what colors are in the reference Table. They get smaller if the input's color is not registered. This process is dynamic and live and not slow!
+	<h1>TouchDesigner Prototype 01 - November 2024</h1>
+<p>Scratch this pile of operators, I need a script that will do all the simple operations of this colorAnalyzeTOPs in a for loop. Also, there's probably a way to create operators and so I'll be able to change, modify, expand it easily ans faster.</p>
+<p>I'm starting to work with NumPy because basically, you can read an image as a really long 2D array populated by every pixel of the image. The pixels are an object. There's useful methods like split(), making it possible to digest the array by smaller areas, and variables, like the .r, .g and .b values of each pixels. In brief, the NumPy array and split into cells[x,y]. The RGB values of each pixels of each cells are averaged, basically smudging them all together. I export both an image, and a table containing all colors in written form (this was more for debugging purposes). Then, to create the visual, I am storing a 3Dspheres node system in a baseComp, and copying it a bunch as much times as the image is split. The colors of each sphere changes according to what's in front of the camera, and to what colors are in the reference Table. They get smaller if the input's color is not registered. This process is dynamic and live and not slow!</p>
 
-In this prototype, I'm doing a few very sensible things
-- storing a dynamic reference color table 
-- storing x and y size of the split/grid
+<h2>In this prototype, I'm doing a few very sensible things</h2>
+<p>- storing a dynamic reference color table</p>
+<p>- storing x and y size of the split/grid</p>
 
-The things that could be better
-- the visual output is ugly af.
-- The image exported just looks pixelated.
-- there is little to no considerations of the physical setup
-- the for loop to read the colums and rows of the NumPy
+<h2>The things that could be better</h2>
+<p>- the visual output is ugly af.</p>
+<p>- The image exported just looks pixelated.</p>
+<p>- there is little to no considerations of the physical setup</p>
+<p>- the for loop to read the colums and rows of the NumPy</p>
 
-Ideas
-- 2 screens looking at each other? back-to-back?
-- 1st screen looking at a physical thing, 2nd looking at the digital output of the first, and more and more? that experience of playing with friends and looking over at their screens, or playing on the same screens, or looking at them play (series of 2-3 installs?). Also maybe refer to Elio's reading about systems, and other about the subject. 
-- wait export to .fbx and 3D print a couple of variations?
-- look at toys (lego blocks, bakugans, playmobiles)
-- since the image will forcibly decrease in quality and credibility, I could reinforce a theme of the games being increasingly far and vague in my memories.
+<p><h2>Ideas</h2>
+<p>- 2 screens looking at each other? back-to-back?</p>
+<p>- 1st screen looking at a physical thing, 2nd looking at the digital output of the first, and more and more? that experience of playing with friends and looking over at their screens, or playing on the same screens, or looking at them play (series of 2-3 installs?). Also maybe refer to Elio's reading about systems, and other about the subject.</p>
+<p>- wait export to .fbx and 3D print a couple of variations?</p>
+<p>- look at toys (lego blocks, bakugans, playmobiles)</p>
+<p>- since the image will forcibly decrease in quality and credibility, I could reinforce a theme of the games being increasingly far and vague in my memories.</p>
 
-	Submitting to ENMEDIA Particle + Wave Festival, August 2024
-Exhibition Piece
-Mismatched
-Interactive physical installation with digital output
-Physical Legos, creates a 3D Barbie Doll.
-No news but I think the proposal is too ambitious. It's hard to trust that I'll be able to make this. I think the concept is slay but also i was/ am not really into barbies.
+	<h1>Submitting to ENMEDIA Particle + Wave Festival, August 2024</h1>
+<p>Exhibition Piece</p>
+<p>Mismatched</p>
+<p>Interactive physical installation with digital output</p>
+<p>Physical Legos, creates a 3D Barbie Doll.</p>
+<p>No news but I think the proposal is too ambitious. It's hard to trust that I'll be able to make this. I think the concept is slay but also i was/ am not really into barbies.</p>
 
-	TouchDesigner Prototype 01 - Summer 2024
-This first prototype was using common TOPs and CHOPs, mostly the colorAnalyzeTOP. 
-It was complex to build, change, and expand the network. 
-It was also slow, unreliable and very hard to setup the physical display.
+	<h1>TouchDesigner Prototype 01 - Summer 2024</h1>
+<p>This first prototype was using common TOPs and CHOPs, mostly the colorAnalyzeTOP.</p>
+<p>It was complex to build, change, and expand the network. </p>
+<p>It was also slow, unreliable and very hard to setup the physical display.
 
-	What's computer vision? - Summer 2024
-From INM's website: "Computer vision is a field of artificial intelligence (AI) that uses machine learning and neural networks to teach computers and systems to derive meaningful information from digital images, videos and other visual inputs (https://www.ibm.com/topics/computer-vision)". 
-Exemples of early techniques:
-1974 - Optical character recognition (https://www.britannica.com/technology/OCR)
-To identify characters by comparing shapes to those stored in the software library.
-* More on this later
+	<h1>What's computer vision? - Summer 2024</h1>
+<p>From INM's website: "Computer vision is a field of artificial intelligence (AI) that uses machine learning and neural networks to teach computers and systems to derive meaningful information from digital images, videos and other visual inputs (https://www.ibm.com/topics/computer-vision)".</p>
+<p>Exemples of early techniques:</p>
+<p>1974 - Optical character recognition (https://www.britannica.com/technology/OCR)</p>
+<p>To identify characters by comparing shapes to those stored in the software library.</p>
+<p>* More on this later</p>
 	
-	Preliminary idea - Summer 2024
-interactive sculpture, gallery viewers can modify a block structure, the sculpture is forever changing.
+	<h1>Preliminary idea - Summer 2024</h1>
+<p>interactive sculpture, gallery viewers can modify a block structure, the sculpture is forever changing.</p>
 
 	

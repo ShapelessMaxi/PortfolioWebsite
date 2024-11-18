@@ -7,6 +7,20 @@ window.onload = (event) => {
 
         // call different actions depending on which page is displayed
         switch (document.body.getAttribute("page")) {
+          
+          case "log":
+             // Fetch Log.txt and display its content
+            fetch("project_data/LookAgain/Log.txt")
+              .then(response => response.text())
+              .then(data => {
+                document.getElementById("textlog").innerHTML = data;
+              })
+              .catch(error => {
+                console.error("Error fetching Log.txt:", error);
+              });
+          
+            break
+
           case "about":
 
            // dropdown buttons interaction, reveal textboxes
@@ -102,46 +116,23 @@ window.onload = (event) => {
             // description
             document.getElementById("description").innerText = displayedProject.description;
             
-            // extra doc
-            document.getElementById("doc-button-text").innerText = displayedProject.documentation[0].tag;
+            // Extra doc
+            let docTag = document.getElementById("doc-button-text");
+            docTag.innerText = displayedProject.documentation[0].tag;
             document.getElementById("doc-button").addEventListener("click", function(event) {
-            const url = displayedProject.documentation[0].link;
-            const options = "width=800,height=600,scrollbars=yes,resizable=yes";
-            
-            if (displayedProject.documentation[0].tag == "Log") {
-                var newWindow = window.open("log.html", "_blank", options);
-                console.log(url)
+              let url = displayedProject.documentation[0].link;
 
-                // Wait for the new window to load before modifying the text
-                newWindow.onload = function() {
-                  // Fetch the content of the text file
-                  fetch(url)
-                  .then(response => {
-                    if (!response.ok) {
-                      throw new Error('Failed to load the text file');
-                    }
-                    return response.text();
-                  })
-                  .then(data => {
-                    // Find the .textlog element in the new window and set its text content
-                    
-                    console(data)
-                    
-                    var textbox = newWindow.document.querySelector(".textlog");
-                    if (textbox) {
-                          textbox.textContent = data;
-                      } else {
-                          console.error('Element .textlog not found in the new window.');
-                      }
-                    })
-                    .catch(error => {
-                      console.error('Error fetching the text file:', error);
-                    });
-                };
-            } else {
+              // Check if the tag is "Log"
+              if (displayedProject.documentation[0].tag === "Log") {
+                // Open the log page
+                let logOptions = "width=800,height=1000,scrollbars=yes,resizable=yes";
+                window.open("log.html", "_blank", logOptions);
+              } else {
+                // Open the external docs
+                let options = "width=1500,height=1000,scrollbars=yes,resizable=yes";
                 window.open(url, "_blank", options);
-            }
-          });
+              }
+            });
 
           // project buttons interaction
           document.querySelectorAll('.project-button').forEach(button => {
