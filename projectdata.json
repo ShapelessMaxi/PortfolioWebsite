@@ -9,15 +9,15 @@
             "gallery": [
                 {
                     "dir": "project_data\\GiltchArmor\\DSC00418.jpg",
-                    "type": "jpg"
+                    "caption": "Documentation of work installed for the Millieux x MTLconnect event (10-2024)"
                 },
                 {
                     "dir": "project_data\\GiltchArmor\\DSC00446.jpg",
-                    "type": "jpg"
+                    "caption": "Documentation of work presented during the Millieux x MTLconnect event (10-2024)"
                 },
                 {
                     "dir": "project_data\\GiltchArmor\\DSC00499.jpg",
-                    "type": "jpg"
+                    "caption": "Documentation of work presented during the Millieux x MTLconnect event (10-2024)"
                 }
             ],
             "keywords": [
@@ -49,7 +49,7 @@
             "gallery": [
                 {
                     "dir": "project_data\\LookAgain\\Proto01.jpg",
-                    "type": "jpg"
+                    "caption": "jpg"
                 }
             ],
             "keywords": [
@@ -79,23 +79,23 @@
             "gallery": [
                 {
                     "dir": "project_data\\ToDissectToStitch\\ToDissectToStitch_01.png",
-                    "type": "png"
+                    "caption": "png"
                 },
                 {
                     "dir": "project_data\\ToDissectToStitch\\ToDissectToStitch_02.png",
-                    "type": "png"
+                    "caption": "png"
                 },
                 {
                     "dir": "project_data\\ToDissectToStitch\\ToDissectToStitch_03.gif",
-                    "type": "gif"
+                    "caption": "gif"
                 },
                 {
                     "dir": "project_data\\ToDissectToStitch\\ToDissectToStitch_04.png",
-                    "type": "png"
+                    "caption": "png"
                 },
                 {
                     "dir": "project_data\\ToDissectToStitch\\ToDissectToStitch_05.png",
-                    "type": "png"
+                    "caption": "png"
                 }
             ],
             "keywords": [
@@ -128,15 +128,15 @@
             "gallery": [
                 {
                     "dir": "project_data\\PostApocalypticHottie\\PostApocalypticHottie_01.png",
-                    "type": "png"
+                    "caption": "png"
                 },
                 {
                     "dir": "project_data\\PostApocalypticHottie\\PostApocalypticHottie_03.png",
-                    "type": "png"
+                    "caption": "png"
                 },
                 {
                     "dir": "project_data\\PostApocalypticHottie\\PostApocalypticHottie_04.png",
-                    "type": "png"
+                    "caption": "png"
                 }
             ],
             "keywords": [
@@ -168,15 +168,15 @@
             "gallery": [
                 {
                     "dir": "project_data\\AwakeningofTheFrog\\AwakeningofTheFrog_01.png",
-                    "type": "png"
+                    "caption": "png"
                 },
                 {
                     "dir": "project_data\\AwakeningofTheFrog\\AwakeningofTheFrog_03.png",
-                    "type": "png"
+                    "caption": "png"
                 },
                 {
                     "dir": "project_data\\AwakeningofTheFrog\\AwakeningofTheFrog_04.png",
-                    "type": "png"
+                    "caption": "png"
                 }
             ],
             "keywords": [
@@ -208,15 +208,15 @@
             "gallery": [
                 {
                     "dir": "project_data\\bodymod\\bodymod_01.png",
-                    "type": "png"
+                    "caption": "png"
                 },
                 {
                     "dir": "project_data\\bodymod\\bodymod_04.png",
-                    "type": "png"
+                    "caption": "png"
                 },
                 {
                     "dir": "project_data\\bodymod\\bodymod_05.png",
-                    "type": "png"
+                    "caption": "png"
                 }
             ],
             "keywords": [
@@ -248,7 +248,7 @@
             "gallery": [
                 {
                     "dir": "project_data\\project\\img.png",
-                    "type": "png"
+                    "caption": "png"
                 }
             ],
             "keywords": [

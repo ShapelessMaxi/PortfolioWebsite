@@ -12,10 +12,11 @@
     --socials: 1;
 
     /* colors */
-    --navbar-color: rgb(195,195,195);
+    --navbar-color: rgb(167, 167, 167);
     --green-c: rgb(110 142 111);
     --pink-c: #f58daf;
     --content-bg-c: rgb(245, 245, 245);
+    --buttons-bg: rgb(52, 52, 52);
         
     /* fonts */
     --body-font: 'Spline Sans', sans-serif;
@@ -127,8 +128,8 @@ html, body {
   margin: 0.25rem 1rem 0.25rem 1rem;
   padding: 0.8rem 1rem;
   font-family: var(--body-font);
-  color: black;
-  background-color: rgb(91, 91, 91);
+  color: white;
+  background-color: var(--buttons-bg);
 }
 #project-list > .project-button:hover, 
 #wip-list > .project-button:hover {
@@ -175,7 +176,7 @@ html, body {
   font-family: var(--body-font);
   font-size: 0.9rem;
   font-weight: 200;
-  color: var(--green-c);
+  color: black
 }
 #finished-projects-title {
   grid-row: 6;
@@ -224,10 +225,11 @@ html, body {
   font-size: 1.5rem;
 }
 #content > #gallery {
-  /* background-color: rgb(68, 68, 68); */
+  position: relative; /* This will allow absolute positioning inside */
   grid-column: 5 / calc(var(--page-cols) + 1 - 8 - 4);
   grid-row: 5 / span 11;
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   padding: 0.25rem;
@@ -244,11 +246,31 @@ html, body {
 #content > #right-gallery-button {
   grid-column: -4;
 }
-#content > #gallery > img {
-  padding: 0.25rem;
+#content > #gallery > #img-caption-combo {
+  background-color: var(--buttons-bg);
+  position: relative; /* Makes it a positioned element */
+  max-width: 100%; /* Ensures the combo div does not expand beyond gallery */
+  max-height: 100%; /* Ensures the combo div does not expand beyond gallery */
+  display: flex;
+  flex-direction: column; /* Stack image and caption vertically */
+  align-items: left;
+  justify-content: center;
+  overflow: hidden; /* Prevents overflow of content */
+}
+#content > #gallery > #img-caption-combo > img {
   max-width: 100%;
-  max-height: 100%;
+  max-height: 95%;
   object-fit: contain;
+}
+#content > #gallery > #img-caption-combo > #caption {
+  color: white;
+  font-size: 0.7rem;
+  font-family: var(--fine-font);
+  font-weight: 100;
+  box-sizing: border-box;
+  padding-bottom: 0.25rem;
+  padding-left: 1rem;
+  padding-top: 0.25rem;
 }
 #content > #keywords-box {
   grid-column: 16 / calc(var(--page-cols) + 1 - 8 - 2);

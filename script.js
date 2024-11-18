@@ -81,7 +81,10 @@ window.onload = (event) => {
             document.getElementById("year").innerText = displayedProject.year;
             // display the first image
             let galleryElement = document.getElementById("gallery-img");
-            galleryElement.src =displayedProject.gallery[0].dir;
+            galleryElement.src = displayedProject.gallery[0].dir;
+            // first img caption
+            let captionElement = document.getElementById("caption");
+            captionElement.innerText = displayedProject.gallery[0].caption;
             // keywords
             for (let k = 0; k < displayedProject.keywords.length; k++) {
               let currentKeyword = document.createElement("span");
@@ -164,8 +167,9 @@ window.onload = (event) => {
                   // title and year
                   document.getElementById("title").innerText = projects[p].title;
                   document.getElementById("year").innerText = projects[p].year;
-                  // display the first image
+                  // display the first image and caption
                   galleryElement.src = projects[p].gallery[0].dir;
+                  captionElement.innerText = displayedProject.gallery[0].caption;
                   // keywords
                   for (let k = 0; k < projects[p].keywords.length; k++) {
                     let currentKeyword = document.createElement("span");
@@ -198,6 +202,7 @@ window.onload = (event) => {
             currentImgIndex ++;
             currentImgIndex = currentImgIndex % imgCount;
             galleryElement.src = displayedProject.gallery[currentImgIndex].dir;
+            captionElement.innerText = displayedProject.gallery[currentImgIndex].caption;
           });
           // left button
           document.getElementById('left-gallery-button').addEventListener('click', function() {
@@ -207,6 +212,7 @@ window.onload = (event) => {
               currentImgIndex = imgCount - 1;
             }
             galleryElement.src = displayedProject.gallery[currentImgIndex].dir;
+            captionElement.innerText = displayedProject.gallery[currentImgIndex].caption;
           });
 
           break;
