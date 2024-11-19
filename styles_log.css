@@ -40,11 +40,23 @@ html, body {
 #log-container {
   width: 100vw;
   height: 100vh;
+  overflow-x: hidden;
+}
+#log-container::-webkit-scrollbar {
+  width: 0.5rem;
+}
+#log-container::-webkit-scrollbar-thumb{
+  background-color: var(--green-c);
+  margin-right: 0.25rem;
+}
+#log-container::-webkit-scrollbar-track{
+  background: white;
+  margin-right: 0.25rem;
 }
 
 #content {
     display: grid;
-    grid-template-columns: 80% 1fr;
+    grid-template-columns: 85% 1fr;
     gap: 2rem;
   }
 #content > #textlog,
@@ -77,3 +89,4 @@ html, body {
 #content > #textlog > p {
     text-indent: 1rem;
 }
+
