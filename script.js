@@ -116,31 +116,43 @@ window.onload = (event) => {
             // description
             document.getElementById("description").innerText = displayedProject.description;
             
-            // Extra doc
-            let docTag = document.getElementById("doc-button-text");
-            docTag.innerText = displayedProject.documentation[0].tag;
-            document.getElementById("doc-button").addEventListener("click", function(event) {
-              let url = displayedProject.documentation[0].link;
+            // Extra doc buttons
+            for (let d = 0; d < displayedProject.documentation.length; d++) {
+              let currentDocButton = document.createElement("div");
+              currentDocButton.classList.add('doc-button');
+              currentDocButton.setAttribute("target", "_blank");
+              currentDocButton.setAttribute("href", "");
+              document.getElementById("doc-button-box").appendChild(currentDocButton);
 
-              // Check if the tag is "Log"
-              if (displayedProject.documentation[0].tag === "Log") {
-                // Open the log page
-                let logOptions = "width=800,height=1000,left=200,top=300,scrollbars=yes,resizable=yes";
-                window.open("log.html", "_blank", logOptions);
-              } else {
-                // Open the external docs
-                let options = "width=1500,height=1000,left=200,top=300,scrollbars=yes,resizable=yes";
-                window.open(url, "_blank", options);
-              }
-            });
+              let currentButtonText = document.createElement("span");
+              currentButtonText.classList.add('doc-button-text');
+              currentButtonText.innerText = displayedProject.documentation[d].tag;
+              currentDocButton.appendChild(currentButtonText);
 
+              currentDocButton.addEventListener("click", function(event) {
+                // Check if the tag is "Log"
+                if (displayedProject.documentation[d].tag === "Log") {
+                  // Open the log page
+                  let logOptions = "width=600,height=1000,left=200,top=300,scrollbars=yes,resizable=yes";
+                  window.open("log.html", "log", logOptions);
+                } else {
+                  // Open the external docs
+                  let options = "width=1500,height=1000,left=800,top=300,scrollbars=yes,resizable=yes";
+                  window.open(displayedProject.documentation[d].link, "doc", options);
+                }
+              });
+            };
+            
           // project buttons interaction
           document.querySelectorAll('.project-button').forEach(button => {
             button.addEventListener('click', function() {
               // Remove Keywords and tools
               document.querySelectorAll('.keyword').forEach(keyword => keyword.remove());
               document.querySelectorAll('.tool').forEach(tool => tool.remove());
-              
+
+              // Remove Documentation buttons
+              document.querySelectorAll('.doc-button').forEach(keyword => keyword.remove());
+
               // Remove and add 'active' class from all buttons
               document.querySelectorAll('.project-button').forEach(btn => btn.classList.remove('active'));
               this.classList.add('active');
@@ -177,9 +189,33 @@ window.onload = (event) => {
                   }
                   // description
                   document.getElementById("description").innerText = projects[p].description;
-                  // extra documentation
-                  document.getElementById("doc-button-text").innerText = projects[p].documentation[0].tag;
-                  document.getElementById("doc-button").setAttribute('href', projects[p].documentation[0].link);
+
+                   // Extra doc buttons
+                  for (let d = 0; d < displayedProject.documentation.length; d++) {
+                    let currentDocButton = document.createElement("div");
+                    currentDocButton.classList.add('doc-button');
+                    currentDocButton.setAttribute("target", "_blank");
+                    currentDocButton.setAttribute("href", "");
+                    document.getElementById("doc-button-box").appendChild(currentDocButton);
+
+                    let currentButtonText = document.createElement("span");
+                    currentButtonText.classList.add('doc-button-text');
+                    currentButtonText.innerText = displayedProject.documentation[d].tag;
+                    currentDocButton.appendChild(currentButtonText);
+
+                    currentDocButton.addEventListener("click", function(event) {
+                      // Check if the tag is "Log"
+                      if (displayedProject.documentation[d].tag === "Log") {
+                        // Open the log page
+                        let options = "width=800,height=1000,left=200,top=300,scrollbars=yes,resizable=yes";
+                        window.open("log.html", "log", options);
+                      } else {
+                        // Open the external docs
+                        let options = "width=1500,height=1000,left=200,top=300,scrollbars=yes,resizable=yes";
+                        window.open(displayedProject.documentation[d].link, "doc", options);
+                      }
+                    });
+                  }
                 }
               }
             

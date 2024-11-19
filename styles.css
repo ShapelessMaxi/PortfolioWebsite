@@ -331,7 +331,16 @@ html, body {
   background: white;
   margin-right: 0.25rem;
 }
-#content > #doc-button {
+#content > #doc-button-box {
+    grid-row: 21 / 22;
+    grid-column: 17 / -3;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: blue;
+}
+#content > #doc-button-box > .doc-button {
   overflow: hidden;
   display: flex;
   align-items: center;
@@ -342,7 +351,7 @@ html, body {
   text-decoration: none;
   cursor: pointer;
 }
-#content > #doc-button > #doc-button-text {
+#content > #doc-button-box > .doc-button > .doc-button-text {
   color: white;
   font-family: var(--body-font);
   font-size: 1rem;

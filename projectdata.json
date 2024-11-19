@@ -37,7 +37,11 @@
                 {
                     "tag": "Web Documentation",
                     "link": "https://hdmaxi411.wordpress.com"
-                }                    
+                },
+                {
+                    "tag": "Log",
+                    "link": "project_data\\GlitchArmor\\log.txt"
+                }                              
             ]
         },
 

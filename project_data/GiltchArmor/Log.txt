@@ -1,0 +1,57 @@
+	<h1>TouchDesigner Prototype 01 - November 2024</h1>
+<p>Scratch this pile of operators, I need a script that will do all the simple operations of this colorAnalyzeTOPs in a for loop. Also, there's probably a way to create operators and so I'll be able to change, modify, expand it easily ans faster.</p>
+<p>I'm starting to work with NumPy because basically, you can read an image as a really long 2D array populated by every pixel of the image. The pixels are an object. There's useful methods like split(), making it possible to digest the array by smaller areas, and variables, like the .r, .g and .b values of each pixels. In brief, the NumPy array and split into cells[x,y]. The RGB values of each pixels of each cells are averaged, basically smudging them all together. I export both an image, and a table containing all colors in written form (this was more for debugging purposes). Then, to create the visual, I am storing a 3Dspheres node system in a baseComp, and copying it a bunch as much times as the image is split. The colors of each sphere changes according to what's in front of the camera, and to what colors are in the reference Table. They get smaller if the input's color is not registered. This process is dynamic and live and not slow!</p>
+
+<h2>In this prototype, I'm doing a few very sensible things</h2>
+<p>- storing a dynamic reference color table</p>
+<p>- storing x and y size of the split/grid</p>
+
+<h2>The things that could be better</h2>
+<p>- the visual output is ugly af.</p>
+<p>- The image exported just looks pixelated.</p>
+<p>- there is little to no considerations of the physical setup</p>
+<p>- the for loop to read the colums and rows of the NumPy</p>
+
+<p><h2>Ideas</h2>
+<p>- 2 screens looking at each other? back-to-back?</p>
+<p>- 1st screen looking at a physical thing, 2nd looking at the digital output of the first, and more and more? that experience of playing with friends and looking over at their screens, or playing on the same screens, or looking at them play (series of 2-3 installs?). Also maybe refer to Elio's reading about systems, and other about the subject.</p>
+<p>- wait export to .fbx and 3D print a couple of variations?</p>
+<p>- look at toys (lego blocks, bakugans, playmobiles)</p>
+<p>- since the image will forcibly decrease in quality and credibility, I could reinforce a theme of the games being increasingly far and vague in my memories.</p>
+
+	<h1>Submitting to ENMEDIA Particle + Wave Festival, August 2024</h1>
+<p>Exhibition Piece</p>
+<p>Mismatched</p>
+<p>Interactive physical installation with digital output</p>
+<p>Physical Legos, creates a 3D Barbie Doll.</p>
+<p>No news but I think the proposal is too ambitious. It's hard to trust that I'll be able to make this. I think the concept is slay but also i was/ am not really into barbies.</p>
+
+	<h1>TouchDesigner Prototype 01 - Summer 2024</h1>
+<p>This first prototype was using common TOPs and CHOPs, mostly the colorAnalyzeTOP.</p>
+<p>It was complex to build, change, and expand the network. </p>
+<p>It was also slow, unreliable and very hard to setup the physical display.
+
+	<h1>Inital Technicalt Tests - Jan 2024</h1>
+<p>I did some testing with the blob track TOP in TouchDesigner. With it, I can easily detect moving objects, or humans, in a space. The size of the blob inform us of the general distance of the person (smaller blob = further, bigger blob = closer). Although this technique is not 100% accurate, I think it would be sufficient for this project.</p>
+<p>For the desintegration effect, I tinkered around and created a patch on TD mimicking a pixel sorting algorithm. There is still work to do on this as I am not supr happy with it, but this is the type of effect I am thinking about for the progressive disintegration part.</p>
+	
+	<h1>Inital Concept - Jan 2024</h1>
+<p>Are you afraid of being seen?</p>
+<p>In her essay titled Shifting Futures: Digital Trans of Color Praxis, Micha Cardénas writes about the violence committed against specifically black trans women in the US (https://scalar.usc.edu/works/shifting-futures-micha-cardenas/index). She argues that visibility politics made it possible for a black trans movement to gain so much traction. On the other hand, being able to “pass” as cis women is often what saves them from violent acts. Cardénas conceive of this ability to shift through states of visibility as an essential tool for survival. In addition to that, my own experience as a queer subject made me realize that I pretty much only receive violence and slurs when I dress and act more queer, gay, and fem.</p>
+<p>What if technology evolved to have human characteristics?</p>
+<p>What if digital characters also had anxiety about being visible?</p>
+<p>For this piece, I want to depict a scene of queer intimacy. On screen, we would see a gay couple looking at each other longingly. While sensing human presence in front of the screen through camera technology, the image will progressively disintegrate.</p>
+<h1>State 1: Intimacy</h1>
+<p>the two characters are looking at each other.</p>
+<h1>State 2: Consciousness</h1>
+<p>the characters’ eyes are tracking the viewer. If there are multiple viewers, their eyes erratically change targets.</p>
+<h1>State 3: Progressive disintegration</h1>
+<p>pixel sorting algorithm/effect rendering the image progressively harder to read.</p>
+<p>The digital couple would be 3D modelled, textured and animated in Blender and Substance Painter.</p>
+<p>The conscious and interactive part would be programmed in TouchDesigner, using the Blob tracking technique and/or MediaPipe. I am also intrigued by IR cameras (night vision) as a way to get more precise images to analyze.</p>
+
+
+<h1></h1>
+<h2></h2>
+<p></p>
+	
