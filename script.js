@@ -125,11 +125,11 @@ window.onload = (event) => {
               // Check if the tag is "Log"
               if (displayedProject.documentation[0].tag === "Log") {
                 // Open the log page
-                let logOptions = "width=800,height=1000,scrollbars=yes,resizable=yes";
+                let logOptions = "width=800,height=1000,left=200,top=300,scrollbars=yes,resizable=yes";
                 window.open("log.html", "_blank", logOptions);
               } else {
                 // Open the external docs
-                let options = "width=1500,height=1000,scrollbars=yes,resizable=yes";
+                let options = "width=1500,height=1000,left=200,top=300,scrollbars=yes,resizable=yes";
                 window.open(url, "_blank", options);
               }
             });

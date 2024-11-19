@@ -340,6 +340,7 @@ html, body {
   grid-column: 20 / calc(var(--page-cols) + 1 - 8 - 2);
   grid-row: 21;
   text-decoration: none;
+  cursor: pointer;
 }
 #content > #doc-button > #doc-button-text {
   color: white;
