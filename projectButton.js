@@ -2,11 +2,13 @@ class projectButton {
     constructor(
       title,
       year,
-      isDone
+      isDone,
+      isFirst
     ) {
       this.title = title;
       this.year = year;
       this.isDone = isDone;
+      this.isFirst = isFirst;
 
       this.createButton();
     }
@@ -22,6 +24,9 @@ class projectButton {
       // button
       this.button = document.createElement("a");
       this.button.classList.add("project-button");
+      if (this.isFirst) {
+        this.button.classList.add('active');      
+      }
       
       this.button.appendChild(this.titleBox);
       this.button.appendChild(this.yearBox);

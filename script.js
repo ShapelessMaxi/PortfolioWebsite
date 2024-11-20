@@ -9,18 +9,32 @@ window.onload = (event) => {
         switch (document.body.getAttribute("page")) {
           
           case "log":
-             // Fetch Log.txt and display its content
-            fetch("project_data/LookAgain/Log.txt")
-              .then(response => response.text())
-              .then(data => {
-                document.getElementById("textlog").innerHTML = data;
-              })
-              .catch(error => {
-                console.error("Error fetching Log.txt:", error);
-              });
-          
-            break
+            const urlParams = new URLSearchParams(window.location.search);
+            let logFilePath = urlParams.get("log");
 
+            if (logFilePath) {
+              fetch(logFilePath)
+                .then((response) => {
+                  if (!response.ok) {
+                    throw new Error(`Failed to fetch the log file. Status: ${response.status}`);
+                  }
+                  return response.text();
+                })
+                .then((data) => {
+                  document.getElementById("textlog").innerHTML = data;
+                  console.log("Log file content:", data);
+                })
+                .catch((error) => {
+                  console.error("Error fetching log file:", error);
+                  document.getElementById("textlog").innerText = "Failed to load the log file.";
+                });
+            } else {
+              console.warn("No log file specified.");
+              document.getElementById("textlog").innerText = "No log file specified.";
+            }
+            
+            break;
+           
           case "about":
 
            // dropdown buttons interaction, reveal textboxes
@@ -64,10 +78,17 @@ window.onload = (event) => {
             let finishedProjectButtons = [];
             for (let i = 0; i < data.projects.length; i++) {
               if (data.projects[i].isDone == "True") {
+                let isFirst;
+                if (i === 0) {
+                  isFirst = true;
+                } else {
+                  isFirst = false;
+                }
                 let currentButton = new projectButton(
                   data.projects[i].title,
                   data.projects[i].year,
-                  data.projects[i].isDone
+                  data.projects[i].isDone,
+                  isFirst
                 );
                 finishedProjectButtons.push(currentButton);
               }
@@ -117,31 +138,8 @@ window.onload = (event) => {
             document.getElementById("description").innerText = displayedProject.description;
             
             // Extra doc buttons
-            for (let d = 0; d < displayedProject.documentation.length; d++) {
-              let currentDocButton = document.createElement("div");
-              currentDocButton.classList.add('doc-button');
-              currentDocButton.setAttribute("target", "_blank");
-              currentDocButton.setAttribute("href", "");
-              document.getElementById("doc-button-box").appendChild(currentDocButton);
-
-              let currentButtonText = document.createElement("span");
-              currentButtonText.classList.add('doc-button-text');
-              currentButtonText.innerText = displayedProject.documentation[d].tag;
-              currentDocButton.appendChild(currentButtonText);
-
-              currentDocButton.addEventListener("click", function(event) {
-                // Check if the tag is "Log"
-                if (displayedProject.documentation[d].tag === "Log") {
-                  // Open the log page
-                  let logOptions = "width=600,height=1000,left=200,top=300,scrollbars=yes,resizable=yes";
-                  window.open("log.html", "log", logOptions);
-                } else {
-                  // Open the external docs
-                  let options = "width=1500,height=1000,left=800,top=300,scrollbars=yes,resizable=yes";
-                  window.open(displayedProject.documentation[d].link, "doc", options);
-                }
-              });
-            };
+            createDocButtons(displayedProject);
+            
             
           // project buttons interaction
           document.querySelectorAll('.project-button').forEach(button => {
@@ -181,6 +179,7 @@ window.onload = (event) => {
                     document.getElementById("keywords-box").appendChild(currentKeyword);
                   }
                   // tools
+                  createContent(displayedProject);
                   for (let t = 0; t < projects[p].tools.length; t++) {
                     let currentTool = document.createElement("span");
                     currentTool.classList.add("tool");
@@ -190,32 +189,9 @@ window.onload = (event) => {
                   // description
                   document.getElementById("description").innerText = projects[p].description;
 
-                   // Extra doc buttons
-                  for (let d = 0; d < displayedProject.documentation.length; d++) {
-                    let currentDocButton = document.createElement("div");
-                    currentDocButton.classList.add('doc-button');
-                    currentDocButton.setAttribute("target", "_blank");
-                    currentDocButton.setAttribute("href", "");
-                    document.getElementById("doc-button-box").appendChild(currentDocButton);
+                  // Extra doc buttons
+                  createDocButtons(displayedProject);
 
-                    let currentButtonText = document.createElement("span");
-                    currentButtonText.classList.add('doc-button-text');
-                    currentButtonText.innerText = displayedProject.documentation[d].tag;
-                    currentDocButton.appendChild(currentButtonText);
-
-                    currentDocButton.addEventListener("click", function(event) {
-                      // Check if the tag is "Log"
-                      if (displayedProject.documentation[d].tag === "Log") {
-                        // Open the log page
-                        let options = "width=800,height=1000,left=200,top=300,scrollbars=yes,resizable=yes";
-                        window.open("log.html", "log", options);
-                      } else {
-                        // Open the external docs
-                        let options = "width=1500,height=1000,left=200,top=300,scrollbars=yes,resizable=yes";
-                        window.open(displayedProject.documentation[d].link, "doc", options);
-                      }
-                    });
-                  }
                 }
               }
             
@@ -246,4 +222,37 @@ window.onload = (event) => {
       }
 
     });
+  }
+
+  function createDocButtons (displayedProject) {
+    for (let d = 0; d < displayedProject.documentation.length; d++) {
+      let currentDocButton = document.createElement("div");
+      currentDocButton.classList.add('doc-button');
+      currentDocButton.setAttribute("target", "_blank");
+      currentDocButton.setAttribute("href", "");
+      document.getElementById("doc-button-box").appendChild(currentDocButton);
+
+      let currentButtonText = document.createElement("span");
+      currentButtonText.classList.add('doc-button-text');
+      currentButtonText.innerText = displayedProject.documentation[d].tag;
+      currentDocButton.appendChild(currentButtonText);
+
+      currentDocButton.addEventListener("click", function(event) {
+        // Check if the tag is "Log" or not
+        if (displayedProject.documentation[d].tag === "Log") {
+          // Open the log page
+          let logFilePath = displayedProject.documentation[d].link;
+          let logOptions = "width=600,height=1000,left=200,top=300,scrollbars=yes,resizable=yes";
+          window.open(`log.html?log=${encodeURIComponent(logFilePath)}`, "log", logOptions);
+        } else {
+          // Open the external docs
+          let options = "width=1500,height=1000,left=1000,top=300,scrollbars=yes,resizable=yes";
+          window.open(displayedProject.documentation[d].link, "doc", options);
+        }
+      });
+    };
+  }
+  
+  function createContent (displayedProject){
+    
   }

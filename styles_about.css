@@ -12,9 +12,11 @@
     --socials: 1;
 
     /* colors */
-    --bg-color: lightgrey;
-    --header-color: rgb(87, 87, 87);
-    --navbar-color: rgb(129, 129, 129);
+    --grey: rgb(167, 167, 167);
+    --green: rgb(110 142 111);
+    --pink: #f58daf;
+    --grey-white: rgb(245, 245, 245);
+    --grey-black: rgb(52, 52, 52);
         
     /* fonts */
     --body-font: 'Spline Sans', sans-serif;
@@ -49,7 +51,7 @@ html, body {
   grid-template-rows: repeat(3, minmax(0, 1fr));
   grid-column: 1 / -1;
   grid-row: 1 / 3;
-  background-color: var(--header-color);
+  background-color: var(--green);
 }
 #header > #name-box {
   grid-column: 11 / -3;
@@ -72,7 +74,7 @@ html, body {
 #navbar {
   grid-column: 1 / 9;
   grid-row: 1 / -1;
-  background-color: var(--navbar-color);
+  background-color: var(--grey);
   display: grid;
   grid-template-columns: repeat(12, minmax(0, 1fr));
   grid-template-rows: repeat(var(--page-rows), minmax(0, 1fr));
@@ -132,13 +134,13 @@ html, body {
   font-family: var(--display-font);
   text-align: center;
   cursor: pointer;
-  border-bottom: 0.1rem solid var(--navbar-color);
+  border-bottom: 0.1rem solid var(--grey);
 }
 #content > #text-box > .drop-button > .titles:hover {
-  color: var(--navbar-color);
+  color: var(--pink);
 }
 #content > #text-box > .drop-button > .titles.active {
-  color: var(--navbar-color);
+  color: var(--pink);
   border-bottom: none;
 }
 #content > #text-box > .paragraphs {
@@ -152,7 +154,7 @@ html, body {
 }
 #content > #text-box > .paragraphs.active {
   display: block;
-  border-bottom: 0.1rem solid var(--navbar-color);
+  border-bottom: 0.1rem solid var(--pink);
 }
 #content > #text-box > .titles {
   padding-top: 5rem;
@@ -161,9 +163,26 @@ html, body {
   font-size: 1rem;
   font-family: var(--display-font);
   text-align: center;
-  border-bottom: 0.1rem solid var(--navbar-color);
+  border-bottom: 0.1rem solid var(--grey);
 }
 #content > #text-box > .secondary {
   text-align: left;
   width: 50%;
+}
+#content > #interest-cards-box {
+  grid-column: 3 / -3;
+  grid-row: 6 / -3;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+#content > #interest-cards-box > .interest-cards {
+  width: 300px;
+  height: 300px;
+  background-color: var(--pink);
+  margin: 2rem;
+}
+#content > #interest-cards-box > .interest-cards > .interest-title {
+  color: black;
+  font-family: var(--body-font);
 }

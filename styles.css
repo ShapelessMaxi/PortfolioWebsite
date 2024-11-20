@@ -12,11 +12,11 @@
     --socials: 1;
 
     /* colors */
-    --navbar-color: rgb(167, 167, 167);
-    --green-c: rgb(110 142 111);
-    --pink-c: #f58daf;
-    --content-bg-c: rgb(245, 245, 245);
-    --buttons-bg: rgb(52, 52, 52);
+    --grey: rgb(167, 167, 167);
+    --green: rgb(110 142 111);
+    --pink: #f58daf;
+    --grey-white: rgb(245, 245, 245);
+    --grey-black: rgb(53, 53, 53);
         
     /* fonts */
     --body-font: 'Spline Sans', sans-serif;
@@ -51,7 +51,7 @@ html, body {
   grid-template-rows: repeat(2, minmax(0, 1fr));
   grid-column: 1 / calc(var(--page-cols) + 1);
   grid-row: 1 / span 2;
-  background-color: var(--green-c);
+  background-color: var(--green);
 }
 #header > #name-box {
   grid-column: 11 / calc(var(--page-cols) + 1 - 2);
@@ -61,6 +61,11 @@ html, body {
   justify-content: space-between;
   align-items: flex-end;
 }
+#header > #name-box > #name,
+#header > #name-box > #alias {
+  color: black;
+  text-decoration: none;
+}
 #header > #name-box > #name {
   font-family: var(--altbody-font);
   font-size: 1.25rem;
@@ -69,12 +74,17 @@ html, body {
   font-family: var(--display-font);
   font-size: 1.2rem;
 }
+#header > #name-box > #name:hover,
+#header > #name-box > #alias:hover {
+  cursor: pointer;
+  color: var(--pink);
+}
 
 /* navbar */
 #navbar {
   grid-column: 1 / span 8;
   grid-row: 1 / calc(var(--page-rows)  + 1);
-  background-color: var(--navbar-color);
+  background-color: var(--grey);
   display: grid;
   grid-template-columns: repeat(8, minmax(0, 1fr));
   grid-template-rows: repeat(var(--page-rows), minmax(0, 1fr));
@@ -86,7 +96,7 @@ html, body {
   grid-row: 2 / span 2;
 }
 #navbar > #logo > img {
-  height: 100%;
+  height: 125%;
 }
 #navbar > #about-button {
   overflow: hidden;
@@ -103,7 +113,18 @@ html, body {
   font-family: var(--body-font);
   font-size: 1rem;
 }
+#navbar > #socials {
+  grid-column: 3 / span 4;
+  grid-row: calc(var(--page-rows) - 1) / span 1;
+  padding: 0 0.25vw 0;
+  display: flex;
+}
+#navbar > #socials > a > #insta, #youtube, #mail {
+  height: 100%;
+  padding: 0 1.3vw 0;
+}
 
+/* navbar projects buttons */
 #project-list {
   grid-column: 1 / -1;
   grid-row: 7 / -9;
@@ -129,17 +150,17 @@ html, body {
   padding: 0.8rem 1rem;
   font-family: var(--body-font);
   color: white;
-  background-color: var(--buttons-bg);
+  background-color: var(--grey-black);
 }
 #project-list > .project-button:hover, 
 #wip-list > .project-button:hover {
-  background: var(--pink-c);
+  background: var(--pink);
   cursor: pointer;
 }
 #project-list > .project-button.active, 
 #wip-list > .project-button.active {
   background: white;
-  color: var(--pink-c);
+  color: var(--pink);
   cursor: default;
   pointer-events: none;
 }
@@ -161,7 +182,7 @@ html, body {
 }
 #project-list::-webkit-scrollbar-thumb,
 #wip-list::-webkit-scrollbar-thumb{
-  background-color: var(--green-c);
+  background-color: var(--green);
   margin-right: 0.25rem;
 }
 #finished-projects-title,
@@ -185,24 +206,11 @@ html, body {
   grid-row: 17;
 }
 
-#navbar > #socials {
-  grid-column: 3 / span 4;
-  grid-row: calc(var(--page-rows) - 1) / span 1;
-  padding: 0 0.25vw 0;
-  display: flex;
-}
-#navbar > #socials > a > #insta, #youtube, #mail {
-  height: 100%;
-  padding: 0 1.3vw 0;
-}
-
-
-
 /* content */
 #content {
   grid-column: 9 /calc(var(--page-cols) + 1);
   grid-row: 3 / calc(var(--page-rows) + 1);
-  background-color: var(--content-bg-c);
+  background-color: var(--grey-white);
   display: grid;
   grid-template-columns: repeat(calc(var(--page-cols) - 8), minmax(0, 1fr));
   grid-template-rows: repeat(calc(var(--page-rows) - 2), minmax(0, 1fr));
@@ -225,8 +233,8 @@ html, body {
   font-size: 1.5rem;
 }
 #content > #gallery {
-  position: relative; /* This will allow absolute positioning inside */
-  grid-column: 5 / calc(var(--page-cols) + 1 - 8 - 4);
+  position: relative;
+  grid-column: 5 / -5;
   grid-row: 5 / span 11;
   display: flex;
   flex-direction: column;
@@ -247,15 +255,13 @@ html, body {
   grid-column: -4;
 }
 #content > #gallery > #img-caption-combo {
-  background-color: var(--buttons-bg);
-  position: relative; /* Makes it a positioned element */
-  max-width: 100%; /* Ensures the combo div does not expand beyond gallery */
-  max-height: 100%; /* Ensures the combo div does not expand beyond gallery */
+  position: relative;
+  max-width: 100%;
+  max-height: 100%;
   display: flex;
-  flex-direction: column; /* Stack image and caption vertically */
-  align-items: left;
+  flex-direction: column;
   justify-content: center;
-  overflow: hidden; /* Prevents overflow of content */
+  overflow: hidden;
 }
 #content > #gallery > #img-caption-combo > img {
   max-width: 100%;
@@ -263,17 +269,16 @@ html, body {
   object-fit: contain;
 }
 #content > #gallery > #img-caption-combo > #caption {
-  color: white;
+  color: black;
   font-size: 0.7rem;
   font-family: var(--fine-font);
-  font-weight: 100;
+  font-weight: 600;
   box-sizing: border-box;
-  padding-bottom: 0.25rem;
-  padding-left: 1rem;
+  /* padding-bottom: 0.25rem; */
   padding-top: 0.25rem;
 }
 #content > #keywords-box {
-  grid-column: 16 / calc(var(--page-cols) + 1 - 8 - 2);
+  grid-column: 16 / -3;
   grid-row: 17 / span 2;
   overflow-y: hidden;
   display: flex;
@@ -293,7 +298,7 @@ html, body {
   padding-left: 0.5rem;
 }
 #content > #tools-box {
-  grid-column: 16 / calc(var(--page-cols) + 1 - 8 - 2);
+  grid-column: 16 / -3;
   grid-row: 19 / span 2;
   overflow-y: hidden;
   display: flex;
@@ -324,7 +329,7 @@ html, body {
   width: 0.5rem;
 }
 #content > #description::-webkit-scrollbar-thumb{
-  background-color: var(--green-c);
+  background-color: var(--green);
   margin-right: 0.25rem;
 }
 #content > #description::-webkit-scrollbar-track{
@@ -332,24 +337,29 @@ html, body {
   margin-right: 0.25rem;
 }
 #content > #doc-button-box {
-    grid-row: 21 / 22;
-    grid-column: 17 / -3;
+    grid-row: 21 / -2;
+    grid-column: 19 / -3;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    align-items: center;
-    background-color: blue;
+    align-items: flex-end;
 }
 #content > #doc-button-box > .doc-button {
   overflow: hidden;
   display: flex;
   align-items: center;
   padding-left: 0.25rem;
-  background-color: rgb(110 142 111);
+  background-color: var(--green);
   grid-column: 20 / calc(var(--page-cols) + 1 - 8 - 2);
   grid-row: 21;
   text-decoration: none;
   cursor: pointer;
+  padding: 1rem;
+  margin-bottom: 0.5rem;
+  width: 100%;
+}
+#content > #doc-button-box > .doc-button:hover {
+  background-color: var(--pink);
 }
 #content > #doc-button-box > .doc-button > .doc-button-text {
   color: white;
