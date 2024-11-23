@@ -9,7 +9,7 @@ window.onload = (event) => {
         switch (document.body.getAttribute("page")) {
           
           case "log":
-            const urlParams = new URLSearchParams(window.location.search);
+            let urlParams = new URLSearchParams(window.location.search);
             let logFilePath = urlParams.get("log");
 
             if (logFilePath) {
@@ -36,8 +36,29 @@ window.onload = (event) => {
             break;
            
           case "about":
+            // create an object for each interest
+            let interests = [];
+            for (let i = 0; i < data.interests.length; i++) {
+              // create all interests objects
+              let currentInterest = new interest(
+                data.interests[i].title,  
+                data.interests[i].summary,
+                data.interests[i].description,             
+              );
+              interests.push(currentInterest);
+            }
+            // create all interest cards
+            let interestCards = [];
+            for (let i = 0; i < data.interests.length; i++) {
+              let currentCard = new interestCard(
+                data.interests[i].title,
+                data.interests[i].summary,
+                data.interests[i].description,
+              );
+              interestCards.push(currentCard);
+            }
 
-           // dropdown buttons interaction, reveal textboxes
+            // dropdown buttons interaction, reveal textboxes
             document.querySelectorAll('.drop-button').forEach(button => {
               button.addEventListener('click', function() {
                 textbox = button.nextElementSibling;
@@ -74,21 +95,30 @@ window.onload = (event) => {
             }
             let displayedProject = projects[0]
 
+            // getting an interest tag from the about page
+            let urlParameters = new URLSearchParams(window.location.search);
+            let interestProject = urlParameters.get("interest");
+            if (interestProject) {
+              // check which project can be of interest (from about page)
+              let interestingProjects = [];
+              for (let i = 0; i < projects.length; i++) {
+                if (projects[i].filters.includes(interestProject)){
+                  interestingProjects.push(projects[i]);
+                }               
+              };
+              // Get a random project
+              let rIndex = Math.floor(Math.random() * interestingProjects.length);
+              displayedProject = interestingProjects[rIndex];
+            }
+
             // create all finished project buttons
             let finishedProjectButtons = [];
             for (let i = 0; i < data.projects.length; i++) {
               if (data.projects[i].isDone == "True") {
-                let isFirst;
-                if (i === 0) {
-                  isFirst = true;
-                } else {
-                  isFirst = false;
-                }
                 let currentButton = new projectButton(
                   data.projects[i].title,
                   data.projects[i].year,
-                  data.projects[i].isDone,
-                  isFirst
+                  data.projects[i].isDone
                 );
                 finishedProjectButtons.push(currentButton);
               }
@@ -103,6 +133,15 @@ window.onload = (event) => {
                   data.projects[i].isDone
                 );
                 wipProjectButtons.push(currentButton);
+              }
+            }
+
+            // activating the correct button
+            let allButtons = document.querySelectorAll('.project-button');
+            for (let i = 0; i < allButtons.length; i++) {
+              let buttonTitle = allButtons[i].firstElementChild.innerText;
+              if (buttonTitle === displayedProject.title){
+                allButtons[i].classList.add('active');
               }
             }
 
@@ -189,15 +228,23 @@ window.onload = (event) => {
       currentDocButton.appendChild(currentButtonText);
 
       currentDocButton.addEventListener("click", function(event) {
+        // dimensions based on screen size
+        let logWidth = Math.round(screen.width * 0.25);
+        let logLeft = Math.round(screen.width * 0.1);
+        let docWidth = Math.round(screen.width * 0.6);
+        let docLeft = Math.round(screen.width * 0.333);
+        let extHeight = Math.round(screen.height * 0.666);
+        let extTop = Math.round(screen.height * 0.2);
+
         // Check if the tag is "Log" or not
         if (displayedProject.documentation[d].tag === "Log") {
           // Open the log page
           let logFilePath = displayedProject.documentation[d].link;
-          let logOptions = "width=600,height=1000,left=200,top=300,scrollbars=yes,resizable=yes";
-          window.open(`log.html?log=${encodeURIComponent(logFilePath)}`, "log", logOptions);
+          let options = `width=${logWidth},height=${extHeight},left=${logLeft},top=${extTop},scrollbars=yes,resizable=yes`;
+          window.open(`log.html?log=${encodeURIComponent(logFilePath)}`, "log", options);
         } else {
           // Open the external docs
-          let options = "width=1500,height=1000,left=1000,top=300,scrollbars=yes,resizable=yes";
+          let options = `width=${docWidth},height=${extHeight},left=${docLeft},top=${extTop},scrollbars=yes,resizable=yes`;
           window.open(displayedProject.documentation[d].link, "doc", options);
         }
       });

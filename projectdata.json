@@ -4,7 +4,10 @@
         {
             "title": "Glitch Armor",
             "year": 2024,
-            "filters": "Interactive",
+            "filters": [
+                "3D Animation",
+                "Interactive"
+            ],
             "isDone": "True",
             "gallery": [
                 {
@@ -48,7 +51,10 @@
         {
             "title": "Look Again",
             "year": "2024",
-            "filters": "Interactive",
+            "filters": [
+                "Creative Coding",
+                "Interactive"
+            ],
             "isDone": "False",
             "gallery": [
                 {
@@ -78,7 +84,10 @@
         {
             "title": "To Dissect / To Stitch",
             "year": "2023",
-            "filters": "Interactive",
+            "filters": [
+                "Creative Coding",
+                "Interactive"
+            ],
             "isDone": "False",
             "gallery": [
                 {
@@ -127,20 +136,22 @@
         {
             "title": "Post-Apocalyptic Hottie",
             "year": 2023,
-            "filters": "3D animation",
+            "filters": [
+                "3D Animation"
+            ],
             "isDone": "True",
             "gallery": [
                 {
+                    "dir": "project_data\\PostApocalypticHottie\\PostApocalypticHottie_04.png",
+                    "caption": "Character in a T-Pose"
+                },
+                {
                     "dir": "project_data\\PostApocalypticHottie\\PostApocalypticHottie_01.png",
-                    "caption": "png"
+                    "caption": "Still from the walking animation"
                 },
                 {
                     "dir": "project_data\\PostApocalypticHottie\\PostApocalypticHottie_03.png",
-                    "caption": "png"
-                },
-                {
-                    "dir": "project_data\\PostApocalypticHottie\\PostApocalypticHottie_04.png",
-                    "caption": "png"
+                    "caption": "Displacement map used for the ground block"
                 }
             ],
             "keywords": [
@@ -167,7 +178,9 @@
         {
             "title": "Awakening of the Frog",
             "year": "2022",
-            "filters": "3D animation",
+            "filters":[
+                "3D Animation"
+            ],
             "isDone": "True",
             "gallery": [
                 {
@@ -271,6 +284,25 @@
                 }                    
             ]
         }
+    ],
+
+    "interests": [
+
+        {
+            "title": "3D Animation",
+            "summary" : "The process of creating a time-based digital product with 3D software.",
+            "description": "When I say I love 3D animation, I am speaking about everything that happens in 3D software when I create a digital video file, namely 3D modelling, remeshing, UV mapping, texturing and baking, rigging, animating, lighting, simulating physics, and compositing. Not every project needs all of these steps, so I have gone through different versions of this process multiple times. Since I have found myself enjoying each and every steps for various reasons, I have a hard time limiting myself to a specific one, and I guess that make sense with my 'all-over-the-place' personality.",
+            "tag": "3D Animation"
+        },
+
+        {
+            "title": "Tattooing",
+            "summary" : "Marking the body of another person permanently with needles and ink.",
+            "description": "I have always been interested in the tattoing process, both in decorating my own body and in doing it for others. I find body modification enticing for many reasons. It takes effort and pain to sit down for a tattoo and to heal it well, making it something significant and giving it grounding properties. I started learning to tattoo on my own in 2020, and have been honing my technique since with the help of other tattoo artists working alongside of me. I'm grateful for every advice I've gotten from them, and for my clients that have put an enormous amount of trust in me.",
+            "tag": "3D Animation"
+        }
+
+        
     ]
     
 }

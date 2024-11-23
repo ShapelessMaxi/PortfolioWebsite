@@ -116,18 +116,26 @@ html, body {
 #content {
   grid-column: 9 / -1;
   grid-row: 3 / -1;
-  background-color: rgb(227, 227, 227);
+  background-color: var(--grey-white);
   display: grid;  
   grid-template-columns: repeat(calc(var(--page-cols) - 12), minmax(0, 1fr));
   grid-template-rows: repeat(calc(var(--page-rows) - 4), minmax(0, 1fr));
 }
 #content > #text-box {
   grid-column: 3 / -3;
-  grid-row: 2 / -2;
+  grid-row: 2/-2;
   display: flex;
   flex-direction: column;
+  z-index: 2;
+  pointer-events: none;
 }
-#content > #text-box > .drop-button > .titles {
+#content > #text-box > .inner-wrapper {
+  background-color: var(--grey-white);
+  width: 100%;
+  height: fit-content;
+  pointer-events: auto;
+}
+#content > #text-box > .inner-wrapper > .drop-button > .titles {
   padding-bottom: 0.5rem;
   margin-bottom: 0.2rem;
   font-size: 1.25rem;
@@ -136,27 +144,26 @@ html, body {
   cursor: pointer;
   border-bottom: 0.1rem solid var(--grey);
 }
-#content > #text-box > .drop-button > .titles:hover {
+#content > #text-box > .inner-wrapper > .drop-button > .titles:hover {
   color: var(--pink);
 }
-#content > #text-box > .drop-button > .titles.active {
+#content > #text-box > .inner-wrapper > .drop-button > .titles.active {
   color: var(--pink);
   border-bottom: none;
 }
-#content > #text-box > .paragraphs {
+#content > #text-box > .inner-wrapper > .paragraphs {
   display: None;
   padding-bottom: 1rem;
-  margin-bottom : 2rem;
   font-size: 0.9rem;
   font-family: var(--body-font);
   line-height: 1.15rem;
   columns: 2;
 }
-#content > #text-box > .paragraphs.active {
+#content > #text-box > .inner-wrapper > .paragraphs.active {
   display: block;
   border-bottom: 0.1rem solid var(--pink);
 }
-#content > #text-box > .titles {
+#content > #text-box > .inner-wrapper > .titles {
   padding-top: 5rem;
   padding-bottom: 0.5rem;
   margin-bottom: 0.2rem;
@@ -165,24 +172,55 @@ html, body {
   text-align: center;
   border-bottom: 0.1rem solid var(--grey);
 }
-#content > #text-box > .secondary {
+#content >  #text-box > .inner-wrapper > #title-interest {
+  color: black;
+  font-family: var(--display-font);
+  font-size: 1rem;
   text-align: left;
-  width: 50%;
+  padding-top: 1rem;
 }
 #content > #interest-cards-box {
   grid-column: 3 / -3;
-  grid-row: 6 / -3;
+  grid-row: 9 / -3;
   display: flex;
   flex-direction: row;
-  flex-wrap: wrap;
+  gap: 1rem;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
 }
 #content > #interest-cards-box > .interest-cards {
-  width: 300px;
-  height: 300px;
   background-color: var(--pink);
-  margin: 2rem;
+  z-index: 1;
+  pointer-events: auto;
+  display: flex;
+  flex-direction: column;
+  flex: 1 0 33%;
+  height: 100%;
+  width: auto;
+  text-wrap: pretty;
+  margin: 0;
+  scroll-snap-align: center;
+}
+#content > #interest-cards-box > .interest-cards > p {
+  padding: 0.25rem;
+  color: white;
 }
 #content > #interest-cards-box > .interest-cards > .interest-title {
-  color: black;
+  font-family: var(--display-font);
+  font-size: 1.25rem;
+}
+#content > #interest-cards-box > .interest-cards > .interest-summary {
+  /* color: black; */
+  font-style: italic;
   font-family: var(--body-font);
+  font-size: 0.85rem;
+  padding: 0 1rem 0 2rem;
+  }
+#content > #interest-cards-box > .interest-cards > .interest-description {
+  font-size: 0.9rem;
+  font-family: var(--body-font);
+  line-height: 1.15rem;
+  margin-top: 0.5rem;
+  padding: 0.5rem 1rem 0.5rem 2rem;
 }
