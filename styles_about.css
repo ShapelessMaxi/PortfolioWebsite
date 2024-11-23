@@ -101,7 +101,7 @@ html, body {
   align-items: center;
   width: 100%;
   padding-left: 0.25rem;
-  background-color: rgb(110 142 111);
+  background-color: var(--grey-black);
   grid-column: 2 /-2;
   grid-row: 12 / 15;
   text-decoration: none;
@@ -185,6 +185,7 @@ html, body {
   display: flex;
   flex-direction: row;
   gap: 1rem;
+  padding-bottom: 0.5rem;
   overflow-x: auto;
   overflow-y: hidden;
   scroll-snap-type: x mandatory;
@@ -223,4 +224,13 @@ html, body {
   line-height: 1.15rem;
   margin-top: 0.5rem;
   padding: 0.5rem 1rem 0.5rem 2rem;
+}
+#content > #interest-cards-box::-webkit-scrollbar {
+  height: 0.5rem;
+}
+#content > #interest-cards-box::-webkit-scrollbar-thumb{
+  background-color: var(--green);
+}
+#content > #interest-cards-box::-webkit-scrollbar-track{
+  background: white;
 }
