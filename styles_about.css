@@ -54,7 +54,7 @@ html, body {
   background-color: var(--green);
 }
 #header > #name-box {
-  grid-column: 11 / -3;
+  grid-column: 10 / -3;
   grid-row: 3;
   padding-bottom: 0.5rem;
   display: flex;
@@ -72,11 +72,11 @@ html, body {
 
 /* navbar */
 #navbar {
-  grid-column: 1 / 9;
+  grid-column: 1 / 8;
   grid-row: 1 / -1;
   background-color: var(--grey);
   display: grid;
-  grid-template-columns: repeat(12, minmax(0, 1fr));
+  grid-template-columns: repeat(calc(var(--page-cols) - 24), minmax(0, 1fr));
   grid-template-rows: repeat(var(--page-rows), minmax(0, 1fr));
   justify-items: center;
 }
@@ -114,15 +114,15 @@ html, body {
 
 /* content */
 #content {
-  grid-column: 9 / -1;
+  grid-column: 8 / -1;
   grid-row: 3 / -1;
   background-color: var(--grey-white);
   display: grid;  
-  grid-template-columns: repeat(calc(var(--page-cols) - 12), minmax(0, 1fr));
+  grid-template-columns: repeat(calc(var(--page-cols) - 7), minmax(0, 1fr));
   grid-template-rows: repeat(calc(var(--page-rows) - 4), minmax(0, 1fr));
 }
 #content > #text-box {
-  grid-column: 3 / -3;
+  grid-column: 2 / -2;
   grid-row: 2/-2;
   display: flex;
   flex-direction: column;
@@ -180,50 +180,70 @@ html, body {
   padding-top: 1rem;
 }
 #content > #interest-cards-box {
-  grid-column: 3 / -3;
-  grid-row: 9 / -3;
+  grid-column: 2 / -2;
+  grid-row: 9 / -2;
   display: flex;
   flex-direction: row;
   gap: 1rem;
-  padding-bottom: 0.5rem;
-  overflow-x: auto;
-  overflow-y: hidden;
+  overflow: auto;
   scroll-snap-type: x mandatory;
+  width: 100%;
 }
 #content > #interest-cards-box > .interest-cards {
-  background-color: var(--pink);
   z-index: 1;
   pointer-events: auto;
   display: flex;
   flex-direction: column;
   flex: 1 0 33%;
-  height: 100%;
-  width: auto;
+  max-height: 100%;
+  min-width: 20%;
   text-wrap: pretty;
-  margin: 0;
   scroll-snap-align: center;
+}
+@media (min-width: 1200px) { /* Adjust for larger screens */
+  #content > #interest-cards-box > .interest-cards {
+    flex: 1 0 15%;
+  }
 }
 #content > #interest-cards-box > .interest-cards > p {
   padding: 0.25rem;
   color: white;
 }
 #content > #interest-cards-box > .interest-cards > .interest-title {
+  background-color: var(--green);
+  color: white;
   font-family: var(--display-font);
   font-size: 1.25rem;
+  padding-left: 0.5rem;
 }
 #content > #interest-cards-box > .interest-cards > .interest-summary {
-  /* color: black; */
-  font-style: italic;
+  background-color: var(--green);
+  color: white;
   font-family: var(--body-font);
   font-size: 0.85rem;
-  padding: 0 1rem 0 2rem;
+  padding: 0 1rem 0.5rem 2rem;
   }
 #content > #interest-cards-box > .interest-cards > .interest-description {
+  background-color: var(--grey-black);
+  color: white;
+  font-family: var(--fine-font);
   font-size: 0.9rem;
-  font-family: var(--body-font);
   line-height: 1.15rem;
-  margin-top: 0.5rem;
   padding: 0.5rem 1rem 0.5rem 2rem;
+}
+#content > #interest-cards-box > .interest-cards > .project-button {
+  background-color: var(--grey-black);
+  color: white;
+  font-family: var(--body-font);
+  font-size: 0.8rem;
+  text-align: end;
+  text-decoration: none;
+  padding: 0.5rem 0.5rem 0.5rem 0;
+}
+#content > #interest-cards-box > .interest-cards > .project-button:hover {
+  background-color: var(--pink);
+  cursor: pointer;
+  
 }
 #content > #interest-cards-box::-webkit-scrollbar {
   height: 0.5rem;

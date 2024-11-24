@@ -290,25 +290,17 @@
 
         {
             "title": "3D Animation",
-            "summary" : "The process of creating a time-based digital product with 3D software.",
-            "description": "When I say I love 3D animation, I am speaking about everything that happens in 3D software when I create a digital video file, namely 3D modelling, remeshing, UV mapping, texturing and baking, rigging, animating, lighting, simulating physics, and compositing. Not every project needs all of these steps, so I have gone through different versions of this process multiple times. Since I have found myself enjoying each and every steps for various reasons, I have a hard time limiting myself to a specific one, and I guess that make sense with my 'all-over-the-place' personality.",
+            "summary" : "The process of creating a digital product with 3D software.",
+            "description": "When I say I do 3D animation, I mean mostly everything that can happen in a 3D software. That's modelling, remeshing, UV mapping, texturing, rigging, animating, lighting, simulating physics, and compositing. Not every project requires all steps, but I deeply enjoy this overall process.",
             "tag": "3D Animation"
         },
 
         {
             "title": "Tattooing",
-            "summary" : "Marking the body of another person permanently with needles and ink.",
-            "description": "I have always been interested in the tattoing process, both in decorating my own body and in doing it for others. I find body modification enticing for many reasons. It takes effort and pain to sit down for a tattoo and to heal it well, making it something significant and giving it grounding properties. I started learning to tattoo on my own in 2020, and have been honing my technique since with the help of other tattoo artists working alongside of me. I'm grateful for every advice I've gotten from them, and for my clients that have put an enormous amount of trust in me.",
-            "tag": "3D Animation"
-        },
-
-        {
-            "title": "Tattooing",
-            "summary" : "Marking the body of another person permanently with needles and ink.",
-            "description": "I have always been interested in the tattoing process, both in decorating my own body and in doing it for others. I find body modification enticing for many reasons. It takes effort and pain to sit down for a tattoo and to heal it well, making it something significant and giving it grounding properties. I started learning to tattoo on my own in 2020, and have been honing my technique since with the help of other tattoo artists working alongside of me. I'm grateful for every advice I've gotten from them, and for my clients that have put an enormous amount of trust in me.",
+            "summary" : "Marking the skin permanently with needles and ink.",
+            "description": "I have always been drawn to the tattoing process, both to decorate my own body and others. I find body modification enticing because it takes effort and pain, making it something significant and giving it grounding properties.",
             "tag": "3D Animation"
         }
-
 
     ]
     

@@ -36,6 +36,17 @@ window.onload = (event) => {
             break;
            
           case "about":
+
+            // // horizontal scroll with mousewheel
+            // let horizontal = document.getElementById("interest-cards-box");
+            // horizontal.addEventListener("wheel", (e) => {
+            //   e.preventDefault(); // Prevent the default vertical scroll behavior
+            //   horizontal.scrollBy({
+            //       left: e.deltaY,
+            //       behavior: "smooth"
+            //   });
+            // });
+
             // create an object for each interest
             let interests = [];
             for (let i = 0; i < data.interests.length; i++) {

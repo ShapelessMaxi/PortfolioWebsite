@@ -318,12 +318,13 @@ html, body {
   padding-left: 0.5rem;
 }
 #content > #description {    
-  overflow-y: scroll;
   grid-column: 3 / span 12;
   grid-row:  17 / calc(var(--page-rows) - 2);
+  padding-right: 1rem;
+  overflow-y: scroll;
+  font-family: var(--body-font);
   font-size: 0.9rem;
   line-height: 1.3rem;
-  font-family: var(--body-font);
 }
 #content > #description::-webkit-scrollbar {
   width: 0.5rem;
@@ -338,25 +339,24 @@ html, body {
 }
 #content > #doc-button-box {
     grid-row: 21 / -2;
-    grid-column: 19 / -3;
+    grid-column: 16 / -3;
     display: flex;
-    flex-direction: column;
-    justify-content: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-end;
     align-items: flex-end;
+    gap: 0.5rem;
 }
 #content > #doc-button-box > .doc-button {
   overflow: hidden;
   display: flex;
   align-items: center;
-  padding-left: 0.25rem;
   background-color: var(--green);
-  grid-column: 20 / calc(var(--page-cols) + 1 - 8 - 2);
-  grid-row: 21;
   text-decoration: none;
   cursor: pointer;
-  padding: 1rem;
+  padding: 0.25rem 0.5rem;
   margin-bottom: 0.5rem;
-  width: 100%;
+  width: auto;
 }
 #content > #doc-button-box > .doc-button:hover {
   background-color: var(--pink);
@@ -364,5 +364,5 @@ html, body {
 #content > #doc-button-box > .doc-button > .doc-button-text {
   color: white;
   font-family: var(--body-font);
-  font-size: 1rem;
+  font-size: 0.85rem;
 }
