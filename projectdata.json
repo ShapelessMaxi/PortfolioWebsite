@@ -6,7 +6,7 @@
             "year": 2024,
             "filters": [
                 "3D Animation",
-                "Interactive"
+                "Interactivity"
             ],
             "isDone": "True",
             "gallery": [
@@ -53,7 +53,7 @@
             "year": "2024",
             "filters": [
                 "Creative Coding",
-                "Interactive"
+                "Interactivity"
             ],
             "isDone": "False",
             "gallery": [
@@ -86,7 +86,7 @@
             "year": "2023",
             "filters": [
                 "Creative Coding",
-                "Interactive"
+                "Interactivity"
             ],
             "isDone": "False",
             "gallery": [
@@ -185,15 +185,15 @@
             "gallery": [
                 {
                     "dir": "project_data\\AwakeningofTheFrog\\AwakeningofTheFrog_01.png",
-                    "caption": "png"
+                    "caption": "Focus on the frog, still from the turntable animation"
                 },
                 {
                     "dir": "project_data\\AwakeningofTheFrog\\AwakeningofTheFrog_03.png",
-                    "caption": "png"
+                    "caption": "Focus on the pond, still from the turntable animation"
                 },
                 {
                     "dir": "project_data\\AwakeningofTheFrog\\AwakeningofTheFrog_04.png",
-                    "caption": "png"
+                    "caption": "Still from the turntable animation"
                 }
             ],
             "keywords": [
@@ -290,7 +290,7 @@
 
         {
             "title": "3D Animation",
-            "summary" : "The process of creating a digital product with 3D software.",
+            "summary" : "Creating a digital product with 3D software.",
             "description": "When I say I do 3D animation, I mean mostly everything that can happen in a 3D software. That's modelling, remeshing, UV mapping, texturing, rigging, animating, lighting, simulating physics, and compositing. Not every project requires all steps, but I deeply enjoy this overall process.",
             "tag": "3D Animation"
         },
@@ -300,8 +300,22 @@
             "summary" : "Marking the skin permanently with needles and ink.",
             "description": "I have always been drawn to the tattoing process, both to decorate my own body and others. I find body modification enticing because it takes effort and pain, making it something significant and giving it grounding properties.",
             "tag": "3D Animation"
-        }
+        },
 
+        {
+            "title": "Creative Coding",
+            "summary" : "Programming as a tool for creative expression.",
+            "description": "I started learning to code a few years ago, and I now am pretty decent at HTML/CSS, Javascript, and Python. These languages opened up so many doors for me, and most of my current projects include some kind of script.",
+            "tag": "Creative Coding"
+        },
+
+        {
+            "title": "Interactive Technologies",
+            "summary" : "Systems, devices, or software designed to enable real-time engagement.",
+            "description": "This is a wide area, but my personal interests lies within cameras (especially webcams), video games, and game mechanics. I experiment with interactive design to tell new kinds of stories, some that may need more nuance or that may benefit from having multiple states revealed to the viewers.",
+            "tag": "Interactivity"
+        }
+        
     ]
     
 }

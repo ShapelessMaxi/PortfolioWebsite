@@ -37,24 +37,15 @@ window.onload = (event) => {
            
           case "about":
 
-            // // horizontal scroll with mousewheel
-            // let horizontal = document.getElementById("interest-cards-box");
-            // horizontal.addEventListener("wheel", (e) => {
-            //   e.preventDefault(); // Prevent the default vertical scroll behavior
-            //   horizontal.scrollBy({
-            //       left: e.deltaY,
-            //       behavior: "smooth"
-            //   });
-            // });
-
-            // create an object for each interest
+          // create an object for each interest
             let interests = [];
             for (let i = 0; i < data.interests.length; i++) {
               // create all interests objects
               let currentInterest = new interest(
                 data.interests[i].title,  
                 data.interests[i].summary,
-                data.interests[i].description,             
+                data.interests[i].description,
+                data.interests[i].tag            
               );
               interests.push(currentInterest);
             }
@@ -65,6 +56,7 @@ window.onload = (event) => {
                 data.interests[i].title,
                 data.interests[i].summary,
                 data.interests[i].description,
+                data.interests[i].tag
               );
               interestCards.push(currentCard);
             }
@@ -113,6 +105,7 @@ window.onload = (event) => {
               // check which project can be of interest (from about page)
               let interestingProjects = [];
               for (let i = 0; i < projects.length; i++) {
+                console.log(projects[i].filters);
                 if (projects[i].filters.includes(interestProject)){
                   interestingProjects.push(projects[i]);
                 }               
@@ -238,9 +231,14 @@ window.onload = (event) => {
       currentButtonText.innerText = displayedProject.documentation[d].tag;
       currentDocButton.appendChild(currentButtonText);
 
+      let extArrowImg = document.createElement("img");
+      extArrowImg.classList.add('ext-arrow-icon');
+      extArrowImg.src = "\assets\\arrow_ext.png";
+      currentDocButton.appendChild(extArrowImg);
+      
       currentDocButton.addEventListener("click", function(event) {
         // dimensions based on screen size
-        let logWidth = Math.round(screen.width * 0.25);
+        let logWidth = Math.round(screen.width * 0.4);
         let logLeft = Math.round(screen.width * 0.1);
         let docWidth = Math.round(screen.width * 0.6);
         let docLeft = Math.round(screen.width * 0.333);

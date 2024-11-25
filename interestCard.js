@@ -3,12 +3,12 @@ class interestCard {
       title,
       summary,
       description,
-      // tag
+      tag
     ) {
       this.title = title;
       this.summary = summary;
       this.description = description;
-      // this.tag= tag;
+      this.tag= tag;
 
       this.createCard();
     }
@@ -34,10 +34,16 @@ class interestCard {
         this.button.href = 'https://www.instagram.com/hd.maxi/';
         this.button.target= '_blank';
       } else {
-        let interest = this.title;
+        let interest = this.tag;
         this.button.href = `/index.html?interest=${encodeURIComponent(interest)}`;
       }
       this.button.classList.add("project-button");
+
+      // link icon
+      let linkImg = document.createElement("img");
+      linkImg.classList.add('link-icon');
+      linkImg.src = "\assets\\arrow_ext_h.png";
+      this.button.appendChild(linkImg);
 
       // card
       this.card = document.createElement("div");

@@ -23,7 +23,9 @@
     --altbody-font: 'Crimson Text', serif;
     --display-font: 'Bricolage Grotesque', sans-serif;
     --fine-font: 'Sofia Sans', sans-serif;
-
+    
+    /* radii */
+    --button-corners: 0.2rem;
   }
 
 /* page */
@@ -54,7 +56,7 @@ html, body {
   background-color: var(--green);
 }
 #header > #name-box {
-  grid-column: 10 / -3;
+  grid-column: 9 / -2;
   grid-row: 3;
   padding-bottom: 0.5rem;
   display: flex;
@@ -98,18 +100,26 @@ html, body {
 #navbar > #to-gallery {
   overflow: hidden;
   display: flex;
+  justify-content: center;
   align-items: center;
+  background-color: var(--grey-black);
   width: 100%;
   padding-left: 0.25rem;
-  background-color: var(--grey-black);
   grid-column: 2 /-2;
-  grid-row: 12 / 15;
+  grid-row: 12 / 14;
   text-decoration: none;
   color: white;
   font-family: var(--body-font);
   font-size: 1.5rem;
+  border-radius: var(--button-corners);
 }
-
+#navbar > #to-gallery:hover {
+  background-color: var(--pink);
+}
+#navbar > #to-gallery > #portfolio-star {
+  width: 2rem;
+  height: auto;
+}
 
 
 /* content */
@@ -119,7 +129,7 @@ html, body {
   background-color: var(--grey-white);
   display: grid;  
   grid-template-columns: repeat(calc(var(--page-cols) - 7), minmax(0, 1fr));
-  grid-template-rows: repeat(calc(var(--page-rows) - 4), minmax(0, 1fr));
+  grid-template-rows: repeat(calc(var(--page-rows) - 2), minmax(0, 1fr));
 }
 #content > #text-box {
   grid-column: 2 / -2;
@@ -188,6 +198,7 @@ html, body {
   overflow: auto;
   scroll-snap-type: x mandatory;
   width: 100%;
+  align-items: flex-end;
 }
 #content > #interest-cards-box > .interest-cards {
   z-index: 1;
@@ -197,8 +208,8 @@ html, body {
   flex: 1 0 33%;
   max-height: 100%;
   min-width: 20%;
-  text-wrap: pretty;
   scroll-snap-align: center;
+  margin-bottom: 0.5rem;
 }
 @media (min-width: 1200px) { /* Adjust for larger screens */
   #content > #interest-cards-box > .interest-cards {
@@ -208,20 +219,22 @@ html, body {
 #content > #interest-cards-box > .interest-cards > p {
   padding: 0.25rem;
   color: white;
+  /* text-wrap: pretty; */
 }
 #content > #interest-cards-box > .interest-cards > .interest-title {
   background-color: var(--green);
   color: white;
   font-family: var(--display-font);
   font-size: 1.25rem;
-  padding-left: 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: var(--button-corners) var(--button-corners) 0 0;
 }
 #content > #interest-cards-box > .interest-cards > .interest-summary {
   background-color: var(--green);
   color: white;
   font-family: var(--body-font);
   font-size: 0.85rem;
-  padding: 0 1rem 0.5rem 2rem;
+  padding: 0 1rem 0.5rem 1rem;
   }
 #content > #interest-cards-box > .interest-cards > .interest-description {
   background-color: var(--grey-black);
@@ -229,26 +242,37 @@ html, body {
   font-family: var(--fine-font);
   font-size: 0.9rem;
   line-height: 1.15rem;
-  padding: 0.5rem 1rem 0.5rem 2rem;
+  padding: 0.5rem 1rem;
+}
+#content > #interest-cards-box > .interest-cards > .project-button > .link-icon {
+  width: 1.5rem;
+  height: auto;
+  padding-left: 0.5rem;
 }
 #content > #interest-cards-box > .interest-cards > .project-button {
   background-color: var(--grey-black);
   color: white;
   font-family: var(--body-font);
-  font-size: 0.8rem;
+  font-size: 0.85rem;
   text-align: end;
   text-decoration: none;
   padding: 0.5rem 0.5rem 0.5rem 0;
+  border-radius: 0 0 var(--button-corners) var(--button-corners);
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-end;
 }
 #content > #interest-cards-box > .interest-cards > .project-button:hover {
   background-color: var(--pink);
   cursor: pointer;
-  
+}
+#content > #interest-cards-box > .interest-cards > .project-button:hover > .link-icon {
+  filter: brightness(50%) saturate(400%) contrast(200%);
 }
 #content > #interest-cards-box::-webkit-scrollbar {
   height: 0.5rem;
 }
-#content > #interest-cards-box::-webkit-scrollbar-thumb{
+/* #content > #interest-cards-box::-webkit-scrollbar-thumb{ */
   background-color: var(--green);
 }
 #content > #interest-cards-box::-webkit-scrollbar-track{

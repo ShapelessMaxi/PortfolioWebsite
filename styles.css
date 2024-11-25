@@ -24,6 +24,8 @@
     --display-font: 'Bricolage Grotesque', sans-serif;
     --fine-font: 'Sofia Sans', sans-serif;
 
+    /* radii */
+    --button-corners: 0.2rem;
   }
 
 /* page */
@@ -151,6 +153,8 @@ html, body {
   font-family: var(--body-font);
   color: white;
   background-color: var(--grey-black);
+  border-radius: var(--button-corners);
+
 }
 #project-list > .project-button:hover, 
 #wip-list > .project-button:hover {
@@ -352,11 +356,12 @@ html, body {
   display: flex;
   align-items: center;
   background-color: var(--green);
+  /* background-color: var(--grey-black); */
   text-decoration: none;
   cursor: pointer;
   padding: 0.25rem 0.5rem;
-  margin-bottom: 0.5rem;
   width: auto;
+  border-radius: var(--button-corners);
 }
 #content > #doc-button-box > .doc-button:hover {
   background-color: var(--pink);
@@ -365,4 +370,9 @@ html, body {
   color: white;
   font-family: var(--body-font);
   font-size: 0.85rem;
+}
+#content > #doc-button-box > .doc-button > .ext-arrow-icon {
+  width: 1.5rem;
+  height: auto;
+  padding-left: 0.5rem;
 }
