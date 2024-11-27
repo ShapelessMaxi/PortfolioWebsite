@@ -98,8 +98,8 @@ html, body {
   justify-content: space-between;
 }
 #navbar > #socials > a > #insta, #youtube, #mail {
-  height: 175%;
-  padding: 0 1vw 0;
+  height: 3rem;
+  padding: 0 0.5rem 0;
 }
 #navbar > #to-gallery {
   background-color: var(--grey-black);
@@ -139,8 +139,8 @@ html, body {
     grid-row: -9 / -3;
   }
   #navbar > #socials > a > #insta, #youtube, #mail {
-    padding-top: 1rem;
-    width: 7vh;
+    padding-top: 0.5rem;
+    width: 3rem;
   }
   #navbar > #socials > a {
     display: contents;
@@ -258,10 +258,19 @@ html, body {
     flex: 1 0 15%;
   }
 }
-@media (max-width: 800px) { 
+@media (max-width: 1000px) { 
   #content > #interest-cards-box > .interest-cards {
-    min-width: 80%;
+    min-width: 60%;
   }
+  #content > #text-box > .inner-wrapper > .paragraphs{
+    columns: 1;
+  }
+}
+@media (max-width: 600px) { 
+  #content > #interest-cards-box > .interest-cards {
+    min-width: 100%;
+  }
+  
 }
 #content > #interest-cards-box > .interest-cards > p {
   padding: 0.25rem;
@@ -321,6 +330,7 @@ html, body {
 }
 #content > #interest-cards-box::-webkit-scrollbar {
   height: 0.5rem;
+  width: 0.5rem;
 }
 #content > #interest-cards-box::-webkit-scrollbar-thumb{
   background-color: var(--green);
