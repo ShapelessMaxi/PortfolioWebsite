@@ -29,7 +29,20 @@ class interestCard {
 
       // related project button
       this.button = document.createElement("a");
-      this.button.textContent = "related project";
+      // button icon
+      let linkImg = document.createElement("img");
+      linkImg.classList.add('link-icon');
+      linkImg.src = "\assets\\arrow_ext_h.png";
+      // Append the first icon
+      // this.button.appendChild(linkImg.cloneNode(true));
+      // this.button.appendChild(linkImg.cloneNode(true));
+      // this.button.appendChild(linkImg.cloneNode(true));
+      // Add text to the button
+      const buttonText = document.createTextNode(" related project");
+      this.button.appendChild(buttonText);
+      // Append the second icon
+      this.button.appendChild(linkImg.cloneNode(true));
+      // button url
       if (this.title === "Tattooing") {
         this.button.href = 'https://www.instagram.com/hd.maxi/';
         this.button.target= '_blank';
@@ -38,12 +51,7 @@ class interestCard {
         this.button.href = `/index.html?interest=${encodeURIComponent(interest)}`;
       }
       this.button.classList.add("project-button");
-
-      // link icon
-      let linkImg = document.createElement("img");
-      linkImg.classList.add('link-icon');
-      linkImg.src = "\assets\\arrow_ext_h.png";
-      this.button.appendChild(linkImg);
+      
 
       // card
       this.card = document.createElement("div");

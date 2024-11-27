@@ -15,6 +15,8 @@
     --grey: rgb(167, 167, 167);
     --green: rgb(110 142 111);
     --pink: #f58daf;
+    --blue: rgb(226, 238, 255);
+    --blue-dark: rgb(10, 10, 161);
     --grey-white: rgb(245, 245, 245);
     --grey-black: rgb(52, 52, 52);
         
@@ -85,42 +87,82 @@ html, body {
 #navbar > #logo {
   z-index: 1;
   grid-column: 1 / span 12;
-  grid-row: 2 / span 7;
+  grid-row: 2  / span 7;
   height: 100%;
 }
 #navbar > #socials {
   grid-column: 1/13;
-  grid-row: -6;
+  grid-row: -4;
   display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 #navbar > #socials > a > #insta, #youtube, #mail {
   height: 175%;
-  padding: 0 1.3vw 0;
+  padding: 0 1vw 0;
 }
 #navbar > #to-gallery {
-  overflow: hidden;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   background-color: var(--grey-black);
-  width: 100%;
-  padding-left: 0.25rem;
-  grid-column: 2 /-2;
-  grid-row: 12 / 14;
-  text-decoration: none;
-  color: white;
-  font-family: var(--body-font);
-  font-size: 1.5rem;
+  width: fit-content;
+  height: fit-content;
+  grid-column: 2 / -2;
+  grid-row: 10 / span 2;
+  overflow: clip;
+  display: flex;
+  flex-wrap: no-wrap;
+  justify-content: flex-end;
+  align-items: center;
   border-radius: var(--button-corners);
+  text-decoration: none;
 }
 #navbar > #to-gallery:hover {
   background-color: var(--pink);
+  color: var(--blue-dark);
 }
 #navbar > #to-gallery > #portfolio-star {
-  width: 2rem;
+  width: 1.5rem;
   height: auto;
+  padding: 0.25rem 1rem 0.25rem 0;
 }
-
+#navbar > #to-gallery > p {
+  font-family: var(--body-font);
+  color: var(--blue);
+  font-size: 1.5rem;
+  padding: 0.25rem 1rem 0.25rem 1rem;
+}
+@media (max-width: 1000px) {
+  #navbar > #socials {
+    height: fit-content;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    grid-row: -9 / -3;
+  }
+  #navbar > #socials > a > #insta, #youtube, #mail {
+    padding-top: 1rem;
+    width: 7vh;
+  }
+  #navbar > #socials > a {
+    display: contents;
+  }
+  #navbar > #logo {
+    height: 20vw;
+  }
+  #navbar > #to-gallery {
+    grid-row: 9 / span 2;
+    justify-content: center;
+    flex-direction: column;
+  }
+  #navbar > #to-gallery > #portfolio-star {
+    width: 1.5rem;
+    height: auto;
+    padding: 0.25rem 1rem 0.25rem 1rem;
+  }
+  #navbar > #to-gallery > p {
+    font-size: 1.2rem;
+    padding: 0.25rem 0.5rem 0.25rem 0.5rem;
+  }
+}
 
 /* content */
 #content {
@@ -211,9 +253,14 @@ html, body {
   scroll-snap-align: center;
   margin-bottom: 0.5rem;
 }
-@media (min-width: 1200px) { /* Adjust for larger screens */
+@media (min-width: 1200px) { 
   #content > #interest-cards-box > .interest-cards {
     flex: 1 0 15%;
+  }
+}
+@media (max-width: 800px) { 
+  #content > #interest-cards-box > .interest-cards {
+    min-width: 80%;
   }
 }
 #content > #interest-cards-box > .interest-cards > p {
@@ -247,11 +294,11 @@ html, body {
 #content > #interest-cards-box > .interest-cards > .project-button > .link-icon {
   width: 1.5rem;
   height: auto;
-  padding-left: 0.5rem;
+  padding: 0 0.5rem 0 0.5rem;
 }
 #content > #interest-cards-box > .interest-cards > .project-button {
   background-color: var(--grey-black);
-  color: white;
+  color: var(--blue);
   font-family: var(--body-font);
   font-size: 0.85rem;
   text-align: end;
@@ -261,10 +308,13 @@ html, body {
   display: flex;
   justify-content: flex-end;
   align-items: flex-end;
+  overflow-x: clip;
+  text-wrap: nowrap;
 }
 #content > #interest-cards-box > .interest-cards > .project-button:hover {
   background-color: var(--pink);
   cursor: pointer;
+  color: var(--blue-dark);
 }
 #content > #interest-cards-box > .interest-cards > .project-button:hover > .link-icon {
   filter: brightness(50%) saturate(400%) contrast(200%);
@@ -272,7 +322,7 @@ html, body {
 #content > #interest-cards-box::-webkit-scrollbar {
   height: 0.5rem;
 }
-/* #content > #interest-cards-box::-webkit-scrollbar-thumb{ */
+#content > #interest-cards-box::-webkit-scrollbar-thumb{
   background-color: var(--green);
 }
 #content > #interest-cards-box::-webkit-scrollbar-track{

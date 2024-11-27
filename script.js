@@ -233,7 +233,7 @@ window.onload = (event) => {
 
       let extArrowImg = document.createElement("img");
       extArrowImg.classList.add('ext-arrow-icon');
-      extArrowImg.src = "\assets\\arrow_ext.png";
+      extArrowImg.src = "\assets\\arrow_ext_h.png";
       currentDocButton.appendChild(extArrowImg);
       
       currentDocButton.addEventListener("click", function(event) {

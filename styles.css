@@ -17,6 +17,8 @@
     --pink: #f58daf;
     --grey-white: rgb(245, 245, 245);
     --grey-black: rgb(53, 53, 53);
+    --blue: rgb(226, 238, 255);
+    --blue-dark: rgb(10, 10, 161);
         
     /* fonts */
     --body-font: 'Spline Sans', sans-serif;
@@ -122,7 +124,8 @@ html, body {
   display: flex;
 }
 #navbar > #socials > a > #insta, #youtube, #mail {
-  height: 100%;
+  height: 110%;
+  width: auto;
   padding: 0 1.3vw 0;
 }
 
@@ -151,15 +154,18 @@ html, body {
   margin: 0.25rem 1rem 0.25rem 1rem;
   padding: 0.8rem 1rem;
   font-family: var(--body-font);
-  color: white;
+  color: var(--blue);
   background-color: var(--grey-black);
   border-radius: var(--button-corners);
-
 }
 #project-list > .project-button:hover, 
 #wip-list > .project-button:hover {
   background: var(--pink);
   cursor: pointer;
+}
+#project-list > .project-button:hover > p, 
+#wip-list > .project-button:hover > p {
+  color: var(--blue-dark);
 }
 #project-list > .project-button.active, 
 #wip-list > .project-button.active {
@@ -355,8 +361,7 @@ html, body {
   overflow: hidden;
   display: flex;
   align-items: center;
-  background-color: var(--green);
-  /* background-color: var(--grey-black); */
+  background-color: var(--grey-black);
   text-decoration: none;
   cursor: pointer;
   padding: 0.25rem 0.5rem;
@@ -366,8 +371,14 @@ html, body {
 #content > #doc-button-box > .doc-button:hover {
   background-color: var(--pink);
 }
+#content > #doc-button-box > .doc-button:hover > .doc-button-text {
+  color: var(--blue-dark);
+}
+#content > #doc-button-box > .doc-button:hover > .ext-arrow-icon {
+  filter: brightness(50%) saturate(400%) contrast(200%);
+}
 #content > #doc-button-box > .doc-button > .doc-button-text {
-  color: white;
+  color: var(--blue);
   font-family: var(--body-font);
   font-size: 0.85rem;
 }
@@ -375,4 +386,24 @@ html, body {
   width: 1.5rem;
   height: auto;
   padding-left: 0.5rem;
+}
+@media (max-width: 1000px) {
+  #content > .gallery-button{
+    width: 1.8rem;
+  }
+  #content > #gallery > #img-caption-combo > #caption {
+    font-size: 0.6rem;
+  } 
+  #content > #keywords-box {
+    font-size: 0.75rem;
+  }
+  #content > #doc-button-box {
+    gap: 0.25rem;
+  }
+  #content > #doc-button-box > .doc-button > .doc-button-text {
+    font-size: 0.7rem;
+  }
+  #content > #doc-button-box > .doc-button > .ext-arrow-icon {
+    width: 1.1rem; 
+  }
 }
