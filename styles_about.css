@@ -12,12 +12,15 @@
     --socials: 1;
 
     /* colors */
-    --grey: rgb(167, 167, 167);
-    --green: rgb(110 142 111);
+    --green: rgb(73, 112, 87);
+    --green-shadow: rgb(58, 153, 145);
     --pink: #f58daf;
     --blue: rgb(226, 238, 255);
     --blue-dark: rgb(10, 10, 161);
+    --grey: rgb(167, 167, 167);
+    --grey-shadow: rgb(108, 108, 108);
     --grey-white: rgb(245, 245, 245);
+    --grey-white-shadow: rgb(176, 176, 176);
     --grey-black: rgb(52, 52, 52);
         
     /* fonts */
@@ -55,7 +58,7 @@ html, body {
   grid-template-rows: repeat(3, minmax(0, 1fr));
   grid-column: 1 / -1;
   grid-row: 1 / 3;
-  background-color: var(--green);
+  background-image: linear-gradient(var(--green), var(--green-shadow) 200%);
 }
 #header > #name-box {
   grid-column: 9 / -2;
@@ -66,8 +69,8 @@ html, body {
   align-items: flex-end;
 }
 #header > #name-box > #name {
-  font-family: var(--altbody-font);
-  font-size: 1.25rem;
+  font-family: var(--body-font);
+  font-size: 1.1rem;
 }
 #header > #name-box > #alias {
   font-family: var(--display-font);
@@ -78,17 +81,21 @@ html, body {
 #navbar {
   grid-column: 1 / 8;
   grid-row: 1 / -1;
-  background-color: var(--grey);
   display: grid;
   grid-template-columns: repeat(calc(var(--page-cols) - 24), minmax(0, 1fr));
   grid-template-rows: repeat(var(--page-rows), minmax(0, 1fr));
   justify-items: center;
+  background-image: linear-gradient(var(--grey), var(--pink) 300%);
 }
 #navbar > #logo {
   z-index: 1;
   grid-column: 1 / span 12;
   grid-row: 2  / span 7;
   height: 100%;
+}
+#navbar > #logo:hover{
+  animation: scale-bounce 2s ease-in-out infinite;
+  cursor: none;
 }
 #navbar > #socials {
   grid-column: 1/13;
@@ -100,6 +107,36 @@ html, body {
 #navbar > #socials > a > #insta, #youtube, #mail {
   height: 3rem;
   padding: 0 0.5rem 0;
+}
+#navbar > #socials > a > #insta:hover,
+#navbar > #socials > a > #youtube:hover,
+#navbar > #socials > a > #mail:hover {
+  animation: scale-bounce 2s ease-in-out infinite;
+}
+@keyframes scale-bounce {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.2);
+    filter: brightness(1.2);
+  }
+  40% {
+    transform: scale(0.9);
+    filter: brightness(0.9);
+  }
+  55% {
+    transform: scale(1.05);
+    filter: brightness(1.05);
+  }
+  70% {
+    transform: scale(1);
+    filter: brightness(1);
+  }
+  100% {
+    transform: scale(1);
+    filter: brightness(1);
+  }
 }
 #navbar > #to-gallery {
   background-color: var(--grey-black);
@@ -114,10 +151,16 @@ html, body {
   align-items: center;
   border-radius: var(--button-corners);
   text-decoration: none;
+  box-shadow: 0 0.15rem 0.25rem var(--grey-shadow);
 }
 #navbar > #to-gallery:hover {
   background-color: var(--pink);
+}
+#navbar > #to-gallery:hover > p {
   color: var(--blue-dark);
+}
+#navbar > #to-gallery:hover > #portfolio-star {
+  filter: brightness(50%) saturate(400%) contrast(200%);
 }
 #navbar > #to-gallery > #portfolio-star {
   width: 1.5rem;
@@ -127,7 +170,7 @@ html, body {
 #navbar > #to-gallery > p {
   font-family: var(--body-font);
   color: var(--blue);
-  font-size: 1.5rem;
+  font-size: 1.25rem;
   padding: 0.25rem 1rem 0.25rem 1rem;
 }
 @media (max-width: 1000px) {
@@ -154,24 +197,25 @@ html, body {
     flex-direction: column;
   }
   #navbar > #to-gallery > #portfolio-star {
-    width: 1.5rem;
+    width: 1.65rem;
     height: auto;
     padding: 0.25rem 1rem 0.25rem 1rem;
   }
   #navbar > #to-gallery > p {
-    font-size: 1.2rem;
+    color: var(--blue);
+    font-size: 1.1rem;
     padding: 0.25rem 0.5rem 0.25rem 0.5rem;
   }
 }
 
 /* content */
 #content {
+  display: grid;  
   grid-column: 8 / -1;
   grid-row: 3 / -1;
-  background-color: var(--grey-white);
-  display: grid;  
   grid-template-columns: repeat(calc(var(--page-cols) - 7), minmax(0, 1fr));
   grid-template-rows: repeat(calc(var(--page-rows) - 2), minmax(0, 1fr));
+  background-image: linear-gradient(var(--grey-white), white 300%);
 }
 #content > #text-box {
   grid-column: 2 / -2;
@@ -252,6 +296,7 @@ html, body {
   min-width: 20%;
   scroll-snap-align: center;
   margin-bottom: 0.5rem;
+  box-shadow: 0 0.15rem 0.25rem var(--grey-white-shadow);
 }
 @media (min-width: 1200px) { 
   #content > #interest-cards-box > .interest-cards {
@@ -286,7 +331,8 @@ html, body {
   border-radius: var(--button-corners) var(--button-corners) 0 0;
 }
 #content > #interest-cards-box > .interest-cards > .interest-summary {
-  background-color: var(--green);
+  /* background-color: var(--green); */
+  background-image: linear-gradient(var(--green), var(--green-shadow) 250%);
   color: white;
   font-family: var(--body-font);
   font-size: 0.85rem;

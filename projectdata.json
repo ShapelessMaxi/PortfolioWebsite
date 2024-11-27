@@ -21,6 +21,22 @@
                 {
                     "dir": "project_data\\GiltchArmor\\DSC00499.jpg",
                     "caption": "Documentation of work presented during the Millieux x MTLconnect event (10-2024)"
+                },
+                {
+                    "dir": "project_data\\GiltchArmor\\composantmachinal01.jpg",
+                    "caption": "Installation presented in the Composant Machinal Group Exhibition (07-2024)"
+                },
+                {
+                    "dir": "project_data\\GiltchArmor\\composantmachinal02.jpg",
+                    "caption": "Installation presented in the Composant Machinal Group Exhibition (07-2024)"
+                },
+                {
+                    "dir": "project_data\\GiltchArmor\\composantmachinal03.jpg",
+                    "caption": "Installation presented in the Composant Machinal Group Exhibition (07-2024)"
+                },
+                {
+                    "dir": "project_data\\GiltchArmor\\tech.png",
+                    "caption": "Technical drawing of the physical installation"
                 }
             ],
             "keywords": [
@@ -29,7 +45,7 @@
                 "Visibility;",
                 "Queer Storytelling;"
             ],
-            "description": "Glitch Armor is a protective spell.",
+            "description": "Glitch Armor is a protective spell inspired by the nuanced experience of visibility within queer communities. On one hand, being visible allows them to be their full authentic selves, occupy space, exist, and find others alike. On the other hand, being visible exposes them to emotional and physical violence. This 3D animated couple reacts to movement in the room through a live camera feed. In turn, the glitch effect takes place and renders them progressively less visible. What if technology had evolved to have human personality traits? What if digital characters also had anxiety about being visibly queer? Glitch Armor represents an exercise in character design, utilizing interactive technology as another layer for storytelling. As more viewers get closer to the installation, the characters display their personalities, anxiety, and rebellious thoughts.",
             "tools": [
                 "TouchDesigner;",
                 "Blender3D;",
@@ -40,7 +56,11 @@
                 {
                     "tag": "Web Documentation",
                     "link": "https://hdmaxi411.wordpress.com"
-                }                     
+                },
+                {
+                    "tag": "Demo",
+                    "link": "https://www.youtube.com/watch?v=QMzflT3d9EA"
+                }                         
             ]
         },
 

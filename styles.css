@@ -12,13 +12,16 @@
     --socials: 1;
 
     /* colors */
-    --grey: rgb(167, 167, 167);
-    --green: rgb(110 142 111);
+    --green: rgb(73, 112, 87);
+    --green-shadow: rgb(58, 153, 145);
     --pink: #f58daf;
-    --grey-white: rgb(245, 245, 245);
-    --grey-black: rgb(53, 53, 53);
     --blue: rgb(226, 238, 255);
     --blue-dark: rgb(10, 10, 161);
+    --grey: rgb(167, 167, 167);
+    --grey-shadow: rgb(108, 108, 108);
+    --grey-white: rgb(245, 245, 245);
+    --grey-white-shadow: rgb(176, 176, 176);
+    --grey-black: rgb(52, 52, 52);
         
     /* fonts */
     --body-font: 'Spline Sans', sans-serif;
@@ -55,7 +58,7 @@ html, body {
   grid-template-rows: repeat(2, minmax(0, 1fr));
   grid-column: 1 / calc(var(--page-cols) + 1);
   grid-row: 1 / span 2;
-  background-color: var(--green);
+  background-image: linear-gradient(var(--green), var(--green-shadow) 200%);
 }
 #header > #name-box {
   grid-column: 11 / calc(var(--page-cols) + 1 - 2);
@@ -71,8 +74,8 @@ html, body {
   text-decoration: none;
 }
 #header > #name-box > #name {
-  font-family: var(--altbody-font);
-  font-size: 1.25rem;
+  font-family: var(--body-font);
+  font-size: 1.1rem;
 }
 #header > #name-box > #alias {
   font-family: var(--display-font);
@@ -88,11 +91,11 @@ html, body {
 #navbar {
   grid-column: 1 / span 8;
   grid-row: 1 / calc(var(--page-rows)  + 1);
-  background-color: var(--grey);
   display: grid;
   grid-template-columns: repeat(8, minmax(0, 1fr));
   grid-template-rows: repeat(var(--page-rows), minmax(0, 1fr));
   justify-items: center;
+  background-image: linear-gradient(var(--grey), var(--pink) 300%);
 }
 #navbar > #logo {
   z-index: 1;
@@ -102,20 +105,33 @@ html, body {
 #navbar > #logo > img {
   height: 125%;
 }
-#navbar > #about-button {
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  padding-left: 0.25rem;
-  background-color: rgb(110 142 111);
-  grid-column: 1/9;
-  grid-row: 5;
-  text-decoration: none;
+#navbar > #logo > img:hover {
+  animation: scale-bounce 2s ease-in-out infinite;
 }
-#navbar > #about-button > #about-button-text {
-  color: white;
-  font-family: var(--body-font);
-  font-size: 1rem;
+@keyframes scale-bounce {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.2);
+    filter: brightness(1.2);
+  }
+  40% {
+    transform: scale(0.9);
+    filter: brightness(0.9);
+  }
+  55% {
+    transform: scale(1.05);
+    filter: brightness(1.05);
+  }
+  70% {
+    transform: scale(1);
+    filter: brightness(1);
+  }
+  100% {
+    transform: scale(1);
+    filter: brightness(1);
+  }
 }
 #navbar > #socials {
   grid-column: 3 / span 4;
@@ -127,6 +143,11 @@ html, body {
   height: 110%;
   width: auto;
   padding: 0 1.3vw 0;
+}
+#navbar > #socials > a > #mail:hover,
+#navbar > #socials > a > #insta:hover ,
+#navbar > #socials > a > #youtube:hover  {
+  animation: scale-bounce 2s ease-in-out infinite;
 }
 
 /* navbar projects buttons */
@@ -158,6 +179,7 @@ html, body {
   color: var(--blue);
   background-color: var(--grey-black);
   border-radius: var(--button-corners);
+  box-shadow: 0 0.15rem 0.25rem var(--grey-shadow); 
 }
 #project-list > .project-button:hover, 
 #wip-list > .project-button:hover {
@@ -221,10 +243,10 @@ html, body {
 #content {
   grid-column: 9 /calc(var(--page-cols) + 1);
   grid-row: 3 / calc(var(--page-rows) + 1);
-  background-color: var(--grey-white);
   display: grid;
   grid-template-columns: repeat(calc(var(--page-cols) - 8), minmax(0, 1fr));
   grid-template-rows: repeat(calc(var(--page-rows) - 2), minmax(0, 1fr));
+  background-image: linear-gradient(var(--grey-white), white 200%);
 }
 #content > #title-box {
   grid-column: 3 / calc(var(--page-cols) - 9);
@@ -256,6 +278,34 @@ html, body {
   width: 2.5rem;
   height: auto;
   cursor: pointer;
+}
+#content > .gallery-button:hover {
+  animation: scale-bounce-soft 2s ease-in-out infinite;
+}
+@keyframes scale-bounce-soft {
+  0% {
+    transform: scale(1);
+  }
+  25% {
+    transform: scale(1.1);
+    filter: brightness(1.2);
+  }
+  40% {
+    transform: scale(0.95);
+    filter: brightness(0.95);
+  }
+  55% {
+    transform: scale(1.05);
+    filter: brightness(1.05);
+  }
+  70% {
+    transform: scale(1);
+    filter: brightness(1);
+  }
+  100% {
+    transform: scale(1);
+    filter: brightness(1);
+  }
 }
 #content > #left-gallery-button {
   grid-column: 3;
@@ -366,6 +416,7 @@ html, body {
   padding: 0.25rem 0.5rem;
   width: auto;
   border-radius: var(--button-corners);
+  box-shadow: 0 0.15rem 0.25rem var(--grey-white-shadow); 
 }
 #content > #doc-button-box > .doc-button:hover {
   background-color: var(--pink);
