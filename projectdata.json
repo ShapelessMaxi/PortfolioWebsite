@@ -45,7 +45,12 @@
                 "Visibility;",
                 "Queer Storytelling;"
             ],
-            "description": "Glitch Armor is a protective spell inspired by the nuanced experience of visibility within queer communities. On one hand, being visible allows them to be their full authentic selves, occupy space, exist, and find others alike. On the other hand, being visible exposes them to emotional and physical violence. This 3D animated couple reacts to movement in the room through a live camera feed. In turn, the glitch effect takes place and renders them progressively less visible. What if technology had evolved to have human personality traits? What if digital characters also had anxiety about being visibly queer? Glitch Armor represents an exercise in character design, utilizing interactive technology as another layer for storytelling. As more viewers get closer to the installation, the characters display their personalities, anxiety, and rebellious thoughts.",
+            "description": [
+                "Glitch Armor is a protective spell inspired by the nuanced experience of visibility within queer communities. On one hand, being visible allows them to be their full authentic selves, occupy space, exist, and find others alike. On the other hand, being visible exposes them to emotional and physical violence. This 3D animated couple reacts to movement in the room through a live camera feed. In turn, the glitch effect takes place and renders them progressively less visible.",
+                "What if technology had evolved to have human personality traits?",
+                "What if digital characters also had anxiety about being visibly queer?",
+                "Glitch Armor represents an exercise in character design, utilizing interactive technology as another layer for storytelling. As more viewers get closer to the installation, the characters display their personalities, anxiety, and rebellious thoughts."
+            ],
             "tools": [
                 "TouchDesigner;",
                 "Blender3D;",
@@ -75,7 +80,7 @@
             "gallery": [
                 {
                     "dir": "project_data\\LookAgain\\Proto01.jpg",
-                    "caption": "jpg"
+                    "caption": "Prototype 01, Analyze TOPs and legos"
                 }
             ],
             "keywords": [
@@ -83,7 +88,9 @@
                 "Machine Personification;",
                 "Nostalgia;"
             ],
-            "description": "",
+            "description": [
+                "An exploration of 'low-tech' computer vision. With a simple python script utilizing the numPy library along with a webcam, I try to have the computer make sens of what it 'sees' through the webcam in a more humanistic way. Rather than seeing thousands of pixels and rgb values, it now 'sees' the average color of wider areas, and can detect which color matches best by comparing it to a small database."
+            ],
             "tools": [
                 "Python;",
                 "TouchDesigner;",
@@ -108,23 +115,19 @@
             "gallery": [
                 {
                     "dir": "project_data\\ToDissectToStitch\\ToDissectToStitch_01.png",
-                    "caption": "png"
+                    "caption": "In-progress state of the puzzle"
                 },
                 {
                     "dir": "project_data\\ToDissectToStitch\\ToDissectToStitch_02.png",
-                    "caption": "png"
-                },
-                {
-                    "dir": "project_data\\ToDissectToStitch\\ToDissectToStitch_03.gif",
-                    "caption": "gif"
+                    "caption": "Imported body part as an .fbx file in TD"
                 },
                 {
                     "dir": "project_data\\ToDissectToStitch\\ToDissectToStitch_04.png",
-                    "caption": "png"
+                    "caption": "Opportunity for optimization, all these nodes could be a simpler script"
                 },
                 {
                     "dir": "project_data\\ToDissectToStitch\\ToDissectToStitch_05.png",
-                    "caption": "png"
+                    "caption": "Completed state of the puzzle"
                 }
             ],
             "keywords": [
@@ -134,7 +137,11 @@
                 "Medical Gaze;",
                 "Creative writing"
             ],
-            "description": "This interactive installation is a kind of puzzle made of my own 3D scanned body, inspired by academic literature in queer theory. The final piece acts as a manifesto regarding body-related and perception-based societal norms. In the end, I see it as a kind of auto-ethnographic process where I was able to analyze the external perception, as well as my own, of my body, both in a deconstructed and reconstructed state. With MediaPipe, a machine learning tool, the viewer in front of a visual composition of myself with heavy medical and 'objective' undertones can replace the pieces back in place using hand gestures. The experience is complete when the viewer sees the whole manifesto written in the place of a previously dry descriptions of each body parts.",
+            "description": [
+                "*This project needs an update, more in the .txt log.",
+                "*This desctiption needs an update",
+                "This is a digital puzzle made of my own 3D scanned body, inspired by academic literature in queer theory. The final piece acts as a manifesto regarding body-related and perception-based societal norms. In the end, I see it as a kind of auto-ethnographic process where I was able to analyze the external perception, as well as my own, of my body, both in a deconstructed and reconstructed state. With MediaPipe, a machine learning tool, the viewer in front of a visual composition of myself with heavy medical and 'objective' undertones can replace the pieces back in place using hand gestures. The experience is complete when the viewer sees the whole manifesto written in the place of a previously dry descriptions of each body parts."
+            ],
             "tools": [
                 "TouchDesigner;",
                 "MediaPipe;",
@@ -142,6 +149,10 @@
                 "Blender3D"                
             ],
             "documentation": [
+                {
+                    "tag": "Log",
+                    "link": "project_data\\ToDissectToStitch\\log.txt"
+                },
                 {
                     "tag": "Web Documentation",
                     "link": "https://hdmaxi410.wordpress.com"
@@ -175,7 +186,10 @@
                 "Motion Capture;",
                 "High-Poly Modelling"
             ],
-            "description": "This sculpted character is brought to life using Mixamo, a motion capture library. The textures are painted and generated with Substance Designer. With this one, I tell a futuristic story, where fashion is still a priority even after the environment became hostile.",
+            "description": [
+                "*This description needs an update.",
+                "This sculpted character is brought to life using Mixamo, a motion capture library. The textures are painted and generated with Substance Designer. With this one, I tell a futuristic story, where fashion is still a priority even after the environment became hostile."
+            ],
             "tools": [
                 "Blender3d;",
                 "Substance Painter;",
@@ -219,7 +233,10 @@
                 "Video Game Concept;",
                 "Visual Storytelling"
             ],
-            "description": "This is a low-poly diorama in tell the story of an adored demon toad. The animations are minimal, but still add to the rich story developed through the different animals and plants. The background was generated with Substance Designer, and the rest of the scene was modelled, textured, animated, and lit in Blender 3D.",
+            "description": [
+                "*This description needs an update.",
+                "This is a low-poly diorama in tell the story of an adored demon toad. The animations are minimal, but still add to the rich story developed through the different animals and plants. The background was generated with Substance Designer, and the rest of the scene was modelled, textured, animated, and lit in Blender 3D."
+            ],
             "tools": [
                 "Blender3D;",
                 "Substance Designer;",
@@ -240,24 +257,27 @@
             "isDone": "True",
             "gallery": [
                 {
-                    "dir": "project_data\\bodymod\\bodymod_01.png",
-                    "caption": "png"
+                    "dir": "project_data\\bodymod\\bodymod_01_copy.png",
+                    "caption": "Capture of the game when all modifications are discovered"
+                },
+                {
+                    "dir": "project_data\\bodymod\\bodymod_05_copy.png",
+                    "caption": "Capture of the game when most modifications are unknown"
                 },
                 {
                     "dir": "project_data\\bodymod\\bodymod_04.png",
-                    "caption": "png"
-                },
-                {
-                    "dir": "project_data\\bodymod\\bodymod_05.png",
-                    "caption": "png"
-                }
+                    "caption": "Capture of the name input screen."
+                }               
             ],
             "keywords": [
                 "Creative coding;",
                 "Video Game;",
                 "Body Agency"
             ],
-            "description": "This is a reflection about being a human with a body, a subject that I have been thinking about a lot. It also relates to my work as a tattoo artist. Everything was programmed in Javascript P5.",
+            "description": [
+                "*This description needs an update.",
+                "This is a reflection about being a human with a body, a subject that I have been thinking about a lot. It also relates to my work as a tattoo artist. Everything was programmed in Javascript P5."
+            ],
             "tools": [
                 "JavaScript;",
                 "p5.js;",

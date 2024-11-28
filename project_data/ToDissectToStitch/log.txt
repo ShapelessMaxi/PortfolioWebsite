@@ -1,0 +1,11 @@
+<h1>Ideas for the next update - November 2024</h1>
+<p>I pretty much have a single idea to remedy the situation and to be able to show this project eventually.</p>
+<p>First of all, with all the knowledge I have gained in the past year, I need to go over and remake, heavily revamp, and/or optimize the TouchDesigner patch.</p>
+<p>Second, I need to talk to people around me and find a digital touch screen. I think rewriting the code for the controls to be on finger/touch screen based (sorry for my lack of vocabulary here) won't be too hard. I also think that the Sensor Lab aka Elio has a touch screen that I might be able to use if I ask nicely! If not, I could maybe try to upload the project on the web and display it on an iPad, but I dont really want to get into the whole app making thing for now.</p>
+
+<h1>Problem with so-called 'final' version - November 2024</h1>
+<p>In the current version of this project, the player uses their hand to move the pieces on a screen. Using a webcam and MediaPipe's gesture detection, they have to pinch their thumb and ring finger together to grab a piece, and then slide their hand in front of the screen to move it. I first liked the idea of people having to grab or point at my body pieces, but in action, this is troublesome.</p>
+<h2>Problems:</h2>
+<p>1- The whole TouchDesigner patch runs super slow on my computer, so this calls for some optimization.</p>
+<p>2- The Gesture recognition algorithm only detects one hand. When there is only 1 person in the field of view of the webcam, it switches between the two hands of the person, and although it is manageable, this is not how I would want it to work. When there is more than one person, it switches between all the hands of each person present, and it is really hard to know which person has the control and when. This is a dealbreaker.</p>
+<p>3- The sliding gestures are not natural and intuitive</p>

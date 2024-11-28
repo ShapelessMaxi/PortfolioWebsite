@@ -105,7 +105,6 @@ window.onload = (event) => {
               // check which project can be of interest (from about page)
               let interestingProjects = [];
               for (let i = 0; i < projects.length; i++) {
-                console.log(projects[i].filters);
                 if (projects[i].filters.includes(interestProject)){
                   interestingProjects.push(projects[i]);
                 }               
@@ -166,6 +165,10 @@ window.onload = (event) => {
                 // Remove Documentation buttons
                 document.querySelectorAll('.doc-button').forEach(keyword => keyword.remove());
 
+                // Remove Description
+                let description = document.getElementById("description");
+                Array.from(description.children).forEach(paragraph => paragraph.remove());
+
                 // Remove and add 'active' class from all buttons
                 document.querySelectorAll('.project-button').forEach(btn => btn.classList.remove('active'));
                 this.classList.add('active');
@@ -207,11 +210,31 @@ window.onload = (event) => {
               if (currentImgIndex < 0) {
                 currentImgIndex = imgCount - 1;
               }
-              
               galleryElement.src = displayedProject.gallery[currentImgIndex].dir;
               captionElement.innerText = displayedProject.gallery[currentImgIndex].caption;
             });
 
+            let lightbox = document.getElementById("lightbox");
+            let lightboxImg = document.getElementById("lightbox-img");
+            // close lightbox by default
+            lightbox.style.display = "none";
+            // Open lightbox on gallery image click
+            galleryElement.addEventListener("click", () => {
+              lightboxImg.src = galleryElement.src;
+              lightbox.style.display = "flex";
+            });
+            document.addEventListener("keydown", (e) => {
+              if (e.key === "Escape") {
+                lightbox.style.display = "none";
+              }
+            });
+            // Close lightbox on clicking outside the image
+            lightbox.addEventListener("click", (e) => {
+              if (e.target === lightbox) {
+                lightbox.style.display = "none";
+              }
+            });
+            
           break;
       }
     });
@@ -260,11 +283,15 @@ window.onload = (event) => {
     };
   }
   function updateContent (displayedProject) {
-    // description
-    document.getElementById("description").innerText = displayedProject.description;
-
     // Extra doc buttons
     createDocButtons(displayedProject);
+    
+    // description
+    for (let i = 0; i < displayedProject.description.length; i++){
+      let paragraph = document.createElement("p");
+      paragraph.innerText = displayedProject.description[i];
+      document.getElementById("description").appendChild(paragraph);
+    }
 
     // tools
     for (let t = 0; t < displayedProject.tools.length; t++) {
