@@ -1,0 +1,75 @@
+/* root master oimniscient rules */
+:root {
+
+    /* page divisions */
+    --page-rows: 3;
+    --page-cols: 7;
+
+    /* element fractionnal sizes */
+    --header-h: 2;
+    --navbar-w: 8;
+    --logo-home: 2;
+    --socials: 1;
+
+    /* colors */
+    --green: rgb(73, 112, 87);
+    --green-shadow: rgb(58, 153, 145);
+    --pink: #f58daf;
+    --blue: rgb(226, 238, 255);
+    --blue-dark: rgb(10, 10, 161);
+    --grey: rgb(167, 167, 167);
+    --grey-shadow: rgb(108, 108, 108);
+    --grey-white: rgb(245, 245, 245);
+    --grey-white-shadow: rgb(176, 176, 176);
+    --grey-black: rgb(52, 52, 52);
+        
+    /* fonts */
+    --body-font: 'Spline Sans', sans-serif;
+    --altbody-font: 'Crimson Text', serif;
+    --display-font: 'Bricolage Grotesque', sans-serif;
+    --fine-font: 'Sofia Sans', sans-serif;
+
+  }
+
+/* page */
+* {
+  margin: 0;
+}
+html, body {
+  width: 100vw;
+  height: 100vh;
+}
+
+/* containers */
+#loading-container {
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background-image: linear-gradient(var(--grey), var(--grey-white) 100%);
+}
+#icons-container {
+  padding: 0 3rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  gap: 8rem;
+}
+.icon {
+  width: 15rem;
+  height: auto;
+}
+#bunny {
+  transform: scalex(-1);
+}
+#star {
+  animation: rotateClockwise 1.8s linear infinite;
+}
+@keyframes rotateClockwise {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}

@@ -262,7 +262,7 @@ html, body {
   font-family: var(--display-font);
 }
 #content > #title-box > #title {
-  font-size: 2.5rem;
+  font-size: 2.25rem;
 }
 #content > #title-box > #year {
   font-size: 1.5rem;

@@ -2,7 +2,7 @@
 <html>
   <head>
     <!-- this links to css file containing styles -->
-    <link rel="stylesheet" href="styles.css" />
+    <link rel="stylesheet" href="styles_loading.css" />
 
     <!-- Add your external google fonts here -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -17,8 +17,8 @@
     
     <!-- custom scripts -->
     <script src="/script.js"></script>
-    <script src="/project.js"></script>
-    <script src="/projectButton.js"></script>
+    <script src="/interest.js"></script>
+    <script src="/interestCard.js"></script>
     
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <!-- this line takes care of special characters in text -->
@@ -29,76 +29,18 @@
     </title>
   </head>
   
-  <body page="gallery">
-    <div id="home-container">
-      
-      <div id="content">
+<body page="loading">
 
-        <div id="title-box">
-          <span id="title"></span>
-          <span id="year"></span>
+    <div id="loading-container">
+        
+        <div id="icons-container">
+           
+            <img id="guy" class="icon" src="assets\bunny01.png" alt=""">
+            <img id="star" class="icon" src="assets\star01.png" alt="">
+            <img id="bunny" class="icon" src="assets\bunny01.png" alt="">
+        
         </div>
-        <img id="left-gallery-button" class="gallery-button" src="assets\arrow_l.png">
-        <img id="right-gallery-button" class="gallery-button" src="assets\arrow_r.png">
-        <div id="gallery">
-          <div id="img-caption-combo">
-            <img id="gallery-img" src="">
-            <p id="caption"></p>
-          </div>
-        </div>
-        <div id="keywords-box">
-        <span class="keyword-title">Keywords:</span>
-        </div>
-        <div id="tools-box">
-          <span class="tool-title">Tools:</span>
-          </div>
-        <p id="description"></p>
-        <div id="doc-button-box"></div>
-
-      </div>
-
-      <div id="navbar">
-        <a href="about.html" id="logo">
-          <img src="assets/bunny01.png" alt="logo">
-        </a>
-
-        <p id="finished-projects-title" class="keyword-title">Finished Projects</p>
-        <div id="project-list">
-          <!-- populated with script -->
-        </div>
-        <p id="wip-projects-title" class="keyword-title">WIP Projects</p>
-        <div id="wip-list">
-          <!-- populated with script -->
-        </div>
-
-        <div id="socials">
-          <a href="https://www.youtube.com/@hd___________maxi" target="_blank">
-            <img id="youtube" src="assets\youtube.png" alt="logo">
-          </a>
-          <a href="https://www.instagram.com/hd.maxi/" target=”_blank”>
-            <img id="insta" src="assets\insta.png" alt="logo">
-          </a>
-          <a href="mailto:hd.maxi.tattoo@gmail.com" target=”_blank”>
-            <img id="mail" src="assets\mail.png" alt="logo">
-          </a>
-        </div>
-      </div>
-
-      <div id="header">
-        <div id="name-box">
-          <a href="about.html" id="name">Maxime Perreault</a>
-          <a href="about.html" id="alias">hd.maxi</a>
-        </div>
-      </div>    
-
+       
     </div>
 
-    <div id="lightbox">
-      <div id="lightbox-content">
-        <img id="lightbox-img" src="" alt="image">
-      </div>
-    </div>
-
-  </body>
-
-</html>
+</body>

@@ -278,7 +278,7 @@ html, body {
 }
 #content > #interest-cards-box {
   grid-column: 2 / -2;
-  grid-row: 9 / -2;
+  grid-row: 5 / -2;
   display: flex;
   flex-direction: row;
   gap: 1rem;

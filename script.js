@@ -5,9 +5,45 @@ window.onload = (event) => {
         // Remove last project from the json file (its a template to add more porjects more easily)
         data.projects.pop();
 
+        
+        // Check if the user has visited during the current session
+        let hasVisitedThisSession = sessionStorage.getItem("hasVisitedThisSession") === "true";
+
+        // Check if the user has visited the site before (persisted across sessions)
+        let hasVisited = localStorage.getItem("hasVisited") === "true";
+
+        
         // call different actions depending on which page is displayed
         switch (document.body.getAttribute("page")) {
-          
+                   
+          case "loading":
+            console.log("Has visited this session:", hasVisitedThisSession);
+            console.log("Has visited ever:", hasVisited);
+        
+            // Redirect function
+            function redirectToNextPage() {
+              window.location.href = "gallery.html"; // Replace with your target URL
+            }
+        
+            if (!hasVisitedThisSession) {
+              // First time visit during this session
+              sessionStorage.setItem("hasVisitedThisSession", "true");  // Mark this session's visit
+              if (!hasVisited) {
+                // First-time visit ever
+                localStorage.setItem("hasVisited", "true"); // Mark as visited for future sessions
+                console.log("First visit to the loading page.");
+                setTimeout(redirectToNextPage, 2500);
+              } else {
+                console.log("Returning visitor (first time on this session).");
+                setTimeout(redirectToNextPage, 2500);
+              }
+            } else {
+              console.log("Already visited this session.");
+              setTimeout(redirectToNextPage, 300);
+            }
+        
+          break;
+
           case "log":
             let urlParams = new URLSearchParams(window.location.search);
             let logFilePath = urlParams.get("log");
