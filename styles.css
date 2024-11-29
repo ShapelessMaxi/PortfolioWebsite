@@ -95,7 +95,9 @@ html, body {
   grid-template-columns: repeat(8, minmax(0, 1fr));
   grid-template-rows: repeat(var(--page-rows), minmax(0, 1fr));
   justify-items: center;
-  background-image: linear-gradient(var(--grey), var(--pink) 300%);
+  /* background-image: linear-gradient(var(--grey), var(--pink) 300%); */
+  /* background-image: linear-gradient(var(--grey-white), white 200%); */
+  background-image: linear-gradient(var(--grey), var(--grey-white) 100%);
 }
 #navbar > #logo {
   z-index: 1;
@@ -103,7 +105,7 @@ html, body {
   grid-row: 2 / span 2;
 }
 #navbar > #logo > img {
-  height: 125%;
+  height: 165%;
 }
 #navbar > #logo > img:hover {
   animation: scale-bounce 2s ease-in-out infinite;
@@ -158,6 +160,7 @@ html, body {
   overflow-y: scroll;
   overflow-x: hidden;
   margin-right: 0.5rem;
+  /* background-image: linear-gradient(rgba(255, 255, 255, 0) 90%, var(--pink) 150%); */
 }
 #wip-list {
   grid-column: 1 / -1;
@@ -166,6 +169,7 @@ html, body {
   overflow-y: scroll;
   overflow-x: hidden;
   margin-right: 0.5rem;
+  /* background-image: linear-gradient(rgba(255, 255, 255, 0) 90%, var(--pink) 150%); */
 }
 #project-list > .project-button, 
 #wip-list > .project-button {
@@ -385,6 +389,7 @@ html, body {
   font-family: var(--body-font);
   font-size: 0.9rem;
   line-height: 1.3rem;
+  background-image: linear-gradient(rgba(255, 255, 255, 0) 90%, var(--pink) 150%);
 }
 #content > #description > p {
   padding-bottom: 0.5rem;

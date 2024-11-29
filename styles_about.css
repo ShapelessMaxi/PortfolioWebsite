@@ -85,7 +85,8 @@ html, body {
   grid-template-columns: repeat(calc(var(--page-cols) - 24), minmax(0, 1fr));
   grid-template-rows: repeat(var(--page-rows), minmax(0, 1fr));
   justify-items: center;
-  background-image: linear-gradient(var(--grey), var(--pink) 300%);
+  background-image: linear-gradient(var(--grey), var(--grey-white) 100%);
+  /* background-image: linear-gradient(var(--grey), var(--pink) 300%); */
 }
 #navbar > #logo {
   z-index: 1;
@@ -215,7 +216,7 @@ html, body {
   grid-row: 3 / -1;
   grid-template-columns: repeat(calc(var(--page-cols) - 7), minmax(0, 1fr));
   grid-template-rows: repeat(calc(var(--page-rows) - 2), minmax(0, 1fr));
-  background-image: linear-gradient(var(--grey-white), white 300%);
+  background-image: linear-gradient(var(--grey-white), white 200%);
 }
 #content > #text-box {
   grid-column: 2 / -2;

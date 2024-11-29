@@ -12,10 +12,15 @@
     --socials: 1;
 
     /* colors */
-    --grey: rgb(167, 167, 167);
-    --green: rgb(110 142 111);
+    --green: rgb(73, 112, 87);
+    --green-shadow: rgb(58, 153, 145);
     --pink: #f58daf;
+    --blue: rgb(226, 238, 255);
+    --blue-dark: rgb(10, 10, 161);
+    --grey: rgb(167, 167, 167);
+    --grey-shadow: rgb(108, 108, 108);
     --grey-white: rgb(245, 245, 245);
+    --grey-white-shadow: rgb(176, 176, 176);
     --grey-black: rgb(52, 52, 52);
         
     /* fonts */

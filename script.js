@@ -242,45 +242,49 @@ window.onload = (event) => {
 
   // papge population
   function createDocButtons (displayedProject) {
-    for (let d = 0; d < displayedProject.documentation.length; d++) {
-      let currentDocButton = document.createElement("div");
-      currentDocButton.classList.add('doc-button');
-      currentDocButton.setAttribute("target", "_blank");
-      currentDocButton.setAttribute("href", "");
-      document.getElementById("doc-button-box").appendChild(currentDocButton);
+    if (displayedProject.documentation[0].tag === "") {
+      // do not create a button
+    } else {
+        for (let d = 0; d < displayedProject.documentation.length; d++) {
+        let currentDocButton = document.createElement("div");
+        currentDocButton.classList.add('doc-button');
+        currentDocButton.setAttribute("target", "_blank");
+        currentDocButton.setAttribute("href", "");
+        document.getElementById("doc-button-box").appendChild(currentDocButton);
 
-      let currentButtonText = document.createElement("span");
-      currentButtonText.classList.add('doc-button-text');
-      currentButtonText.innerText = displayedProject.documentation[d].tag;
-      currentDocButton.appendChild(currentButtonText);
+        let currentButtonText = document.createElement("span");
+        currentButtonText.classList.add('doc-button-text');
+        currentButtonText.innerText = displayedProject.documentation[d].tag;
+        currentDocButton.appendChild(currentButtonText);
 
-      let extArrowImg = document.createElement("img");
-      extArrowImg.classList.add('ext-arrow-icon');
-      extArrowImg.src = "\assets\\arrow_ext_h.png";
-      currentDocButton.appendChild(extArrowImg);
-      
-      currentDocButton.addEventListener("click", function(event) {
-        // dimensions based on screen size
-        let logWidth = Math.round(screen.width * 0.4);
-        let logLeft = Math.round(screen.width * 0.1);
-        let docWidth = Math.round(screen.width * 0.6);
-        let docLeft = Math.round(screen.width * 0.333);
-        let extHeight = Math.round(screen.height * 0.666);
-        let extTop = Math.round(screen.height * 0.2);
+        let extArrowImg = document.createElement("img");
+        extArrowImg.classList.add('ext-arrow-icon');
+        extArrowImg.src = "\assets\\arrow_ext_h.png";
+        currentDocButton.appendChild(extArrowImg);
+        
+        currentDocButton.addEventListener("click", function(event) {
+          // dimensions based on screen size
+          let logWidth = Math.round(screen.width * 0.4);
+          let logLeft = Math.round(screen.width * 0.1);
+          let docWidth = Math.round(screen.width * 0.6);
+          let docLeft = Math.round(screen.width * 0.333);
+          let extHeight = Math.round(screen.height * 0.666);
+          let extTop = Math.round(screen.height * 0.2);
 
-        // Check if the tag is "Log" or not
-        if (displayedProject.documentation[d].tag === "Log") {
-          // Open the log page
-          let logFilePath = displayedProject.documentation[d].link;
-          let options = `width=${logWidth},height=${extHeight},left=${logLeft},top=${extTop},scrollbars=yes,resizable=yes`;
-          window.open(`log.html?log=${encodeURIComponent(logFilePath)}`, "log", options);
-        } else {
-          // Open the external docs
-          let options = `width=${docWidth},height=${extHeight},left=${docLeft},top=${extTop},scrollbars=yes,resizable=yes`;
-          window.open(displayedProject.documentation[d].link, "doc", options);
-        }
-      });
-    };
+          // Check if the tag is "Log" or not
+          if (displayedProject.documentation[d].tag === "Log") {
+            // Open the log page
+            let logFilePath = displayedProject.documentation[d].link;
+            let options = `width=${logWidth},height=${extHeight},left=${logLeft},top=${extTop},scrollbars=yes,resizable=yes`;
+            window.open(`log.html?log=${encodeURIComponent(logFilePath)}`, "log", options);
+          } else {
+            // Open the external docs
+            let options = `width=${docWidth},height=${extHeight},left=${docLeft},top=${extTop},scrollbars=yes,resizable=yes`;
+            window.open(displayedProject.documentation[d].link, "doc", options);
+          }
+        });
+      };
+    }
   }
   function updateContent (displayedProject) {
     // Extra doc buttons

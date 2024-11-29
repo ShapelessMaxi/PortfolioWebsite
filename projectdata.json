@@ -89,7 +89,7 @@
                 "Nostalgia;"
             ],
             "description": [
-                "An exploration of 'low-tech' computer vision. With a simple python script utilizing the numPy library along with a webcam, I try to have the computer make sens of what it 'sees' through the webcam in a more humanistic way. Rather than seeing thousands of pixels and rgb values, it now 'sees' the average color of wider areas, and can detect which color matches best by comparing it to a small database."
+                "This project explores 'low-tech' computer vision through a simple Python script. Using the NumPy library and a webcam, it enables the computer to interpret the visual input in a more human-like way. Instead of processing thousands of individual pixels and RGB values, the script simplifies the image data into average colors across larger areas. These are then compared to a small database to identify the closest color match."
             ],
             "tools": [
                 "Python;",
@@ -187,8 +187,9 @@
                 "High-Poly Modelling"
             ],
             "description": [
-                "*This description needs an update.",
-                "This sculpted character is brought to life using Mixamo, a motion capture library. The textures are painted and generated with Substance Designer. With this one, I tell a futuristic story, where fashion is still a priority even after the environment became hostile."
+                "This character tells a futuristic story, where fashion is still a priority even after the environment became hostile. I imagine people in this alternate universe having to cover up entirely to protect themselves from the polluted air and intense UV rays.",
+                "In this character design exercise, the personal protective equipment takes the shape of a pair of plateform boots, a helmet with anti-UV glasses, a skin-tight shirt to show off defined chest muscles, puffy leather pants and gloves. To complete the outfit, a cute shoulder bag that matches the boots and helmet along wiht a phone capting atmospheric information are added as accessories.",
+                "This high-ploygon count sculpted character is brought to life using Mixamo, a motion capture library. The textures are painted and generated with Substance Designer and Substance Painter."
             ],
             "tools": [
                 "Blender3d;",
@@ -235,7 +236,7 @@
             ],
             "description": [
                 "*This description needs an update.",
-                "This is a low-poly diorama in tell the story of an adored demon toad. The animations are minimal, but still add to the rich story developed through the different animals and plants. The background was generated with Substance Designer, and the rest of the scene was modelled, textured, animated, and lit in Blender 3D."
+                "This is a low-poly diorama that tells the story of an adored demon toad. The animations are minimal, but still add to the rich story developed through the different animals and plants. The background was generated with Substance Designer, and the rest of the scene was modelled, textured, animated, and lit in Blender 3D."
             ],
             "tools": [
                 "Blender3D;",
@@ -291,8 +292,125 @@
             ]
         },
         
+        {
+            "title": "EFFA - Visual Identity",
+            "year": "2020",
+            "filters": [
+                "Graphic Design"
+            ],
+            "isDone": "True",
+            "gallery": [
+                {
+                    "dir": "project_data\\EFFAGraphicDesign\\finaldoc_07.png",
+                    "caption": "Mocked-up poster"
+                },
+                {
+                    "dir": "project_data\\EFFAGraphicDesign\\finaldoc_08.png",
+                    "caption": "Mocked-up book cover"
+                },
+                {
+                    "dir": "project_data\\EFFAGraphicDesign\\finaldoc_01.png",
+                    "caption": "Exhibition brief summary"
+                },
+                {
+                    "dir": "project_data\\EFFAGraphicDesign\\finaldoc_02.png",
+                    "caption": "Words of inspiration"
+                },
+                {
+                    "dir": "project_data\\EFFAGraphicDesign\\finaldoc_03.png",
+                    "caption": "Typography moodboard"
+                },
+                {
+                    "dir": "project_data\\EFFAGraphicDesign\\finaldoc_04.png",
+                    "caption": "Color moodboard"
+                },
+                {
+                    "dir": "project_data\\EFFAGraphicDesign\\finaldoc_05.png",
+                    "caption": "Style and vibe moodboard"
+                },
+                {
+                    "dir": "project_data\\EFFAGraphicDesign\\finaldoc_06.png",
+                    "caption": "A few word on the choices of typography, color, and style"
+                },
+                {
+                    "dir": "project_data\\EFFAGraphicDesign\\AfficheFinale.png",
+                    "caption": "The final poster"
+                },
+                {
+                    "dir": "project_data\\EFFAGraphicDesign\\AlbumCoverFinal.png",
+                    "caption": "The final book cover"
+                }
+            ],
+            "keywords": [
+                "Graphic Design;",
+                "Visual ID;",
+                "Mock-ups;"
+            ],
+            "description": [
+                "This visual identity was developped in the context of a graphic design class during my - unfinished - bachelor degree in Industrial Design at Universié de Montréal. We were all prompted to create posters, book covers, and other merchandise for the next iteration of EFFA (Exposition des finissants de la Faculté de l'aménagement).",
+                "The theme being 'CTRL+S', I went with a design sporting heavy contrast, fine lines, and repeating typography. My inspiration for these choices came from an exploration of the theme that could be resumed in three words: Nervosité, Écho, and Arts Numériques (translation: Nervousness, Echos, and Digital Arts)."
+            ],
+            "tools": [
+                "Adobe Illustrator;",
+                "Adobe InDesign;",
+                "Adobe Photoshop;"
+            ],
+            "documentation": [
+                {
+                    "tag": "",
+                    "link": ""
+                }                    
+            ]
+        },
 
-    
+        {
+            "title": "Pyre",
+            "year": "2019",
+            "filters": "Product Design",
+            "isDone": "True",
+            "gallery": [
+                {
+                    "dir": "project_data\\Pyre\\top.png",
+                    "caption": "Top view highlighting the branding"
+                },
+                {
+                    "dir": "project_data\\Pyre\\AfficheFinale.png",
+                    "caption": "Final presentation poster"
+                },
+                {
+                    "dir": "project_data\\Pyre\\pp.png",
+                    "caption": "Perspective view"
+                },
+                {
+                    "dir": "project_data\\Pyre\\cut.jpg",
+                    "caption": "Vertical slice of the product"
+                }
+            ],
+            "keywords": [
+                "Product Design;",
+                "Portable Object;",
+                "Product Concept;",
+                "Brand ID;"
+            ],
+            "description": [
+                "This portable barbecue concept was developped in the context of a class during my - unfinished - bachelor degree in Industrial Design at Universié de Montréal. I was prompted to create this object for the Hudson Bay Company (HBC), and a lot of emphasis was put on the branding. It had be marketed towards their mid-to-high end costumer base, be portable, and safe.",
+                "After researching metal sheet bending and assembly, I came up with this sleek and original stackable design. For instance, with just six tabs on the lid and six corresponding notches in the base, the lid securely stays in place. This approach not only provides an elegant form but also ensures that the object's fabrication and assembly are straightforward and cost-effective."
+            ],
+            "tools": [
+                "SolidWorks;",
+                "Adobe Illustrator;",
+                "Adobe Photoshop;"
+            ],
+            "documentation": [
+                {
+                    "tag": "",
+                    "link": ""
+                }                    
+            ]
+        },
+
+
+
         {
             "title": "",
             "year": "",
@@ -308,7 +426,10 @@
                 ";",
                 ";"
             ],
-            "description": "",
+            "description": [
+                "",
+                ""
+            ],
             "tools": [
                 ";",
                 ";"
