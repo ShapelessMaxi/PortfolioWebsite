@@ -1,0 +1,478 @@
+{
+    "projects": [
+        
+        {
+            "title": "Glitch Armor",
+            "year": 2024,
+            "filters": [
+                "3D Animation",
+                "Interactivity"
+            ],
+            "isDone": "True",
+            "gallery": [
+                {
+                    "dir": "project_data\\GiltchArmor\\DSC00418.jpg",
+                    "caption": "Documentation de l'installation pour l'événement Millieux x MTLconnect (10-2024)."
+                },
+                {
+                    "dir": "project_data\\GiltchArmor\\DSC00446.jpg",
+                    "caption": "Documentation de l'installation pour l'événement Millieux x MTLconnect (10-2024)."
+                },
+                {
+                    "dir": "project_data\\GiltchArmor\\DSC00499.jpg",
+                    "caption": "Documentation de l'installation présenté pendant l'événement Millieux x MTLconnect (10-2024)"
+                },
+                {
+                    "dir": "project_data\\GiltchArmor\\composantmachinal01.jpg",
+                    "caption": "Installation présenté dans l'exposition collective Composant Machinal (07-2024)"
+                },
+                {
+                    "dir": "project_data\\GiltchArmor\\composantmachinal02.jpg",
+                    "caption": "Installation présenté dans l'exposition collective Composant Machinal (07-2024)"
+                },
+                {
+                    "dir": "project_data\\GiltchArmor\\composantmachinal03.jpg",
+                    "caption": "Installation présenté dans l'exposition collective Composant Machinal (07-2024)"
+                },
+                {
+                    "dir": "project_data\\GiltchArmor\\tech.png",
+                    "caption": "Dessin technique de l'installation physique"
+                }
+            ],
+            "keywords": [
+                "Conception de personnages;",
+                "Effets visuels (VFX);",
+                "Visibilité;",
+                "Narration queer;"
+            ],
+            "description": [
+                "Glitch Armor est un sort protecteur inspiré par l'experience nuancée du concept de la visibilité au sein des communauté queer. D'un côté, être visible leur permet d'exister de façon authentique, de prender de la place et de signifier leur identité aux autres. D'un autre côté, être visible les expose à de la violence émotionelle et physique. Cette animation 3D montre un couple ainsi que leur réaction aux mouvements présent autours d'eux grace à un flux vidéo provenant d'une webcam. Conséquemment, l'effect de glitch prend place et les rend progressivement moins visible.",
+                "Est-ce que la tehnologie pourrait évoluer afin d'avoir des traits de personalité humains?",
+                "Et si les personnages numériques ressentaient eux aussi de l'anxiété à l'idée d'être visiblement queer?",
+                "Glitch Armor représente un exercice de conception de personnages, utilisant une technologie interactive afin d'ajouter à l'histoire racontée. À mesure que les spectateurs s'approchent de l'installation, les personnages révèlent leurs personnalités, leur anxiété et leurs pensées rebelles."
+            ],
+            "tools": [
+                "TouchDesigner;",
+                "Blender3D;",
+                "Substance Painter;",
+                "MediaPipe;"
+            ],
+            "documentation": [
+                {
+                    "tag": "Web Documentation",
+                    "link": "https://hdmaxi411.wordpress.com"
+                },
+                {
+                    "tag": "Demo",
+                    "link": "https://www.youtube.com/watch?v=QMzflT3d9EA"
+                }                         
+            ]
+        },
+
+        {
+            "title": "Look Again",
+            "year": "2024",
+            "filters": [
+                "Creative Coding",
+                "Interactivity"
+            ],
+            "isDone": "False",
+            "gallery": [
+                {
+                    "dir": "project_data\\LookAgain\\Proto01.jpg",
+                    "caption": "Prototype 01, Analyze TOPs and legos"
+                }
+            ],
+            "keywords": [
+                "Computer Vision;",
+                "Machine Personification;",
+                "Nostalgia;"
+            ],
+            "description": [
+                "This project explores 'low-tech' computer vision through a simple Python script. Using the NumPy library and a webcam, it enables the computer to interpret the visual input in a more human-like way. Instead of processing thousands of individual pixels and RGB values, the script simplifies the image data into average colors across larger areas. These are then compared to a small database to identify the closest color match."
+            ],
+            "tools": [
+                "Python;",
+                "TouchDesigner;",
+                "OBS Studio;"
+            ],
+            "documentation": [
+                {
+                    "tag": "Log",
+                    "link": "project_data\\LookAgain\\log.txt"
+                }                    
+            ]
+        },
+
+        {
+            "title": "To Dissect / To Stitch",
+            "year": "2023",
+            "filters": [
+                "Creative Coding",
+                "Interactivity"
+            ],
+            "isDone": "False",
+            "gallery": [
+                {
+                    "dir": "project_data\\ToDissectToStitch\\ToDissectToStitch_01.png",
+                    "caption": "In-progress state of the puzzle"
+                },
+                {
+                    "dir": "project_data\\ToDissectToStitch\\ToDissectToStitch_02.png",
+                    "caption": "Imported body part as an .fbx file in TD"
+                },
+                {
+                    "dir": "project_data\\ToDissectToStitch\\ToDissectToStitch_04.png",
+                    "caption": "Opportunity for optimization, all these nodes could be a simpler script"
+                },
+                {
+                    "dir": "project_data\\ToDissectToStitch\\ToDissectToStitch_05.png",
+                    "caption": "Completed state of the puzzle"
+                }
+            ],
+            "keywords": [
+                "Interactivity;",
+                "3D Scanning;",
+                "Body Politics;",
+                "Medical Gaze;",
+                "Creative writing"
+            ],
+            "description": [
+                "*This project needs an update, more in the .txt log.",
+                "*This desctiption needs an update",
+                "This is a digital puzzle made of my own 3D scanned body, inspired by academic literature in queer theory. The final piece acts as a manifesto regarding body-related and perception-based societal norms. In the end, I see it as a kind of auto-ethnographic process where I was able to analyze the external perception, as well as my own, of my body, both in a deconstructed and reconstructed state. With MediaPipe, a machine learning tool, the viewer in front of a visual composition of myself with heavy medical and 'objective' undertones can replace the pieces back in place using hand gestures. The experience is complete when the viewer sees the whole manifesto written in the place of a previously dry descriptions of each body parts."
+            ],
+            "tools": [
+                "TouchDesigner;",
+                "MediaPipe;",
+                "Kiri Engine;",
+                "Blender3D"                
+            ],
+            "documentation": [
+                {
+                    "tag": "Log",
+                    "link": "project_data\\ToDissectToStitch\\log.txt"
+                },
+                {
+                    "tag": "Web Documentation",
+                    "link": "https://hdmaxi410.wordpress.com"
+                }                    
+            ]
+        },
+        
+        {
+            "title": "Post-Apocalyptic Hottie",
+            "year": 2023,
+            "filters": [
+                "3D Animation"
+            ],
+            "isDone": "True",
+            "gallery": [
+                {
+                    "dir": "project_data\\PostApocalypticHottie\\PostApocalypticHottie_04.png",
+                    "caption": "Character in a T-Pose"
+                },
+                {
+                    "dir": "project_data\\PostApocalypticHottie\\PostApocalypticHottie_01.png",
+                    "caption": "Still from the walking animation"
+                },
+                {
+                    "dir": "project_data\\PostApocalypticHottie\\PostApocalypticHottie_03.png",
+                    "caption": "Displacement map used for the ground block"
+                }
+            ],
+            "keywords": [
+                "Character Design;",
+                "Motion Capture;",
+                "High-Poly Modelling"
+            ],
+            "description": [
+                "This character tells a futuristic story, where fashion is still a priority even after the environment became hostile. I imagine people in this alternate universe having to cover up entirely to protect themselves from the polluted air and intense UV rays.",
+                "In this character design exercise, the personal protective equipment takes the shape of a pair of plateform boots, a helmet with anti-UV glasses, a skin-tight shirt to show off defined chest muscles, puffy leather pants and gloves. To complete the outfit, a cute shoulder bag that matches the boots and helmet along wiht a phone capting atmospheric information are added as accessories.",
+                "This high-ploygon count sculpted character is brought to life using Mixamo, a motion capture library. The textures are painted and generated with Substance Designer and Substance Painter."
+            ],
+            "tools": [
+                "Blender3d;",
+                "Substance Painter;",
+                "Substance Designer;",
+                "Mixamo;",
+                "Adobe Premiere"
+            ],
+            "documentation": [
+                {
+                    "tag": "Full Animation",
+                    "link": "https://youtu.be/kZotRX9Zqgo"
+                }                    
+            ]
+        },
+        
+        {
+            "title": "Awakening of the Frog",
+            "year": "2022",
+            "filters":[
+                "3D Animation"
+            ],
+            "isDone": "True",
+            "gallery": [
+                {
+                    "dir": "project_data\\AwakeningofTheFrog\\AwakeningofTheFrog_01.png",
+                    "caption": "Focus on the frog, still from the turntable animation"
+                },
+                {
+                    "dir": "project_data\\AwakeningofTheFrog\\AwakeningofTheFrog_03.png",
+                    "caption": "Focus on the pond, still from the turntable animation"
+                },
+                {
+                    "dir": "project_data\\AwakeningofTheFrog\\AwakeningofTheFrog_04.png",
+                    "caption": "Still from the turntable animation"
+                }
+            ],
+            "keywords": [
+                "Low Poly Modelling;",
+                "Particle Systems;",
+                "2D VFX;",
+                "Video Game Concept;",
+                "Visual Storytelling"
+            ],
+            "description": [
+                "*This description needs an update.",
+                "This is a low-poly diorama that tells the story of an adored demon toad. The animations are minimal, but still add to the rich story developed through the different animals and plants. The background was generated with Substance Designer, and the rest of the scene was modelled, textured, animated, and lit in Blender 3D."
+            ],
+            "tools": [
+                "Blender3D;",
+                "Substance Designer;",
+                "Adobe Premiere"
+            ],
+            "documentation": [
+                {
+                    "tag": "Full Animation",
+                    "link": "https://youtu.be/zROBx7WUO-w"
+                }                    
+            ]
+        },
+           
+        {
+            "title": "bodymod",
+            "year": 2021,
+            "filters": "Interactive",
+            "isDone": "True",
+            "gallery": [
+                {
+                    "dir": "project_data\\bodymod\\bodymod_01_copy.png",
+                    "caption": "Capture of the game when all modifications are discovered"
+                },
+                {
+                    "dir": "project_data\\bodymod\\bodymod_05_copy.png",
+                    "caption": "Capture of the game when most modifications are unknown"
+                },
+                {
+                    "dir": "project_data\\bodymod\\bodymod_04.png",
+                    "caption": "Capture of the name input screen."
+                }               
+            ],
+            "keywords": [
+                "Creative coding;",
+                "Video Game;",
+                "Body Agency"
+            ],
+            "description": [
+                "*This description needs an update.",
+                "This is a reflection about being a human with a body, a subject that I have been thinking about a lot. It also relates to my work as a tattoo artist. Everything was programmed in Javascript P5."
+            ],
+            "tools": [
+                "JavaScript;",
+                "p5.js;",
+                "HTML"
+            ],
+            "documentation": [
+                {
+                    "tag": "Game Files",
+                    "link": "https://github.com/ShapelessMaxi/cart253/tree/main/projects/mod"
+                }                    
+            ]
+        },
+        
+        {
+            "title": "EFFA - Visual Identity",
+            "year": "2020",
+            "filters": [
+                "Graphic Design"
+            ],
+            "isDone": "True",
+            "gallery": [
+                {
+                    "dir": "project_data\\EFFAGraphicDesign\\finaldoc_07.png",
+                    "caption": "Mocked-up poster"
+                },
+                {
+                    "dir": "project_data\\EFFAGraphicDesign\\finaldoc_08.png",
+                    "caption": "Mocked-up book cover"
+                },
+                {
+                    "dir": "project_data\\EFFAGraphicDesign\\finaldoc_01.png",
+                    "caption": "Exhibition brief summary"
+                },
+                {
+                    "dir": "project_data\\EFFAGraphicDesign\\finaldoc_02.png",
+                    "caption": "Words of inspiration"
+                },
+                {
+                    "dir": "project_data\\EFFAGraphicDesign\\finaldoc_03.png",
+                    "caption": "Typography moodboard"
+                },
+                {
+                    "dir": "project_data\\EFFAGraphicDesign\\finaldoc_04.png",
+                    "caption": "Color moodboard"
+                },
+                {
+                    "dir": "project_data\\EFFAGraphicDesign\\finaldoc_05.png",
+                    "caption": "Style and vibe moodboard"
+                },
+                {
+                    "dir": "project_data\\EFFAGraphicDesign\\finaldoc_06.png",
+                    "caption": "A few word on the choices of typography, color, and style"
+                },
+                {
+                    "dir": "project_data\\EFFAGraphicDesign\\AfficheFinale.png",
+                    "caption": "The final poster"
+                },
+                {
+                    "dir": "project_data\\EFFAGraphicDesign\\AlbumCoverFinal.png",
+                    "caption": "The final book cover"
+                }
+            ],
+            "keywords": [
+                "Graphic Design;",
+                "Visual ID;",
+                "Mock-ups;"
+            ],
+            "description": [
+                "This visual identity was developped in the context of a graphic design class during my - unfinished - bachelor degree in Industrial Design at Universié de Montréal. We were all prompted to create posters, book covers, and other merchandise for the next iteration of EFFA (Exposition des finissants de la Faculté de l'aménagement).",
+                "The theme being 'CTRL+S', I went with a design sporting heavy contrast, fine lines, and repeating typography. My inspiration for these choices came from an exploration of the theme that could be resumed in three words: Nervosité, Écho, and Arts Numériques (translation: Nervousness, Echos, and Digital Arts)."
+            ],
+            "tools": [
+                "Adobe Illustrator;",
+                "Adobe InDesign;",
+                "Adobe Photoshop;"
+            ],
+            "documentation": [
+                {
+                    "tag": "",
+                    "link": ""
+                }                    
+            ]
+        },
+
+        {
+            "title": "Pyre",
+            "year": "2019",
+            "filters": "Product Design",
+            "isDone": "True",
+            "gallery": [
+                {
+                    "dir": "project_data\\Pyre\\top.png",
+                    "caption": "Top view highlighting the branding"
+                },
+                {
+                    "dir": "project_data\\Pyre\\AfficheFinale.png",
+                    "caption": "Final presentation poster"
+                },
+                {
+                    "dir": "project_data\\Pyre\\pp.png",
+                    "caption": "Perspective view"
+                },
+                {
+                    "dir": "project_data\\Pyre\\cut.jpg",
+                    "caption": "Vertical slice of the product"
+                }
+            ],
+            "keywords": [
+                "Product Design;",
+                "Portable Object;",
+                "Product Concept;",
+                "Brand ID;"
+            ],
+            "description": [
+                "This portable barbecue concept was developped in the context of a class during my - unfinished - bachelor degree in Industrial Design at Universié de Montréal. I was prompted to create this object for the Hudson Bay Company (HBC), and a lot of emphasis was put on the branding. It had be marketed towards their mid-to-high end costumer base, be portable, and safe.",
+                "After researching metal sheet bending and assembly, I came up with this sleek and original stackable design. For instance, with just six tabs on the lid and six corresponding notches in the base, the lid securely stays in place. This approach not only provides an elegant form but also ensures that the object's fabrication and assembly are straightforward and cost-effective."
+            ],
+            "tools": [
+                "SolidWorks;",
+                "Adobe Illustrator;",
+                "Adobe Photoshop;"
+            ],
+            "documentation": [
+                {
+                    "tag": "",
+                    "link": ""
+                }                    
+            ]
+        },
+
+
+
+        {
+            "title": "",
+            "year": "",
+            "filters": "",
+            "isDone": "True",
+            "gallery": [
+                {
+                    "dir": "project_data\\project\\img.png",
+                    "caption": "png"
+                }
+            ],
+            "keywords": [
+                ";",
+                ";"
+            ],
+            "description": [
+                "",
+                ""
+            ],
+            "tools": [
+                ";",
+                ";"
+            ],
+            "documentation": [
+                {
+                    "tag": "",
+                    "link": ""
+                }                    
+            ]
+        }
+    ],
+
+    "interests": [
+
+        {
+            "title": "Animation 3D",
+            "summary" : "Créer un produit numérique avec un logiciel 3D.",
+            "description": "When I say I do 3D animation, I mean mostly everything that can happen in a 3D software. That's modelling, remeshing, UV mapping, texturing, rigging, animating, lighting, simulating physics, and compositing. Not every project requires all steps, but I deeply enjoy this overall process.",
+            "tag": "3D Animation"
+        },
+
+        {
+            "title": "Tattooing",
+            "summary" : "Marking the skin permanently with needles and ink.",
+            "description": "I have always been drawn to the tattoing process, both to decorate my own body and others. I find body modification enticing because it takes effort and pain, making it something significant and giving it grounding properties.",
+            "tag": "3D Animation"
+        },
+
+        {
+            "title": "Creative Coding",
+            "summary" : "Programming as a tool for creative expression.",
+            "description": "I started learning to code a few years ago, and I now am pretty decent at HTML/CSS, Javascript, and Python. These languages opened up so many doors for me, and most of my current projects include some kind of script.",
+            "tag": "Creative Coding"
+        },
+
+        {
+            "title": "Interactive Technologies",
+            "summary" : "Systems, devices, or software designed to enable real-time engagement.",
+            "description": "This is a wide area, but my personal interests lies within cameras (especially webcams), video games, and game mechanics. I experiment with interactive design to tell new kinds of stories, some that may need more nuance or that may benefit from having multiple states revealed to the viewers.",
+            "tag": "Interactivity"
+        }
+        
+    ]
+    
+}

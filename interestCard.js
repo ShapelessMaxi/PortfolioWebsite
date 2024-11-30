@@ -3,12 +3,14 @@ class interestCard {
       title,
       summary,
       description,
-      tag
+      tag,
+      language
     ) {
       this.title = title;
       this.summary = summary;
       this.description = description;
       this.tag= tag;
+      this.language = language;
 
       this.createCard();
     }
@@ -48,7 +50,7 @@ class interestCard {
         this.button.target= '_blank';
       } else {
         let interest = this.tag;
-        this.button.href = `/index.html?interest=${encodeURIComponent(interest)}`;
+        this.button.href = `/gallery.html?lg=${encodeURIComponent(this.language)}&interest=${encodeURIComponent(interest)}`;
       }
       this.button.classList.add("project-button");
       

@@ -2,7 +2,7 @@
 <html>
   <head>
     <!-- this links to css file containing styles -->
-    <link rel="stylesheet" href="styles_loading.css" />
+    <link rel="stylesheet" href="styles_splash.css" />
 
     <!-- Add your external google fonts here -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -29,17 +29,30 @@
     </title>
   </head>
   
-<body page="loading">
+<body page="splash">
 
-    <div id="loading-container">
+    <div id="splash-container">
         
         <div id="icons-container">
            
-            <img id="guy" class="icon" src="assets\bunny01.png" alt=""">
-            <img id="star" class="icon" src="assets\star01.png" alt="">
-            <img id="bunny" class="icon" src="assets\bunny01.png" alt="">
+          <img id="cactus" class="icon" src="assets\cactus_render.png" alt="cactus">
+            <img id="guy" class="icon" src="assets\guy_render.png" alt="guy">
+            <img id="bunny" class="icon" src="assets\bunny01.png" alt="bunny">
         
         </div>
+    
+        <div id="button-container">
+          <a href="/gallery.html?lg=fr" id="fr-button" class="language-button">
+            <p>Français</p>
+            <img id="star" src="assets/star.png" alt="star">
+          </a>
+          
+          <a href="/gallery.html?lg=en" id="eng-button" class="language-button">
+            <p>English</p>
+            <img id="star" src="assets/star.png" alt="star">
+          </a>
+        </div>
+        
        
     </div>
 

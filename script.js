@@ -1,47 +1,46 @@
 window.onload = (event) => {
-    fetch("/projectdata.json")
+
+  let urlParams = new URLSearchParams(window.location.search);
+  let language = urlParams.get("lg") || "en";
+  let projectDataFile = "/projectdata-" + language + ".json";
+
+    fetch(projectDataFile)
       .then((response) => response.json())
       .then((data) => {
         // Remove last project from the json file (its a template to add more porjects more easily)
         data.projects.pop();
 
-        
-        // Check if the user has visited during the current session
-        let hasVisitedThisSession = sessionStorage.getItem("hasVisitedThisSession") === "true";
-
-        // Check if the user has visited the site before (persisted across sessions)
-        let hasVisited = localStorage.getItem("hasVisited") === "true";
-
-        
         // call different actions depending on which page is displayed
         switch (document.body.getAttribute("page")) {
                    
-          case "loading":
-            console.log("Has visited this session:", hasVisitedThisSession);
-            console.log("Has visited ever:", hasVisited);
-        
-            // Redirect function
-            function redirectToNextPage() {
-              window.location.href = "gallery.html"; // Replace with your target URL
-            }
-        
-            if (!hasVisitedThisSession) {
-              // First time visit during this session
-              sessionStorage.setItem("hasVisitedThisSession", "true");  // Mark this session's visit
-              if (!hasVisited) {
-                // First-time visit ever
-                localStorage.setItem("hasVisited", "true"); // Mark as visited for future sessions
-                console.log("First visit to the loading page.");
-                setTimeout(redirectToNextPage, 2500);
-              } else {
-                console.log("Returning visitor (first time on this session).");
-                setTimeout(redirectToNextPage, 2500);
-              }
-            } else {
-              console.log("Already visited this session.");
-              setTimeout(redirectToNextPage, 300);
-            }
-        
+          case "splash":
+            let engButton = document.getElementById('eng-button');
+            let frButton = document.getElementById('fr-button');
+            let lgButton = [engButton, frButton];
+            let lg = "en"; // Default language is English
+            
+            lgButton.forEach(button => {
+              button.addEventListener('click', function() {
+                lg = button.children[0].innerText;
+                
+                if (lg === "Français") {
+                  lg = "fr";
+                } else {
+                  lg = "en";
+                }
+            
+                // Go back to the about page with the correct language
+                let url = new URLSearchParams(window.location.search);
+                let rt = url.get("rt") || "gallery";
+            
+                // Construct the nextPage URL after the language has been set
+                let nextPage = rt + ".html?lg=" + lg;
+            
+                // Update the button's href
+                button.href = nextPage;
+              });
+            });
+          
           break;
 
           case "log":
@@ -72,8 +71,25 @@ window.onload = (event) => {
             break;
            
           case "about":
+            // get language from url
+            let urlAbout = new URLSearchParams(window.location.search);
+            let lgAbout = urlAbout.get("lg") || "en"
 
-          // create an object for each interest
+            // change titles and other text depending on language
+            if (lgAbout === "fr") {
+              document.getElementsByClassName('titles')[0].innerText = "Biographie";
+              document.getElementsByClassName('titles')[1].innerText = "Déclaration";
+              document.getElementById('language').children[0].innerText = "Langage";
+            } else {
+              document.getElementsByClassName('titles')[0].innerText = "Biography";
+              document.getElementsByClassName('titles')[1].innerText = "Statement";
+              document.getElementById('language').children[0].innerText = "Language";
+            }
+
+            // pass the language var in the url
+            document.getElementById('to-gallery').href = '\gallery.html?lg=' + lgAbout;
+
+            // create an object for each interest
             let interests = [];
             for (let i = 0; i < data.interests.length; i++) {
               // create all interests objects
@@ -92,7 +108,8 @@ window.onload = (event) => {
                 data.interests[i].title,
                 data.interests[i].summary,
                 data.interests[i].description,
-                data.interests[i].tag
+                data.interests[i].tag,
+                lgAbout
               );
               interestCards.push(currentCard);
             }
@@ -115,6 +132,10 @@ window.onload = (event) => {
             break;
             
           case "gallery":
+             // get language from url
+             let urlGallery= new URLSearchParams(window.location.search);
+             let lgGallery = urlGallery.get("lg") || "en"
+
             // create an object for each project
             let projects = [];
             for (let i = 0; i < data.projects.length; i++) {
@@ -189,7 +210,7 @@ window.onload = (event) => {
             let imgCount = displayedProject.gallery.length;
 
             // update page content according to current project
-            updateContent(displayedProject);
+            updateContent(displayedProject, lgGallery);
             
             // project buttons interaction
             document.querySelectorAll('.project-button').forEach(button => {
@@ -217,9 +238,9 @@ window.onload = (event) => {
                     // reset gallery buttons click counts
                     currentImgIndex = 0;
                     imgCount = displayedProject.gallery.length;
-
+                    
                     // update page content according to displayed project
-                    updateContent(displayedProject);
+                    updateContent(displayedProject, lgGallery);
 
                   }
                 }
@@ -227,31 +248,12 @@ window.onload = (event) => {
               });
             });
 
-            // gallery buttons interaction
             let galleryElement = document.getElementById("gallery-img");
             let captionElement = document.getElementById("caption");
-            // right button
-            document.getElementById('right-gallery-button').addEventListener('click', function() {
-              // for each click, count up
-              currentImgIndex ++;
-              currentImgIndex = currentImgIndex % imgCount;
-              galleryElement.src = displayedProject.gallery[currentImgIndex].dir;
-              captionElement.innerText = displayedProject.gallery[currentImgIndex].caption;
-            });
-            
-            // left button
-            document.getElementById('left-gallery-button').addEventListener('click', function() {
-              // for each click, count down
-              currentImgIndex--;
-              if (currentImgIndex < 0) {
-                currentImgIndex = imgCount - 1;
-              }
-              galleryElement.src = displayedProject.gallery[currentImgIndex].dir;
-              captionElement.innerText = displayedProject.gallery[currentImgIndex].caption;
-            });
 
             let lightbox = document.getElementById("lightbox");
             let lightboxImg = document.getElementById("lightbox-img");
+
             // close lightbox by default
             lightbox.style.display = "none";
             // Open lightbox on gallery image click
@@ -266,13 +268,52 @@ window.onload = (event) => {
             });
             // Close lightbox on clicking outside the image
             lightbox.addEventListener("click", (e) => {
-              if (e.target === lightbox) {
+              // Check if the click happened on the lightbox background and not the image
+              if (e.target === lightboxImg || e.target === lightbox) {
                 lightbox.style.display = "none";
               }
             });
-            
+
+            // gallery buttons interaction
+            galleryButton(currentImgIndex, imgCount, galleryElement, captionElement, displayedProject);
+
+            // pass the language var in the url
+            let aboutButtons = [document.getElementById('logo'), document.getElementById('name'), document.getElementById('alias')];
+            aboutButtons.forEach(button => {
+              button.href = '\about.html?lg=' + lgGallery;
+            });
+
           break;
       }
+    });
+  }
+
+  // gallery button interaction
+  function galleryButton(currentImgIndex, imgCount, galleryElement, captionElement, displayedProject) {
+    function updateGallery(indexChange) {
+      // Update the current image index
+      currentImgIndex += indexChange;
+      if (currentImgIndex < 0) currentImgIndex = imgCount - 1;
+      if (currentImgIndex >= imgCount) currentImgIndex = 0;
+
+      // Update the gallery image and caption
+      galleryElement.src = displayedProject.gallery[currentImgIndex].dir;
+      captionElement.innerText = displayedProject.gallery[currentImgIndex].caption;
+
+      // Update the lightbox image
+      document.getElementById('lightbox-img').src = displayedProject.gallery[currentImgIndex].dir;
+    }
+
+    // Right button
+    document.getElementById('right-gallery-button').addEventListener('click', () => updateGallery(1));
+
+    // Left button
+    document.getElementById('left-gallery-button').addEventListener('click', () => updateGallery(-1));
+
+    // Keyboard arrows
+    document.addEventListener("keydown", (e) => {
+      if (e.key === "ArrowLeft") updateGallery(1);
+      else if (e.key === "ArrowRight") updateGallery(-1);
     });
   }
 
@@ -322,7 +363,7 @@ window.onload = (event) => {
       };
     }
   }
-  function updateContent (displayedProject) {
+  function updateContent (displayedProject, language) {
     // Extra doc buttons
     createDocButtons(displayedProject);
     
@@ -334,6 +375,11 @@ window.onload = (event) => {
     }
 
     // tools
+    if (language === 'en'){
+      document.getElementById("tools-box").children[0].innerText = "Tools:";
+    } else {
+      document.getElementById("tools-box").children[0].innerText = "Outils:";
+    }
     for (let t = 0; t < displayedProject.tools.length; t++) {
       let currentTool = document.createElement("span");
       currentTool.classList.add("tool");
@@ -341,6 +387,11 @@ window.onload = (event) => {
       document.getElementById("tools-box").appendChild(currentTool);
     }
     // keywords
+    if (language === 'en'){
+      document.getElementById("keywords-box").children[0].innerText = "Keywords:";
+    } else {
+      document.getElementById("keywords-box").children[0].innerText = "Mots clés:";
+    }
     for (let k = 0; k < displayedProject.keywords.length; k++) {
       let currentKeyword = document.createElement("span");
       currentKeyword.classList.add("keyword");

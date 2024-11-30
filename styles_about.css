@@ -76,6 +76,25 @@ html, body {
   font-family: var(--display-font);
   font-size: 1.2rem;
 }
+#header > #language-box > #language:hover {
+  cursor: pointer;
+  color: var(--pink);
+}
+#header > #language-box {
+  grid-column: 1 / span 2;
+  grid-row: 3;
+  padding-bottom: 0.5rem;
+  padding-left: 0.75rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+#header > #language-box > #language {
+  text-decoration: none;
+  font-family: var(--body-font);
+  color: black;
+  font-size: 1rem;
+}
 
 /* navbar */
 #navbar {
@@ -139,12 +158,12 @@ html, body {
     filter: brightness(1);
   }
 }
-#navbar > #to-gallery {
+#navbar > #to-gallery,
+#navbar > #language {
   background-color: var(--grey-black);
   width: fit-content;
   height: fit-content;
   grid-column: 2 / -2;
-  grid-row: 10 / span 2;
   overflow: clip;
   display: flex;
   flex-wrap: no-wrap;
@@ -154,25 +173,50 @@ html, body {
   text-decoration: none;
   box-shadow: 0 0.15rem 0.25rem var(--grey-shadow);
 }
-#navbar > #to-gallery:hover {
+#navbar > #to-gallery {
+  grid-row: 10 / span 2;
+}
+#navbar > #language {
+  grid-row: 12 / span 2;
+}
+#navbar > #to-gallery:hover,
+#navbar > #language:hover {
   background-color: var(--pink);
 }
-#navbar > #to-gallery:hover > p {
+#navbar > #to-gallery:hover > p,
+#navbar > #language:hover > p {
   color: var(--blue-dark);
 }
-#navbar > #to-gallery:hover > #portfolio-star {
+#navbar > #to-gallery:hover > #portfolio-star,
+#navbar > #language:over > #portfolio-star {
   filter: brightness(50%) saturate(400%) contrast(200%);
 }
 #navbar > #to-gallery > #portfolio-star {
-  width: 1.5rem;
   height: auto;
   padding: 0.25rem 1rem 0.25rem 0;
 }
-#navbar > #to-gallery > p {
+#navbar > #language > #portfolio-star  {
+  height: auto;
+  padding: 0.25rem 0.5rem 0.25rem 0;
+}
+#navbar > #to-gallery > #portfolio-star {
+  width: 1.5rem;
+}
+#navbar > #language > #portfolio-star {
+  width: 1.25rem;
+}
+#navbar > #to-gallery > p,
+#navbar > #language > p {
   font-family: var(--body-font);
   color: var(--blue);
-  font-size: 1.25rem;
+}
+#navbar > #to-gallery > p {
   padding: 0.25rem 1rem 0.25rem 1rem;
+  font-size: 1.25rem;
+}
+#navbar > #language > p {
+  padding: 0.25rem 0.5rem 0.25rem 0.5rem;
+  font-size: 1rem;
 }
 @media (max-width: 1000px) {
   #navbar > #socials {
