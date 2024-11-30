@@ -250,7 +250,58 @@
                 }                    
             ]
         },
-           
+
+        {
+            "title": "Les Daltons s'évadent!",
+            "year": "2022",
+            "filters": [
+                "Video Game",
+                "Creative Coding"
+            ],
+            "isDone": "True",
+            "gallery": [
+                {
+                    "dir": "project_data\\LesDaltonsSEvadent\\doc_cell.png",
+                    "caption": "Screen capture of the gameplay"
+                },
+                {
+                    "dir": "project_data\\LesDaltonsSEvadent\\doc_cour.png",
+                    "caption": "Screen capture of the gameplay"
+                },
+                {
+                    "dir": "project_data\\LesDaltonsSEvadent\\doc_visite.png",
+                    "caption": "Screen capture of the gameplay"
+                },
+                {
+                    "dir": "project_data\\LesDaltonsSEvadent\\doc_tunnel.png",
+                    "caption": "Screen capture of the gameplay"
+                }
+            ],
+            "keywords": [
+                "Game Design;",
+                "2D Game;",
+                "Prison Break;",
+                "Nostalgia;"
+            ],
+            "description": [
+                "This program is inspired by the cartoon 'Lucky Luke', in which a famous and solitary cowboy runs after a group of four criminals: the Dalton brothers. These infamous criminals are ruthless, but not wise. Indeed, they keep ending up at the prison state, where they attempt to escape on a regular basis.",
+                "I remember watching this TV show as a child and loving it. This game gave me the opportunity to dive back into it and to bring back a few memories.",
+                "This short narrative prison break game was created in the conext of a programming class. Because this is a very simple one, both visually and conceptually, I was able to spend time of animations and composition. This minimalist style is out of my comfort zone, but i find the product very striking and enjoyable."                
+            ],
+            "tools": [
+                "P5.js;",
+                "JavaScript;",
+                "HTML;",
+                "CSS;"
+            ],
+            "documentation": [
+                {
+                    "tag": "Play",
+                    "link": "https://hdmaxi.itch.io/les-daltons-svadent"
+                }                    
+            ]
+        },
+
         {
             "title": "bodymod",
             "year": 2021,
@@ -408,6 +459,8 @@
                 }                    
             ]
         },
+
+        
 
 
 

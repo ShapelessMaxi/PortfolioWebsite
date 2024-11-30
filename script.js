@@ -274,8 +274,32 @@ window.onload = (event) => {
               }
             });
 
-            // gallery buttons interaction
-            galleryButton(currentImgIndex, imgCount, galleryElement, captionElement, displayedProject);
+            function updateGallery(indexChange) {
+              // Update the current image index
+              currentImgIndex += indexChange;
+              if (currentImgIndex < 0) currentImgIndex = imgCount - 1;
+              if (currentImgIndex >= imgCount) currentImgIndex = 0;
+
+              // Update the gallery image and caption
+              galleryElement.src = displayedProject.gallery[currentImgIndex].dir;
+              captionElement.innerText = displayedProject.gallery[currentImgIndex].caption;
+
+              // Update the lightbox image
+              document.getElementById('lightbox-img').src = displayedProject.gallery[currentImgIndex].dir;
+            }
+
+            // Right button
+            document.getElementById('right-gallery-button').addEventListener('click', () => updateGallery(1));
+
+            // Left button
+            document.getElementById('left-gallery-button').addEventListener('click', () => updateGallery(-1));
+
+            // Keyboard arrows
+            document.addEventListener("keydown", (e) => {
+              if (e.key === "ArrowLeft") updateGallery(1);
+              else if (e.key === "ArrowRight") updateGallery(-1);
+            });
+  
 
             // pass the language var in the url
             let aboutButtons = [document.getElementById('logo'), document.getElementById('name'), document.getElementById('alias')];
@@ -288,34 +312,7 @@ window.onload = (event) => {
     });
   }
 
-  // gallery button interaction
-  function galleryButton(currentImgIndex, imgCount, galleryElement, captionElement, displayedProject) {
-    function updateGallery(indexChange) {
-      // Update the current image index
-      currentImgIndex += indexChange;
-      if (currentImgIndex < 0) currentImgIndex = imgCount - 1;
-      if (currentImgIndex >= imgCount) currentImgIndex = 0;
-
-      // Update the gallery image and caption
-      galleryElement.src = displayedProject.gallery[currentImgIndex].dir;
-      captionElement.innerText = displayedProject.gallery[currentImgIndex].caption;
-
-      // Update the lightbox image
-      document.getElementById('lightbox-img').src = displayedProject.gallery[currentImgIndex].dir;
-    }
-
-    // Right button
-    document.getElementById('right-gallery-button').addEventListener('click', () => updateGallery(1));
-
-    // Left button
-    document.getElementById('left-gallery-button').addEventListener('click', () => updateGallery(-1));
-
-    // Keyboard arrows
-    document.addEventListener("keydown", (e) => {
-      if (e.key === "ArrowLeft") updateGallery(1);
-      else if (e.key === "ArrowRight") updateGallery(-1);
-    });
-  }
+  
 
   // papge population
   function createDocButtons (displayedProject) {
