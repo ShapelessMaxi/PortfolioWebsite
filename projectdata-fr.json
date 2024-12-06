@@ -47,7 +47,7 @@
             ],
             "description": [
                 "Glitch Armor est un sort protecteur inspiré par l'experience nuancée du concept de la visibilité au sein des communauté queer. D'un côté, être visible leur permet d'exister de façon authentique, de prender de la place et de signifier leur identité aux autres. D'un autre côté, être visible les expose à de la violence émotionelle et physique. Cette animation 3D montre un couple ainsi que leur réaction aux mouvements présent autours d'eux grace à un flux vidéo provenant d'une webcam. Conséquemment, l'effect de glitch prend place et les rend progressivement moins visible.",
-                "Est-ce que la tehnologie pourrait évoluer afin d'avoir des traits de personalité humains?",
+                "Est-ce que la technologie pourrait évoluer afin d'avoir des traits de personalité humains?",
                 "Et si les personnages numériques ressentaient eux aussi de l'anxiété à l'idée d'être visiblement queer?",
                 "Glitch Armor représente un exercice de conception de personnages, utilisant une technologie interactive afin d'ajouter à l'histoire racontée. À mesure que les spectateurs s'approchent de l'installation, les personnages révèlent leurs personnalités, leur anxiété et leurs pensées rebelles."
             ],
@@ -140,7 +140,7 @@
             "description": [
                 "*This project needs an update, more in the .txt log.",
                 "*This desctiption needs an update",
-                "This is a digital puzzle made of my own 3D scanned body, inspired by academic literature in queer theory. The final piece acts as a manifesto regarding body-related and perception-based societal norms. In the end, I see it as a kind of auto-ethnographic process where I was able to analyze the external perception, as well as my own, of my body, both in a deconstructed and reconstructed state. With MediaPipe, a machine learning tool, the viewer in front of a visual composition of myself with heavy medical and 'objective' undertones can replace the pieces back in place using hand gestures. The experience is complete when the viewer sees the whole manifesto written in the place of a previously dry descriptions of each body parts."
+                "To Dissect / To Stitch is a digital puzzle made of my own 3D scanned body, inspired by academic literature in queer theory. The final piece acts as a manifesto regarding body-related and perception-based societal norms. In the end, I see it as a kind of auto-ethnographic process where I was able to analyze the external perception, as well as my own, of my body, both in a deconstructed and reconstructed state. With MediaPipe, a machine learning tool, the viewer in front of a visual composition of myself with heavy medical and 'objective' undertones can replace the pieces back in place using hand gestures. The experience is complete when the viewer sees the whole manifesto written in the place of a previously dry descriptions of each body parts."
             ],
             "tools": [
                 "TouchDesigner;",
@@ -170,37 +170,37 @@
             "gallery": [
                 {
                     "dir": "project_data\\PostApocalypticHottie\\PostApocalypticHottie_04.png",
-                    "caption": "Character in a T-Pose"
+                    "caption": "Personage en T-Ppose"
                 },
                 {
                     "dir": "project_data\\PostApocalypticHottie\\PostApocalypticHottie_01.png",
-                    "caption": "Still from the walking animation"
+                    "caption": "Image extraite de l'animation"
                 },
                 {
                     "dir": "project_data\\PostApocalypticHottie\\PostApocalypticHottie_03.png",
-                    "caption": "Displacement map used for the ground block"
+                    "caption": "'Displacement map', texture utilisé pour modifier la position des sommets du bloc de terrain"
                 }
             ],
             "keywords": [
-                "Character Design;",
-                "Motion Capture;",
-                "High-Poly Modelling"
+                "Design de Personnage;",
+                "Capture de Mouvement;",
+                "Modélisation au nombre de Polygones Élevé;"
             ],
             "description": [
-                "This character tells a futuristic story, where fashion is still a priority even after the environment became hostile. I imagine people in this alternate universe having to cover up entirely to protect themselves from the polluted air and intense UV rays.",
-                "In this character design exercise, the personal protective equipment takes the shape of a pair of plateform boots, a helmet with anti-UV glasses, a skin-tight shirt to show off defined chest muscles, puffy leather pants and gloves. To complete the outfit, a cute shoulder bag that matches the boots and helmet along wiht a phone capting atmospheric information are added as accessories.",
-                "This high-ploygon count sculpted character is brought to life using Mixamo, a motion capture library. The textures are painted and generated with Substance Designer and Substance Painter."
+                "Ce personnage raconte une histoire futuriste, où la mode est encore une priorité, même après que l'environnement soit devenu hostile. J'imagine que les habitants de cet univers alternatif doivent se couvrir entièrement pour se protéger de l'air pollué et des rayons UV intenses.",
+                "Dans cet exercice de design de personnage, l'équipement de protection individuelle prend la forme d'une paire de bottes à plateforme, d'un casque avec des lunettes anti-UV, d'une chemise moulante pour montrer les muscles defini du haut du corps, d'un pantalon en cuir bouffant et de gants. Pour compléter la tenue, une sacoche qui correspond aux bottes et au casque ainsi qu'un téléphone captant les informations atmosphériques sont ajoutés comme accessoires.",
+                "Ce personnage scultpé au nombre de ploygones élevé prend vie à l'aide de Mixamo, une bibliothèque de capture de mouvement. Les textures sont peintes ou générées avec Substance Designer et Substance Painter."
             ],
             "tools": [
                 "Blender3d;",
                 "Substance Painter;",
                 "Substance Designer;",
                 "Mixamo;",
-                "Adobe Premiere"
+                "Adobe Premiere;"
             ],
             "documentation": [
                 {
-                    "tag": "Full Animation",
+                    "tag": "Animation",
                     "link": "https://youtu.be/kZotRX9Zqgo"
                 }                    
             ]
@@ -216,27 +216,27 @@
             "gallery": [
                 {
                     "dir": "project_data\\AwakeningofTheFrog\\AwakeningofTheFrog_01.png",
-                    "caption": "Focus on the frog, still from the turntable animation"
+                    "caption": "Image extraite de l'animation, focus sur la grenouille"
                 },
                 {
                     "dir": "project_data\\AwakeningofTheFrog\\AwakeningofTheFrog_03.png",
-                    "caption": "Focus on the pond, still from the turntable animation"
+                    "caption": "Image extraite de l'animation, focus sur l'étant"
                 },
                 {
                     "dir": "project_data\\AwakeningofTheFrog\\AwakeningofTheFrog_04.png",
-                    "caption": "Still from the turntable animation"
+                    "caption": "Image extraite de l'animation"
                 }
             ],
             "keywords": [
-                "Low Poly Modelling;",
-                "Particle Systems;",
-                "2D VFX;",
-                "Video Game Concept;",
-                "Visual Storytelling"
+                "Modélisation au nombre de Polygones Réduit;",
+                "Systèmes de Particules;",
+                "Effets visuels 2D;",
+                "Concept de Jeu Vidéo;",
+                "Narration Visuelle;"
             ],
             "description": [
-                "*This description needs an update.",
-                "This is a low-poly diorama that tells the story of an adored demon toad. The animations are minimal, but still add to the rich story developed through the different animals and plants. The background was generated with Substance Designer, and the rest of the scene was modelled, textured, animated, and lit in Blender 3D."
+                "Awakening of the Frog prend la forme d'un diorama animé au nombre de polygones réduit, et raconte l'histoire d'un crapaud démoniaque dans un environnement fantaisiste et mystérieux. Dans cette exploration créative d'un thème satanique et naturel, la scène prend vie avec des plantes et des animaux soigneusement conçus qui interagissent subtilement entre eux, révélant une riche narration à travers leur positionnement et leur comportement. La pièce maîtresse, un crapaud ailé aux dents effrayantes, flotte dans les airs tandis que toute l'attention des autres petites créatures qui peuplent ce monde surréaliste est dirigée vers lui.",
+                "L'arrière-plan du diorama comporte une texture animée, générée avec Substance Designer, pour renforcer l'atmosphère fantastique. Le reste de l'environnement, comprenant les modèles détaillés, les textures stylisées et l'éclairage tamisé, est entièrement conçu avec Blender 3D. Des animations minimales mais utiles, comme les gouttes de sang qui tombent de la grenouille, donnent vie à la scène et invite l'audience à se plonger dans son histoire."
             ],
             "tools": [
                 "Blender3D;",
@@ -245,7 +245,7 @@
             ],
             "documentation": [
                 {
-                    "tag": "Full Animation",
+                    "tag": "Animation",
                     "link": "https://youtu.be/zROBx7WUO-w"
                 }                    
             ]
@@ -499,31 +499,38 @@
         {
             "title": "Animation 3D",
             "summary" : "Créer un produit numérique avec un logiciel 3D.",
-            "description": "When I say I do 3D animation, I mean mostly everything that can happen in a 3D software. That's modelling, remeshing, UV mapping, texturing, rigging, animating, lighting, simulating physics, and compositing. Not every project requires all steps, but I deeply enjoy this overall process.",
+            "description": "Quand je parle d'animation 3D, je fais référence à presque tout ce qui peut être réalisé dans un logiciel 3D. Ça comprend le modélage, le remeshing, le mapping UV, la création de textures, le rigging, l'animation, l'éclairage, les simulations physiques et la composition. Évidemment, tous les projets ne nécessitent pas toutes ces étapes, mais je suis familier avec et j'adore le processus complet. ",
             "tag": "3D Animation"
         },
 
         {
-            "title": "Tattooing",
-            "summary" : "Marking the skin permanently with needles and ink.",
-            "description": "I have always been drawn to the tattoing process, both to decorate my own body and others. I find body modification enticing because it takes effort and pain, making it something significant and giving it grounding properties.",
+            "title": "Tatouage",
+            "summary" : "Marquer la peau de façon permanente avec des aiguilles et de l'encre.",
+            "description": "J'ai toujours été attiré par le processus du tatouage, à la fois pour décorer mon propre corps et celui des autres. Je trouve la modification corporelle fascinante parce qu'elle demande des efforts et de la douleur, ce qui en fait quelque chose de significatif et .",
             "tag": "3D Animation"
         },
 
         {
-            "title": "Creative Coding",
-            "summary" : "Programming as a tool for creative expression.",
-            "description": "I started learning to code a few years ago, and I now am pretty decent at HTML/CSS, Javascript, and Python. These languages opened up so many doors for me, and most of my current projects include some kind of script.",
+            "title": "Programmation Créative",
+            "summary" : "La programmation comme outil d'expression.",
+            "description": "J'ai commencé à apprendre à coder il y a quelques années, et je suis maintenant assez bon en HTML/CSS, Javascript, et Python. Ces langages m'ont ouvert de nombreuses portes, et la plupart de mes projets actuels incluent un script d'une manière ou d'une autre.",
             "tag": "Creative Coding"
         },
 
         {
-            "title": "Interactive Technologies",
-            "summary" : "Systems, devices, or software designed to enable real-time engagement.",
-            "description": "This is a wide area, but my personal interests lies within cameras (especially webcams), video games, and game mechanics. I experiment with interactive design to tell new kinds of stories, some that may need more nuance or that may benefit from having multiple states revealed to the viewers.",
+            "title": "Technologies Interactives",
+            "summary" : "Systèmes, dispositifs, ou logiciels conçus pour un engagement en temps réel.",
+            "description": "Il s'agit d'un vaste domaine, mais je m'intéresse personnellement aux caméras (en particulier les webcams), aux jeux vidéo et à la mécanique des jeux. J'expérimente avec le design interactif pour raconter de nouveaux types d'histoires pouvant nécessiter plus de nuances ou pouvant bénéficier de multiples états révèlé à des moments opportuns.",
             "tag": "Interactivity"
         }
         
+    ],
+ 
+    "about": [
+        {
+            "bio" : "Maxime Perreault est un artiste multimédia numérique émergent originaire de la ville de Québec et maintenant basé à Tiohtiá:ke (Montréal). Il détient un baccalauréat en beaux-arts spécialisé en arts informatiques de l'Université Concordia. Tout au long de sa vie, Maxime a appris l'animation 3D, la programmation et les technologies créatives, ce qui lui a permis de produire des œuvres d'art allant de l'illustration à l'animation, en passant par les installations interactives. Il travaille maintenant pour Aboriginal Territories in Cyberspace en tant qu'instructeur d'atelier et a commencé à exposer ses œuvres dans des galeries. Parallèlement, depuis 2021, Maxime travaille comme tatoueur sous le pseudonyme de hd.maxi.",
+
+            "statement": "Enraciné dans la théorie queer et influencé par mes expériences personnelles en tant qu'individu queer, mon travail parle d'identité, de perception et de visibilité. En combinant l'art, la technologie et les sciences humaines, je souhaite repousser les limites de l'expression artistique conventionnelle. En outre, ma passion pour le tatouage me permet d'aider les gens à définir leur identité par le biais de l'iconographie. Il est extrêmement gratifiant que des personnes me fassent confiance pour des décisions aussi permanentes et cela me motive à devenir un meilleur artiste et une meilleure personne. Les modifications corporelles sont une grande source d'inspiration pour mes œuvres numériques, car elles sont étroitement liées à certains des thèmes récurrents que j'aime explorer. Mon objectif global en tant qu'artiste est de remettre en question nos notions préconçues de normalité. Pour y parvenir, je combine une variété de techniques allant de l'animation 3D à la programmation créative. Je donne vie à des personnages humanoïdes et à des environnements d'un autre monde, je développe des installations interactives et je traite les images de manière expérimentale."
+        }   
     ]
-    
 }

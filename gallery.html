@@ -2,7 +2,7 @@
 <html>
   <head>
     <!-- this links to css file containing styles -->
-    <link rel="stylesheet" href="styles_gallery.css" />
+    <link rel="stylesheet" href="CSS/styles_gallery.css" />
 
     <!-- Add your external google fonts here -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -16,9 +16,9 @@
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
     
     <!-- custom scripts -->
-    <script src="/script.js"></script>
-    <script src="/project.js"></script>
-    <script src="/projectButton.js"></script>
+    <script src="JAVASCRIPT/script.js"></script>
+    <script src="JAVASCRIPT/project.js"></script>
+    <script src="JAVASCRIPT/projectButton.js"></script>
     
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <!-- this line takes care of special characters in text -->
@@ -62,11 +62,11 @@
           <img src="assets/bunny01.png" alt="logo">
         </a>
 
-        <p id="finished-projects-title" class="keyword-title">Finished Projects</p>
+        <p id="finished-projects-title" class="keyword-title">Finished</p>
         <div id="project-list">
           <!-- populated with script -->
         </div>
-        <p id="wip-projects-title" class="keyword-title">WIP Projects</p>
+        <p id="wip-projects-title" class="keyword-title">WIP</p>
         <div id="wip-list">
           <!-- populated with script -->
         </div>
@@ -87,7 +87,9 @@
       <div id="header">
         <div id="language-box">
           <a href="index.html" id="language">
-            fr/eng
+            <span>fr</span>
+            /
+            <span>eng</span>
           </a>
         </div>
         <div id="name-box">
@@ -99,9 +101,14 @@
     </div>
 
     <div id="lightbox">
+      <img id="left-lightbox-button" class="gallery-button" src="assets\arrow_l.png">
       <div id="lightbox-content">
-        <img id="lightbox-img" src="" alt="image">
+        <div id="img-caption-combo">
+          <img id="lightbox-img" src="">
+          <p id="lightbox-caption"></p>
+        </div>
       </div>
+      <img id="right-lightbox-button" class="gallery-button" src="assets\arrow_r.png">
     </div>
 
   </body>

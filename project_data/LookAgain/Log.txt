@@ -1,4 +1,33 @@
-	<h1>TouchDesigner Prototype 01 - November 2024</h1>
+<h1>Self-perception vs external perception</h1>
+<p>I've already explored this theme, but I feel like there is more to uncover or just more creative inspiration lying there. In Glitch Armor, I speak of the anxiety induced by being perceived that's heightened when you are visibly queer. It's our instinct to dress and present in a queer fashion, and it might inspire people to give compliments or present in an authentic way themselves, but it also might provoke other people's homo/transphobia. In To Dissect / To Stitch, I dove into the societal perception and stereotypes that comes with having a modified and tattooed body, and I wrote about how it can be freeing to disconnect yourself from the way societal norms shape your physical and emotional self.</p>
+<p>What if there were two digital characters looking at themselves face-to-face through the screens and just being, while at the same time looking at themselves through webcams. That webcam feed could be analyzed and modified, and then displayed on screens that were only visible to the viewers, aka facing backwards (<- screen of consciousness / right character -> webcam -> <- webcam <- left character / screen of consciousness ->). *btw is Screen of Consciousness a genius title???</p>
+<p>This setup would evoke how we can never know what other people think. It would show how our presentation can be seen in a completely different way.</p>
+
+<h1>Recursion - Optical phenomenon research</h1>
+<p>Mise en abyme:</p>
+
+<h1>Visual component concept freewrite - 01-12-2024</h1>
+<p>My first idea was to have the 1st screen be a fresh-in-my-memory game, untouched (either captured or played live). The 2nd screen is looking over the 1st with a webcam. I would program an algorithm that extract parts of clips of the a specific color, some kind of modification to the current script maybe. The digital output is composed from games that are more hazy in my memory. The 2nd screen would be the vision of the computer, an abstracted version of an older game. It would signify a step back, instead of a game you can understand and point back on easily.</p>
+<p>Another avenue: The game played by a user is from the past, and the resulting "game" is how the computer sees it.</p>
+<p>As a more interactive install, there could be a keyboard in front of the two screens, connected to the same game, but with wildly different visuals. Or just in front of the one that's abstracted, so you would play this new version of the game that's more of a abstract art generator.</p>
+<p>Maybe what needs to happen is a compare and contrast between versions of the same game: the one I played as a child/teen, and the most recent one. This could be game design research.</p>
+<p>Can we categorize the changes that happened in different games? Can we find elements that did not change at all? Did the stories/lore evolve and does it make sense?</p>
+
+<h1>Prototype 03 - 01-12-2024</h1>
+<p>I wanted to focus on the physical installation component of the project. I really like the idea of a webcam looking at a screen, displaying some kind of modified hazy version of it of another screen, and another webcam doing the same. But why not just pass the video stream to the other computer/screen instead of having the computer look at it with the webcam? This is a weird decision that makes for a cool installation setup, but there must be a conceptual idea behind it, and it needs to be reinforced by the visual component. Anyway, back to physical install.</p>
+<h2>I actually want to test a few different setups:</h2>
+<p>1- two screens: 1st displaying a video, webcam looking at it. The 2nd displays the a remix of the webcam input. Can be expanded with 3 screens or more (currently I only have 3 sets including my laptop's screen and webcam).</p>
+<p>2- The screens are back-to-back (or angled), webcams are looking at the other screen.</p>
+
+<h1>Nostalgic Games list - 01-12-2024</h1>
+<h2>Fresh in my memory, played recently</h2>
+<p>LoL, Minecraft, CS:GO [the version i played is not available anymore tho..], The Sims 3, Audition Online [i think this one's also not alive anymore], Wii Mario Kart, Roller Coaster Tycoon.</p>
+<h2>More hazy in my memory</h2>
+<p>POE, IMVU, Neopets, PS2 007, COD [some old version on the PS3?], Rayman on PC, Stuart Little Skateboard game</p>
+<p></p>
+<p></p>
+
+<h1>TouchDesigner Prototype 02 - November 2024</h1>
 <p>Scratch this pile of operators, I need a script that will do all the simple operations of this colorAnalyzeTOPs in a for loop. Also, there's probably a way to create operators and so I'll be able to change, modify, expand it easily ans faster.</p>
 <p>I'm starting to work with NumPy because basically, you can read an image as a really long 2D array populated by every pixel of the image. The pixels are an object. There's useful methods like split(), making it possible to digest the array by smaller areas, and variables, like the .r, .g and .b values of each pixels. In brief, the NumPy array and split into cells[x,y]. The RGB values of each pixels of each cells are averaged, basically smudging them all together. I export both an image, and a table containing all colors in written form (this was more for debugging purposes). Then, to create the visual, I am storing a 3Dspheres node system in a baseComp, and copying it a bunch as much times as the image is split. The colors of each sphere changes according to what's in front of the camera, and to what colors are in the reference Table. They get smaller if the input's color is not registered. This process is dynamic and live and not slow!</p>
 
@@ -12,7 +41,7 @@
 <p>- there is little to no considerations of the physical setup</p>
 <p>- the for loop to read the colums and rows of the NumPy</p>
 
-<p><h2>Ideas</h2>
+<h2>Ideas</h2>
 <p>- 2 screens looking at each other? back-to-back?</p>
 <p>- 1st screen looking at a physical thing, 2nd looking at the digital output of the first, and more and more? that experience of playing with friends and looking over at their screens, or playing on the same screens, or looking at them play (series of 2-3 installs?). Also maybe refer to Elio's reading about systems, and other about the subject.</p>
 <p>- wait export to .fbx and 3D print a couple of variations?</p>

@@ -188,7 +188,7 @@
             ],
             "description": [
                 "This character tells a futuristic story, where fashion is still a priority even after the environment became hostile. I imagine people in this alternate universe having to cover up entirely to protect themselves from the polluted air and intense UV rays.",
-                "In this character design exercise, the personal protective equipment takes the shape of a pair of plateform boots, a helmet with anti-UV glasses, a skin-tight shirt to show off defined chest muscles, puffy leather pants and gloves. To complete the outfit, a cute shoulder bag that matches the boots and helmet along wiht a phone capting atmospheric information are added as accessories.",
+                "In this character design exercise, the personal protective equipment takes the shape of a pair of plateform boots, a helmet with anti-UV glasses, a skin-tight shirt to show off defined chest muscles, puffy leather pants and gloves. To complete the outfit, a cute shoulder bag that matches the boots and helmet along with a phone capting atmospheric information are added as accessories.",
                 "This high-ploygon count sculpted character is brought to life using Mixamo, a motion capture library. The textures are painted and generated with Substance Designer and Substance Painter."
             ],
             "tools": [
@@ -235,8 +235,8 @@
                 "Visual Storytelling"
             ],
             "description": [
-                "*This description needs an update.",
-                "This is a low-poly diorama that tells the story of an adored demon toad. The animations are minimal, but still add to the rich story developed through the different animals and plants. The background was generated with Substance Designer, and the rest of the scene was modelled, textured, animated, and lit in Blender 3D."
+                "In the form of a low-poly animated diorama, Awakening of the Frog tells the story of an adored demon toad, set in a whimsical and mysterious environment. In this creative exploration of a satanical and natural theme, the scene comes alive with carefully designed plants and animals that interact subtly, revealing a rich narrative through their positionning and behavior. The centerpiece, a winged toad with scary teeth, floats in the air while all the attention of the other smaller creatures that inhabit this surreal world is directed on it.",
+                "The diorama features a softly animated backdrop, generated with Substance Designer, to enhance the dreamlike atmosphere. The rest of the environment, including the detailed models, the stylized textures, and the moody lighting, is entirely crafted in Blender 3D. Minimal yet purposeful animations such as blood dripping from the frog breathe life into the scene, inviting viewers to immerse themselves in its story."
             ],
             "tools": [
                 "Blender3D;",
@@ -245,7 +245,7 @@
             ],
             "documentation": [
                 {
-                    "tag": "Full Animation",
+                    "tag": "Animation",
                     "link": "https://youtu.be/zROBx7WUO-w"
                 }                    
             ]
@@ -501,7 +501,7 @@
         {
             "title": "3D Animation",
             "summary" : "Creating a digital product with 3D software.",
-            "description": "When I say I do 3D animation, I mean mostly everything that can happen in a 3D software. That's modelling, remeshing, UV mapping, texturing, rigging, animating, lighting, simulating physics, and compositing. Not every project requires all steps, but I deeply enjoy this overall process.",
+            "description": "When I say I do 3D animation, I mean mostly everything that can happen in a 3D software. That's modelling, remeshing, UV mapping, texturing, rigging, animating, lighting, simulating physics, and compositing. Not every project requires all steps, but I am familiar with and deeply enjoy this overall process.",
             "tag": "3D Animation"
         },
 
@@ -522,10 +522,18 @@
         {
             "title": "Interactive Technologies",
             "summary" : "Systems, devices, or software designed to enable real-time engagement.",
-            "description": "This is a wide area, but my personal interests lies within cameras (especially webcams), video games, and game mechanics. I experiment with interactive design to tell new kinds of stories, some that may need more nuance or that may benefit from having multiple states revealed to the viewers.",
+            "description": "This is a wide area, but my personal interests lies within cameras (especially webcams), video games, and game mechanics. I experiment with interactive design to tell new kinds of stories that may require more nuance or benefit from multiple states revealed at convenient moments.",
             "tag": "Interactivity"
         }
         
+    ],
+ 
+    "about": [
+        {
+            "bio" : "Maxime Perreault is an emerging digital multimedia artist from Quebec City and is now based in Tiohtiá:ke (Montreal). He holds a Bachelor of Fine Arts specialized in Computation Arts from Concordia University. Throughout his life, Maxime has been learning about 3D animation, programming, and creative technologies, allowing him to produce artwork ranging from illustrations, animations, and interactive installations. He is now working for Aboriginal Territories in Cyberspace as a workshop instructor and has started exhibiting his work in galleries. In parallel, from 2021 onwards, Maxime has been working as a tattoo artist under the alias of hd.maxi.",
+
+            "statement": "Rooted in queer theory and influenced by my own personal experiences as a queer subject, my work speaks of identity, perception, and visibility. Through the combination of art, technology, and humanities, I want to push the boundaries of conventional artistic expression. Additionally, my love for tattooing allows me to help people define their identity through iconography. It is wildly validating to have people trust me with such permanent decisions and motivates me to be a better artist and person. Body modification serves as a huge inspiration for my digital media pieces, as it is closely tied to some of the recurrent themes I love to explore. My overall goal as an artist is to challenge our preconceived notions of normalcy. To achieve this, I combine a variety of techniques ranging from 3D animation and creative programming. I bring humanoid characters and otherworldly environments to life, I develop interactive installations, and I process images in experimental ways."
+        }   
     ]
     
 }
