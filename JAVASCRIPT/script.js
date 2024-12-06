@@ -345,8 +345,8 @@ window.onload = (event) => {
 
           // Left and Right Keyboard arrows to naviguate gallery images
           document.addEventListener("keydown", (e) => {
-            if (e.key === "ArrowLeft") updateGallery(1);
-            else if (e.key === "ArrowRight") updateGallery(-1);
+            if (e.key === "ArrowLeft") updateGallery(-1);
+            else if (e.key === "ArrowRight") updateGallery(1);
           });
 
           let lightbox = document.getElementById("lightbox");

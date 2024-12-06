@@ -59,11 +59,11 @@
             ],
             "documentation": [
                 {
-                    "tag": "Web Documentation",
+                    "tag": "Documentation Web",
                     "link": "https://hdmaxi411.wordpress.com"
                 },
                 {
-                    "tag": "Demo",
+                    "tag": "Démo",
                     "link": "https://www.youtube.com/watch?v=QMzflT3d9EA"
                 }                         
             ]
@@ -80,16 +80,25 @@
             "gallery": [
                 {
                     "dir": "project_data\\LookAgain\\Proto01.jpg",
-                    "caption": "Prototype 01, Analyze TOPs and legos"
+                    "caption": "Prototype 01, Analyze TOPs et legos"
+                },
+                {
+                    "dir": "project_data\\LookAgain\\Proto02.png",
+                    "caption": "Prototype 02, Script Python, Regard sur un object physique"
+                },
+                {
+                    "dir": "project_data\\LookAgain\\physicalproto4.png",
+                    "caption": "Prototype 02, Test d'installation"
                 }
             ],
             "keywords": [
-                "Computer Vision;",
-                "Machine Personification;",
-                "Nostalgia;"
+                "Vision par Ordinateur;",
+                "Personnification;",
+                "Perception;"
             ],
             "description": [
-                "This project explores 'low-tech' computer vision through a simple Python script. Using the NumPy library and a webcam, it enables the computer to interpret the visual input in a more human-like way. Instead of processing thousands of individual pixels and RGB values, the script simplifies the image data into average colors across larger areas. These are then compared to a small database to identify the closest color match."
+                "Ce projet explore la Vision par Ordinateur (Computer Vision) « low-tech » par le biais d'un simple script écrit en Python. En utilisant la bibliothèque NumPy et une webcam, il permet à l'ordinateur d'interpréter les données visuelles d'une manière plus humaine. Au lieu de traiter des milliers de pixels individuels et de valeurs RGB, le script simplifie les données de l'image, le résultat étant de plus grandes surfaces de pixels ainsi que leur couleur médianne. Celles-ci sont ensuite comparées à une petite base de données afin d'identifier la couleur la plus proche.",
+                "Plus d'information dans le journal associé."
             ],
             "tools": [
                 "Python;",
@@ -98,7 +107,7 @@
             ],
             "documentation": [
                 {
-                    "tag": "Log",
+                    "tag": "Journal",
                     "link": "project_data\\LookAgain\\log.txt"
                 }                    
             ]
@@ -131,16 +140,16 @@
                 }
             ],
             "keywords": [
-                "Interactivity;",
-                "3D Scanning;",
-                "Body Politics;",
-                "Medical Gaze;",
-                "Creative writing"
+                "Interactivité;",
+                "Scan 3D;",
+                "Politiques du corps;",
+                "Regard médical;",
+                "Création littéraire;"
             ],
             "description": [
-                "*This project needs an update, more in the .txt log.",
-                "*This desctiption needs an update",
-                "To Dissect / To Stitch is a digital puzzle made of my own 3D scanned body, inspired by academic literature in queer theory. The final piece acts as a manifesto regarding body-related and perception-based societal norms. In the end, I see it as a kind of auto-ethnographic process where I was able to analyze the external perception, as well as my own, of my body, both in a deconstructed and reconstructed state. With MediaPipe, a machine learning tool, the viewer in front of a visual composition of myself with heavy medical and 'objective' undertones can replace the pieces back in place using hand gestures. The experience is complete when the viewer sees the whole manifesto written in the place of a previously dry descriptions of each body parts."
+                "Plus d'information dans le journal associé.",
+                "Ce projet a été créé dans le contexte d'un cours. Par manque de temps, je n'ai pas pu le finir de manière satisfaisante. Je planifie donc une mis-à-jour dans les prochains mois. ",
+                "To Dissect / To Stitch est un puzzle numérique réalisé à partir de mon propre corps scanné en 3D, inspiré par la littérature académique de la théorie queer. La pièce finale agit comme un manifeste concernant les normes sociétales liées au corps et à la perception. En fin de compte, je le vois comme une sorte de processus auto-ethnographique où j'ai pu analyser la perception externe, ainsi que la mienne, de mon corps, à la fois dans un état déconstruit et reconstruit. Grâce à MediaPipe, un outil d'apprentissage automatique, le spectateur qui se trouve face à une composition visuelle de moi-même aux accents médicaux et « objectifs » prononcés peut remettre les pièces en place à l'aide de gestes de la main. L'expérience est complète lorsque le spectateur voit le manifeste entier écrit à la place des descriptions sèches de chaque partie du corps."
             ],
             "tools": [
                 "TouchDesigner;",
@@ -262,31 +271,31 @@
             "gallery": [
                 {
                     "dir": "project_data\\LesDaltonsSEvadent\\doc_cell.png",
-                    "caption": "Screen capture of the gameplay"
+                    "caption": "Capture d'écran du jeu"
                 },
                 {
                     "dir": "project_data\\LesDaltonsSEvadent\\doc_cour.png",
-                    "caption": "Screen capture of the gameplay"
+                    "caption": "Capture d'écran du jeu"
                 },
                 {
                     "dir": "project_data\\LesDaltonsSEvadent\\doc_visite.png",
-                    "caption": "Screen capture of the gameplay"
+                    "caption": "Capture d'écran du jeu"
                 },
                 {
                     "dir": "project_data\\LesDaltonsSEvadent\\doc_tunnel.png",
-                    "caption": "Screen capture of the gameplay"
+                    "caption": "Capture d'écran du jeu"
                 }
             ],
             "keywords": [
-                "Game Design;",
-                "2D Game;",
-                "Prison Break;",
-                "Nostalgia;"
+                "Design de Jeux;",
+                "Jeux Vidéo 2D;",
+                "Évasion;",
+                "Nostalgie;"
             ],
             "description": [
-                "This program is inspired by the cartoon 'Lucky Luke', in which a famous and solitary cowboy runs after a group of four criminals: the Dalton brothers. These infamous criminals are ruthless, but not wise. Indeed, they keep ending up at the prison state, where they attempt to escape on a regular basis.",
-                "I remember watching this TV show as a child and loving it. This game gave me the opportunity to dive back into it and to bring back a few memories.",
-                "This short narrative prison break game was created in the conext of a programming class. Because this is a very simple one, both visually and conceptually, I was able to spend time of animations and composition. This minimalist style is out of my comfort zone, but i find the product very striking and enjoyable."                
+                "Les Daltons s'évadent! est un jeu en 2D inspiré des aventures pleines d'action de Lucky Luke, un dessin animé des années 90 mettant en scène un cow-boy solitaire à la poursuite des frères Dalton. Ces quatre criminels préparent toujours leur prochain coup et sont célèbres dans l'Ouest américain. Le plus souvent, leurs ambitieux braquages de banques leur causent des ennuis, et ils finissent toujours par retourner à la prison d'État, où ils préparent une nouvelle tentative d'évasion.",
+                "J'ai écouté cette série télé tout au long de mon enfance, et je n'ai pas pu résister à l'envie de revivre ces souvenirs en créant ce petit jeu narratif d'évasion de prison.",
+                "Conçu dans le contexte d'un cours de programmation, il s'agit d'un jeu très simple, à la fois visuellement et conceptuellement. J'ai donc pu consacrer du temps aux animations et à la composition. Ce style minimaliste sort de ma zone de confort, mais je trouve le produit très audacieux et amusant."                
             ],
             "tools": [
                 "P5.js;",
@@ -296,7 +305,7 @@
             ],
             "documentation": [
                 {
-                    "tag": "Play",
+                    "tag": "Jouer",
                     "link": "https://hdmaxi.itch.io/les-daltons-svadent"
                 }                    
             ]
@@ -310,25 +319,28 @@
             "gallery": [
                 {
                     "dir": "project_data\\bodymod\\bodymod_01_copy.png",
-                    "caption": "Capture of the game when all modifications are discovered"
+                    "caption": "Capture d'écran du jeu lorsque toutes les modifications sont découvertes"
                 },
                 {
                     "dir": "project_data\\bodymod\\bodymod_05_copy.png",
-                    "caption": "Capture of the game when most modifications are unknown"
+                    "caption": "Capture d'écran du jeu lorsque toutes les modifications sont cachées"
                 },
                 {
                     "dir": "project_data\\bodymod\\bodymod_04.png",
-                    "caption": "Capture of the name input screen."
+                    "caption": "Capture d'écran du jeu"
                 }               
             ],
             "keywords": [
-                "Creative coding;",
-                "Video Game;",
-                "Body Agency"
+                "Programmation Créative;",
+                "Design de Jeux;",
+                "Modification du Corps",
+                "Art Génératif;",
+                "Contrôle de soi-même;"
             ],
             "description": [
-                "*This description needs an update.",
-                "This is a reflection about being a human with a body, a subject that I have been thinking about a lot. It also relates to my work as a tattoo artist. Everything was programmed in Javascript P5."
+                "bodymod est un jeu 2D expérimental de type bac à sable et comportant de l'art génératif. C'est aussi une réflexion sur les modifications corporelles et le contrôle de son corps. En grandissant, j'ai été victime de nombreuses microagressions et je me suis rarement senti beau et confiant. J'ai souvent rêvé à la possibilité de changer complètement mon apparence, soit pour effrayer les autres, soit pour être accepté parmis eux.",
+                "Le fait de prendre en main l'apparence de mon corps m'a fait prendre conscience de deux choses. Premièrement, je veux avoir une apparence différente des autres. Deuxièmement, il est possible d'y parvenir et d'avoir confiance en moi sans la validation des autres. Me faire tatouer et percer, me teindre les cheveux et m'habiller comme je le souhaite m'a semblé libérateur et puissant au début, et c'est toujours le cas aujourd'hui. Cette idée de la modification du corps comme moyen de se sentir maître de son état mental et physique est le message général que je voulais faire passer.",
+                "Dans l'ensemble, je voulais que l'ambiance du jeu soit sombre, mystérieuse et imprévisible. Je pense que modifier son corps dans la vraie vie produit des sentiments similaires par ce qu'on ne sait jamais vraiment ce qui va se passer et comment on va réagir. C'est à la fois excitant et légèrement effrayant... Êtes-vous prêt à vous lancer?"
             ],
             "tools": [
                 "JavaScript;",
@@ -337,9 +349,13 @@
             ],
             "documentation": [
                 {
-                    "tag": "Game Files",
+                    "tag": "Jouer",
+                    "link": "https://hdmaxi.itch.io/bodymod-2021"
+                },
+                {
+                    "tag": "Github",
                     "link": "https://github.com/ShapelessMaxi/cart253/tree/main/projects/mod"
-                }                    
+                }                       
             ]
         },
         
@@ -353,53 +369,53 @@
             "gallery": [
                 {
                     "dir": "project_data\\EFFAGraphicDesign\\finaldoc_07.png",
-                    "caption": "Mocked-up poster"
+                    "caption": "Maquette numérique de l'affiche"
                 },
                 {
                     "dir": "project_data\\EFFAGraphicDesign\\finaldoc_08.png",
-                    "caption": "Mocked-up book cover"
+                    "caption": "Maquette numérique de l'album des finissants"
                 },
                 {
                     "dir": "project_data\\EFFAGraphicDesign\\finaldoc_01.png",
-                    "caption": "Exhibition brief summary"
+                    "caption": "Résumé du concept de l'exposition"
                 },
                 {
                     "dir": "project_data\\EFFAGraphicDesign\\finaldoc_02.png",
-                    "caption": "Words of inspiration"
+                    "caption": "Mots d'inspiration"
                 },
                 {
                     "dir": "project_data\\EFFAGraphicDesign\\finaldoc_03.png",
-                    "caption": "Typography moodboard"
+                    "caption": "Planche d'inspiration sur la typographie"
                 },
                 {
                     "dir": "project_data\\EFFAGraphicDesign\\finaldoc_04.png",
-                    "caption": "Color moodboard"
+                    "caption": "Planche d'inspiration sur les couleurs"
                 },
                 {
                     "dir": "project_data\\EFFAGraphicDesign\\finaldoc_05.png",
-                    "caption": "Style and vibe moodboard"
+                    "caption": "Planche d'inspiration sur l'ambiance et le style"
                 },
                 {
                     "dir": "project_data\\EFFAGraphicDesign\\finaldoc_06.png",
-                    "caption": "A few word on the choices of typography, color, and style"
+                    "caption": "Quelques mots sur les choix de typographie, de couleur et de style"
                 },
                 {
                     "dir": "project_data\\EFFAGraphicDesign\\AfficheFinale.png",
-                    "caption": "The final poster"
+                    "caption": "Affiche finale"
                 },
                 {
                     "dir": "project_data\\EFFAGraphicDesign\\AlbumCoverFinal.png",
-                    "caption": "The final book cover"
+                    "caption": "Couverture de l'album des finissants"
                 }
             ],
             "keywords": [
-                "Graphic Design;",
-                "Visual ID;",
-                "Mock-ups;"
+                "Graphisme;",
+                "Identité Visuelle;",
+                "Maquettes Numériques;"
             ],
             "description": [
-                "This visual identity was developped in the context of a graphic design class during my - unfinished - bachelor degree in Industrial Design at Universié de Montréal. We were all prompted to create posters, book covers, and other merchandise for the next iteration of EFFA (Exposition des finissants de la Faculté de l'aménagement).",
-                "The theme being 'CTRL+S', I went with a design sporting heavy contrast, fine lines, and repeating typography. My inspiration for these choices came from an exploration of the theme that could be resumed in three words: Nervosité, Écho, and Arts Numériques (translation: Nervousness, Echos, and Digital Arts)."
+                "Cette identité visuelle a été développée dans le cadre d'un cours de graphisme pendant mon diplôme (inachevé) en design industriel à l'Université de Montréal. Nous devions créer des affiches, des couvertures de livres et d'autres produits dérivés pour la prochaine édition de l'EFFA (Exposition des finissants de la Faculté de l'aménagement).",
+                "Le thème étant 'CTRL+S', j'ai opté pour un design très contrasté, des lignes fines et une typographie répétitive. Ces choix m'ont été inspirés par une exploration du thème qui pourrait se résumer en trois mots: Nervosité, Écho, et Arts Numériques."
             ],
             "tools": [
                 "Adobe Illustrator;",
@@ -422,30 +438,30 @@
             "gallery": [
                 {
                     "dir": "project_data\\Pyre\\top.png",
-                    "caption": "Top view highlighting the branding"
+                    "caption": "Vue du dessus mettant en valeur la marque"
                 },
                 {
                     "dir": "project_data\\Pyre\\AfficheFinale.png",
-                    "caption": "Final presentation poster"
+                    "caption": "Affiche de présentation"
                 },
                 {
                     "dir": "project_data\\Pyre\\pp.png",
-                    "caption": "Perspective view"
+                    "caption": "Vue de perspective"
                 },
                 {
                     "dir": "project_data\\Pyre\\cut.jpg",
-                    "caption": "Vertical slice of the product"
+                    "caption": "Coupe verticale du produit"
                 }
             ],
             "keywords": [
-                "Product Design;",
-                "Portable Object;",
-                "Product Concept;",
-                "Brand ID;"
+                "Design de Produit;",
+                "Portabilité",
+                "Concept d'Object;",
+                "Image de Marque;"
             ],
             "description": [
-                "This portable barbecue concept was developped in the context of a class during my - unfinished - bachelor degree in Industrial Design at Universié de Montréal. I was prompted to create this object for the Hudson Bay Company (HBC), and a lot of emphasis was put on the branding. It had be marketed towards their mid-to-high end costumer base, be portable, and safe.",
-                "After researching metal sheet bending and assembly, I came up with this sleek and original stackable design. For instance, with just six tabs on the lid and six corresponding notches in the base, the lid securely stays in place. This approach not only provides an elegant form but also ensures that the object's fabrication and assembly are straightforward and cost-effective."
+                "Pyre est un concept de petit barbecue portable développé pendant mon diplôme (inachevé) en design industriel à l'Université de Montréal. Ce projet a été créé pour la Compagnie de la Baie d'Hudson (HBC), en mettant l'accent sur l'image de marque. Il devait être commercialisé auprès de leur clientèle de milieu et de haut de gamme, être portable et, surtout sécuritaire.",
+                "Après avoir effectué des recherches sur le pliage et l'assemblage des tôles, j'ai conçu un modèle empilable élégant et original. Par exemple, avec seulement six languettes sur le couvercle et six encoches correspondantes dans la base, le couvercle reste solidement en place. Cette approche permet non seulement d'obtenir une forme élégante, mais aussi de s'assurer que la fabrication et l'assemblage de l'objet sont simples et rentables."
             ],
             "tools": [
                 "SolidWorks;",

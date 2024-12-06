@@ -81,15 +81,24 @@
                 {
                     "dir": "project_data\\LookAgain\\Proto01.jpg",
                     "caption": "Prototype 01, Analyze TOPs and legos"
+                },
+                {
+                    "dir": "project_data\\LookAgain\\Proto02.png",
+                    "caption": "Prototype 02, Python script, Looking at a physical object"
+                },
+                {
+                    "dir": "project_data\\LookAgain\\physicalproto4.png",
+                    "caption": "Prototype 02, Installation Test"
                 }
             ],
             "keywords": [
                 "Computer Vision;",
                 "Machine Personification;",
-                "Nostalgia;"
+                "Perception;"
             ],
             "description": [
-                "This project explores 'low-tech' computer vision through a simple Python script. Using the NumPy library and a webcam, it enables the computer to interpret the visual input in a more human-like way. Instead of processing thousands of individual pixels and RGB values, the script simplifies the image data into average colors across larger areas. These are then compared to a small database to identify the closest color match."
+                "This project explores “low-tech” Computer Vision through a simple script written in Python. Using the NumPy library and a webcam, it enables the computer to interpret visual data in a more human-like way. Instead of processing thousands of individual pixels and RGB values, the script simplifies the image data, resulting in larger pixel areas and their median color. These are then compared with a small database to identify the closest color.",
+                "More information in the associated log."
             ],
             "tools": [
                 "Python;",
@@ -135,12 +144,12 @@
                 "3D Scanning;",
                 "Body Politics;",
                 "Medical Gaze;",
-                "Creative writing"
+                "Creative writing;"
             ],
             "description": [
-                "*This project needs an update, more in the .txt log.",
-                "*This desctiption needs an update",
-                "This is a digital puzzle made of my own 3D scanned body, inspired by academic literature in queer theory. The final piece acts as a manifesto regarding body-related and perception-based societal norms. In the end, I see it as a kind of auto-ethnographic process where I was able to analyze the external perception, as well as my own, of my body, both in a deconstructed and reconstructed state. With MediaPipe, a machine learning tool, the viewer in front of a visual composition of myself with heavy medical and 'objective' undertones can replace the pieces back in place using hand gestures. The experience is complete when the viewer sees the whole manifesto written in the place of a previously dry descriptions of each body parts."
+                "More information in the associated log.",
+                "This project was created in the context of a course. Due to lack of time, I wasn't able to finish it satisfactorily. I plan to update it in the coming months.",
+                "To Dissect / To Stitch is a digital puzzle made of my own 3D scanned body, inspired by academic literature in queer theory. The final piece acts as a manifesto regarding body-related and perception-based societal norms. In the end, I see it as a kind of auto-ethnographic process where I was able to analyze the external perception, as well as my own, of my body, both in a deconstructed and reconstructed state. With MediaPipe, a machine learning tool, the viewer in front of a visual composition of myself with heavy medical and 'objective' undertones can replace the pieces back in place using hand gestures. The experience is complete when the viewer sees the whole manifesto written in the place of a previously dry descriptions of each body parts."
             ],
             "tools": [
                 "TouchDesigner;",
@@ -284,9 +293,9 @@
                 "Nostalgia;"
             ],
             "description": [
-                "This program is inspired by the cartoon 'Lucky Luke', in which a famous and solitary cowboy runs after a group of four criminals: the Dalton brothers. These infamous criminals are ruthless, but not wise. Indeed, they keep ending up at the prison state, where they attempt to escape on a regular basis.",
-                "I remember watching this TV show as a child and loving it. This game gave me the opportunity to dive back into it and to bring back a few memories.",
-                "This short narrative prison break game was created in the conext of a programming class. Because this is a very simple one, both visually and conceptually, I was able to spend time of animations and composition. This minimalist style is out of my comfort zone, but i find the product very striking and enjoyable."                
+                "Les Daltons s'évadent! (The Daltons Escape!) is a 2D game inspired by the action-packed adventures of Lucky Luke, a vintage cartoon about a lone cowboy chasing down the Dalton brothers. These four criminals are always planning their next coup, and are infamous outlaws in the american west. Most often, their ambitious bank robberies put them in trouble, as they always end up back in the state prison, only to plot yet another escape attempt.",
+                "I grew up loving this TV show and couldn’t resist the chance to relive those childhood memories by creating this short narrative prison break game.",
+                "This game was created in the conext of a programming class. Because this is a very simple one, both visually and conceptually, I was able to spend time of animations and composition. This minimalist style is out of my comfort zone, but i find the product very bold and fun."                
             ],
             "tools": [
                 "P5.js;",
@@ -323,12 +332,15 @@
             ],
             "keywords": [
                 "Creative coding;",
-                "Video Game;",
-                "Body Agency"
+                "Video Game Design;",
+                "Body Agency;",
+                "Body Modification;",
+                "Generative Art;"
             ],
             "description": [
-                "*This description needs an update.",
-                "This is a reflection about being a human with a body, a subject that I have been thinking about a lot. It also relates to my work as a tattoo artist. Everything was programmed in Javascript P5."
+                "bodymod is an experimental sandbox 2D game, with a few elements of generative art. It's also a reflection about body modification and body agency. Growing up gay, I've been subjected to a lot of microaggressions and rarely felt pretty and confident. I have often fantasized about being able to completly change the way I look, either to scare others or to be accepted by them.",
+                "Taking agency over how my body looks like made me realize two things. First, I want to look different and I can be different. Second, it's possible to achieve that and have confidence in who I am and how I present myself without the valiation of others. Getting tattoos and piercings, dying my hair, and dressing the way I want felt liberating and powerful at first, and it still feels the same now. This idea of body modification as a way to feel in control of my mental state is the overall message I wanted to convey.",
+                "Overall, I wanted the mood of this game to be dark, mysterious, and unpredictable. I think modifying your body in real life induce similar feelings, as you never fully know what will happen and how you will react. It's exciting and mildly scary… Are you ready to leap into it?"
             ],
             "tools": [
                 "JavaScript;",
@@ -337,7 +349,11 @@
             ],
             "documentation": [
                 {
-                    "tag": "Game Files",
+                    "tag": "Play",
+                    "link": "https://hdmaxi.itch.io/bodymod-2021"
+                },
+                {
+                    "tag": "Github",
                     "link": "https://github.com/ShapelessMaxi/cart253/tree/main/projects/mod"
                 }                    
             ]
@@ -361,7 +377,7 @@
                 },
                 {
                     "dir": "project_data\\EFFAGraphicDesign\\finaldoc_01.png",
-                    "caption": "Exhibition brief summary"
+                    "caption": "Exhibition concept summary"
                 },
                 {
                     "dir": "project_data\\EFFAGraphicDesign\\finaldoc_02.png",
@@ -444,7 +460,7 @@
                 "Brand ID;"
             ],
             "description": [
-                "This portable barbecue concept was developped in the context of a class during my - unfinished - bachelor degree in Industrial Design at Universié de Montréal. I was prompted to create this object for the Hudson Bay Company (HBC), and a lot of emphasis was put on the branding. It had be marketed towards their mid-to-high end costumer base, be portable, and safe.",
+                "Pyre is a small, portable barbecue concept developed during my (unfinished) degree in Industrial Design at Université de Montréal. This project was created for the Hudson's Bay Company (HBC), with a strong emphasis on branding. It needed to be marketed to their mid-to-high-end customer base, be portable, and above all, safe to use.",
                 "After researching metal sheet bending and assembly, I came up with this sleek and original stackable design. For instance, with just six tabs on the lid and six corresponding notches in the base, the lid securely stays in place. This approach not only provides an elegant form but also ensures that the object's fabrication and assembly are straightforward and cost-effective."
             ],
             "tools": [
