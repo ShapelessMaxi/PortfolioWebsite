@@ -133,7 +133,7 @@ html, body {
   animation: scale-bounce 2s ease-in-out infinite;
 }
 
-#navbar > #to-gallery,
+#navbar > #portfolio-button,
 #navbar > #language {
   grid-column: 2 / -2;
   width: fit-content;
@@ -152,25 +152,25 @@ html, body {
   border-radius: var(--button-corners);
   overflow: clip;
 }
-#navbar > #to-gallery {
+#navbar > #portfolio-button {
   grid-row: 10 / span 2;
 }
 #navbar > #language {
   grid-row: 12 / span 2;
 }
-#navbar > #to-gallery:hover,
+#navbar > #portfolio-button:hover,
 #navbar > #language:hover {
   background-color: var(--pink);
 }
-#navbar > #to-gallery:hover > p,
+#navbar > #portfolio-button:hover > p,
 #navbar > #language:hover > p {
   color: var(--blue-dark);
 }
-#navbar > #to-gallery:hover > #portfolio-star,
+#navbar > #portfolio-button:hover > #portfolio-star,
 #navbar > #language:over > #portfolio-star {
   filter: brightness(50%) saturate(400%) contrast(200%);
 }
-#navbar > #to-gallery > #portfolio-star {
+#navbar > #portfolio-button > #portfolio-star {
   height: auto;
   padding: 0.25rem 1rem 0.25rem 0;
 }
@@ -178,18 +178,18 @@ html, body {
   height: auto;
   padding: 0.25rem 0.5rem 0.25rem 0;
 }
-#navbar > #to-gallery > #portfolio-star {
+#navbar > #portfolio-button > #portfolio-star {
   width: 1.5rem;
 }
 #navbar > #language > #portfolio-star {
   width: 1.25rem;
 }
-#navbar > #to-gallery > p,
+#navbar > #portfolio-button > p,
 #navbar > #language > p {
   font-family: var(--body-font);
   color: var(--blue);
 }
-#navbar > #to-gallery > p {
+#navbar > #portfolio-button > p {
   padding: 0.25rem 1rem 0.25rem 1rem;
   font-size: 1.25rem;
 }
@@ -386,17 +386,17 @@ html, body {
   #navbar > #logo {
     height: 20vw;
   }
-  #navbar > #to-gallery {
+  #navbar > #portfolio-button {
     grid-row: 9 / span 2;
     justify-content: center;
     flex-direction: column;
   }
-  #navbar > #to-gallery > #portfolio-star {
+  #navbar > #portfolio-button > #portfolio-star {
     width: 1.65rem;
     height: auto;
     padding: 0.25rem 1rem 0.25rem 1rem;
   }
-  #navbar > #to-gallery > p {
+  #navbar > #portfolio-button > p {
     color: var(--blue);
     font-size: 1.1rem;
     padding: 0.25rem 0.5rem 0.25rem 0.5rem;

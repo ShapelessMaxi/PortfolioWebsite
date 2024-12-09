@@ -34,11 +34,8 @@ class interestCard {
       // button icon
       let linkImg = document.createElement("img");
       linkImg.classList.add('link-icon');
+      // Append the icon
       linkImg.src = "\assets\\arrow_ext_h.png";
-      // Append the first icon
-      // this.button.appendChild(linkImg.cloneNode(true));
-      // this.button.appendChild(linkImg.cloneNode(true));
-      // this.button.appendChild(linkImg.cloneNode(true));
       // Add text to the button
       let text = '';
       if (this.language === "fr") {
