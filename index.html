@@ -2,7 +2,7 @@
 <html>
   <head>
     <!-- this links to css file containing styles -->
-    <link rel="stylesheet" href="CSS/styles_splash.css" />
+    <link rel="stylesheet" href="CSS/styles_about.css" />
 
     <!-- Add your external google fonts here -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -29,31 +29,75 @@
     </title>
   </head>
   
-<body page="splash">
+  <body page="about">
+    <div id="about-container">
+      
+      <div id="navbar">
+        <img id="logo" src="assets\bunny01.png" alt="logo">
+        
+        <div id="socials">
+          <a href="https://www.youtube.com/@hd___________maxi" target="_blank">
+            <img id="youtube" src="assets\youtube.png" alt="logo">
+          </a>
+          <a href="https://www.instagram.com/hd.maxi/" target=”_blank”>
+            <img id="insta" src="assets\insta.png" alt="logo">
+          </a>
+          <a href="mailto:hd.maxi.tattoo@gmail.com" target=”_blank”>
+            <img id="mail" src="assets\mail.png" alt="logo">
+          </a>
+        </div>
 
-    <div id="splash-container">
-        
-        <div id="icons-container">
-           
-          <img id="cactus" class="icon" src="assets\cactus_render.png" alt="cactus">
-            <img id="guy" class="icon" src="assets\guy.png" alt="guy">
-            <img id="bunny" class="icon" src="assets\bunny01.png" alt="bunny">
-        
-        </div>
-    
-        <div id="button-container">
-          <a href="/gallery.html?lg=fr" id="fr-button" class="language-button" data-lang="fr">
-            <p>Français</p>
-            <img id="star" src="assets/star.png" alt="star">
-          </a>
-          
-          <a href="/gallery.html?lg=en" id="eng-button" class="language-button" data-lang="en">
-            <p>English</p>
-            <img id="star" src="assets/star.png" alt="star">
+        <a id="portfolio-button" href="/gallery.html">
+          <p> Portfolio </p>
+          <img id="portfolio-star" src="assets\star.png" alt="star">
+        </a>
+      
+      </div>
+
+      <div id="header">
+        <div id="language-box">
+          <a href="" id="language">
+            <span>fr</span>
+            /
+            <span>eng</span>
           </a>
         </div>
+        <div id="name-box">
+          <p id="name">Maxime Perreault</p>
+          <p id="alias">hd.maxi</p>
+        </div>
+      </div>
+
+      <div id="content">
+        <div id="text-box">
+          <div class="inner-wrapper">
+            
+            <div class="about-card">
+              <p class="titles">
+                Biography 
+              </p>
+              <p class="paragraphs">
+              </p>
+            </div>
+            
+            <div class="about-card">
+              <p class="titles">
+                Statement 
+              </p>
+              <p class="paragraphs">
+              </p>
+            </div>
+            
+            </div>
+        </div>
+
+        <div id="interest-cards-box">
+        </div>
         
-       
+      </div>
+        
     </div>
 
-</body>
+  </body>
+
+</html>

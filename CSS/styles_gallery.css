@@ -85,7 +85,7 @@ html, body {
 }
 #header > #language-box {
   grid-row: 2;
-  grid-column: 1 / span 2;
+  grid-column: 1 / span 7;
   padding-left: 0.75rem;
   padding-bottom: 0.5rem;
   display: flex;
@@ -429,7 +429,7 @@ html, body {
   width: 100vw;
   height: 100vh;
   background: color-mix(in srgb, black, transparent 7%);
-  display: flex;
+  display: none;
   justify-content: center;
   align-items: center;
   overflow: hidden;

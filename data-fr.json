@@ -148,7 +148,7 @@
             ],
             "description": [
                 "Plus d'information dans le journal associé.",
-                "Ce projet a été créé dans le contexte d'un cours. Par manque de temps, je n'ai pas pu le finir de manière satisfaisante. Je planifie donc une mis-à-jour dans les prochains mois. ",
+                "Ce projet a été créé dans le contexte d'un cours. Avec du recul, je crois avoir une meilleur idée pour l'interaction du joueur. Je planifie donc une mis-à-jour dans les prochains mois. ",
                 "To Dissect / To Stitch est un puzzle numérique réalisé à partir de mon propre corps scanné en 3D, inspiré par la littérature académique de la théorie queer. La pièce finale agit comme un manifeste concernant les normes sociétales liées au corps et à la perception. En fin de compte, je le vois comme une sorte de processus auto-ethnographique où j'ai pu analyser la perception externe, ainsi que la mienne, de mon corps, à la fois dans un état déconstruit et reconstruit. Grâce à MediaPipe, un outil d'apprentissage automatique, le spectateur qui se trouve face à une composition visuelle de moi-même aux accents médicaux et « objectifs » prononcés peut remettre les pièces en place à l'aide de gestes de la main. L'expérience est complète lorsque le spectateur voit le manifeste entier écrit à la place des descriptions sèches de chaque partie du corps."
             ],
             "tools": [
@@ -159,7 +159,7 @@
             ],
             "documentation": [
                 {
-                    "tag": "Log",
+                    "tag": "Journal",
                     "link": "project_data\\ToDissectToStitch\\log.txt"
                 },
                 {

@@ -51,6 +51,9 @@ class interestCard {
       if (this.title === "Tattooing") {
         this.button.href = 'https://www.instagram.com/hd.maxi/';
         this.button.target= '_blank';
+      } else if (this.title === "Tatouage") {
+        this.button.href = 'https://www.instagram.com/hd.maxi/';
+        this.button.target= '_blank';
       } else {
         let interest = this.tag;
         this.button.href = `/gallery.html?lg=${encodeURIComponent(this.language)}&interest=${encodeURIComponent(interest)}`;

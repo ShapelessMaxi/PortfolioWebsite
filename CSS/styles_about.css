@@ -76,24 +76,34 @@ html, body {
   font-family: var(--display-font);
   font-size: 1.2rem;
 }
-#header > #language-box > #language:hover {
-  cursor: pointer;
-  color: var(--pink);
-}
-#header > #language-box {
-  grid-column: 1 / span 2;
-  grid-row: 3;
-  padding-bottom: 0.5rem;
-  padding-left: 0.75rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-end;
-}
 #header > #language-box > #language {
   text-decoration: none;
   font-family: var(--body-font);
   color: black;
   font-size: 1rem;
+}
+#header > #language-box {
+  grid-row: 3;
+  grid-column: 1 / span 6;
+  padding-left: 0.75rem;
+  padding-bottom: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+#header > #language-box > #language {
+  font-family: var(--body-font);
+  font-size: 1rem;
+  color: black;
+  text-decoration: none;
+  padding: 0.25rem 0.5rem;
+  border: 1px solid var(--grey-black);
+  border-radius: var(--button-corners);
+}
+#header > #language-box > #language:hover {
+  cursor: pointer;
+  color: var(--pink);
+  border: 1px solid var(--pink);
 }
 
 /* navbar */
@@ -110,7 +120,7 @@ html, body {
 #navbar > #logo {
   z-index: 1;
   grid-column: 1 / span 12;
-  grid-row: 2  / span 7;
+  grid-row: 5  / span 7;
   height: 100%;
 }
 #navbar > #logo:hover{
@@ -153,7 +163,7 @@ html, body {
   overflow: clip;
 }
 #navbar > #portfolio-button {
-  grid-row: 10 / span 2;
+  grid-row: 14 / span 2;
 }
 #navbar > #language {
   grid-row: 12 / span 2;
@@ -211,21 +221,24 @@ html, body {
 #content > #text-box {
   grid-column: 2 / -2;
   grid-row: 2/-2;
-  display: flex;
-  flex-direction: column;
   z-index: 2;
   pointer-events: none;
 }
 #content > #text-box > .inner-wrapper {
-  background-color: var(--grey-white);
   width: 100%;
-  height: fit-content;
+  max-height: 40%;
   pointer-events: auto;
+  display: flex;
+  flex-direction: row;
+  column-gap: 1rem;
+}
+#content > #text-box > .inner-wrapper > .about-card {
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 50%;    
 }
-#content > #text-box > .inner-wrapper > .drop-button > .titles { 
+#content > #text-box > .inner-wrapper > .about-card > .titles { 
   width: 7rem;
   margin-bottom: 0.2rem;
   font-family: var(--display-font);
@@ -233,39 +246,18 @@ html, body {
   font-size: 1.1rem;
   text-align: center;
   text-decoration: none;
-  padding: 0.25rem;
-  cursor: pointer;
-  border: 1px solid var(--grey-black);
-  border-radius: var(--button-corners );
+  padding: 0.5rem;
+  cursor: auto;
 }
-#content > #text-box > .inner-wrapper > .drop-button > .titles:hover {
-  color: var(--pink);
-  border: 1px solid var(--pink);
-  border-radius: var(--button-corners);
-}
-#content > #text-box > .inner-wrapper > .drop-button > .titles.active {
-  color: var(--pink);
-  text-decoration: none;
-  border: 1px solid var(--pink);
-  border-radius: var(--button-corners);
-}
-#content > #text-box > .inner-wrapper > .paragraphs {
-  display: None;
+#content > #text-box > .inner-wrapper > .about-card > .paragraphs {
+  display: block;
+  background-image: linear-gradient(rgba(255, 255, 255, 0) 90%, var(--pink) 150%);
   padding-bottom: 1rem;
   font-size: 0.9rem;
   font-family: var(--body-font);
   line-height: 1.15rem;
-  columns: 2;
-}
-#content > #text-box > .inner-wrapper > .paragraphs.active {
-  display: block;
-  background-image: linear-gradient(rgba(255, 255, 255, 0) 90%, var(--pink) 150%);
-  border-bottom: 0.1rem solid var(--pink);
-  text-decoration: none;
-  padding: 0.25rem 0.5rem;
-  border: 0px solid var(--pink);
-  border-radius: var(--button-corners);
-  margin-bottom: 0.5rem;
+  height: auto;
+  overflow-y: scroll;
 }
 #content > #interest-cards-box {
   grid-column: 2 / -2;
@@ -281,10 +273,17 @@ html, body {
   height: 0.5rem;
   width: 0.5rem;
 }
-#content > #interest-cards-box::-webkit-scrollbar-thumb{
-  background-color: var(--green);
+#content > #text-box > .inner-wrapper > .about-card > .paragraphs::-webkit-scrollbar {
+  width: 0.5rem;
 }
-#content > #interest-cards-box::-webkit-scrollbar-track{
+#content > #interest-cards-box::-webkit-scrollbar-thumb,
+#content > #text-box > .inner-wrapper > .about-card::-webkit-scrollbar-thumb,
+#content > #text-box > .inner-wrapper > .about-card > .paragraphs::-webkit-scrollbar-thumb {
+  background-color: var(--green);
+  margin-right: 0.5rem;
+}
+#content > #interest-cards-box::-webkit-scrollbar-track,
+#content > #text-box > .inner-wrapper > .about-card > .paragraphs::-webkit-scrollbar-track {
   background: white;
 }
 #content > #interest-cards-box > .interest-cards {
@@ -335,7 +334,6 @@ html, body {
   flex-wrap: no-wrap;
   justify-content: flex-end;
   align-items: flex-end;
-  overflow-x: clip;
   text-wrap: nowrap;
   font-family: var(--body-font);
   font-size: 0.85rem;
@@ -364,6 +362,35 @@ html, body {
 @media (min-width: 1200px) { 
   #content > #interest-cards-box > .interest-cards {
     flex: 1 0 15%;
+  }
+}
+@media (max-height: 750px) {
+  #content > #text-box > .inner-wrapper {
+    background: var(--grey-white);
+  }
+  #content > #text-box > .inner-wrapper > .about-card > .paragraphs {
+    display: none;
+    margin-bottom: 1rem;
+  }
+  #content > #text-box > .inner-wrapper > .about-card > .paragraphs.active {
+    margin-bottom: 1rem;
+    display: block;
+  }
+  #content > #text-box > .inner-wrapper > .about-card > .titles { 
+    cursor: pointer;
+    margin-bottom: 0.5rem;
+    border: 1px solid var(--grey-black);
+    border-radius: var(--button-corners );
+  }
+  #content > #text-box > .inner-wrapper > .about-card > .titles:hover {
+    color: var(--pink);
+    border: 1px solid var(--pink);
+    border-radius: var(--button-corners);
+  }
+  #content > #text-box > .inner-wrapper > .about-card > .titles.active {
+    color: var(--pink);
+    border: 1px solid var(--pink);
+    border-radius: var(--button-corners);
   }
 }
 

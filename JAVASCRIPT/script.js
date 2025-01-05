@@ -16,15 +16,15 @@ window.onload = (event) => {
   function urlBuilder (targetPage, language = null, returnPage = null, lastProject = null) {
     let url = `\\${targetPage}.html`;
     if (language) {
-      url += `?lg=${language}`;
+        url += `?lg=${language}`;
     }
     if (returnPage) {
-      url += `&returnPage=${returnPage}`;
+        url += `${language ? '&' : '?'}returnPage=${returnPage}`;
     }
     if (lastProject) {
-      url += `&pr=${lastProject}`;
+        url += `${language || returnPage ? '&' : '?'}pr=${lastProject}`;
     }
-    return url 
+    return url;
   }
 
 
@@ -72,11 +72,9 @@ window.onload = (event) => {
         if (lg === "fr") {
           document.getElementsByClassName('titles')[0].innerText = "Biographie";
           document.getElementsByClassName('titles')[1].innerText = "Déclaration";
-          document.getElementById('language').children[0].innerText = "Langage";
         } else {
           document.getElementsByClassName('titles')[0].innerText = "Biography";
           document.getElementsByClassName('titles')[1].innerText = "Statement";
-          document.getElementById('language').children[0].innerText = "Language";
         }
         // update the bio and statement text
         let paragraphs = document.querySelectorAll('.paragraphs');
@@ -120,15 +118,15 @@ window.onload = (event) => {
         }
 
         // dropdown buttons interaction, reveal textboxes
-        document.querySelectorAll('.drop-button').forEach(button => {
+        document.querySelectorAll('.titles').forEach(button => {
           button.addEventListener('click', function() {
             textbox = button.nextElementSibling;
-            title = button.children[0];
-            if (textbox.classList.contains('active')){
-              title.classList.remove('active');
+            console.log(button);
+            if (button.classList.contains('active')){
+              button.classList.remove('active');
               textbox.classList.remove('active');
             } else {
-              title.classList.add('active');
+              button.classList.add('active');
               textbox.classList.add('active');
             }
             });
@@ -171,6 +169,17 @@ window.onload = (event) => {
               isScrolling = false;  // Stop scrolling when we reach the target
           }
         }
+
+        // Language button interaction
+        // Pass the current project ID in the URL
+        document.getElementById("language").addEventListener("click", (event) => {
+          if (lg === 'en'){
+            lg = 'fr';
+          } else {
+            lg = 'en';
+          };
+          document.getElementById("language").href = urlBuilder("index", lg, null, lastProject); 
+        });
 
         break;
         
@@ -251,6 +260,26 @@ window.onload = (event) => {
             allButtons[i].classList.add('active');
           }
         }
+
+        function lgButtonUrl(lastProjectID) {
+          // Pass the current project ID in the URL
+          let langButton = document.getElementById("language");
+          langButton.addEventListener("click", (event) => {
+            if (lgGallery === 'en'){
+              lgGallery = 'fr';
+            } else {
+              lgGallery = 'en';
+            };
+            langButton.href = urlBuilder("gallery", lgGallery, null, lastProjectID); 
+          });
+        }
+        function aboutButtonsUrl(lastProjectID) {
+          let aboutButtons = [document.getElementById('logo'), document.getElementById('name'), document.getElementById('alias')];
+          aboutButtons.forEach(button => {
+            button.href  = urlBuilder("index", lgGallery, null, lastProjectID);
+          });
+        }
+
         // project buttons interaction
         document.querySelectorAll('.project-button').forEach(button => {
           button.addEventListener('click', function() {
@@ -280,34 +309,22 @@ window.onload = (event) => {
                 
                 // update page content according to displayed project
                 updateContent(displayedProject, lgGallery);
-
-                // update url
-                console.log(displayedProject)
-
+                
                 // update project id
                 lastProjectID = p;
+                // update buttons urls
+                lgButtonUrl(lastProjectID);
+                aboutButtonsUrl(lastProjectID);
               }
             }
           });  
         });
 
         // Language button interaction
-        // Pass the current project ID in the URL
-        let langButton = document.getElementById("language");
-        langButton.addEventListener("click", (event) => {
-          if (lgGallery === 'en'){
-            lgGallery = 'fr';
-          } else {
-            lgGallery = 'en';
-          };
-          langButton.href = urlBuilder("gallery", lgGallery, null, lastProjectID); 
-        });
-
-        // pass the language var in the url
-        let aboutButtons = [document.getElementById('logo'), document.getElementById('name'), document.getElementById('alias')];
-        aboutButtons.forEach(button => {
-          button.href  = urlBuilder("about", lgGallery, null, lastProjectID);
-        });
+        lgButtonUrl(lastProjectID);
+        
+        // About buttons interaction
+        aboutButtonsUrl(lastProjectID);
         
         // update page content according to current project
         updateContent(displayedProject, lgGallery);
@@ -350,6 +367,7 @@ window.onload = (event) => {
         galleryElement.addEventListener("click", () => {
           lightboxImg.src = galleryElement.src;
           lightbox.style.display = "flex";
+          document.getElementById('lightbox-caption').innerText = displayedProject.gallery[currentImgIndex].caption;
         });
         document.addEventListener("keydown", (e) => {
           if (e.key === "Escape") {
@@ -432,7 +450,7 @@ function createDocButtons (displayedProject) {
         let extTop = Math.round(screen.height * 0.2);
 
         // Check if the tag is "Log" or not
-        if (displayedProject.documentation[d].tag === "Log") {
+        if (displayedProject.documentation[d].tag === "Log" || displayedProject.documentation[d].tag === "Journal") {
           // Open the log page
           let logFilePath = displayedProject.documentation[d].link;
           let options = `width=${logWidth},height=${extHeight},left=${logLeft},top=${extTop},scrollbars=yes,resizable=yes`;
@@ -447,6 +465,7 @@ function createDocButtons (displayedProject) {
   }
 }
 function updateContent (displayedProject, language) {
+
   // Extra doc buttons
   createDocButtons(displayedProject);
   
