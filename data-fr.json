@@ -67,6 +67,50 @@
                     "link": "https://www.youtube.com/watch?v=QMzflT3d9EA"
                 }                         
             ]
+        
+        },
+        {
+            "title": "Untitled Game",
+            "year": "2025",
+            "filters": [
+                "Creative Coding",
+                "Video Game",
+                "Interactivity"
+            ],
+            "isDone": "False",
+            "gallery": [
+                {
+                    "dir": "project_data\\UntitledGame\\UntitledGame_01.png",
+                    "caption": "Téléphone portable interactif"
+                },
+                {
+                    "dir": "project_data\\UntitledGame\\UntitledGame_02.png",
+                    "caption": "Sketch initiaux sur papier et digital"
+                }
+            ],
+            "keywords": [
+                "Design de Jeu;",
+                "Narration Queer;",
+                "Archives"
+            ],
+            "description": [
+                "More information in the associated log.",
+                "Un jeu gay, avec des personnages gays qui font des trucs gays (aka des quêtes aléatoires dans la ville). Sombre, Beau, Fantaisiste, Pas Serieux. J'aimerais en faire un exercice de recherche, donnant vie aux découvertes d'archives (à déterminer). Un étrange mélange de passé, présent et futur."
+            ],
+            "tools": [
+                "Unity;",
+                "C#",
+                "Pixaki;",
+                "Procreate;",
+                "Nomad Sculpt;",
+                "Blender;"                
+            ],
+            "documentation": [
+                {
+                    "tag": "Log",
+                    "link": "project_data\\UntitledGame\\log.txt"
+                }                  
+            ]
         },
 
         {
