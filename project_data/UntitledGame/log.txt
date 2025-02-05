@@ -1,0 +1,14 @@
+<h1>General Concept - January 2024</h1>
+<p>In the context of writing a travel grant to be able to visit San Francisco, i started thinking about archival research. As a gay person, I really want to go see SF's queer culture, and I have always enjoyed learning about our history. The current times feels like 30 steps backwards, so I think this longing for the past comes from that already rough sociopolitical state worsening year-by-year. I now begin this journey of research-creation. 
+</p>
+<p>What is there to find in archives? What do I hope to find? What are the ethics around using archival material as creative inspiration? 
+</p>
+<p>What is there to see in SF? What can i learn about others alike in this culturally rich city? Can I find comfort in looking at what has happened before?</p>
+
+<h1>Unity/C# learning curve - 28/01/2025</h1>
+<p>So I just decided to start. There's just a cap to how much I can develop a full video game, if I continue thinking, the project will just feel too big to even start. In the past I've realized that my ideas just continue to change during the actual production process. Unexpected things happen, I get new inspiration, I come to terms with various limitation related to the devices used, materials, software, time, etc.</p>
+<p>Yea ok, maybe I don't remember much about unity. Also C# is different from python and javascript, crazy. It's hard but I feel I won't stay stuck for so long. I am learning about unity in-world UI, 2D sprite animations, shader graphs, and scripting in c#.</p>
+<p>Starting with something I am super xcited to see come to life, a cunty phone, maximalist in form and aesthetics, but minimalist in functionality.<p>
+
+<h1>Phone 3D model - 02/02/2025</h1>
+<p>I am now having so much fun, this 3D phone UI looks so good, I now have to put time into the code behind it giving the player a fluid experience. i want the controls to feel good, and I want the code behind the message received to be easily modifiable and expandable. I am starting to be more confident in my programming skills, and I think ill be able to bring this project to life.</p>
