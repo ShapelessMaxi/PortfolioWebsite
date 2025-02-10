@@ -1,6 +1,52 @@
 {
     "projects": [
-        
+
+        {
+            "title": "In Training",
+            "year": 2024,
+            "filters": [
+                "3D Animation",
+                "Pixel Art"
+            ],
+            "isDone": "True",
+            "gallery": [
+                {
+                    "dir": "project_data\\InTraining\\InTraining_03.jpg",
+                    "caption": "5x9\" Illustrations imprimées"
+                },
+                {
+                    "dir": "project_data\\InTraining\\InTraining_05.jpg",
+                    "caption": "Gros plan sur une des illustrations"
+                },
+                {
+                    "dir": "project_data\\InTraining\\InTraining_04.jpg",
+                    "caption": "Gros plan sur une des illustrations"
+                }
+            ],
+            "keywords": [
+                "Concept de Jeu Vidéo;",
+                "Pixel Art;",
+                "Modélisation 3D;",
+                "Media d'impression;"
+            ],
+            "description": [
+                "In Training est un duo d'illustrations imprimées sur du papier cartonné texturé, et un concept de jeu vidéo en ligne (ou multijoueurs en salle d'arcade). Cette idée est née d’une discussion avec une amie sur le voyage à travers le cyberespace et notre réalité physique. J'ai adoré cette idée de transposer les mêmes personnages et objets dans des réalités différentes. En plus, elle est liée à certains de mes travaux qui mélangent différentes techniques et supports traditionnels et numériques, ou qui utilisent des technologies interactives.",
+                "Pour ce projet, j'ai choisi de dépeindre un monde 3D à faible densité où tout et tout le monde attend dans les limbes, à côté d'un monde pixelisé à relativement haute résolution, hyper agité. De plus, en l'imprimant sur un papier cartonné de haute qualité, il vit désormais en dehors du domaine numérique, en tant qu'objet dans notre monde physique.",
+                "Le concept du jeu est assez simple : vous, un humanoïde blessé, essayez de vaincre le plus grand nombre possible de monstres sélectionnés. Plus vous en battez, plus vous gagnez de points. Certains ennemis sont plus coriaces et vous rapportent plus de points. Chaque fois que vous mourez, votre score global et vos statistiques personnelles sont mis à jour. Au fur et à mesure que vous atteignez certaines étapes, vous débloquez des armes et des ennemis différents."
+            ],
+            "tools": [
+                "Blender3d;",
+                "Pixaki;",
+                "Adobe Illustrator;"
+            ],
+            "documentation": [
+                {
+                    "tag": "Log",
+                    "link": "project_data\\UntitledGame\\log.txt"
+                }                    
+            ]
+        },
+
         {
             "title": "Glitch Armor",
             "year": 2024,
@@ -358,6 +404,54 @@
             ]
         },
         
+        {
+            "title": "feed... me...",
+            "year": 2021,
+            "filters": [
+                "Creative Coding",
+                "Video Game",
+                "Interactivity"
+            ],
+            "isDone": "True",
+            "gallery": [
+                {
+                    "dir": "project_data\\feedme\\feedme_01.png",
+                    "caption": "Capture d'écran du jeu"
+                },
+                {
+                    "dir": "project_data\\feedme\\feedme_02.png",
+                    "caption": "Capture d'écran du jeu"
+                },
+                {
+                    "dir": "project_data\\feedme\\feedme_03.png",
+                    "caption": "Capture d'écran du jeu"
+                }               
+            ],
+            "keywords": [
+                "Programmation Créative;",
+                "Developpement de jeu;"
+            ],
+            "description": [
+                "Qui nourrit un chat dans l’au-delà lorsqu’il atteint sa limite de neuf vies ? Et que se passe-t-il lorsqu'on donne à manger des choses étranges à un chat mort?",
+                "Ce mini jeu 2D créé avec P5.js était un exercice rapide dans un cours de programmation. Il vous emmène dans un monde éthéré où vous, un fantôme, avez la responsabilité de prendre soin de ce chat étrange. L'histoire et les dialogues invitent le joueur à réfléchir à ce lien mystérieux quil a avec le chat: que s'est-il passé dans votre vie qui vous a amené tous les deux dans cet endroit surnaturel?"
+            ],
+            "tools": [
+                "JavaScript;",
+                "p5.js;",
+                "HTML"
+            ],
+            "documentation": [
+                {
+                    "tag": "Jouer",
+                    "link": "https://hdmaxi.itch.io/feed-me"
+                },
+                {
+                    "tag": "Github",
+                    "link": "https://github.com/ShapelessMaxi/cart253/tree/main/projects/simulation"
+                }                    
+            ]
+        },
+
         {
             "title": "EFFA",
             "year": "2020",
