@@ -2,6 +2,52 @@
     "projects": [
         
         {
+            "title": "In Training",
+            "year": 2024,
+            "filters": [
+                "3D Animation",
+                "Pixel Art"
+            ],
+            "isDone": "True",
+            "gallery": [
+                {
+                    "dir": "project_data\\InTraining\\InTraining_03.jpg",
+                    "caption": "5x9\" Printed illustrations"
+                },
+                {
+                    "dir": "project_data\\InTraining\\InTraining_05.jpg",
+                    "caption": "Illustration close-up"
+                },
+                {
+                    "dir": "project_data\\InTraining\\InTraining_04.jpg",
+                    "caption": "Illustration close-up"
+                }
+            ],
+            "keywords": [
+                "Video Game Concept;",
+                "Pixel Art;",
+                "3D Modelling;",
+                "Print Media;"
+            ],
+            "description": [
+                "In Training is a duo of illustration printed on textured cardstock, and an online (or local multiplayer arcade) video game concept. This idea came from a discussion with a friend about travelling in and out of cyberspace and of our physical reality. I loved this idea of the same characters and objects being transposed into different realities, and it related to some of my work that mixes different traditional and digital techniques and medium, or that uses interactive technologies.",
+                "In this case, I choose to depict a low-poly 3D world where everyone and everything is waiting in limbo, alongside a relatively high resolution, restless pixel world. Further, by printing it on a high quality cardstock, it now lives outside of the digital realm as an object in our physical world",
+                "As for the game concept, it is pretty simple, you, a roughed-up humanoid, try to defeat as many of one selected monster. The more you defeat, the more points you get. Some enemies are tougher and gives you more points. Whenever you die, your overall score and your personal statistics gets updated. As you get to certain point milestones, you unlock different weapons and enemies."
+            ],
+            "tools": [
+                "Blender3d;",
+                "Pixaki;",
+                "Adobe Illustrator;"
+            ],
+            "documentation": [
+                {
+                    "tag": "Log",
+                    "link": "project_data\\UntitledGame\\log.txt"
+                }                    
+            ]
+        },
+
+        {
             "title": "Glitch Armor",
             "year": 2024,
             "filters": [
@@ -66,6 +112,52 @@
                     "tag": "Demo",
                     "link": "https://www.youtube.com/watch?v=QMzflT3d9EA"
                 }                         
+            ]
+        },
+        
+        {
+            "title": "Untitled Game",
+            "year": "2025",
+            "filters": [
+                "Creative Coding",
+                "Video Game",
+                "Interactivity"
+            ],
+            "isDone": "False",
+            "gallery": [
+                {
+                    "dir": "project_data\\UntitledGame\\UntitledGame_01.png",
+                    "caption": "Imported body part as an .fbx file in TD"
+                },
+                {
+                    "dir": "project_data\\UntitledGame\\UntitledGame_02.png",
+                    "caption": "Initial paper sketches"
+                }
+            ],
+            "keywords": [
+                "Interactivity;",
+                "Game Design;",
+                "Queer Storytelling;",
+                "Archives"
+            ],
+            "description": [
+                "More information in the associated log.",
+                "A Game about gay people doing gay things (aka random quests around the city), a weird mix of past, present, and future. Dark, Beautiful, Whimsical, Unserious. I'd like to turn this into a research excercice, bringing archival findings to life (TBD).",
+                ""
+            ],
+            "tools": [
+                "Unity;",
+                "C#",
+                "Pixaki;",
+                "Procreate;",
+                "Nomad Sculpt;",
+                "Blender;"                
+            ],
+            "documentation": [
+                {
+                    "tag": "Log",
+                    "link": "project_data\\UntitledGame\\log.txt"
+                }                  
             ]
         },
 
@@ -308,8 +400,9 @@
             "title": "Les Daltons s'évadent!",
             "year": "2022",
             "filters": [
+                "Creative Coding",
                 "Video Game",
-                "Creative Coding"
+                "Interactivity"
             ],
             "isDone": "True",
             "gallery": [
@@ -358,7 +451,11 @@
         {
             "title": "bodymod",
             "year": 2021,
-            "filters": "Interactive",
+            "filters": [
+                "Creative Coding",
+                "Video Game",
+                "Interactivity"
+            ],
             "isDone": "True",
             "gallery": [
                 {
@@ -399,6 +496,54 @@
                 {
                     "tag": "Github",
                     "link": "https://github.com/ShapelessMaxi/cart253/tree/main/projects/mod"
+                }                    
+            ]
+        },
+
+        {
+            "title": "feed... me...",
+            "year": 2021,
+            "filters": [
+                "Creative Coding",
+                "Video Game",
+                "Interactivity"
+            ],
+            "isDone": "True",
+            "gallery": [
+                {
+                    "dir": "project_data\\feedme\\feedme_01.png",
+                    "caption": "Screen capture of the game"
+                },
+                {
+                    "dir": "project_data\\feedme\\feedme_02.png",
+                    "caption": "Screen capture of the game"
+                },
+                {
+                    "dir": "project_data\\feedme\\feedme_03.png",
+                    "caption": "Screen capture of the game"
+                }               
+            ],
+            "keywords": [
+                "Creative coding;",
+                "Game Development;"
+            ],
+            "description": [
+                "Who feeds a cat in the afterlife when they reach their limit of nine lives? And what happens when you feed strange things to a dead cat?",
+                "This mini 2D game created with P5.js as a quick exercise in a programming class brings you in an ethereal world where you, a ghost, have the responsibility of taking care of this cat. The backstory and dialogue invite the player to reflect on the mysterious connection between themselves and the cat—what happened in life that brought both of you to this otherworldly place?"
+            ],
+            "tools": [
+                "JavaScript;",
+                "p5.js;",
+                "HTML"
+            ],
+            "documentation": [
+                {
+                    "tag": "Play",
+                    "link": "https://hdmaxi.itch.io/feed-me"
+                },
+                {
+                    "tag": "Github",
+                    "link": "https://github.com/ShapelessMaxi/cart253/tree/main/projects/simulation"
                 }                    
             ]
         },

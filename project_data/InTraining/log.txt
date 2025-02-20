@@ -1,0 +1,40 @@
+<h1>scoreboard</h1>
+<h2>rank	player id	score </h2>
+<p>0000	xxxx00000	000 000,000
+0001	yora33320	999 999,999
+0000	kita00091	000 000,000
+0001	hhor03332	999 999,999</p>
+
+<h1>player: Rusty
+id: rust02990</h1>
+<p>sp. atk.: powersurge
+power		0935/9999
+duration	12 s.
+recharge	70 s.</p>
+<h2>high score: 309 998,021
+rank: 6842</h2>
+<p>stats
+atk.	0109/9999
+def.	1005/9999
+spd.	0098/9999</p>
+
+<h1>weapon: Volt
+id: volt08455</h1>
+<p>sp. atk.: zap
+power		0089/9999
+duration	1 s.
+recharge	3 s.</p>
+<p>stats
+atk.	0301/9999
+def.	0011/9999
+spd.	2324/9999</p>
+
+<h1>enemies: Bunny</h1>
+ull
+power		0000/9999
+duration	0 s.
+recharge	0 s.</p>
+<p>stats
+atk.	0760/9999
+def.	0289/9999
+spd.	3001/9999</p>
