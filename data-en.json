@@ -173,50 +173,7 @@
             ]
         },
 
-        {
-            "title": "Untitled Game",
-            "year": "2025",
-            "filters": [
-                "Creative Coding",
-                "Video Game",
-                "Interactivity"
-            ],
-            "isDone": "False",
-            "gallery": [
-                {
-                    "dir": "project_data\\UntitledGame\\UntitledGame_01.png",
-                    "caption": "Interactive 3D phone"
-                },
-                {
-                    "dir": "project_data\\UntitledGame\\UntitledGame_02.png",
-                    "caption": "Initial paper and digital sketches"
-                }
-            ],
-            "keywords": [
-                "Game Design;",
-                "Queer Storytelling;",
-                "Archives"
-            ],
-            "description": [
-                "More information in the associated log.",
-                "Un jeu gay, avec des personnages gays qui font des trucs gays (aka des quêtes aléatoires dans la ville). Sombre, Beau, Fantaisiste, Pas Serieux. J'aimerais en faire un exercice de recherche, donnant vie aux découvertes d'archives (à déterminer). Un étrange mélange de passé, présent et futur."
-            ],
-            "tools": [
-                "Unity;",
-                "C#",
-                "Pixaki;",
-                "Procreate;",
-                "Nomad Sculpt;",
-                "Blender;"                
-            ],
-            "documentation": [
-                {
-                    "tag": "Log",
-                    "link": "project_data\\UntitledGame\\log.txt"
-                }                  
-            ]
-        },
-
+        
         {
             "title": "Look Again",
             "year": "2024",
@@ -268,23 +225,31 @@
                 "Creative Coding",
                 "Interactivity"
             ],
-            "isDone": "False",
+            "isDone": "True",
             "gallery": [
                 {
                     "dir": "project_data\\ToDissectToStitch\\ToDissectToStitch_01.png",
                     "caption": "In-progress state of the puzzle"
                 },
                 {
+                    "dir": "project_data\\ToDissectToStitch\\ToDissectToStitch_05.png",
+                    "caption": "Completed state of the puzzle"
+                },
+                {
                     "dir": "project_data\\ToDissectToStitch\\ToDissectToStitch_02.png",
                     "caption": "Imported body part as an .fbx file in TD"
                 },
                 {
-                    "dir": "project_data\\ToDissectToStitch\\ToDissectToStitch_04.png",
-                    "caption": "Opportunity for optimization, all these nodes could be a simpler script"
+                    "dir": "project_data\\ToDissectToStitch\\monitor.jpg",
+                    "caption": "Puzzle displayed on a computer monitor"
                 },
                 {
-                    "dir": "project_data\\ToDissectToStitch\\ToDissectToStitch_05.png",
-                    "caption": "Completed state of the puzzle"
+                    "dir": "project_data\\ToDissectToStitch\\laptop.png",
+                    "caption": "Puzzle displayed on a laptop"
+                },
+                {
+                    "dir": "project_data\\ToDissectToStitch\\ToDissectToStitch_04.png",
+                    "caption": "Opportunity for optimization, all these nodes could be a simpler script"
                 }
             ],
             "keywords": [
@@ -295,9 +260,9 @@
                 "Creative writing;"
             ],
             "description": [
-                "More information in the associated log.",
-                "This project was created in the context of a uni class. With hindsight, I don't enjoy the way the user interacts with the piece, so I plan to update it in the coming months.",
-                "To Dissect / To Stitch is a digital puzzle made of my own 3D scanned body, inspired by academic literature in queer theory. The final piece acts as a manifesto regarding body-related and perception-based societal norms. In the end, I see it as a kind of auto-ethnographic process where I was able to analyze the external perception, as well as my own, of my body, both in a deconstructed and reconstructed state. With MediaPipe, a machine learning tool, the viewer in front of a visual composition of myself with heavy medical and 'objective' undertones can replace the pieces back in place using hand gestures. The experience is complete when the viewer sees the whole manifesto written in the place of a previously dry descriptions of each body parts."
+                "In the past few decades, tattooing and piercing have been popularized and commodified so much as to be seen only as an aesthetic pursuit. For me, it is a beneficial exercise of letting go, of taking agency over my body, of expressing myself, and of controlling my life’s narrative. Adding on to this, queer people have been utilizing body modification to go against norms and to gain more visibility.",
+                "When I started getting tattooed in 2016, I felt an array of different gazes analyzing my appearance, and it really affected me. Some people loved it, others hated it, and a whole lot did not understand it. At the same time, I was barely coming to term with my queer identity. Overall, my days were regularly dotted with microaggressions. Tattoos are now mostly seen as mainstream, but still, tattooed people are often reduced to bodies you can comment on and judge. In the end, choosing to modify your physical self invites negative scrutiny, just as being visibly queer does. This relates to the not-so-distant history of pathologizing queerness. A slice of this past lies in medical photography, where trans, intersex, and queer people were subjected to the medical gaze, a harmful way to observe and categorize our bodies with the final intention of telling us we are unfit and abnormal.",
+                "To Dissect / To Stitch is a digital puzzle made from my 3D scanned body. By reclaiming visual signifiers from anatomical science and medical photography, I initially define the dismembered pieces in a seemingly objective and factual way. In doing so, I recreate a detached and violent gaze that feels so familiar — not to torture myself with past trauma, but to put it in relation to our present and future fights. As the viewer reconstruct each part, a manifesto that queries about their personal relationship with their body replaces the limiting descriptions with a more hopeful tone."
             ],
             "tools": [
                 "TouchDesigner;",

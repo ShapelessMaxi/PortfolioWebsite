@@ -127,6 +127,7 @@
             ]
         
         },
+        
         {
             "title": "Untitled Game",
             "year": "2025",
@@ -154,51 +155,6 @@
             "description": [
                 "More information in the associated log.",
                 "Un jeu gay, avec des personnages gays qui font des trucs gays (aka des quêtes aléatoires dans la ville). Sombre, Beau, Fantaisiste, Pas Serieux. J'aimerais en faire un exercice de recherche, donnant vie aux découvertes d'archives (à déterminer). Un étrange mélange de passé, présent et futur."
-            ],
-            "tools": [
-                "Unity;",
-                "C#",
-                "Pixaki;",
-                "Procreate;",
-                "Nomad Sculpt;",
-                "Blender;"                
-            ],
-            "documentation": [
-                {
-                    "tag": "Log",
-                    "link": "project_data\\UntitledGame\\log.txt"
-                }                  
-            ]
-        },
-
-        {
-            "title": "Untitled Game",
-            "year": "2025",
-            "filters": [
-                "Creative Coding",
-                "Video Game",
-                "Interactivity"
-            ],
-            "isDone": "False",
-            "gallery": [
-                {
-                    "dir": "project_data\\UntitledGame\\UntitledGame_01.png",
-                    "caption": "Téléphone portable interactif"
-                },
-                {
-                    "dir": "project_data\\UntitledGame\\UntitledGame_02.png",
-                    "caption": "Dessins initaux"
-                }
-            ],
-            "keywords": [
-                "Design de Jeu;",
-                "Narration Queer;",
-                "Archives"
-            ],
-            "description": [
-                "More information in the associated log.",
-                "A Game about gay people doing gay things (aka random quests around the city), a weird mix of past, present, and future. Dark, Beautiful, Whimsical, Unserious. I'd like to turn this into a research excercice, bringing archival findings to life (TBD).",
-                ""
             ],
             "tools": [
                 "Unity;",
@@ -267,23 +223,31 @@
                 "Creative Coding",
                 "Interactivity"
             ],
-            "isDone": "False",
+            "isDone": "True",
             "gallery": [
                 {
                     "dir": "project_data\\ToDissectToStitch\\ToDissectToStitch_01.png",
-                    "caption": "In-progress state of the puzzle"
+                    "caption": "Puzzle en cours"
+                },                
+                {
+                    "dir": "project_data\\ToDissectToStitch\\ToDissectToStitch_05.png",
+                    "caption": "Puzzle fini"
                 },
                 {
                     "dir": "project_data\\ToDissectToStitch\\ToDissectToStitch_02.png",
-                    "caption": "Imported body part as an .fbx file in TD"
+                    "caption": "Partie du corps importée sous forme de fichier .fbx dans TouchDesigner"
+                },                
+                {
+                    "dir": "project_data\\ToDissectToStitch\\monitor.jpg",
+                    "caption": "Puzzle affiché sur un écran d'ordinateur"
+                },
+                {
+                    "dir": "project_data\\ToDissectToStitch\\laptop.png",
+                    "caption": "Puzzle affiché sur un ordinateur portable"
                 },
                 {
                     "dir": "project_data\\ToDissectToStitch\\ToDissectToStitch_04.png",
-                    "caption": "Opportunity for optimization, all these nodes could be a simpler script"
-                },
-                {
-                    "dir": "project_data\\ToDissectToStitch\\ToDissectToStitch_05.png",
-                    "caption": "Completed state of the puzzle"
+                    "caption": "Possibilité d'optimisation, tous ces opérateurs pourraient être un script plus simple"
                 }
             ],
             "keywords": [
@@ -294,9 +258,9 @@
                 "Creative writing;"
             ],
             "description": [
-                "More information in the associated log.",
-                "This project was created in the context of a uni class. With hindsight, I don't enjoy the way the user interacts with the piece, so I plan to update it in the coming months.",
-                "To Dissect / To Stitch is a digital puzzle made of my own 3D scanned body, inspired by academic literature in queer theory. The final piece acts as a manifesto regarding body-related and perception-based societal norms. In the end, I see it as a kind of auto-ethnographic process where I was able to analyze the external perception, as well as my own, of my body, both in a deconstructed and reconstructed state. With MediaPipe, a machine learning tool, the viewer in front of a visual composition of myself with heavy medical and 'objective' undertones can replace the pieces back in place using hand gestures. The experience is complete when the viewer sees the whole manifesto written in the place of a previously dry descriptions of each body parts."
+                "Au cours des dernières décennies, le tatouage et le piercing ont été tellement popularisés et commercialisés qu'ils sont considérés que comme une poursuite esthétique. Pour moi, c'est un exercice bénéfique qui me permet de lâcher prise, de choisir l'apparence de mon corps, de m'exprimer et de prendre le récit de ma vie en main. De plus, les personnes queer utilisent depuis longtemps les modifications corporelles pour aller à l'encontre des normes et gagner en visibilité.",
+                "Lorsque j'ai commencé à me faire tatouer en 2016, j'ai senti beaucoup de regards différents analyser mon apparence, et cela m'a vraiment affecté. Certaines personnes aimaient, d'autres détestaient, et beaucoup ne comprenait pas. À la même époque, je commençais à peine à accepter mon identité queer. Dans l'ensemble, mes journées étaient régulièrement parsemées de microagressions. Les tatouages sont aujourd'hui considérés comme un phénomène courant, mais les personnes tatouées sont souvent réduites à des corps sur lesquels on peut faire des commentaires et que l'on peut juger. En fin de compte, le fait de choisir de modifier son apparence physique invite une certaine négativité, tout comme le fait d'être visiblement queer. Il y a un lien avec l'histoire, pas si lointaine, de la pathologisation de l'homosexualité. Une partie de ce passé réside dans la photographie médicale, où les personnes trans, intersexe et, queer ont été sous un regard médical ('medical gaze'), une manière violente d'observer et de catégoriser nos corps avec l'intention finale de nous dire que nous sommes inaptes et anormaux.",
+                "To Dissect / To Stitch est un puzzle numérique réalisé à partir de mon corps scanné en 3D. En reprenant les signifiants visuels de la science anatomique et de la photographie médicale, je définis initialement les morceaux démembrés d'une manière apparemment objective et factuelle. Ce faisant, je recrée un regard détaché et violent qui me semble si familier - non pas pour me torturer avec des traumatismes passés, mais pour les mettre en relation avec nos combats présents et futurs. Au fur et à mesure que le spectateur reconstruit chaque partie, un manifeste qui l'interroge sur sa relation personnelle avec son corps remplace les descriptions limitatives par un ton plus optimiste."
             ],
             "tools": [
                 "TouchDesigner;",
