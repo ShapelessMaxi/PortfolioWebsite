@@ -21,6 +21,18 @@
                 {
                     "dir": "project_data\\InTraining\\InTraining_04.jpg",
                     "caption": "Illustration close-up"
+                },
+                {
+                    "dir": "project_data\\InTraining\\character_render01.png",
+                    "caption": "Character 3D model"
+                },
+                {
+                    "dir": "project_data\\InTraining\\rat_render01.png",
+                    "caption": "Enemy 3D model"
+                },
+                {
+                    "dir": "project_data\\InTraining\\sword_render01.png",
+                    "caption": "Weapon 3D model"
                 }
             ],
             "keywords": [
@@ -42,7 +54,7 @@
             "documentation": [
                 {
                     "tag": "Log",
-                    "link": "project_data\\UntitledGame\\log.txt"
+                    "link": "project_data\\InTraining\\log.txt"
                 }                    
             ]
         },

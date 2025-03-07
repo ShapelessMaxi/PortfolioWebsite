@@ -21,6 +21,18 @@
                 {
                     "dir": "project_data\\InTraining\\InTraining_04.jpg",
                     "caption": "Gros plan sur une des illustrations"
+                },
+                {
+                    "dir": "project_data\\InTraining\\character_render01.png",
+                    "caption": "Model 3D du personnage"
+                },
+                {
+                    "dir": "project_data\\InTraining\\rat_render01.png",
+                    "caption": "Model 3D de l'ennemi"
+                },
+                {
+                    "dir": "project_data\\InTraining\\sword_render01.png",
+                    "caption": "Model 3D de l'arme"
                 }
             ],
             "keywords": [
@@ -41,8 +53,8 @@
             ],
             "documentation": [
                 {
-                    "tag": "Log",
-                    "link": "project_data\\UntitledGame\\log.txt"
+                    "tag": "Journal",
+                    "link": "project_data\\InTraining\\log.txt"
                 }                    
             ]
         },
@@ -131,7 +143,7 @@
                 },
                 {
                     "dir": "project_data\\UntitledGame\\UntitledGame_02.png",
-                    "caption": "Sketch initials"
+                    "caption": "Dessins initaux"
                 }
             ],
             "keywords": [
