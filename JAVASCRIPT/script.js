@@ -117,20 +117,40 @@ window.onload = (event) => {
           interestCards.push(currentCard);
         }
 
-        // dropdown buttons interaction, reveal textboxes
-        document.querySelectorAll('.titles').forEach(button => {
-          button.addEventListener('click', function() {
-            textbox = button.nextElementSibling;
-            console.log(button);
-            if (button.classList.contains('active')){
-              button.classList.remove('active');
-              textbox.classList.remove('active');
-            } else {
-              button.classList.add('active');
-              textbox.classList.add('active');
-            }
-            });
+        // Dropdown buttons interaction, reveal textboxes
+        let aboutCards = Array.from(document.getElementsByClassName('about-card'));
+
+        // Set the initial active card (bio)
+        let activeCard = aboutCards[0];
+        activeCard.classList.add('active');
+        activeCard.children[0].classList.add('active');
+        activeCard.children[1].classList.add('active');
+
+        // Add click event to all about-cards
+        aboutCards.forEach((card) => {
+          card.addEventListener('click', function () {
+              // If the clicked card is already active, deactivate all
+              if (card.classList.contains('active')) {
+                  aboutCards.forEach((c) => {
+                      c.classList.remove('active');
+                      c.children[0].classList.remove('active'); // Title
+                      c.children[1].classList.remove('active'); // Paragraph
+                  });
+              } else {
+                  // Otherwise, deactivate all and activate the clicked card
+                  aboutCards.forEach((c) => {
+                      c.classList.remove('active');
+                      c.children[0].classList.remove('active'); // Title
+                      c.children[1].classList.remove('active'); // Paragraph
+                  });
+
+                  card.classList.add('active');
+                  card.children[0].classList.add('active'); // Title
+                  card.children[1].classList.add('active'); // Paragraph
+              }
+          });
         });
+
         // horizontal scrolling for interest cards
         const scrollContainer = document.getElementById('interest-cards-box');
         let isScrolling = false;
