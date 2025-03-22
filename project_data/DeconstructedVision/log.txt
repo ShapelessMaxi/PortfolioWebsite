@@ -1,3 +1,6 @@
+<h1>Deconstructed Vision</h1>
+<p>Different pieces that relate to computer vision and human vision.</p>
+
 <h1>Self-perception vs external perception</h1>
 <p>I've already explored this theme, but I feel like there is more to uncover or just more creative inspiration lying there. In Glitch Armor, I speak of the anxiety induced by being perceived that's heightened when you are visibly queer. It's our instinct to dress and present in a queer fashion, and it might inspire people to give compliments or present in an authentic way themselves, but it also might provoke other people's homo/transphobia. In To Dissect / To Stitch, I dove into the societal perception and stereotypes that comes with having a modified and tattooed body, and I wrote about how it can be freeing to disconnect yourself from the way societal norms shape your physical and emotional self.</p>
 <p>What if there were two digital characters looking at themselves face-to-face through the screens and just being, while at the same time looking at themselves through webcams. That webcam feed could be analyzed and modified, and then displayed on screens that were only visible to the viewers, aka facing backwards (<- screen of consciousness / right character -> webcam -> <- webcam <- left character / screen of consciousness ->). *btw is Screen of Consciousness a genius title???</p>

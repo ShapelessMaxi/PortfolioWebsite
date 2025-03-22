@@ -11,27 +11,27 @@
             "isDone": "True",
             "gallery": [
                 {
-                    "dir": "project_data\\InTraining\\InTraining_03.jpg",
+                    "dir": "project_data\\InTraining\\InTraining_03.webp",
                     "caption": "5x9\" Printed illustrations"
                 },
                 {
-                    "dir": "project_data\\InTraining\\InTraining_05.jpg",
+                    "dir": "project_data\\InTraining\\InTraining_05.webp",
                     "caption": "Illustration close-up"
                 },
                 {
-                    "dir": "project_data\\InTraining\\InTraining_04.jpg",
+                    "dir": "project_data\\InTraining\\InTraining_04.webp",
                     "caption": "Illustration close-up"
                 },
                 {
-                    "dir": "project_data\\InTraining\\character_render01.png",
+                    "dir": "project_data\\InTraining\\InTraining_character_render01.webp",
                     "caption": "Character 3D model"
                 },
                 {
-                    "dir": "project_data\\InTraining\\rat_render01.png",
+                    "dir": "project_data\\InTraining\\InTraining_rat_render01.webp",
                     "caption": "Enemy 3D model"
                 },
                 {
-                    "dir": "project_data\\InTraining\\sword_render01.png",
+                    "dir": "project_data\\InTraining\\InTraining_sword_render01.webp",
                     "caption": "Weapon 3D model"
                 }
             ],
@@ -69,31 +69,31 @@
             "isDone": "True",
             "gallery": [
                 {
-                    "dir": "project_data\\GiltchArmor\\DSC00418.jpg",
+                    "dir": "project_data\\GiltchArmor\\GlitchArmor_mtlconnect.webp",
                     "caption": "Documentation of work installed for the Millieux x MTLconnect event (10-2024)"
                 },
                 {
-                    "dir": "project_data\\GiltchArmor\\DSC00446.jpg",
+                    "dir": "project_data\\GiltchArmor\\GlitchArmor_mtlconnect01.webp",
                     "caption": "Documentation of work presented during the Millieux x MTLconnect event (10-2024)"
                 },
                 {
-                    "dir": "project_data\\GiltchArmor\\DSC00499.jpg",
+                    "dir": "project_data\\GiltchArmor\\GlitchArmor_mtlconnect02.webp",
                     "caption": "Documentation of work presented during the Millieux x MTLconnect event (10-2024)"
                 },
                 {
-                    "dir": "project_data\\GiltchArmor\\composantmachinal01.jpg",
+                    "dir": "project_data\\GiltchArmor\\GlitchArmor_composantmachinal01.webp",
                     "caption": "Installation presented in the Composant Machinal Group Exhibition (07-2024)"
                 },
                 {
-                    "dir": "project_data\\GiltchArmor\\composantmachinal02.jpg",
+                    "dir": "project_data\\GiltchArmor\\GlitchArmor_composantmachinal02.webp",
                     "caption": "Installation presented in the Composant Machinal Group Exhibition (07-2024)"
                 },
                 {
-                    "dir": "project_data\\GiltchArmor\\composantmachinal03.jpg",
+                    "dir": "project_data\\GiltchArmor\\GlitchArmor_composantmachinal03.webp",
                     "caption": "Installation presented in the Composant Machinal Group Exhibition (07-2024)"
                 },
                 {
-                    "dir": "project_data\\GiltchArmor\\tech.png",
+                    "dir": "project_data\\GiltchArmor\\GlitchArmor_tech.webp",
                     "caption": "Technical drawing of the physical installation"
                 }
             ],
@@ -138,11 +138,11 @@
             "isDone": "False",
             "gallery": [
                 {
-                    "dir": "project_data\\UntitledGame\\UntitledGame_01.png",
+                    "dir": "project_data\\UntitledGame\\UntitledGame_01.webp",
                     "caption": "Imported body part as an .fbx file in TD"
                 },
                 {
-                    "dir": "project_data\\UntitledGame\\UntitledGame_02.png",
+                    "dir": "project_data\\UntitledGame\\UntitledGame_02.webp",
                     "caption": "Initial paper sketches"
                 }
             ],
@@ -175,7 +175,7 @@
 
         
         {
-            "title": "Look Again",
+            "title": "Deconstructed Vision",
             "year": "2024",
             "filters": [
                 "Creative Coding",
@@ -184,15 +184,15 @@
             "isDone": "False",
             "gallery": [
                 {
-                    "dir": "project_data\\LookAgain\\Proto01.jpg",
+                    "dir": "project_data\\DeconstructedVision\\DeconstructedVision_Proto01.webp",
                     "caption": "Prototype 01, Analyze TOPs and legos"
                 },
                 {
-                    "dir": "project_data\\LookAgain\\Proto02.png",
+                    "dir": "project_data\\DeconstructedVision\\DeconstructedVision_Proto02.webp",
                     "caption": "Prototype 02, Python script, Looking at a physical object"
                 },
                 {
-                    "dir": "project_data\\LookAgain\\physicalproto4.png",
+                    "dir": "project_data\\DeconstructedVision\\DeconstructedVision_physicalproto4.webp",
                     "caption": "Prototype 02, Installation Test"
                 }
             ],
@@ -228,27 +228,27 @@
             "isDone": "True",
             "gallery": [
                 {
-                    "dir": "project_data\\ToDissectToStitch\\ToDissectToStitch_01.png",
+                    "dir": "project_data\\ToDissectToStitch\\ToDissectToStitch_01.webp",
                     "caption": "In-progress state of the puzzle"
                 },
                 {
-                    "dir": "project_data\\ToDissectToStitch\\ToDissectToStitch_05.png",
+                    "dir": "project_data\\ToDissectToStitch\\ToDissectToStitch_05.webp",
                     "caption": "Completed state of the puzzle"
                 },
                 {
-                    "dir": "project_data\\ToDissectToStitch\\ToDissectToStitch_02.png",
+                    "dir": "project_data\\ToDissectToStitch\\ToDissectToStitch_02.webp",
                     "caption": "Imported body part as an .fbx file in TD"
                 },
                 {
-                    "dir": "project_data\\ToDissectToStitch\\monitor.jpg",
+                    "dir": "project_data\\ToDissectToStitch\\ToDissectToStitch_monitor.webp",
                     "caption": "Puzzle displayed on a computer monitor"
                 },
                 {
-                    "dir": "project_data\\ToDissectToStitch\\laptop.jpg",
+                    "dir": "project_data\\ToDissectToStitch\\ToDissectToStitch_laptop.webp",
                     "caption": "Puzzle displayed on a laptop"
                 },
                 {
-                    "dir": "project_data\\ToDissectToStitch\\ToDissectToStitch_04.png",
+                    "dir": "project_data\\ToDissectToStitch\\ToDissectToStitch_04.webp",
                     "caption": "Opportunity for optimization, all these nodes could be a simpler script"
                 }
             ],
@@ -291,15 +291,15 @@
             "isDone": "True",
             "gallery": [
                 {
-                    "dir": "project_data\\PostApocalypticHottie\\PostApocalypticHottie_04.png",
+                    "dir": "project_data\\PostApocalypticHottie\\PostApocalypticHottie_04.webp",
                     "caption": "Character in a T-Pose"
                 },
                 {
-                    "dir": "project_data\\PostApocalypticHottie\\PostApocalypticHottie_01.png",
+                    "dir": "project_data\\PostApocalypticHottie\\PostApocalypticHottie_01.webp",
                     "caption": "Still from the walking animation"
                 },
                 {
-                    "dir": "project_data\\PostApocalypticHottie\\PostApocalypticHottie_03.png",
+                    "dir": "project_data\\PostApocalypticHottie\\PostApocalypticHottie_03.webp",
                     "caption": "Displacement map used for the ground block"
                 }
             ],
@@ -337,15 +337,15 @@
             "isDone": "True",
             "gallery": [
                 {
-                    "dir": "project_data\\AwakeningofTheFrog\\AwakeningofTheFrog_01.png",
+                    "dir": "project_data\\AwakeningofTheFrog\\AwakeningofTheFrog_01.webp",
                     "caption": "Focus on the frog, still from the turntable animation"
                 },
                 {
-                    "dir": "project_data\\AwakeningofTheFrog\\AwakeningofTheFrog_03.png",
+                    "dir": "project_data\\AwakeningofTheFrog\\AwakeningofTheFrog_03.webp",
                     "caption": "Focus on the pond, still from the turntable animation"
                 },
                 {
-                    "dir": "project_data\\AwakeningofTheFrog\\AwakeningofTheFrog_04.png",
+                    "dir": "project_data\\AwakeningofTheFrog\\AwakeningofTheFrog_04.webp",
                     "caption": "Still from the turntable animation"
                 }
             ],
@@ -384,19 +384,19 @@
             "isDone": "True",
             "gallery": [
                 {
-                    "dir": "project_data\\LesDaltonsSEvadent\\doc_cell.png",
+                    "dir": "project_data\\LesDaltonsSEvadent\\Daltons_cell.webp",
                     "caption": "Screen capture of the gameplay"
                 },
                 {
-                    "dir": "project_data\\LesDaltonsSEvadent\\doc_cour.png",
+                    "dir": "project_data\\LesDaltonsSEvadent\\Daltons_cour.webp",
                     "caption": "Screen capture of the gameplay"
                 },
                 {
-                    "dir": "project_data\\LesDaltonsSEvadent\\doc_visite.png",
+                    "dir": "project_data\\LesDaltonsSEvadent\\Daltons_visite.webp",
                     "caption": "Screen capture of the gameplay"
                 },
                 {
-                    "dir": "project_data\\LesDaltonsSEvadent\\doc_tunnel.png",
+                    "dir": "project_data\\LesDaltonsSEvadent\\Daltons_tunnel.webp",
                     "caption": "Screen capture of the gameplay"
                 }
             ],
@@ -436,15 +436,15 @@
             "isDone": "True",
             "gallery": [
                 {
-                    "dir": "project_data\\bodymod\\bodymod_01_copy.png",
+                    "dir": "project_data\\bodymod\\bodymod_01.webp",
                     "caption": "Capture of the game when all modifications are discovered"
                 },
                 {
-                    "dir": "project_data\\bodymod\\bodymod_05_copy.png",
+                    "dir": "project_data\\bodymod\\bodymod_05.webp",
                     "caption": "Capture of the game when most modifications are unknown"
                 },
                 {
-                    "dir": "project_data\\bodymod\\bodymod_04.png",
+                    "dir": "project_data\\bodymod\\bodymod_04.webp",
                     "caption": "Capture of the name input screen."
                 }               
             ],
@@ -488,15 +488,15 @@
             "isDone": "True",
             "gallery": [
                 {
-                    "dir": "project_data\\feedme\\feedme_01.png",
+                    "dir": "project_data\\feedme\\feedme_01.webp",
                     "caption": "Screen capture of the game"
                 },
                 {
-                    "dir": "project_data\\feedme\\feedme_02.png",
+                    "dir": "project_data\\feedme\\feedme_02.webp",
                     "caption": "Screen capture of the game"
                 },
                 {
-                    "dir": "project_data\\feedme\\feedme_03.png",
+                    "dir": "project_data\\feedme\\feedme_03.webp",
                     "caption": "Screen capture of the game"
                 }               
             ],
@@ -534,43 +534,43 @@
             "isDone": "True",
             "gallery": [
                 {
-                    "dir": "project_data\\EFFAGraphicDesign\\finaldoc_07.png",
+                    "dir": "project_data\\EFFAGraphicDesign\\Effa_finaldoc_07.webp",
                     "caption": "Mocked-up poster"
                 },
                 {
-                    "dir": "project_data\\EFFAGraphicDesign\\finaldoc_08.png",
+                    "dir": "project_data\\EFFAGraphicDesign\\Effa_finaldoc_08.webp",
                     "caption": "Mocked-up book cover"
                 },
                 {
-                    "dir": "project_data\\EFFAGraphicDesign\\finaldoc_01.png",
+                    "dir": "project_data\\EFFAGraphicDesign\\Effa_finaldoc_01.webp",
                     "caption": "Exhibition concept summary"
                 },
                 {
-                    "dir": "project_data\\EFFAGraphicDesign\\finaldoc_02.png",
+                    "dir": "project_data\\EFFAGraphicDesign\\Effa_finaldoc_02.webp",
                     "caption": "Words of inspiration"
                 },
                 {
-                    "dir": "project_data\\EFFAGraphicDesign\\finaldoc_03.png",
+                    "dir": "project_data\\EFFAGraphicDesign\\Effa_finaldoc_03.webp",
                     "caption": "Typography moodboard"
                 },
                 {
-                    "dir": "project_data\\EFFAGraphicDesign\\finaldoc_04.png",
+                    "dir": "project_data\\EFFAGraphicDesign\\Effa_finaldoc_04.webp",
                     "caption": "Color moodboard"
                 },
                 {
-                    "dir": "project_data\\EFFAGraphicDesign\\finaldoc_05.png",
+                    "dir": "project_data\\EFFAGraphicDesign\\Effa_finaldoc_05.webp",
                     "caption": "Style and vibe moodboard"
                 },
                 {
-                    "dir": "project_data\\EFFAGraphicDesign\\finaldoc_06.png",
+                    "dir": "project_data\\EFFAGraphicDesign\\Effa_finaldoc_06.webp",
                     "caption": "A few word on the choices of typography, color, and style"
                 },
                 {
-                    "dir": "project_data\\EFFAGraphicDesign\\AfficheFinale.png",
+                    "dir": "project_data\\EFFAGraphicDesign\\Effa_AfficheFinale.webp",
                     "caption": "The final poster"
                 },
                 {
-                    "dir": "project_data\\EFFAGraphicDesign\\AlbumCoverFinal.png",
+                    "dir": "project_data\\EFFAGraphicDesign\\Effa_AlbumCoverFinal.webp",
                     "caption": "The final book cover"
                 }
             ],
@@ -603,19 +603,19 @@
             "isDone": "True",
             "gallery": [
                 {
-                    "dir": "project_data\\Pyre\\top.png",
+                    "dir": "project_data\\Pyre\\Pyre_top.webp",
                     "caption": "Top view highlighting the branding"
                 },
                 {
-                    "dir": "project_data\\Pyre\\AfficheFinale.png",
+                    "dir": "project_data\\Pyre\\Pyre_AfficheFinale.webp",
                     "caption": "Final presentation poster"
                 },
                 {
-                    "dir": "project_data\\Pyre\\pp.png",
+                    "dir": "project_data\\Pyre\\Pyre_pp.webp",
                     "caption": "Perspective view"
                 },
                 {
-                    "dir": "project_data\\Pyre\\cut.jpg",
+                    "dir": "project_data\\Pyre\\Pyre_cut.webp",
                     "caption": "Vertical slice of the product"
                 }
             ],
