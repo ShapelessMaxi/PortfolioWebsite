@@ -120,12 +120,17 @@ window.onload = (event) => {
         // Dropdown buttons interaction, reveal textboxes
         let aboutCards = Array.from(document.getElementsByClassName('about-card'));
 
-        // Set the initial active card (bio)
-        let activeCard = aboutCards[0];
-        activeCard.classList.add('active');
-        activeCard.children[0].classList.add('active');
-        activeCard.children[1].classList.add('active');
-
+        // Set the initial active card (bio parapgraph)
+        // if its a mobile page, dont activate 
+        // const mediaQuery = window.matchMedia('(min-width: 769px)');
+        // if (mediaQuery.matches) {
+        //   // The viewport is at least 769px wide
+        //   let activeCard = aboutCards[0];
+        //   activeCard.classList.add('active');
+        //   activeCard.children[0].classList.add('active');
+        //   activeCard.children[1].classList.add('active');
+        // }
+        
         // Add click event to all about-cards
         aboutCards.forEach((card) => {
           card.addEventListener('click', function () {

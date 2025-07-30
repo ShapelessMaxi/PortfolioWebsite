@@ -436,6 +436,7 @@ html, body {
   #header > #name-box {
     grid-column: 9 / -2;
     grid-row: 3;
+    flex-direction: row;
   }
   #header > #name-box > #name {
     font-size: 1.3rem;
