@@ -2,11 +2,15 @@ class projectButton {
     constructor(
       title,
       year,
-      isDone
+      category,
+      isDone,
+      projectList
     ) {
       this.title = title;
       this.year = year;
+      this.category = category;
       this.isDone = isDone;
+      this.projectList = projectList;
 
       this.createButton();
     }
@@ -16,9 +20,10 @@ class projectButton {
       this.titleBox = document.createElement("p");
       this.titleBox.classList.add("title");
       this.titleBox.textContent = this.title;
-      // year (more in the if statement)
+      // year
       this.yearBox = document.createElement("p");
       this.yearBox.classList.add("year");
+      this.yearBox.textContent = this.year;
       // button
       this.button = document.createElement("a");
       this.button.classList.add("project-button");
@@ -26,22 +31,8 @@ class projectButton {
       this.button.appendChild(this.titleBox);
       this.button.appendChild(this.yearBox);
       
-      if (this.isDone == "True") {
-        // year (finalization)
-        this.yearBox.textContent = this.year;
-        // choose the right container
-        let buttonContainer = document.getElementById("project-list");
-        buttonContainer.appendChild(this.button);
-        
-      } else if (this.isDone == "False") {
-        // year (finalization)
-        let currentYear = new Date().getFullYear()
-        this.yearBox.textContent = this.year + " - " + currentYear;
-        // choose the right container
-        let buttonContainer = document.getElementById("wip-list");
-        buttonContainer.appendChild(this.button);
-      }
-    }
 
-    
+      // choose the right container
+      this.projectList.appendChild(this.button);
+    }
   }

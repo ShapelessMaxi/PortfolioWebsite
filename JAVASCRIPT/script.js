@@ -119,18 +119,7 @@ window.onload = (event) => {
 
         // Dropdown buttons interaction, reveal textboxes
         let aboutCards = Array.from(document.getElementsByClassName('about-card'));
-
-        // Set the initial active card (bio parapgraph)
-        // if its a mobile page, dont activate 
-        // const mediaQuery = window.matchMedia('(min-width: 769px)');
-        // if (mediaQuery.matches) {
-        //   // The viewport is at least 769px wide
-        //   let activeCard = aboutCards[0];
-        //   activeCard.classList.add('active');
-        //   activeCard.children[0].classList.add('active');
-        //   activeCard.children[1].classList.add('active');
-        // }
-        
+      
         // Add click event to all about-cards
         aboutCards.forEach((card) => {
           card.addEventListener('click', function () {
@@ -221,6 +210,7 @@ window.onload = (event) => {
             data.projects[i].title,
             data.projects[i].year,
             data.projects[i].filters,
+            data.projects[i].category,
             data.projects[i].isDone,
             data.projects[i].gallery,
             data.projects[i].keywords,
@@ -236,7 +226,7 @@ window.onload = (event) => {
         
         // Determine the displayed project from the URL or default to the first project
         let lastProjectID = urlSearch ("pr", 0);
-        let displayedProject = projects[lastProjectID];            
+        let displayedProject = projects[lastProjectID];
 
         // getting an interest tag from the about page
         let interestProject = urlSearch("interest", null);
@@ -253,30 +243,34 @@ window.onload = (event) => {
           displayedProject = interestingProjects[rIndex];
         }
         
-        // create all finished project buttons
-        let finishedProjectButtons = [];
-        for (let i = 0; i < data.projects.length; i++) {
-          if (data.projects[i].isDone == "True") {
-            let currentButton = new projectButton(
-              data.projects[i].title,
-              data.projects[i].year,
-              data.projects[i].isDone
-            );
-            finishedProjectButtons.push(currentButton);
-          }
+        // create a list of all projects related to each categories
+        let categories = [];
+        for (let i = 0; i < data.categories.length; i++) {
+          categories.push(data.categories[i])
         }
-        // create all wip project buttons
-        let wipProjectButtons = [];
-        for (let i = 0; i < data.projects.length; i++) {
-          if (data.projects[i].isDone == "False") {
-            let currentButton = new projectButton(
-              data.projects[i].title,
-              data.projects[i].year,
-              data.projects[i].isDone
-            );
-            wipProjectButtons.push(currentButton);
-          }
+        let categoryButtons = [];
+        for (let i = 0; i < categories.length; i++) {
+          let currentCategoryButton = new categoryButton(
+            categories[i]
+          );
+          categoryButtons.push(currentCategoryButton);         
         }
+        let projectButtons = [];
+        for (let i = 0; i < data.projects.length; i++) {
+          let project = data.projects[i];
+          // Find the matching categoryButton
+          let matchedCategory = categoryButtons.find(btn => btn.title === project.category);
+       
+          let currentButton = new projectButton(
+            project.title,
+            project.year,
+            project.category,
+            project.isDone,
+            matchedCategory.projectList
+          );
+          projectButtons.push(currentButton);
+        }
+
         // activating the correct button
         let allButtons = document.querySelectorAll('.project-button');
         for (let i = 0; i < allButtons.length; i++) {
@@ -506,12 +500,12 @@ function updateContent (displayedProject, language) {
     document.getElementById("tools-box").children[0].innerText = "Outils:";
     document.getElementById("keywords-box").children[0].innerText = "Mots clés:";
     document.getElementById("finished-projects-title").innerText = "Complétés";
-    document.getElementById("wip-projects-title").innerText = "En Cours";
+    // document.getElementById("wip-projects-title").innerText = "En Cours";
   } else {
     document.getElementById("tools-box").children[0].innerText = "Tools:";
     document.getElementById("keywords-box").children[0].innerText = "Keywords:";
-    document.getElementById("finished-projects-title").innerText = "Finished";
-    document.getElementById("wip-projects-title").innerText = "WIP";
+    // document.getElementById("finished-projects-title").innerText = "Finished";
+    // document.getElementById("wip-projects-title").innerText = "WIP";
 
   }
   for (let t = 0; t < displayedProject.tools.length; t++) {

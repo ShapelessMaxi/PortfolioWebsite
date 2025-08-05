@@ -5,9 +5,9 @@
             "title": "In Training",
             "year": 2024,
             "filters": [
-                "3D Animation",
-                "Pixel Art"
+                "3D Animation"
             ],
+            "category": "Illustration",
             "isDone": "True",
             "gallery": [
                 {
@@ -66,6 +66,7 @@
                 "3D Animation",
                 "Interactivity"
             ],
+            "category": "Installation",
             "isDone": "True",
             "gallery": [
                 {
@@ -135,6 +136,7 @@
                 "Video Game",
                 "Interactivity"
             ],
+            "category": "2D Interactive",
             "isDone": "False",
             "gallery": [
                 {
@@ -181,6 +183,7 @@
                 "Creative Coding",
                 "Interactivity"
             ],
+            "category": "Installation",
             "isDone": "False",
             "gallery": [
                 {
@@ -225,6 +228,7 @@
                 "Creative Coding",
                 "Interactivity"
             ],
+            "category": "2D Interactive",
             "isDone": "True",
             "gallery": [
                 {
@@ -288,6 +292,7 @@
             "filters": [
                 "3D Animation"
             ],
+            "category": "Video & Animation",
             "isDone": "True",
             "gallery": [
                 {
@@ -334,6 +339,7 @@
             "filters":[
                 "3D Animation"
             ],
+            "category": "Video & Animation",
             "isDone": "True",
             "gallery": [
                 {
@@ -381,6 +387,7 @@
                 "Video Game",
                 "Interactivity"
             ],
+            "category": "2D Interactive",
             "isDone": "True",
             "gallery": [
                 {
@@ -433,6 +440,7 @@
                 "Video Game",
                 "Interactivity"
             ],
+            "category": "2D Interactive",
             "isDone": "True",
             "gallery": [
                 {
@@ -485,6 +493,7 @@
                 "Video Game",
                 "Interactivity"
             ],
+            "category": "2D Interactive",
             "isDone": "True",
             "gallery": [
                 {
@@ -531,6 +540,7 @@
             "filters": [
                 "Graphic Design"
             ],
+            "category": "Design",
             "isDone": "True",
             "gallery": [
                 {
@@ -599,7 +609,10 @@
         {
             "title": "Pyre",
             "year": "2019",
-            "filters": "Product Design",
+            "filters": [
+                "Product Design"
+            ],
+            "category": "Design",
             "isDone": "True",
             "gallery": [
                 {
@@ -638,7 +651,7 @@
                 {
                     "tag": "",
                     "link": ""
-                }                    
+                }            
             ]
         },
 
@@ -649,8 +662,12 @@
         {
             "title": "",
             "year": "",
-            "filters": "",
+            "filters": [
+                "",
+                ""
+            ],
             "isDone": "True",
+            "category": "",
             "gallery": [
                 {
                     "dir": "project_data\\project\\img",
@@ -676,6 +693,14 @@
                 }                    
             ]
         }
+    ],
+
+    "categories": [
+        "Illustration",
+        "Installation",
+        "Video & Animation",
+        "2D Interactive",
+        "Design"
     ],
 
     "interests": [

@@ -158,6 +158,15 @@ html, body {
 }
 
 /* navbar: project list */
+#category-list {
+  grid-column: 2 / span 7;
+  grid-row-start: 2;
+  grid-row-end: -2;
+  width: 100%;
+  overflow-y: scroll;
+  overflow-x: hidden;
+  margin-right: 0.5rem;
+}
 #project-list {
   grid-column: 2 / span 7;
   grid-row-start: 2;
@@ -176,6 +185,7 @@ html, body {
   overflow-x: hidden;
   margin-right: 0.5rem;
 }
+#category-list > .project-button, 
 #project-list > .project-button, 
 #wip-list > .project-button {
   overflow: hidden;
@@ -190,15 +200,18 @@ html, body {
   border-radius: var(--button-corners);
   box-shadow: 0 0.15rem 0.25rem var(--grey-shadow); 
 }
+#category-list > .project-button:hover, 
 #project-list > .project-button:hover, 
 #wip-list > .project-button:hover {
   background: var(--pink);
   cursor: pointer;
 }
+#category-list > .project-button:hover > p, 
 #project-list > .project-button:hover > p, 
 #wip-list > .project-button:hover > p {
   color: var(--blue-dark);
 }
+#category-list > .project-button.active, 
 #project-list > .project-button.active, 
 #wip-list > .project-button.active {
   background: white;
@@ -206,6 +219,7 @@ html, body {
   cursor: default;
   pointer-events: none;
 }
+#category-list > .project-button > .title, 
 #project-list > .project-button > .title, 
 #wip-list > .project-button > .title {
   font-size: 0.8rem;
@@ -214,19 +228,24 @@ html, body {
 #wip-list > .project-button > .year {
   font-size: 0.6rem;
 }
-#project-list::-webkit-scrollbar, #wip-list::-webkit-scrollbar {
+#category-list::-webkit-scrollbar, 
+#project-list::-webkit-scrollbar, 
+#wip-list::-webkit-scrollbar {
   width: 0.5rem; 
 }
+#category-list::-webkit-scrollbar-track,
 #project-list::-webkit-scrollbar-track,
 #wip-list::-webkit-scrollbar-track {
   background: white;
   margin-right: 0.25rem;;
 }
+#category-list::-webkit-scrollbar-thumb,
 #project-list::-webkit-scrollbar-thumb,
 #wip-list::-webkit-scrollbar-thumb{
   background-color: var(--green);
   margin-right: 0.25rem;
 }
+#category-title,
 #finished-projects-title,
 #wip-projects-title {
   grid-row: 1;
@@ -242,8 +261,11 @@ html, body {
   font-weight: 200;
   color: black
 }
+#category-title {
+  grid-column : 2
+}
 #finished-projects-title {
-  grid-column: 2;
+  grid-column: 6;
 }
 #wip-projects-title {
   grid-column: 9;
@@ -708,19 +730,25 @@ html, body {
   }
 
   /* navbar: project list */
-  #project-list {
+  #category-list {
     grid-column: 1 / -1;
     grid-row: 7 / -9;
+  }
+  #project-list {
+    grid-column: 1 / -1;
+    grid-row: 16 / -9;
   }
   #wip-list {
     grid-column: 1 / -1;
     grid-row: 18 / -4;
   }
+  #category-list > .project-button,
   #project-list > .project-button, 
   #wip-list > .project-button {
     padding: 0.8rem 1rem;
   }
-  #project-list > .project-button > .title, 
+  #project-list > .project-button > .title,  
+  #category-list > .project-button > .title, 
   #wip-list > .project-button > .title {
     font-size: 0.9rem;
   }
@@ -728,13 +756,17 @@ html, body {
   #wip-list > .project-button > .year {
     font-size: 0.8rem;
   }
+  #category-title,
   #finished-projects-title,
   #wip-projects-title {
     grid-column: 1 / -1;
     font-size: 0.9rem;
   }
-  #finished-projects-title {
+  #category-title {
     grid-row: 6;
+  }
+  #finished-projects-title {
+    grid-row: 15;
   }
   #wip-projects-title {
     grid-row: 17;

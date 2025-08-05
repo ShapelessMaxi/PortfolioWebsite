@@ -8,6 +8,7 @@
                 "3D Animation",
                 "Pixel Art"
             ],
+            "category": "Illustration",
             "isDone": "True",
             "gallery": [
                 {
@@ -66,6 +67,7 @@
                 "3D Animation",
                 "Interactivity"
             ],
+            "category": "Installation",
             "isDone": "True",
             "gallery": [
                 {
@@ -136,6 +138,7 @@
                 "Video Game",
                 "Interactivity"
             ],
+            "category": "2D interactif",
             "isDone": "False",
             "gallery": [
                 {
@@ -179,6 +182,7 @@
                 "Creative Coding",
                 "Interactivity"
             ],
+            "category": "Installation",
             "isDone": "False",
             "gallery": [
                 {
@@ -223,6 +227,7 @@
                 "Creative Coding",
                 "Interactivity"
             ],
+            "category": "2D interactif",
             "isDone": "True",
             "gallery": [
                 {
@@ -286,6 +291,7 @@
             "filters": [
                 "3D Animation"
             ],
+            "category": "Vidéo & Animation",
             "isDone": "True",
             "gallery": [
                 {
@@ -332,6 +338,7 @@
             "filters":[
                 "3D Animation"
             ],
+            "category": "Vidéo & Animation",
             "isDone": "True",
             "gallery": [
                 {
@@ -378,6 +385,7 @@
                 "Video Game",
                 "Creative Coding"
             ],
+            "category": "2D interactif",
             "isDone": "True",
             "gallery": [
                 {
@@ -426,6 +434,7 @@
             "title": "bodymod",
             "year": 2021,
             "filters": "Interactive",
+            "category": "2D interactif",
             "isDone": "True",
             "gallery": [
                 {
@@ -478,6 +487,7 @@
                 "Video Game",
                 "Interactivity"
             ],
+            "category": "2D interactif",
             "isDone": "True",
             "gallery": [
                 {
@@ -524,6 +534,7 @@
             "filters": [
                 "Graphic Design"
             ],
+            "category": "Design",
             "isDone": "True",
             "gallery": [
                 {
@@ -593,6 +604,7 @@
             "title": "Pyre",
             "year": "2019",
             "filters": "Product Design",
+            "category": "Design",
             "isDone": "True",
             "gallery": [
                 {
@@ -641,7 +653,8 @@
             "title": "",
             "year": "",
             "filters": "",
-            "isDone": "True",
+             "category": "",
+             "isDone": "True",
             "gallery": [
                 {
                     "dir": "project_data\\project\\img.webp",
@@ -667,6 +680,14 @@
                 }                    
             ]
         }
+    ],
+
+    "categories": [
+        "Illustration",
+        "Installation",
+        "Vidéo & Animation",
+        "2D Interactif",
+        "Design"
     ],
 
     "interests": [

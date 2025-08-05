@@ -3,6 +3,7 @@ class project {
       title,
       year,
       filters,
+      category,
       isDone,
       gallery,
       keywords,
@@ -13,6 +14,7 @@ class project {
       this.title = title;
       this.year = year;
       this.filters = filters;
+      this.category = category;
       this.isDone = isDone;
       this.gallery = gallery;
       this.keywords = keywords;
