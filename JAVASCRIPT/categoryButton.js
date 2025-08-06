@@ -16,7 +16,7 @@ class categoryButton {
         
         // button
         this.button = document.createElement("a");
-        this.button.classList.add("project-button");
+        this.button.classList.add("category-button");
 
         this.button.appendChild(this.titleBox);
       

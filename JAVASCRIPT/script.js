@@ -255,28 +255,46 @@ window.onload = (event) => {
           );
           categoryButtons.push(currentCategoryButton);         
         }
+        
         let projectButtons = [];
         for (let i = 0; i < data.projects.length; i++) {
           let project = data.projects[i];
           // Find the matching categoryButton
           let matchedCategory = categoryButtons.find(btn => btn.title === project.category);
+          let matchedProjectList = matchedCategory.projectList;
        
           let currentButton = new projectButton(
             project.title,
             project.year,
             project.category,
             project.isDone,
-            matchedCategory.projectList
+            matchedProjectList
           );
           projectButtons.push(currentButton);
         }
 
-        // activating the correct button
-        let allButtons = document.querySelectorAll('.project-button');
-        for (let i = 0; i < allButtons.length; i++) {
-          let buttonTitle = allButtons[i].firstElementChild.innerText;
-          if (buttonTitle === displayedProject.title){
-            allButtons[i].classList.add('active');
+        // activating the correct category button
+        let allCategoryButtons = document.querySelectorAll('.category-button');
+        for (let i = 0; i < allCategoryButtons.length; i++) {
+          let buttonTitle = allCategoryButtons[i].firstElementChild.innerText;
+          if (buttonTitle === displayedProject.category) {
+            allCategoryButtons[i].classList.add('active');
+          }
+        }
+        // activating the correct project list
+        let allProjectList = document.querySelectorAll('.project-list');
+        for (let i = 0; i < allProjectList.length; i++) {
+          let categoryButtonText = allProjectList[i].previousSibling.innerText;
+          if (categoryButtonText === displayedProject.category){
+            allProjectList[i].classList.add('active');
+          }
+        }
+        // activating the correct project button
+        let allProjectButtons = document.querySelectorAll('.project-button');
+        for (let i = 0; i < allProjectButtons.length; i++) {
+          let buttonTitle = allProjectButtons[i].firstElementChild.innerText;
+          if (buttonTitle === displayedProject.title) {
+            allProjectButtons[i].classList.add('active');
           }
         }
 
@@ -299,6 +317,51 @@ window.onload = (event) => {
           });
         }
 
+        // category buttons interaction
+        document.querySelectorAll('.category-button').forEach(button => {
+          button.addEventListener('click', function() {
+            // Remove Keywords and tools
+            document.querySelectorAll('.keyword').forEach(keyword => keyword.remove());
+            document.querySelectorAll('.tool').forEach(tool => tool.remove());
+
+            // Remove Documentation buttons
+            document.querySelectorAll('.doc-button').forEach(keyword => keyword.remove());
+
+            // Remove Description
+            let description = document.getElementById("description");
+            Array.from(description.children).forEach(paragraph => paragraph.remove());
+
+            // Remove and add 'active' class from all buttons and project lists
+            document.querySelectorAll('.category-button').forEach(btn => btn.classList.remove('active'));
+            document.querySelectorAll('.project-button').forEach(btn => btn.classList.remove('active'));
+            document.querySelectorAll('.project-list').forEach(btn => btn.classList.remove('active'));
+            this.classList.add('active');
+            let activeList = this.nextSibling;
+            activeList.classList.add('active');
+            let activeProjectButton = activeList.firstElementChild;
+            activeProjectButton.classList.add('active');
+
+            // check which project needs to be displayed
+            let activeProjectTitle = activeProjectButton.firstElementChild.innerText;
+            for (let p = 0; p < projectButtons.length; p++) {
+              if (activeProjectTitle === projectButtons[p].title) {
+                displayedProject = projects[p];
+                // reset gallery buttons click counts
+                currentImgIndex = 0;
+                imgCount = displayedProject.gallery.length;
+                
+                // update page content according to displayed project
+                updateContent(displayedProject, lgGallery);
+                
+                // update project id
+                lastProjectID = p;
+                // update buttons urls
+                lgButtonUrl(lastProjectID);
+                aboutButtonsUrl(lastProjectID);
+              }
+            }
+          });  
+        });
         // project buttons interaction
         document.querySelectorAll('.project-button').forEach(button => {
           button.addEventListener('click', function() {
@@ -499,7 +562,7 @@ function updateContent (displayedProject, language) {
   if (language === 'fr'){
     document.getElementById("tools-box").children[0].innerText = "Outils:";
     document.getElementById("keywords-box").children[0].innerText = "Mots clés:";
-    document.getElementById("finished-projects-title").innerText = "Complétés";
+    // document.getElementById("finished-projects-title").innerText = "Complétés";
     // document.getElementById("wip-projects-title").innerText = "En Cours";
   } else {
     document.getElementById("tools-box").children[0].innerText = "Tools:";

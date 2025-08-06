@@ -136,7 +136,7 @@
                 "Video Game",
                 "Interactivity"
             ],
-            "category": "2D Interactive",
+            "category": "WIPs",
             "isDone": "False",
             "gallery": [
                 {
@@ -174,7 +174,6 @@
                 }                  
             ]
         },
-
         
         {
             "title": "Deconstructed Vision",
@@ -183,7 +182,7 @@
                 "Creative Coding",
                 "Interactivity"
             ],
-            "category": "Installation",
+            "category": "WIPs",
             "isDone": "False",
             "gallery": [
                 {
@@ -657,8 +656,6 @@
 
         
 
-
-
         {
             "title": "",
             "year": "",
@@ -700,7 +697,8 @@
         "Installation",
         "Video & Animation",
         "2D Interactive",
-        "Design"
+        "Design",
+        "WIPs"
     ],
 
     "interests": [

@@ -138,7 +138,7 @@
                 "Video Game",
                 "Interactivity"
             ],
-            "category": "2D interactif",
+            "category": "En Cours",
             "isDone": "False",
             "gallery": [
                 {
@@ -182,7 +182,7 @@
                 "Creative Coding",
                 "Interactivity"
             ],
-            "category": "Installation",
+            "category": "En Cours",
             "isDone": "False",
             "gallery": [
                 {
@@ -227,7 +227,7 @@
                 "Creative Coding",
                 "Interactivity"
             ],
-            "category": "2D interactif",
+            "category": "2D Interactif",
             "isDone": "True",
             "gallery": [
                 {
@@ -385,7 +385,7 @@
                 "Video Game",
                 "Creative Coding"
             ],
-            "category": "2D interactif",
+            "category": "2D Interactif",
             "isDone": "True",
             "gallery": [
                 {
@@ -434,7 +434,7 @@
             "title": "bodymod",
             "year": 2021,
             "filters": "Interactive",
-            "category": "2D interactif",
+            "category": "2D Interactif",
             "isDone": "True",
             "gallery": [
                 {
@@ -487,7 +487,7 @@
                 "Video Game",
                 "Interactivity"
             ],
-            "category": "2D interactif",
+            "category": "2D Interactif",
             "isDone": "True",
             "gallery": [
                 {
@@ -687,7 +687,8 @@
         "Installation",
         "Vidéo & Animation",
         "2D Interactif",
-        "Design"
+        "Design",
+        "En Cours"
     ],
 
     "interests": [
