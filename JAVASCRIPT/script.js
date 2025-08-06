@@ -64,7 +64,7 @@ window.onload = (event) => {
       break;  
         
       case "about":
-
+        
         // get language from url
         let lg = urlSearch("lg", "en");
 
@@ -594,4 +594,15 @@ function updateContent (displayedProject, language) {
   galleryElement.src = displayedProject.gallery[0].dir;
   let captionElement = document.getElementById("caption");
   captionElement.innerText = displayedProject.gallery[0].caption;
+}
+
+function copyEmail() {
+  // Get the text field
+  let email = "hd.maxi.tattoo@gmail.com"
+
+  // Copy the text inside the text field
+  navigator.clipboard.writeText(email);
+
+  // Alert the copied text
+  alert("Copied: " + email);
 }

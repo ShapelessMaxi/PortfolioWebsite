@@ -144,6 +144,7 @@ html, body {
 #navbar > #socials > a > #youtube:hover,
 #navbar > #socials > a > #mail:hover {
   animation: scale-bounce 2s ease-in-out infinite;
+  cursor: pointer;
 }
 
 #navbar > #portfolio-button {
