@@ -303,8 +303,9 @@ window.onload = (event) => {
           let langButton = document.getElementById("language");
           langButton.addEventListener("click", (event) => {
             if (lgGallery === 'en'){
+              console.log(lgGallery)
               lgGallery = 'fr';
-            } else {
+            } else if (lgGallery === 'fr'){
               lgGallery = 'en';
             };
             langButton.href = urlBuilder("gallery", lgGallery, null, lastProjectID); 
