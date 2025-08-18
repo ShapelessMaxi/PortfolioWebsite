@@ -1,6 +1,86 @@
 {
     "projects": [
 
+         {
+            "title": "Odo's Mechanical Eye",
+            "year": 2025,
+            "filters": [
+                "3D Animation",
+                "Creative Coding"
+            ],
+            "category": "Installation",
+            "isDone": "True",
+            "gallery": [
+                {
+                    "dir": "project_data\\OdosMechanicalEye\\OdosMechEye_vision_spheres.webp",
+                    "caption": "Installation Murale, Procédé de vision 1."
+                },
+                {
+                    "dir": "project_data\\OdosMechanicalEye\\OdosMechEye_fullvert.webp",
+                    "caption": "Installation Complète, Procédé de vision 3."
+                },
+                {
+                    "dir": "project_data\\OdosMechanicalEye\\OdosMechEye_robot_open.webp",
+                    "caption": "Gros plan sur l'Oeil Mécanique ouvert."
+                },
+                {
+                    "dir": "project_data\\OdosMechanicalEye\\OdosMechEye_robot_close.webp",
+                    "caption": "Gros plan sur l'Oeil Mécanique fermé."
+                },
+                {
+                    "dir": "project_data\\OdosMechanicalEye\\OdosMechEye_spark.webp",
+                    "caption": "Procédé de vision 1."
+                },
+                {
+                    "dir": "project_data\\OdosMechanicalEye\\OdosMechEye_vision_squares01.webp",
+                    "caption": "Procédé de vision 2."
+                },
+                {
+                    "dir": "project_data\\OdosMechanicalEye\\OdosMechEye_laptop.webp",
+                    "caption": "Déroulement des scripts faisant fonctionner l'expérience."
+                },
+                {
+                    "dir": "project_data\\OdosMechanicalEye\\OdosMechEye_vision_data.webp",
+                    "caption": "Procédé de vision 3."
+                },
+                {
+                    "dir": "project_data\\OdosMechanicalEye\\OdosMechEye_vision_squares02.webp",
+                    "caption": "Procédé de vision 2."
+                }
+                ,
+                {
+                    "dir": "project_data\\OdosMechanicalEye\\OdosMechanicalEye_Tech.webp",
+                    "caption": "Schéma d'installation technique et list des composantes."
+                }
+            ],
+            "keywords": [
+                "Vision par Ordinateur;",
+                "Personnification;",
+                "Perception;",
+                "Robotique"
+            ],
+            "description": [
+                ""
+            ],
+            "tools": [
+                "Nomad Sculpt;",
+                "Blender3d;",
+                "DaViici Resolve;",
+                "TouchDesigner;",
+                "Python;"
+            ],
+            "documentation": [
+                {
+                    "tag": "Démo Physique",
+                    "link": "https://youtu.be/FXzSeMvo9Ek"
+                },
+                {
+                    "tag": "Démo Digitale",
+                    "link": "https://youtu.be/_Q_4nZnYkhE"
+                }                    
+            ]
+        },
+        
         {
             "title": "In Training",
             "year": 2024,
@@ -175,51 +255,6 @@
             ]
         },
 
-        {
-            "title": "Deconstructed Vision",
-            "year": "2024",
-            "filters": [
-                "Creative Coding",
-                "Interactivity"
-            ],
-            "category": "En Cours",
-            "isDone": "False",
-            "gallery": [
-                {
-                    "dir": "project_data\\DeconstructedVision\\DeconstructedVision_Proto01.webp",
-                    "caption": "Prototype 01, Analyze TOPs et legos"
-                },
-                {
-                    "dir": "project_data\\DeconstructedVision\\DeconstructedVision_Proto02.webp",
-                    "caption": "Prototype 02, Script Python, Regard sur un object physique"
-                },
-                {
-                    "dir": "project_data\\DeconstructedVision\\DeconstructedVision_physicalproto4.webp",
-                    "caption": "Prototype 02, Test d'installation"
-                }
-            ],
-            "keywords": [
-                "Vision par Ordinateur;",
-                "Personnification;",
-                "Perception;"
-            ],
-            "description": [
-                "Ce projet explore la Vision par Ordinateur (Computer Vision) « low-tech » par le biais d'un simple script écrit en Python. En utilisant la bibliothèque NumPy et une webcam, il permet à l'ordinateur d'interpréter les données visuelles d'une manière plus humaine. Au lieu de traiter des milliers de pixels individuels et de valeurs RGB, le script simplifie les données de l'image, le résultat étant de plus grandes surfaces de pixels ainsi que leur couleur médianne. Celles-ci sont ensuite comparées à une petite base de données afin d'identifier la couleur la plus proche.",
-                "Plus d'information dans le journal associé."
-            ],
-            "tools": [
-                "Python;",
-                "TouchDesigner;",
-                "OBS Studio;"
-            ],
-            "documentation": [
-                {
-                    "tag": "Journal",
-                    "link": "project_data\\LookAgain\\log.txt"
-                }                    
-            ]
-        },
-        
         {
             "title": "To Dissect / To Stitch",
             "year": "2023",
@@ -683,10 +718,10 @@
     ],
 
     "categories": [
-        "Illustration",
         "Installation",
         "Vidéo & Animation",
         "2D Interactif",
+        "Illustration",
         "Design",
         "En Cours"
     ],
