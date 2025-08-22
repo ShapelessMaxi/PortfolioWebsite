@@ -1,7 +1,7 @@
 {
     "projects": [
         
-       {
+        {
             "title": "Odo's Mechanical Eye",
             "year": 2025,
             "filters": [
@@ -82,7 +82,139 @@
                 }                    
             ]
         },
-        
+
+        {
+            "title": "Saturday Sunsets",
+            "year": 2025,
+            "filters": [
+                "Pixel Art"
+            ],
+            "category": "Illustration",
+            "isDone": "True",
+            "gallery": [
+                {
+                    "dir": "project_data\\SaturdaySunsets\\SaturdaySunsets_01_rs.webp",
+                    "caption": "Digital illustration."
+                },
+                {
+                    "dir": "project_data\\SaturdaySunsets\\SaturdaySunsets_print01.webp",
+                    "caption": "Printed illustration, 11x6\"."
+                },
+                {
+                    "dir": "project_data\\SaturdaySunsets\\SaturdaySunsets_print02.webp",
+                    "caption": "Printed illustration, 11x6\"."
+                },
+                {
+                    "dir": "project_data\\SaturdaySunsets\\SaturdaySunsets_print03.webp",
+                    "caption": "Printed illustration detail."
+                },
+            ],
+            "keywords": [
+                "Pixel Art;",
+                "Print Media;"
+            ],
+            "description": [
+                "Illustration made with not too much meaning *EDIT*."
+            ],
+            "tools": [
+                "Pixaki;",
+                "Adobe Illustrator;"
+            ],
+            "documentation": [
+                {
+                    
+                }                    
+            ]
+        },
+
+        {
+            "title": "All Good.",
+            "year": 2025,
+            "filters": [
+                "Pixel Art"
+            ],
+            "category": "Illustration",
+            "isDone": "True",
+            "gallery": [
+                {
+                    "dir": "project_data\\AllGood\\AllGood_01_rs.webp",
+                    "caption": "Digital illustration."
+                },
+                {
+                    "dir": "project_data\\AllGood\\AllGood_print01.webp",
+                    "caption": "Printed illustration, 4x6\"."
+                },
+                {
+                    "dir": "project_data\\AllGood\\AllGood_print02.webp",
+                    "caption": "Printed illustration, 4x6\"."
+                },
+                {
+                    "dir": "project_data\\AllGood\\AllGood_print03.webp",
+                    "caption": "Printed illustration detail."
+                },
+            ],
+            "keywords": [
+                "Pixel Art;",
+                "Print Media;"
+            ],
+            "description": [
+                "Illustration made with not too much meaning *EDIT*."
+            ],
+            "tools": [
+                "Pixaki;",
+                "Adobe Illustrator;"
+            ],
+            "documentation": [
+                {
+                    
+                }                    
+            ]
+        },
+
+        {
+            "title": "sad fish dinner",
+            "year": 2025,
+            "filters": [
+                "Pixel Art"
+            ],
+            "category": "Illustration",
+            "isDone": "True",
+            "gallery": [
+                {
+                    "dir": "project_data\\sadfishdinner\\SadFishDinner_01_rs.webp",
+                    "caption": "Digital illustration."
+                },
+                {
+                    "dir": "project_data\\sadfishdinner\\SadFishDinner_print01.webp",
+                    "caption": "Printed illustration, 4x6\"."
+                },
+                {
+                    "dir": "project_data\\sadfishdinner\\SadFishDinner_print02.webp",
+                    "caption": "Printed illustration, 4x6\"."
+                },
+                {
+                    "dir": "project_data\\sadfishdinner\\SadFishDinner_print03.webp",
+                    "caption": "Printed illustration detail."
+                },
+            ],
+            "keywords": [
+                "Pixel Art;",
+                "Print Media;"
+            ],
+            "description": [
+                "Illustration made with not too much meaning *EDIT*."
+            ],
+            "tools": [
+                "Pixaki;",
+                "Adobe Illustrator;"
+            ],
+            "documentation": [
+                {
+                    
+                }                    
+            ]
+        },
+
         {
             "title": "In Training",
             "year": 2024,
