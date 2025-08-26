@@ -117,8 +117,19 @@ window.onload = (event) => {
           interestCards.push(currentCard);
         }
 
+        // Add click event to menu button
+        let navbar = document.getElementById("navbar")
+        document.getElementById("menu-button").addEventListener("click", (event) => {
+          if (navbar.classList.contains('active')) {
+            navbar.classList.remove('active');  
+          } else {
+            navbar.classList.add('active');
+          }
+          });
+
         // Dropdown buttons interaction, reveal textboxes
         let aboutCards = Array.from(document.getElementsByClassName('about-card'));
+        let aboutCover = document.getElementById("content-cover");
       
         // Add click event to all about-cards
         aboutCards.forEach((card) => {
@@ -129,6 +140,7 @@ window.onload = (event) => {
                       c.classList.remove('active');
                       c.children[0].classList.remove('active'); // Title
                       c.children[1].classList.remove('active'); // Paragraph
+                      aboutCover.classList.remove('active'); // cover
                   });
               } else {
                   // Otherwise, deactivate all and activate the clicked card
@@ -136,11 +148,13 @@ window.onload = (event) => {
                       c.classList.remove('active');
                       c.children[0].classList.remove('active'); // Title
                       c.children[1].classList.remove('active'); // Paragraph
+                      aboutCover.classList.remove('active'); // cover
                   });
 
                   card.classList.add('active');
                   card.children[0].classList.add('active'); // Title
                   card.children[1].classList.add('active'); // Paragraph
+                  aboutCover.classList.add('active'); // cover
               }
           });
         });
@@ -193,6 +207,42 @@ window.onload = (event) => {
             lg = 'en';
           };
           document.getElementById("language").href = urlBuilder("index", lg, null, lastProject); 
+        });
+
+        // remove active class from navbar (static rather than opening menu, like before the mobile version)
+        function navbarAdjust(x) {
+          if (x.matches) { // If media query matches
+            navbar.classList.remove('active');  
+          }
+        }
+        // Create a MediaQueryList object
+        var x = window.matchMedia("(min-width: 769px)")
+        // Call listener function at run time
+        navbarAdjust(x);
+        // Attach listener function on state changes
+        x.addEventListener("change", function() {
+          navbarAdjust(x);
+        });
+
+        // remove active class from content-cover (content showing, like before the mobile version)
+        function coverAdjust(x) {
+          if (x.matches) { // If media query matches
+            aboutCover.classList.remove('active');  
+          } else {
+            aboutCards.forEach((card) => {
+              if (card.classList.contains('active')) {
+                aboutCover.classList.add('active'); // cover
+              }
+            });
+          };
+        }
+        // Create a MediaQueryList object
+        var y = window.matchMedia("(min-width: 1019px)")
+        // Call listener function at run time
+        coverAdjust(y);
+        // Attach listener function on state changes
+        x.addEventListener("change", function() {
+          coverAdjust(y);
         });
 
         break;
