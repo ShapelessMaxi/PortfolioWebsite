@@ -52,6 +52,14 @@ html, body {
   height: 100vh;
 }
 
+/* footer */
+#footer {
+  display: grid;
+  grid-column: 1 / -1;
+  grid-row: -3 / -1;
+  background-color: var(--grey-black);
+}
+
 /* header */
 #header {
   display: grid;
@@ -272,7 +280,7 @@ html, body {
 #content {
   display: grid;  
   grid-column: 1 / -1;
-  grid-row: 4 / 26;
+  grid-row: 3 / -3;
   grid-template-columns: repeat(18, minmax(0, 1fr));
   grid-template-rows: repeat(calc(var(--page-rows) - 2), minmax(0, 1fr));
   background-image: linear-gradient(var(--grey-white), white 200%);
@@ -584,7 +592,15 @@ html, body {
 
 /* tablet */
 @media all and (min-width: 769px) {
+  /* footer */
+  #footer {
+    display: none;
+  }
 
+  /* content */
+  #content {
+    grid-row: 3 / -1;
+  }
   
 }
 

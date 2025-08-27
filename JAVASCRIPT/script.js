@@ -27,7 +27,6 @@ window.onload = (event) => {
     return url;
   }
 
-
   // Find which language was selected, then change the JSON file path
   let dataFile
   let urlParameters = new URLSearchParams(window.location.search);
@@ -118,14 +117,26 @@ window.onload = (event) => {
         }
 
         // Add click event to menu button
-        let navbar = document.getElementById("navbar")
+        let navbar = document.getElementById("navbar");
+        let socials = document.getElementById("socials");
+        let bunny = document.getElementById("logo");
+        let languageBox = document.getElementById("menu-language-box");
+        let menuButton = document.getElementById("menu-button");
         document.getElementById("menu-button").addEventListener("click", (event) => {
           if (navbar.classList.contains('active')) {
-            navbar.classList.remove('active');  
+            navbar.classList.remove('active');
+            socials.classList.remove('active');
+            bunny.classList.remove('active');
+            languageBox.classList.remove('active');
+            menuButton.classList.remove('active');
           } else {
             navbar.classList.add('active');
-          }
-          });
+            socials.classList.add('active');
+            bunny.classList.add('active');
+            languageBox.classList.add('active');
+            menuButton.classList.add('active');
+          }           
+        });
 
         // Dropdown buttons interaction, reveal textboxes
         let aboutCards = Array.from(document.getElementsByClassName('about-card'));
@@ -212,7 +223,11 @@ window.onload = (event) => {
         // remove active class from navbar (static rather than opening menu, like before the mobile version)
         function navbarAdjust(x) {
           if (x.matches) { // If media query matches
-            navbar.classList.remove('active');  
+            navbar.classList.remove('active');
+            socials.classList.remove('active');
+            bunny.classList.remove('active');
+            languageBox.classList.remove('active');
+            menuButton.classList.remove('active');
           }
         }
         // Create a MediaQueryList object
@@ -646,7 +661,7 @@ function updateContent (displayedProject, language) {
   let captionElement = document.getElementById("caption");
   captionElement.innerText = displayedProject.gallery[0].caption;
 }
-
+// email button
 function copyEmail() {
   // Get the text field
   let email = "hd.maxi.tattoo@gmail.com"

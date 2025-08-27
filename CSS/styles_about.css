@@ -71,8 +71,9 @@ html, body {
 }
 #header > #name-box {
   grid-column: 2 / -4;
-  grid-row: 2 / 4;
+  grid-row: 1 / -1;
   padding-bottom: 0.5rem;
+  padding-top: 1rem;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -87,21 +88,36 @@ html, body {
   font-size: 1.1rem;
 }
 #header > #menu-button {
-  display: grid;
+  grid-column: 26 / -4;
   grid-row: 1 / -1;
-  grid-column: -6 / -2;
   width: 100%;
-  padding-bottom: 0.5rem;
+  display: flex;
+  flex-direction: row-reverse;
   justify-content: center;
-  align-items: flex-end;
+  align-items: center;
+  font-family: var(--body-font);
+  font-size: 1rem;
+  color: black;
+  text-decoration: none;
+  border: 1px solid var(--grey-black);
+  border-radius: var(--button-corners);
+  padding: 0.25rem 0.5rem;
+  margin: 1rem 0.5rem 1rem 0.5rem;
+
+}
+#header > #menu-button:hover {
+  cursor: pointer;
+  color: var(--pink);
+  border: 1px solid var(--pink);
+}
+#header > #menu-button.active {
+  color: var(--pink);
+  border: 1px solid var(--pink);
 }
 #header > #language-box {
   display: none;
-  grid-row: 2 / 4;
-  grid-column: -6 / -1;
-  width: 80%;
+  width: 80%; 
   padding-bottom: 0.5rem;
-  /* display: flex; */
   justify-content: center;
   align-items: flex-end;
 }
@@ -121,6 +137,34 @@ html, body {
   color: var(--pink);
   border: 1px solid var(--pink);
 }
+#navbar > #menu-language-box {
+  display: none;
+  width: 80%; 
+  padding-bottom: 0.5rem;
+  justify-content: center;
+  align-items: flex-end;
+  margin-bottom: 5rem;
+}
+#navbar > #menu-language-box.active {
+  display: flex;
+}
+#navbar > #menu-language-box > #language {
+  display: flex;    
+  flex-direction: row;
+  font-family: var(--body-font);
+  font-size: 1rem;
+  color: black;
+  text-decoration: none;
+  padding: 0.25rem 0.5rem;
+  border: 1px solid var(--grey-black);
+  border-radius: var(--button-corners);
+}
+#navbar > #menu-language-box > #language:hover {
+  cursor: pointer;
+  color: var(--pink);
+  border: 1px solid var(--pink);
+}
+
 
 /* navbar */
 #navbar {
@@ -143,12 +187,15 @@ html, body {
     align-items: center;
 }
 #navbar > #logo {
-  display: block;
+  display: none;
   z-index: 1;
   grid-column: 7;
   grid-row: 12;
   height: 6rem;
   margin-top: 2rem;
+}
+#navbar > #logo.active {
+  display: flex;
 }
 #navbar > #logo:hover{
   animation: scale-bounce 2s ease-in-out infinite;
@@ -156,20 +203,22 @@ html, body {
 #navbar > #socials {
   grid-column: -4;
   grid-row: 14;
-  display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   height: fit-content;
-  margin-bottom: 20rem;
+  display: none;
 }
-#navbar > #socials > a {
-  display: contents;
+#navbar > #socials.active {
+  display: flex;
 }
 #navbar > #socials > a > #insta, #youtube, #mail {
   padding: 0 0.5rem;
   width: 4rem;
   height: auto;
+}
+#navbar > #socials > a {
+  display: contents;
 }
 #navbar > #socials > a > #insta:hover,
 #navbar > #socials > a > #youtube:hover,
@@ -485,12 +534,17 @@ html, body {
     grid-column: 9 / -2;
     grid-row: 3;
     flex-direction: row;
+    padding-top: 0;
   }
   #header > #language-box {
     display: flex;
     grid-row: 3;
     grid-column: 1 / 5;
-  }
+    width: 80%;
+    padding-bottom: 0.5rem;
+    justify-content: center;
+    align-items: flex-end;
+    }
   #header > #language-box > #language {
     font-size: 1.1rem;
   }
@@ -537,6 +591,7 @@ html, body {
   #navbar > #portfolio-button > p {
     font-size: 1.5rem;
   }
+  
 
   /* content */
   #content {
