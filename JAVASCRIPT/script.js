@@ -571,24 +571,65 @@ function createDocButtons (displayedProject) {
   if (displayedProject.documentation[0].tag === "") {
     // do not create a button
   } else {
-      for (let d = 0; d < displayedProject.documentation.length; d++) {
+    let docBox = document.getElementById("doc-button-box");
+    let mobileDocBox = document.getElementById("mobile-doc-button-box");
+    
+    for (let d = 0; d < displayedProject.documentation.length; d++) {
       let currentDocButton = document.createElement("div");
       currentDocButton.classList.add('doc-button');
       currentDocButton.setAttribute("target", "_blank");
       currentDocButton.setAttribute("href", "");
-      document.getElementById("doc-button-box").appendChild(currentDocButton);
+      docBox.appendChild(currentDocButton);
 
+      let currentMobileDocButton = document.createElement("div");
+      currentMobileDocButton.classList.add('doc-button');
+      currentMobileDocButton.setAttribute("target", "_blank");
+      currentMobileDocButton.setAttribute("href", "");
+      mobileDocBox.appendChild(currentMobileDocButton);    
+      
       let currentButtonText = document.createElement("span");
       currentButtonText.classList.add('doc-button-text');
       currentButtonText.innerText = displayedProject.documentation[d].tag;
       currentDocButton.appendChild(currentButtonText);
+      
+      let currentMobileButtonText = document.createElement("span");
+      currentMobileButtonText.classList.add('mobile-doc-button-text');
+      currentMobileButtonText.innerText = displayedProject.documentation[d].tag;
+      currentMobileDocButton.appendChild(currentMobileButtonText);
 
       let extArrowImg = document.createElement("img");
       extArrowImg.classList.add('ext-arrow-icon');
       extArrowImg.src = "\assets\\arrow_ext_h.png";
       currentDocButton.appendChild(extArrowImg);
+
+      let mobileExtArrowImg = document.createElement("img");
+      mobileExtArrowImg.classList.add('ext-arrow-icon');
+      mobileExtArrowImg.src = "\assets\\arrow_ext_h.png";
+      currentMobileDocButton.appendChild(mobileExtArrowImg);
       
       currentDocButton.addEventListener("click", function(event) {
+        // dimensions based on screen size
+        let logWidth = Math.round(screen.width * 0.4);
+        let logLeft = Math.round(screen.width * 0.1);
+        let docWidth = Math.round(screen.width * 0.6);
+        let docLeft = Math.round(screen.width * 0.333);
+        let extHeight = Math.round(screen.height * 0.666);
+        let extTop = Math.round(screen.height * 0.2);
+
+        // Check if the tag is "Log" or not
+        if (displayedProject.documentation[d].tag === "Log" || displayedProject.documentation[d].tag === "Journal") {
+          // Open the log page
+          let logFilePath = displayedProject.documentation[d].link;
+          let options = `width=${logWidth},height=${extHeight},left=${logLeft},top=${extTop},scrollbars=yes,resizable=yes`;
+          window.open(`log.html?log=${encodeURIComponent(logFilePath)}`, "log", options);
+        } else {
+          // Open the external docs
+          let options = `width=${docWidth},height=${extHeight},left=${docLeft},top=${extTop},scrollbars=yes,resizable=yes`;
+          window.open(displayedProject.documentation[d].link, "doc", options);
+        }
+      });
+
+      currentMobileDocButton.addEventListener("click", function(event) {
         // dimensions based on screen size
         let logWidth = Math.round(screen.width * 0.4);
         let logLeft = Math.round(screen.width * 0.1);
@@ -613,43 +654,60 @@ function createDocButtons (displayedProject) {
   }
 }
 function updateContent (displayedProject, language) {
-
-  // Extra doc buttons
-  createDocButtons(displayedProject);
-  
-  // description
-  for (let i = 0; i < displayedProject.description.length; i++){
-    let paragraph = document.createElement("p");
-    paragraph.innerText = displayedProject.description[i];
-    document.getElementById("description").appendChild(paragraph);
-  }
-
+  let toolbox = document.getElementById("tools-box");
+  let mobileToolbox = document.getElementById("mobile-tools-box");
+  let keywordsBox = document.getElementById("keywords-box");
+  let mobileKeywordsBox = document.getElementById("mobile-keywords-box");
   // tools
   if (language === 'fr'){
-    document.getElementById("tools-box").children[0].innerText = "Outils:";
-    document.getElementById("keywords-box").children[0].innerText = "Mots clés:";
-    // document.getElementById("finished-projects-title").innerText = "Complétés";
-    // document.getElementById("wip-projects-title").innerText = "En Cours";
+    toolbox.children[0].innerText = "Outils:";
+    mobileToolbox.children[0].innerText = "Outils:";
+    keywordsBox.children[0].innerText = "Mots clés:";
+    mobileKeywordsBox.children[0].innerText = "Mots clés:";
   } else {
-    document.getElementById("tools-box").children[0].innerText = "Tools:";
-    document.getElementById("keywords-box").children[0].innerText = "Keywords:";
-    // document.getElementById("finished-projects-title").innerText = "Finished";
-    // document.getElementById("wip-projects-title").innerText = "WIP";
-
+    toolbox.children[0].innerText = "Tools:";
+    mobileToolbox.children[0].innerText = "Tools:";
+    keywordsBox.children[0].innerText = "Keywords:";
+    mobileKeywordsBox.children[0].innerText = "Keywords:";
   }
   for (let t = 0; t < displayedProject.tools.length; t++) {
     let currentTool = document.createElement("span");
     currentTool.classList.add("tool");
     currentTool.innerText = displayedProject.tools[t];
-    document.getElementById("tools-box").appendChild(currentTool);
+    toolbox.appendChild(currentTool);
+
+    let mobileCurrentTool = document.createElement("span");
+    mobileCurrentTool.classList.add("tool");
+    mobileCurrentTool.innerText = displayedProject.tools[t];
+    mobileToolbox.appendChild(mobileCurrentTool);
   }
   // keywords
   for (let k = 0; k < displayedProject.keywords.length; k++) {
     let currentKeyword = document.createElement("span");
     currentKeyword.classList.add("keyword");
     currentKeyword.innerText = displayedProject.keywords[k];
-    document.getElementById("keywords-box").appendChild(currentKeyword);
+    keywordsBox.appendChild(currentKeyword);
+
+    let mobileCurrentKeyword = document.createElement("span");
+    mobileCurrentKeyword.classList.add("keyword");
+    mobileCurrentKeyword.innerText = displayedProject.keywords[k];
+    mobileKeywordsBox.appendChild(mobileCurrentKeyword);
   }
+
+  // description
+  let descriptionBox = document.getElementById("description");
+  let mobileDescriptionBox = document.getElementById("mobile-description-box");
+  for (let i = 0; i < displayedProject.description.length; i++) {
+    let paragraph = document.createElement("p");
+    paragraph.innerText = displayedProject.description[i];
+    descriptionBox.appendChild(paragraph);
+    let mobileParagraph = document.createElement("p");
+    mobileParagraph.innerText = displayedProject.description[i];
+    mobileDescriptionBox.appendChild(mobileParagraph);
+  }
+
+  // Extra doc buttons
+  createDocButtons(displayedProject);
 
   // title and year
   document.getElementById("title").innerText = displayedProject.title;
