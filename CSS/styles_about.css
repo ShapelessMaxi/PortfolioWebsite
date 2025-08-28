@@ -54,15 +54,22 @@ html, body {
 
 /* footer */
 #footer {
-  display: grid;
+  display: flex;
+  flex-direction: row-reverse;
   grid-column: 1 / -1;
-  grid-row: 23 / -1;
+  grid-row: -3 / -1;
   background-color: var(--grey-black);
+}
+#footer > #foot-logo > img {
+  height: 80%;
+  padding-right: 0.25rem;
+  padding-top: 0.25rem;
 }
 
 /* header */
 #header {
   display: grid;
+  align-items: end;
   grid-template-columns: repeat(32, minmax(0, 1fr));
   grid-template-rows: repeat(3, minmax(0, 1fr));
   grid-column: 1 / -1;
@@ -70,27 +77,34 @@ html, body {
   background-image: linear-gradient(var(--green), var(--green-shadow) 200%);
 }
 #header > #name-box {
-  grid-column: 2 / -4;
-  grid-row: 1 / -1;
-  padding-bottom: 0.5rem;
-  padding-top: 1rem;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  flex-direction: column;
+  grid-column: 2 / -8;
+    grid-row: 2 / 4;
+    padding-bottom: 0.5rem;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    flex-direction: column;
+}
+#header > #name-box > #name,
+#header > #name-box > #alias {
+  color: black;
+  text-decoration: none;
+  border-radius: var(--button-corners);
 }
 #header > #name-box > #name {
   font-family: var(--body-font);
-  font-size: 1rem;
+  font-size: 0.9rem;
 }
+
 #header > #name-box > #alias {
   font-family: var(--display-font);
-  font-size: 1.1rem;
+  font-size: 0.95rem;
 }
 #header > #menu-button {
   grid-column: 26 / -4;
-  grid-row: 1 / -1;
+  grid-row: 2 / -1;
   width: 100%;
+  height: 50%;
   display: flex;
   flex-direction: row-reverse;
   justify-content: center;
@@ -102,8 +116,7 @@ html, body {
   border: 1px solid var(--grey-black);
   border-radius: var(--button-corners);
   padding: 0.25rem 0.5rem;
-  margin: 1rem 0.5rem 1rem 0.5rem;
-
+  margin: 1rem 0.5rem 0.5rem 0.5rem;
 }
 #header > #menu-button:hover {
   cursor: pointer;
@@ -211,6 +224,7 @@ html, body {
 }
 #navbar > #socials.active {
   display: flex;
+  padding-top: 3rem;
 }
 #navbar > #socials > a > #insta, #youtube, #mail {
   padding: 0 0.5rem;
@@ -242,7 +256,7 @@ html, body {
   padding: 0.25rem 0.5rem;
   border-radius: var(--button-corners);
   overflow: clip;
-  margin-bottom: -8rem;
+  margin-top: 2rem;
 }
 #navbar > #portfolio-button > #portfolio-star {
   height: auto;
@@ -267,6 +281,7 @@ html, body {
 
 /* content */
 #content {
+  min-height: 0;
   display: grid;
   grid-column: 1 / -1;
   grid-row: 3 / -3;
@@ -286,14 +301,17 @@ html, body {
 }
 /* content: bio and statement */
 #content > #text-box {
+  min-height: 0;
   grid-column: 2 / -2;
-  grid-row: 2/-2;
+  grid-row: 2/-3;
   z-index: 2;
   pointer-events: none;
 }
 #content > #text-box > .inner-wrapper {
+  flex: 1;
+  min-height: 0;
   width: 100%;
-  max-height: 40%;
+  max-height: 100%;
   pointer-events: auto;
   display: flex;
   column-gap: 1rem;
@@ -301,6 +319,8 @@ html, body {
   background: var(--grey-white);
 }
 #content > #text-box > .inner-wrapper > .about-card {
+  flex: 1;
+  min-height: 0;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -320,6 +340,7 @@ html, body {
   border: 1px solid var(--grey-black);
   border-radius: var(--button-corners );
   cursor: pointer;
+  z-index: 1;
 }
 #content > #text-box > .inner-wrapper > .about-card > .titles:hover {
   color: var(--pink);
@@ -328,25 +349,29 @@ html, body {
 }
 #content > #text-box > .inner-wrapper > .about-card > .titles.active {
   margin-bottom: 1rem;
+  margin-top: 1rem;
   color: var(--pink);
   border: 1px solid var(--pink);
   border-radius: var(--button-corners);
 }
 #content > #text-box > .inner-wrapper > .about-card > .paragraphs {
-  display: none;
-  height: auto;
+  display: none;  
+  flex: 1;
+  min-height: 0; 
+  background-color: var(--grey-white);  
   background-image: linear-gradient(rgba(255, 255, 255, 0) 90%, var(--pink) 150%);
   columns: 1;
   margin-bottom: 1rem;
   font-size: 1rem;
   font-family: var(--body-font);
   line-height: 1.2rem;
-  overflow-y: scroll;
+  margin-bottom: 1rem;
+  overflow-y: auto;
+  padding-right: 1rem;
 }
 #content > #text-box > .inner-wrapper > .about-card > .paragraphs.active {
-  margin-bottom: 1rem;
   display: block;
-  background-color: var(--grey-white);
+  padding-top: 1rem;
 }
 
 /* content: interest cards */

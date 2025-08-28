@@ -337,6 +337,28 @@ window.onload = (event) => {
           );
           projectButtons.push(currentButton);
         }
+        
+        // Add click event to menu button
+        let galleryNavbar = document.getElementById("navbar");
+        let gallerySocials = document.getElementById("socials");
+        let galleryBunny = document.getElementById("logo");
+        // let galleryLanguageBox = document.getElementById("menu-language-box");
+        let galleryMenuButton = document.getElementById("menu-button");
+        document.getElementById("menu-button").addEventListener("click", (event) => {
+          if (galleryNavbar.classList.contains('active')) {
+            galleryNavbar.classList.remove('active');
+            gallerySocials.classList.remove('active');
+            galleryBunny.classList.remove('active');
+            // galleryLanguageBox.classList.remove('active');
+            galleryMenuButton.classList.remove('active');
+          } else {
+            galleryNavbar.classList.add('active');
+            gallerySocials.classList.add('active');
+            galleryBunny.classList.add('active');
+            // galleryLanguageBox.classList.add('active');
+            galleryMenuButton.classList.add('active');
+          }           
+        });
 
         // activating the correct category button
         let allCategoryButtons = document.querySelectorAll('.category-button');
@@ -383,6 +405,25 @@ window.onload = (event) => {
           });
         }
 
+        // remove active class from navbar (static rather than opening menu, like before the mobile version)
+        function navbarAdjust(x) {
+          if (x.matches) { // If media query matches
+            galleryNavbar.classList.remove('active');
+            gallerySocials.classList.remove('active');
+            galleryBunny.classList.remove('active');
+            // galleryLanguageBox.classList.remove('active');
+            galleryMenuButton.classList.remove('active');
+          }
+        }
+        // Create a MediaQueryList object
+        var x = window.matchMedia("(min-width: 1019px)")
+        // Call listener function at run time
+        navbarAdjust(x);
+        // Attach listener function on state changes
+        x.addEventListener("change", function() {
+          navbarAdjust(x);
+        });
+        
         // category buttons interaction
         document.querySelectorAll('.category-button').forEach(button => {
           button.addEventListener('click', function() {
@@ -404,8 +445,17 @@ window.onload = (event) => {
             this.classList.add('active');
             let activeList = this.nextSibling;
             activeList.classList.add('active');
+            // make first project active, but not on mobile version
             let activeProjectButton = activeList.firstElementChild;
-            activeProjectButton.classList.add('active');
+            function activateProject(x) {
+              if (x.matches) { // If media query matches
+                activeProjectButton.classList.add('active');
+              }
+            }
+            // Create a MediaQueryList object
+            var x = window.matchMedia("(min-width: 1019px)")
+            // Call listener function at run time
+            activateProject(x);
 
             // check which project needs to be displayed
             let activeProjectTitle = activeProjectButton.firstElementChild.innerText;
@@ -465,6 +515,14 @@ window.onload = (event) => {
                 aboutButtonsUrl(lastProjectID);
               }
             }
+
+            // Mobile, close menu
+            galleryNavbar.classList.remove('active');
+            gallerySocials.classList.remove('active');
+            galleryBunny.classList.remove('active');
+            // galleryLanguageBox.classList.remove('active');
+            galleryMenuButton.classList.remove('active');
+          
           });  
         });
 
@@ -496,10 +554,31 @@ window.onload = (event) => {
           document.getElementById('lightbox-img').src = displayedProject.gallery[currentImgIndex].dir;
           document.getElementById('lightbox-caption').innerText = displayedProject.gallery[currentImgIndex].caption;
         }
-        // Right 
+        // Right button
         document.getElementById('right-gallery-button').addEventListener('click', () => updateGallery(1));
         // Left button
         document.getElementById('left-gallery-button').addEventListener('click', () => updateGallery(-1));
+
+        // Swipes
+        // create a simple instance
+        let galleryFull = document.getElementById('gallery');
+        let lightboxFull = document.getElementById('img-caption-combo');
+        var swipeGallery = new Hammer(galleryFull);
+        var swipeLightbox = new Hammer(lightboxFull);
+        // Swipe Right
+        swipeGallery.on("swiperight", function(ev) {
+            updateGallery(1);
+        });
+        swipeLightbox.on("swiperight", function(ev) {
+            updateGallery(1);
+        });
+        // Swipe Left
+        swipeGallery.on("swiperight", function(ev) {
+            updateGallery(-1);
+        });
+        swipeLightbox.on("swiperight", function(ev) {
+            updateGallery(-1);
+        });
 
         // Left and Right Keyboard arrows to naviguate gallery images
         document.addEventListener("keydown", (e) => {
