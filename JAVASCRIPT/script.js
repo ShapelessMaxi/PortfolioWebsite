@@ -145,28 +145,31 @@ window.onload = (event) => {
         // Add click event to all about-cards
         aboutCards.forEach((card) => {
           card.addEventListener('click', function () {
+            // Check screen size inside the click
+            if (window.matchMedia("(max-width: 1199px)").matches) {
               // If the clicked card is already active, deactivate all
               if (card.classList.contains('active')) {
-                  aboutCards.forEach((c) => {
-                      c.classList.remove('active');
-                      c.children[0].classList.remove('active'); // Title
-                      c.children[1].classList.remove('active'); // Paragraph
-                      aboutCover.classList.remove('active'); // cover
-                  });
+                aboutCards.forEach((c) => {
+                  c.classList.remove('active');
+                  c.children[0].classList.remove('active'); 
+                  c.children[1].classList.remove('active'); 
+                  aboutCover.classList.remove('active'); 
+                });
               } else {
-                  // Otherwise, deactivate all and activate the clicked card
-                  aboutCards.forEach((c) => {
-                      c.classList.remove('active');
-                      c.children[0].classList.remove('active'); // Title
-                      c.children[1].classList.remove('active'); // Paragraph
-                      aboutCover.classList.remove('active'); // cover
-                  });
+                // Otherwise, deactivate all and activate the clicked card
+                aboutCards.forEach((c) => {
+                  c.classList.remove('active');
+                  c.children[0].classList.remove('active'); 
+                  c.children[1].classList.remove('active'); 
+                  aboutCover.classList.remove('active'); 
+                });
 
-                  card.classList.add('active');
-                  card.children[0].classList.add('active'); // Title
-                  card.children[1].classList.add('active'); // Paragraph
-                  aboutCover.classList.add('active'); // cover
+                card.classList.add('active');
+                card.children[0].classList.add('active');
+                card.children[1].classList.add('active'); 
+                aboutCover.classList.add('active');
               }
+            }
           });
         });
 
@@ -239,26 +242,23 @@ window.onload = (event) => {
           navbarAdjust(x);
         });
 
-        // remove active class from content-cover (content showing, like before the mobile version)
-        function coverAdjust(x) {
-          if (x.matches) { // If media query matches
-            aboutCover.classList.remove('active');  
-          } else {
-            aboutCards.forEach((card) => {
-              if (card.classList.contains('active')) {
-                aboutCover.classList.add('active'); // cover
-              }
+        const mq = window.matchMedia("(min-width: 1119px)");
+        function coverAdjust(e) {
+          if (e.matches) { // screen >= 1019px
+            aboutCards.forEach((c) => {
+              c.classList.remove('active');
+              c.children[0]?.classList.remove('active'); // title
+              c.children[1]?.classList.remove('active'); // paragraph
             });
-          };
+            aboutCover.classList.remove('active');
+          }
         }
-        // Create a MediaQueryList object
-        var y = window.matchMedia("(min-width: 1019px)")
-        // Call listener function at run time
-        coverAdjust(y);
-        // Attach listener function on state changes
-        x.addEventListener("change", function() {
-          coverAdjust(y);
-        });
+
+        // Run on page load
+        coverAdjust(mq);
+
+        // Modern listener
+        mq.addEventListener("change", coverAdjust);
 
         break;
         
@@ -342,20 +342,20 @@ window.onload = (event) => {
         let galleryNavbar = document.getElementById("navbar");
         let gallerySocials = document.getElementById("socials");
         let galleryBunny = document.getElementById("logo");
-        // let galleryLanguageBox = document.getElementById("menu-language-box");
+        let galleryLanguageBox = document.getElementById("gallery-menu-language-box");
         let galleryMenuButton = document.getElementById("menu-button");
         document.getElementById("menu-button").addEventListener("click", (event) => {
           if (galleryNavbar.classList.contains('active')) {
             galleryNavbar.classList.remove('active');
             gallerySocials.classList.remove('active');
             galleryBunny.classList.remove('active');
-            // galleryLanguageBox.classList.remove('active');
+            galleryLanguageBox.classList.remove('active');
             galleryMenuButton.classList.remove('active');
           } else {
             galleryNavbar.classList.add('active');
             gallerySocials.classList.add('active');
             galleryBunny.classList.add('active');
-            // galleryLanguageBox.classList.add('active');
+            galleryLanguageBox.classList.add('active');
             galleryMenuButton.classList.add('active');
           }           
         });
@@ -406,22 +406,22 @@ window.onload = (event) => {
         }
 
         // remove active class from navbar (static rather than opening menu, like before the mobile version)
-        function navbarAdjust(x) {
+        function galleryNavbarAdjust(x) {
           if (x.matches) { // If media query matches
             galleryNavbar.classList.remove('active');
             gallerySocials.classList.remove('active');
             galleryBunny.classList.remove('active');
-            // galleryLanguageBox.classList.remove('active');
+            galleryLanguageBox.classList.remove('active');
             galleryMenuButton.classList.remove('active');
           }
         }
         // Create a MediaQueryList object
         var x = window.matchMedia("(min-width: 1019px)")
         // Call listener function at run time
-        navbarAdjust(x);
+        galleryNavbarAdjust(x);
         // Attach listener function on state changes
         x.addEventListener("change", function() {
-          navbarAdjust(x);
+          galleryNavbarAdjust(x);
         });
         
         // category buttons interaction
@@ -520,7 +520,7 @@ window.onload = (event) => {
             galleryNavbar.classList.remove('active');
             gallerySocials.classList.remove('active');
             galleryBunny.classList.remove('active');
-            // galleryLanguageBox.classList.remove('active');
+            galleryLanguageBox.classList.remove('active');
             galleryMenuButton.classList.remove('active');
           
           });  
