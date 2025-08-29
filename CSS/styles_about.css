@@ -41,6 +41,8 @@
 html, body {
   width: 100vw;
   height: 100vh;
+  cursor: url("../assets/star01_32.png"), auto;
+  font-size: clamp(14px, 1vw + 0.5rem, 18px);
 }
 
 /* container */
@@ -814,4 +816,10 @@ html, body {
     height: auto;
   }
 
+}
+
+@media (min-width: 1600px) {
+  html {
+    font-size: 18px;
+  }
 }

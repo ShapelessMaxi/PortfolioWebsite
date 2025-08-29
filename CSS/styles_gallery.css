@@ -41,6 +41,8 @@
 html, body {
   width: 100vw;
   height: 100vh;
+  cursor: url("../assets/star01_32.png"), auto;
+  font-size: clamp(14px, 1vw + 0.5rem, 18px);
 }
 
 /* container */
@@ -230,7 +232,8 @@ html, body {
   grid-column: 2 / span 7;
   grid-row-start: 2;
   grid-row-end: -2;
-  width: 100%;
+  width: 90%;
+  height: 50%;
   overflow-y: scroll;
   overflow-x: hidden;
   margin-right: 0.5rem;
@@ -1034,5 +1037,11 @@ html, body {
   }
   #lightbox > #lightbox-button-box > #left-lightbox-button {
     padding: 0 0 0 4rem;
+  }
+}
+
+@media (min-width: 1600px) {
+  html {
+    font-size: 18px;
   }
 }
