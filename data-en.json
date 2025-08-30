@@ -46,8 +46,19 @@
                 {
                     "dir": "project_data\\OdosMechanicalEye\\OdosMechEye_vision_squares02.webp",
                     "caption": "Vision Process 2."
-                }
-                ,
+                },
+                {
+                    "dir": "project_data\\OdosMechanicalEye\\OdosMechanicalEye_RenderingProcess_01.webp",
+                    "caption": "Three rendering stages: Viewport, Textured, and Post-composited."
+                },
+                {
+                    "dir": "project_data\\OdosMechanicalEye\\OdosMechanicalEye_Rig_01.webp",
+                    "caption": "Animation process (Blender viewport)."
+                },
+                {
+                    "dir": "project_data\\OdosMechanicalEye\\OdosMechanicalEye_Postcomposition_01.webp",
+                    "caption": "Post-composition process (Blender viewport)."
+                },
                 {
                     "dir": "project_data\\OdosMechanicalEye\\OdosMechanicalEye_Tech.webp",
                     "caption": "Installation Schematics and Component list."

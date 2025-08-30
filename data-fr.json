@@ -46,8 +46,19 @@
                 {
                     "dir": "project_data\\OdosMechanicalEye\\OdosMechEye_vision_squares02.webp",
                     "caption": "Procédé de vision 2."
-                }
-                ,
+                },
+                {
+                    "dir": "project_data\\OdosMechanicalEye\\OdosMechanicalEye_RenderingProcess_01.webp",
+                    "caption": "Trois étapes de rendus: Fenêtre (viewport), Texturé, et Post-composition."
+                },
+                {
+                    "dir": "project_data\\OdosMechanicalEye\\OdosMechanicalEye_Rig_01.webp",
+                    "caption": "Processus d'animation (Fenêtre Blender)."
+                },
+                {
+                    "dir": "project_data\\OdosMechanicalEye\\OdosMechanicalEye_Postcomposition_01.webp",
+                    "caption": "Processus de post-composition (Fenêtre Blender)."
+                },
                 {
                     "dir": "project_data\\OdosMechanicalEye\\OdosMechanicalEye_Tech.webp",
                     "caption": "Schéma d'installation technique et list des composantes."
