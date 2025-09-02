@@ -389,7 +389,7 @@ window.onload = (event) => {
 
         function lgButtonUrl(lastProjectID) {
           // Language button interaction, Pass the current project ID in the URL
-          let languageButtons = [document.getElementById("language"),document.getElementById("menu-language")];
+          let languageButtons = [document.getElementById("language"), document.getElementById("menu-language")];
           languageButtons.forEach(button => {
               // button.addEventListener("click", (event) => {
               if (lgGallery === 'en'){
@@ -398,6 +398,7 @@ window.onload = (event) => {
                 lgGallery = 'en';
               };
               button.href = urlBuilder("gallery", lgGallery, null, lastProjectID); 
+              console.log(button.href)
             // });
           });
         }
@@ -474,8 +475,6 @@ window.onload = (event) => {
                 
                 // update project id
                 lastProjectID = p;
-                console.log(p);
-                console.log(lastProjectID);
                 // update buttons urls
                 lgButtonUrl(lastProjectID);
                 aboutButtonsUrl(lastProjectID);
