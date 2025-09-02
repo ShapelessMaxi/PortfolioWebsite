@@ -13,17 +13,21 @@ window.onload = (event) => {
   }
 
   // Construct the URL with searchable Variables
-  function urlBuilder (targetPage, language = null, returnPage = null, lastProject = null) {
+  function urlBuilder (targetPage, language = null, returnPage = null, projectTitle = null, lastProject = null) {
     let url = `\\${targetPage}.html`;
+    
     if (language) {
         url += `?lg=${language}`;
     }
     if (returnPage) {
         url += `${language ? '&' : '?'}returnPage=${returnPage}`;
     }
-    if (lastProject) {
+    if (projectTitle) {
+        url += `${language || returnPage ? '&' : '?'}pt=${projectTitle}`;
+    } else if (lastProject) {
         url += `${language || returnPage ? '&' : '?'}pr=${lastProject}`;
     }
+
     return url;
   }
 
@@ -89,7 +93,7 @@ window.onload = (event) => {
         let lastProject = urlSearch("pr", 0);
         // create the portfolio button url
         let portfolioButton = document.getElementById('portfolio-button');
-        portfolioButton.href = urlBuilder("gallery", lg, null, lastProject);
+        portfolioButton.href = urlBuilder("gallery", lg, null, null, lastProject);
 
         // create an object for each interest
         let interests = [];
@@ -221,7 +225,7 @@ window.onload = (event) => {
             } else {
               lg = 'en';
             };
-            button.href = urlBuilder("index", lg, null, lastProject); 
+            button.href = urlBuilder("index", lg, null, null, lastProject); 
           });
         });
 
@@ -271,6 +275,7 @@ window.onload = (event) => {
 
         // create an object for each project
         let projects = [];
+        let cleanTitles = [];
         for (let i = 0; i < data.projects.length; i++) {
           // create all project objects
           let currentProject = new project(
@@ -285,6 +290,8 @@ window.onload = (event) => {
             data.projects[i].tools,
             data.projects[i].documentation                 
           );
+          // create a new variable that will be the title without any punctuation
+          cleanTitles.push(currentProject.title.replace(/[^\w]/g, ''));
           projects.push(currentProject);
         }
 
@@ -292,9 +299,21 @@ window.onload = (event) => {
         let lgGallery = urlSearch ("lg", "en");
         
         // Determine the displayed project from the URL or default to the first project
-        let lastProjectID = urlSearch ("pr", 0);
-        let displayedProject = projects[lastProjectID];
-
+        // if the url contains a project title, search for its corresponding ID (index)
+        let urlProjectTitle = urlSearch("pt", null);
+        let lastProjectID;
+        let displayedProject;
+        if (urlProjectTitle != null) {
+          for (let i = 0; i < cleanTitles.length; i++) {
+            let currentTitle = cleanTitles[i];
+            if (currentTitle.toLowerCase() === urlProjectTitle.toLowerCase()) {
+              lastProjectID = i;
+            }
+          }
+        } else {
+          lastProjectID = urlSearch ("pr", 0);
+        }
+        displayedProject = projects[lastProjectID];
         // getting an interest tag from the about page
         let interestProject = urlSearch("interest", null);
         if (interestProject) {
@@ -361,7 +380,7 @@ window.onload = (event) => {
             galleryMenuButton.classList.add('active');
           }           
         });
-
+        
         // activating the correct category button
         let allCategoryButtons = document.querySelectorAll('.category-button');
         for (let i = 0; i < allCategoryButtons.length; i++) {
@@ -391,21 +410,18 @@ window.onload = (event) => {
           // Language button interaction, Pass the current project ID in the URL
           let languageButtons = [document.getElementById("language"), document.getElementById("menu-language")];
           languageButtons.forEach(button => {
-              // button.addEventListener("click", (event) => {
-              if (lgGallery === 'en'){
-                lgGallery = 'fr';
-              } else if (lgGallery === 'fr'){
-                lgGallery = 'en';
-              };
-              button.href = urlBuilder("gallery", lgGallery, null, lastProjectID); 
-              console.log(button.href)
-            // });
+            if (lgGallery === 'en'){
+              lgGallery = 'fr';
+            } else if (lgGallery === 'fr'){
+              lgGallery = 'en';
+            };
+            button.href = urlBuilder("gallery", lgGallery, null, null, lastProjectID); 
           });
         }
         function aboutButtonsUrl(lastProjectID) {
           let aboutButtons = [document.getElementById('logo'), document.getElementById('name'), document.getElementById('alias')];
           aboutButtons.forEach(button => {
-            button.href  = urlBuilder("index", lgGallery, null, lastProjectID);
+            button.href  = urlBuilder("index", lgGallery, null, null, lastProjectID);
           });
         }
 
@@ -567,7 +583,7 @@ window.onload = (event) => {
           } else if (lgGallery === "fr") {
             lgGallery = "en";
           }
-          button.href = urlBuilder("gallery", lgGallery, null, lastProjectID);
+          button.href = urlBuilder("gallery", lgGallery, null, null, lastProjectID);
         });
       });
         // About buttons interaction
@@ -643,14 +659,14 @@ window.onload = (event) => {
               })
               .then((data) => {
                 document.getElementById("textlog").innerHTML = data;
-                console.log("Log file content:", data);
+                // console.log("Log file content:", data);
               })
               .catch((error) => {
-                console.error("Error fetching log file:", error);
+                // console.error("Error fetching log file:", error);
                 document.getElementById("textlog").innerText = "Failed to load the log file.";
               });
           } else {
-            console.warn("No log file specified.");
+            // console.warn("No log file specified.");
             document.getElementById("textlog").innerText = "No log file specified.";
           }
           

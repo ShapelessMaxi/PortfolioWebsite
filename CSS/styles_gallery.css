@@ -144,7 +144,7 @@ html, body {
   padding-bottom: 2rem;
 }
 #header > #language-box > #language,
-#navbar > #gallery-menu-language-box > #language {
+#navbar > #gallery-menu-language-box > #menu-language {
   display: flex;    
   flex-direction: row;
   font-family: var(--body-font);
@@ -158,7 +158,7 @@ html, body {
 #header > #name-box > #name:hover,
 #header > #name-box > #alias:hover,
 #header > #language-box > #language:hover,
-#navbar > #gallery-menu-language-box > #language:hover {
+#navbar > #gallery-menu-language-box > #menu-language:hover {
   cursor: url("../assets/cursor_pointer.png"), pointer;
   color: var(--pink);
   border: 1px solid var(--pink);

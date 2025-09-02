@@ -152,7 +152,7 @@ html, body {
   border-radius: var(--button-corners);
 }
 #header > #language-box > #language:hover,
-#navbar > #menu-language-box > #language:hover {
+#navbar > #menu-language-box > #menu-language:hover {
   cursor: url("../assets/cursor_pointer.gif"), pointer;
   color: var(--pink);
   border: 1px solid var(--pink);
