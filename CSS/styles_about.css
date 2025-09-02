@@ -128,41 +128,19 @@ html, body {
   color: var(--pink);
   border: 1px solid var(--pink);
 }
-#header > #language-box {
+#header > #language-box,
+#header > #menu-language-box {
   display: none;
   width: 80%; 
   padding-bottom: 0.5rem;
   justify-content: center;
   align-items: flex-end;
-}
-#header > #language-box > #language {
-  display: flex;    
-  flex-direction: row;
-  font-family: var(--body-font);
-  font-size: 1rem;
-  color: black;
-  text-decoration: none;
-  padding: 0.25rem 0.5rem;
-  border: 1px solid var(--grey-black);
-  border-radius: var(--button-corners);
-}
-#header > #language-box > #language:hover {
-  cursor: url("../assets/cursor_pointer.gif"), pointer;
-  color: var(--pink);
-  border: 1px solid var(--pink);
 }
 #navbar > #menu-language-box {
-  display: none;
-  width: 80%; 
-  padding-bottom: 0.5rem;
-  justify-content: center;
-  align-items: flex-end;
   margin-bottom: 5rem;
 }
-#navbar > #menu-language-box.active {
-  display: flex;
-}
-#navbar > #menu-language-box > #language {
+#header > #language-box > #language,
+#navbar > #menu-language-box > #menu-language {
   display: flex;    
   flex-direction: row;
   font-family: var(--body-font);
@@ -173,10 +151,14 @@ html, body {
   border: 1px solid var(--grey-black);
   border-radius: var(--button-corners);
 }
+#header > #language-box > #language:hover,
 #navbar > #menu-language-box > #language:hover {
   cursor: url("../assets/cursor_pointer.gif"), pointer;
   color: var(--pink);
   border: 1px solid var(--pink);
+}
+#navbar > #menu-language-box.active {
+  display: flex;
 }
 
 
@@ -711,10 +693,6 @@ html, body {
     padding-left: 0.75rem;
     justify-content: space-between;
   }
-  #header > #language-box > #language {
-    font-size: 1rem;
-  }
-
   /* navbar */
   #navbar {
     grid-column: 1 / 8;

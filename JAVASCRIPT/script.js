@@ -212,15 +212,17 @@ window.onload = (event) => {
           }
         }
 
-        // Language button interaction
-        // Pass the current project ID in the URL
-        document.getElementById("language").addEventListener("click", (event) => {
-          if (lg === 'en'){
-            lg = 'fr';
-          } else {
-            lg = 'en';
-          };
-          document.getElementById("language").href = urlBuilder("index", lg, null, lastProject); 
+        // Language button interaction, Pass the current project ID in the URL
+        let languageButtons = [document.getElementById("language"),document.getElementById("menu-language")];
+        languageButtons.forEach(button => {
+            button.addEventListener("click", (event) => {
+            if (lg === 'en'){
+              lg = 'fr';
+            } else {
+              lg = 'en';
+            };
+            button.href = urlBuilder("index", lg, null, lastProject); 
+          });
         });
 
         // remove active class from navbar (static rather than opening menu, like before the mobile version)
@@ -386,16 +388,17 @@ window.onload = (event) => {
         }
 
         function lgButtonUrl(lastProjectID) {
-          // Pass the current project ID in the URL
-          let langButton = document.getElementById("language");
-          langButton.addEventListener("click", (event) => {
-            if (lgGallery === 'en'){
-              console.log(lgGallery)
-              lgGallery = 'fr';
-            } else if (lgGallery === 'fr'){
-              lgGallery = 'en';
-            };
-            langButton.href = urlBuilder("gallery", lgGallery, null, lastProjectID); 
+          // Language button interaction, Pass the current project ID in the URL
+          let languageButtons = [document.getElementById("language"),document.getElementById("menu-language")];
+          languageButtons.forEach(button => {
+              // button.addEventListener("click", (event) => {
+              if (lgGallery === 'en'){
+                lgGallery = 'fr';
+              } else if (lgGallery === 'fr'){
+                lgGallery = 'en';
+              };
+              button.href = urlBuilder("gallery", lgGallery, null, lastProjectID); 
+            // });
           });
         }
         function aboutButtonsUrl(lastProjectID) {
@@ -471,6 +474,8 @@ window.onload = (event) => {
                 
                 // update project id
                 lastProjectID = p;
+                console.log(p);
+                console.log(lastProjectID);
                 // update buttons urls
                 lgButtonUrl(lastProjectID);
                 aboutButtonsUrl(lastProjectID);
@@ -525,12 +530,6 @@ window.onload = (event) => {
           
           });  
         });
-
-        // Language button interaction
-        lgButtonUrl(lastProjectID);
-        
-        // About buttons interaction
-        aboutButtonsUrl(lastProjectID);
         
         // update page content according to current project
         updateContent(displayedProject, lgGallery);
@@ -558,6 +557,22 @@ window.onload = (event) => {
         document.getElementById('right-gallery-button').addEventListener('click', () => updateGallery(1));
         // Left button
         document.getElementById('left-gallery-button').addEventListener('click', () => updateGallery(-1));
+        
+        // Language button interaction
+        lgButtonUrl(lastProjectID);
+        let langButtons = [document.getElementById("language"),document.getElementById("menu-language")];
+        langButtons.forEach(button => {
+        button.addEventListener("click", (event) => {
+          if (lgGallery === "en") {
+            lgGallery = "fr";
+          } else if (lgGallery === "fr") {
+            lgGallery = "en";
+          }
+          button.href = urlBuilder("gallery", lgGallery, null, lastProjectID);
+        });
+      });
+        // About buttons interaction
+        aboutButtonsUrl(lastProjectID);
 
         // Swipes
         // create a simple instance

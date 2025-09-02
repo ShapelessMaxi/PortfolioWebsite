@@ -496,9 +496,9 @@
                 "Modélisation 3D;"
             ],
             "description": [
-                "This character tells a futuristic story, where fashion is still a priority even after the environment became hostile. I imagine people in this alternate universe having to cover up entirely to protect themselves from the polluted air and intense UV rays.",
-                "In this character design exercise, the personal protective equipment takes the shape of a pair of plateform boots, a helmet with anti-UV glasses, a skin-tight shirt to show off defined chest muscles, puffy leather pants and gloves. To complete the outfit, a cute shoulder bag that matches the boots and helmet along with a phone capting atmospheric information are added as accessories.",
-                "This high-ploygon count sculpted character is brought to life using Mixamo, a motion capture library. The textures are painted and generated with Substance Designer and Substance Painter."
+                "Ce personnage raconte une histoire futuriste, où la mode reste une priorité même après que l'environnement soit devenu hostile. J'imagine que les habitants de cet univers parallèle doivent se couvrir entièrement pour se protéger de l'air pollué et des rayons UV intenses.",
+                "Dans cet exercice de conception de personnage, l'équipement de protection individuelle prend la forme d'une paire de bottes à semelles épaisses, d'un casque avec des lunettes anti-UV, d'un t-shirt moulant pour mettre en valeur les muscles de la poitrine, d'un pantalon bouffant en cuir, et de gants. Pour compléter la tenue, un sac à main assorti aux bottes et au casque, ainsi qu'un téléphone captant les informations atmosphériques, sont ajoutés comme accessoires.",
+                "Ce personnage sculpté à haut nombre de polygones prend vie grâce à Mixamo, une bibliothèque de capture de mouvement. Les textures sont peintes et générées avec Substance Designer et Substance Painter."
             ],
             "tools": [
                 "Blender3d;",
