@@ -511,6 +511,8 @@ window.onload = (event) => {
             // Remove Description
             let description = document.getElementById("description");
             Array.from(description.children).forEach(paragraph => paragraph.remove());
+            let mobileDescription = document.getElementById("mobile-description-box");
+            Array.from(mobileDescription.children).forEach(paragraph => paragraph.remove());
 
             // Remove and add 'active' class from all buttons
             document.querySelectorAll('.project-button').forEach(btn => btn.classList.remove('active'));
@@ -585,29 +587,19 @@ window.onload = (event) => {
           }
           button.href = urlBuilder("gallery", lgGallery, null, null, lastProjectID);
         });
-      });
+        });
         // About buttons interaction
         aboutButtonsUrl(lastProjectID);
 
         // Swipes
         // create a simple instance
         let galleryFull = document.getElementById('gallery');
-        let lightboxFull = document.getElementById('img-caption-combo');
-        var swipeGallery = new Hammer(galleryFull);
-        var swipeLightbox = new Hammer(lightboxFull);
-        // Swipe Right
-        swipeGallery.on("swiperight", function(ev) {
-            updateGallery(1);
-        });
-        swipeLightbox.on("swiperight", function(ev) {
-            updateGallery(1);
-        });
-        // Swipe Left
-        swipeGallery.on("swiperight", function(ev) {
-            updateGallery(-1);
-        });
-        swipeLightbox.on("swiperight", function(ev) {
-            updateGallery(-1);
+        let lightboxFull = document.getElementById('lightbox-img');
+        
+        [galleryFull, lightboxFull].forEach(element => {
+        let hammer = new Hammer(element);
+        hammer.on("swiperight", () => updateGallery(1));
+        hammer.on("swipeleft", () => updateGallery(-1));
         });
 
         // Left and Right Keyboard arrows to naviguate gallery images
