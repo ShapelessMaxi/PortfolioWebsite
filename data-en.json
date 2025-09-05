@@ -122,10 +122,11 @@
             ],
             "keywords": [
                 "Pixel Art;",
-                "Print Media;"
+                "Print Media;",
+                "Fantasy;"
             ],
             "description": [
-                "Illustration made with not too much meaning *EDIT*."
+                "In this fantasy world, sunsets are countless. Saturday Sunsets illustrates an impossible astral phenomenon happening over a glistening ocean scene."
             ],
             "tools": [
                 "Pixaki;",
@@ -167,10 +168,12 @@
             ],
             "keywords": [
                 "Pixel Art;",
-                "Print Media;"
+                "Print Media;",
+                "Environment;",
+                "Personification;"
             ],
             "description": [
-                "Illustration made with not too much meaning *EDIT*."
+                "Yeah, everyhting *is* fine... right? We absolutely are taking care of both ourselves, and of the environment! Great, that is sorted. All Good. is a scrawny piece of land that has been exploited and over-industrialized. Using personification, I draw parallels between our (or my own) lack of self-respect and the lack of respect for our natural kin."
             ],
             "tools": [
                 "Pixaki;",
@@ -212,10 +215,11 @@
             ],
             "keywords": [
                 "Pixel Art;",
-                "Print Media;"
+                "Print Media;",
+                "Recession;"
             ],
             "description": [
-                "Illustration made with not too much meaning *EDIT*."
+                "sad fish dinner illustrates a dinner featuring a single aquarium fish that has been miserably cooked. Perhaps it is an recession indicator, or a depression meal. In any case, this tiny fish does not belong on a plate, and that makes me sad."
             ],
             "tools": [
                 "Pixaki;",
@@ -243,10 +247,6 @@
                     "caption": "5x9\" Printed illustrations"
                 },
                 {
-                    "dir": "project_data\\InTraining\\InTraining_05.webp",
-                    "caption": "Illustration close-up"
-                },
-                {
                     "dir": "project_data\\InTraining\\InTraining_04.webp",
                     "caption": "Illustration close-up"
                 },
@@ -270,9 +270,8 @@
                 "Print Media;"
             ],
             "description": [
-                "In Training is a duo of illustration printed on textured cardstock, and an online (or local multiplayer arcade) video game concept. This idea came from a discussion with a friend about travelling in and out of cyberspace and of our physical reality. I loved this idea of the same characters and objects being transposed into different realities, and it related to some of my work that mixes different traditional and digital techniques and medium, or that uses interactive technologies.",
-                "In this case, I choose to depict a low-poly 3D world where everyone and everything is waiting in limbo, alongside a relatively high resolution, restless pixel world. Further, by printing it on a high quality cardstock, it now lives outside of the digital realm as an object in our physical world",
-                "As for the game concept, it is pretty simple, you, a roughed-up humanoid, try to defeat as many of one selected monster. The more you defeat, the more points you get. Some enemies are tougher and gives you more points. Whenever you die, your overall score and your personal statistics gets updated. As you get to certain point milestones, you unlock different weapons and enemies."
+                "In Training is a duo of illustrations printed on textured cardstock, as well as an online (or local multiplayer arcade) video game concept. Indicated by a shift in the representational digital media, the same characters and objects are travelling between different cyber realities. More specifially, I choose to depict a low-poly 3D world where everyone and everything is waiting in limbo, alongside a relatively high resolution and hyperactive pixelated world.",
+                "As for the game concept, it is pretty simple. As a roughed-up android, you try to defeat as many monsters as possible, coming at you from different angles. The more you defeat, the more points you get. Some enemies are tougher and gives you more points. Whenever you die, your overall score and your personal statistics gets updated. As you get to certain point milestones, you unlock different weapons and enemies."
             ],
             "tools": [
                 "Blender3d;",

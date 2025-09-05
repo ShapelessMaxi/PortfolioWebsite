@@ -122,10 +122,11 @@
             ],
             "keywords": [
                 "Pixel Art;",
-                "Media d'impression;"
+                "Media d'impression;",
+                "Fantaisie;"
             ],
             "description": [
-                "Illustration faites sans trop y penser *EDIT*."
+                "Dans ce monde fantastique, les couchers de soleil sont nombreux. Saturday Sunsets (Couchers de Solei du Samedi) illustre un phénomène astral impossible se déroulant au-dessus d'un océan scintillant."
             ],
             "tools": [
                 "Pixaki;",
@@ -167,10 +168,12 @@
             ],
             "keywords": [
                 "Pixel Art;",
-                "Media d'impression;"
+                "Media d'impression;",
+                "Environnement;",
+                "Personnification;"
             ],
             "description": [
-                "Illustration faites sans trop y penser *EDIT*."
+                "Oui, tout va bien... n'est-ce pas? Nous prenons absolument soin de nous-mêmes et de l'environnement! Super, c'est réglé. All Good. (Tout va bien.) est un bout de terre maigrichon qui a été surexploité et sur-industrialisé. En utilisant la personnification, je fais un parallèle entre notre manque de respect envers nous-mêmes (ou le mien, envers moi-même) et le manque de respect envers la nature nous entourrant et nous permettant d'exister."
             ],
             "tools": [
                 "Pixaki;",
@@ -212,10 +215,11 @@
             ],
             "keywords": [
                 "Pixel Art;",
-                "Media d'impression;"
+                "Media d'impression;",
+                "Récession;"
             ],
             "description": [
-                "Illustration faites sans trop y penser *EDIT*."
+                "sad fish dinner (triste plat de poisson) illustre un souper mettant en vedette un simple poisson d'aquarium misérablement cuisiné. Peut-être est-ce un indicateur de récession, ou un depression meal (repas de depréssion). Dans tout les cas, la place de ce minuscule poisson n'est pas dans une assiette, ça me rend triste."
             ],
             "tools": [
                 "Pixaki;",
@@ -242,11 +246,7 @@
                 {
                     "dir": "project_data\\InTraining\\InTraining_03.webp",
                     "caption": "5x9\" Illustrations imprimées"
-                },
-                {
-                    "dir": "project_data\\InTraining\\InTraining_05.webp",
-                    "caption": "Gros plan sur une des illustrations"
-                },
+                }, 
                 {
                     "dir": "project_data\\InTraining\\InTraining_04.webp",
                     "caption": "Gros plan sur une des illustrations"
@@ -271,9 +271,8 @@
                 "Media d'impression;"
             ],
             "description": [
-                "In Training est un duo d'illustrations imprimées sur du papier cartonné texturé, et un concept de jeu vidéo en ligne (ou multijoueurs en salle d'arcade). Cette idée est née d’une discussion avec une amie sur le voyage à travers le cyberespace et notre réalité physique. J'ai adoré cette idée de transposer les mêmes personnages et objets dans des réalités différentes. En plus, elle est liée à certains de mes travaux qui mélangent différentes techniques et supports traditionnels et numériques, ou qui utilisent des technologies interactives.",
-                "Pour ce projet, j'ai choisi de dépeindre un monde 3D à faible densité où tout et tout le monde attend dans les limbes, à côté d'un monde pixelisé à relativement haute résolution, hyper agité. De plus, en l'imprimant sur un papier cartonné de haute qualité, il vit désormais en dehors du domaine numérique, en tant qu'objet dans notre monde physique.",
-                "Le concept du jeu est assez simple : vous, un humanoïde blessé, essayez de vaincre le plus grand nombre possible de monstres sélectionnés. Plus vous en battez, plus vous gagnez de points. Certains ennemis sont plus coriaces et vous rapportent plus de points. Chaque fois que vous mourez, votre score global et vos statistiques personnelles sont mis à jour. Au fur et à mesure que vous atteignez certaines étapes, vous débloquez des armes et des ennemis différents."
+                "In Training est un duo d'illustrations imprimées sur du papier texturé, ainsi qu'un concept de jeu vidéo en ligne (ou multijoueur local). Indiqué par un changement dans les médias numériques représentatifs utiliés, les mêmes personnages et objets voyagent entre différentes réalités du cyberespace. Plus précisément, j'ai choisi de représenter un monde 3D low-poly où tout le monde et tout les objets attendend dans les limbes, ainsi qu'un monde pixélisé hyperactif à relativement haute résolution.",
+                " Quant au concept du jeu, il est assez simple. En tant qu'androïde rouillé, vous essayez de vaincre autant de monstres que possible, et qui vous attaquent sous différents angles. Plus vous en battez, plus vous gagnez de points. Certains ennemis sont plus coriaces et vous rapportent plus de points. Chaque fois que vous mourez, votre score global et vos statistiques personnelles sont mis à jour. À mesure que vous atteignez certains paliers, vous débloquez différentes armes et différents ennemis."
             ],
             "tools": [
                 "Blender3d;",
