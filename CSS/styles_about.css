@@ -571,6 +571,7 @@ html, body {
     grid-row: 1 / -1;
   }
   #navbar > #socials {
+    display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
