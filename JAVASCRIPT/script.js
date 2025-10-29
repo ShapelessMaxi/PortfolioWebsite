@@ -74,10 +74,10 @@ window.onload = (event) => {
         // change titles and other text depending on language
         if (lg === "fr") {
           document.getElementsByClassName('titles')[0].innerText = "Biographie";
-          document.getElementsByClassName('titles')[1].innerText = "Déclaration";
+          // document.getElementsByClassName('titles')[1].innerText = "Déclaration";
         } else {
           document.getElementsByClassName('titles')[0].innerText = "Biography";
-          document.getElementsByClassName('titles')[1].innerText = "Statement";
+          // document.getElementsByClassName('titles')[1].innerText = "Statement";
         }
         // update the bio and statement text
         let paragraphs = document.querySelectorAll('.paragraphs');
@@ -182,37 +182,31 @@ window.onload = (event) => {
         let isScrolling = false;
         let targetScroll = 0;
         const scrollSpeed = 0.75;
-        scrollContainer.addEventListener('wheel', e => {
-          // Check if the event is from a touchpad
-          if (Math.abs(e.deltaY) < 40) {
-            // Let the browser handle the touchpad's default smooth scrolling
-            return;
-          }
 
-          e.preventDefault(); // Prevent default scroll behavior
+        scrollContainer.addEventListener('wheel', e => {
+          // Only run the handler if the event is actually from a mouse wheel
+          if (Math.abs(e.deltaY) < 40) return; // let touchpad handle smooth scrolling
+
+          e.preventDefault(); // we need this, so listener cannot be passive
+
           targetScroll += e.deltaY * scrollSpeed;
-        
-          // Start smooth scrolling if it's not already active
+
           if (!isScrolling) {
             isScrolling = true;
             requestAnimationFrame(smoothScroll);
           }
-        });
+        }, { passive: false }); // explicitly mark as non-passive
+
         function smoothScroll() {
-          // Get the current scroll position
           const currentScroll = scrollContainer.scrollLeft;
-      
-          // Calculate the step to move towards the target scroll position
-          const scrollStep = (targetScroll - currentScroll) * 0.1;  // This determines how smooth the scroll is
-          
-          // Move the scroll position
+          const scrollStep = (targetScroll - currentScroll) * 0.1;
+
           scrollContainer.scrollLeft += scrollStep;
-      
-          // Check if the scroll is close to the target, stop the animation
+
           if (Math.abs(targetScroll - currentScroll) > 1) {
-              requestAnimationFrame(smoothScroll);
+            requestAnimationFrame(smoothScroll);
           } else {
-              isScrolling = false;  // Stop scrolling when we reach the target
+            isScrolling = false;
           }
         }
 

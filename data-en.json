@@ -78,7 +78,7 @@
             "tools": [
                 "Nomad Sculpt;",
                 "Blender3d;",
-                "DaViici Resolve;",
+                "DaVinci Resolve;",
                 "TouchDesigner;",
                 "Python;"
             ],
@@ -91,6 +91,42 @@
                     "tag": "Digital Demo",
                     "link": "https://youtu.be/_Q_4nZnYkhE"
                 }                    
+            ]
+        },
+
+        {
+            "title": "Your Pulse and Mine",
+            "year": 2025,
+            "filters": [
+                "Robotics",
+                "Creative Coding"
+            ],
+            "category": "WIPs",
+            "isDone": "False",
+            "gallery": [
+                {
+                    "dir": "project_data\\YourPulseandMine\\YourPulseandMine_FisrtSchematic.webp",
+                    "caption": "First schematic, moodboard, and component list (tentative and approximative)."
+                }
+            ],
+            "keywords": [
+                "Soft Robotics;",
+                "Cybernetics;",
+                "Interactivity;"
+            ],
+            "description": [
+                "Your Pulse and Mine is a soft robotic installation, and a mutant machine-organism, breathing thanks to participants’ heart rate data.",
+                "With oximeters, viewers are invited to connect to the organism. In sync with their heartbeat, electric pulses are sent to control air pumps, inflating a circuit of soft silicone actuators. When they leave, their data merges with previous rhythms, allowing the machine to evolve and remember the presence of each contributor.",
+                "I want to build machines that mimic human behaviors to confirm them as kin: entities sharing and shaping the same environments we exist in."
+            ],
+            "tools": [
+                "Adobe Illustrator;"
+            ],
+            "documentation": [
+                {
+                    "tag": "",
+                    "link": ""
+                }              
             ]
         },
 
@@ -917,7 +953,7 @@
  
     "about": [
         {
-            "bio" : "Maxime Perreault is an emerging multimedia digital artist from Quebec City, now based in Tiohtiá:ke (Montreal). In 2024, he received a Bachelor of Fine Arts specialized in Computation Arts from Concordia University. Driven by experimentation and curiosity, Maxi develops otherworldly characters and environments inspired by technology, while exploring queer identity, perception, and visibility. His lasting interest in 3D animation, programming, and creative technologies has led to a diverse body of work ranging from illustrations, animations, and physical installations. In parallel, since 2021, Maxime has been working as a tattoo artist under the alias of hd.maxi.",
+            "bio" : "Maxime Perreault is an emerging multimedia digital artist and tinkerer from Quebec City, now based in Tiohtiá:ke (Montreal). In 2024, he received a Bachelor of Fine Arts specialized in Computation Arts from Concordia University. Driven by experimentation and curiosity, Maxi develops characters and machines, while exploring queer identity, perception, and visibility. His lasting interest in 3D animation, programming, and creative technologies has resulted in a diverse body of work ranging from illustrations and animations, to physical installations.  His latest work engages with ideas surrounding avatar-making, cybernetics, and robotics. In parallel, since 2021, Maxime has been working as a tattoo artist under the alias of hd.maxi.",
             
             "statement": "Rooted in queer theory and influenced by my own personal experiences as a queer subject, my work speaks of identity, perception, and visibility. Through the combination of art, technology, and humanities, I want to push the boundaries of conventional artistic expression. Additionally, my love for tattooing allows me to help people define their identity through iconography. It is wildly validating to have people trust me with such permanent decisions and motivates me to be a better artist and person. Body modification serves as a huge inspiration for my digital media pieces, as it is closely tied to some of the recurrent themes I love to explore. My overall goal as an artist is to challenge our preconceived notions of normalcy. To achieve this, I combine a variety of techniques ranging from 3D animation and creative programming. I bring humanoid characters and otherworldly environments to life, I develop interactive installations, and I process images in experimental ways."
         }   

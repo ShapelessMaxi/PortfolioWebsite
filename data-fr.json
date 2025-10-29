@@ -78,7 +78,7 @@
             "tools": [
                 "Nomad Sculpt;",
                 "Blender3d;",
-                "DaViici Resolve;",
+                "DaVinci Resolve;",
                 "TouchDesigner;",
                 "Python;"
             ],
@@ -94,6 +94,42 @@
             ]
         },
         
+        {
+            "title": "Your Pulse and Mine",
+            "year": 2025,
+            "filters": [
+                "Robotique",
+                "Creative Coding"
+            ],
+            "category": "En Cours",
+            "isDone": "False",
+            "gallery": [
+                {
+                    "dir": "project_data\\YourPulseandMine\\YourPulseandMine_FisrtSchematic.webp",
+                    "caption": "Premier schéma, inspirations, et liste des composants (provisoire et approximative)."
+                }
+            ],
+            "keywords": [
+                "Robotique Souple;",
+                "Cybernétique;",
+                "Interactivité;"
+            ],
+            "description": [
+                "Your Pulse and Mine (Ton Pouls et le Mien) est une installation de robotique souple, un organisme-machine mutant qui respire grâce aux données cardiaques des participants.",
+                "À l'aide d'oxymètres, les spectateurs sont invités à se connecter à l'organisme. En synchronisation avec leur rythme cardiaque, des impulsions électriques sont envoyées pour contrôler des pompes à air, gonflant un circuit d'actionneurs souples en silicone. Lorsqu'ils partent, leurs données fusionnent avec les rythmes précédents, permettant à la machine d'évoluer et de se souvenir de la présence de chaque contributeur.",
+                "Par la construcion d'un système imitant un comportement humain, je souhaite confirmer les machines (en général) comme des entités apparentées à nous (kin). En d'autres mots, ce sont des acteurs qui partagent et façonnent les mêmes environnements que ceux dans lesquels nous existons."
+            ],
+            "tools": [
+                "Adobe Illustrator;"
+            ],
+            "documentation": [
+                {
+                    "tag": "",
+                    "link": ""
+                }              
+            ]
+        },
+
         {
             "title": "Saturday Sunsets",
             "year": 2025,
@@ -907,7 +943,7 @@
  
     "about": [
         {
-            "bio" : "Maxime Perreault est un artiste multimédia numérique émergent originaire de la ville de Québec et maintenant basé à Tiohtiá:ke (Montréal). Depuis 2024, il détient un baccalauréat en beaux-arts spécialisé en arts informatiques de l'Université Concordia. Poussé par l'expérimentation et la curiosité, Maxi développe des personnages et des environnements surnaturels inspirés par la technologie, tout en explorant l'identité queer, la perception et la visibilité. Son intérêt durable pour l'animation 3D, la programmation et les technologies créatives l'a conduit à créer un ensemble d'œuvres variées, allant des illustrations aux animations en passant par des installations physiques. Parallèlement, et depuis 2021, Maxime travaille comme tatoueur sous le pseudonyme de hd.maxi.",
+            "bio" : "Maxime Perreault est un artiste multimédia numérique émergent originaire de la ville de Québec et maintenant basé à Tiohtiá:ke (Montréal). Depuis 2024, il détient un baccalauréat en beaux-arts spécialisé en arts informatiques de l'Université Concordia. Poussé par l'expérimentation et la curiosité, Maxi développe des personnages et des machines, tout en explorant l'identité queer, la perception et la visibilité. Son intérêt durable pour l'animation 3D, la programmation et les technologies créatives l'a conduit à créer un ensemble d'œuvres variées allant de l'illustration à l'animation, en passant par des installations physiques. Ses derniers travaux se penchent sur des concepts liés à la création d'avatars, à la cybernétique et à la robotique. Parallèlement, et depuis 2021, Maxime travaille comme tatoueur sous le pseudonyme de hd.maxi.",
 
             "statement": "Enraciné dans la théorie queer et influencé par mes expériences personnelles en tant qu'individu queer, mon travail parle d'identité, de perception et de visibilité. En combinant l'art, la technologie et les sciences humaines, je souhaite repousser les limites de l'expression artistique conventionnelle. En outre, ma passion pour le tatouage me permet d'aider les gens à définir leur identité par le biais de l'iconographie. Il est extrêmement gratifiant que des personnes me fassent confiance pour des décisions aussi permanentes et cela me motive à devenir un meilleur artiste et une meilleure personne. Les modifications corporelles sont une grande source d'inspiration pour mes œuvres numériques, car elles sont étroitement liées à certains des thèmes récurrents que j'aime explorer. Mon objectif global en tant qu'artiste est de remettre en question nos notions préconçues de normalité. Pour y parvenir, je combine une variété de techniques allant de l'animation 3D à la programmation créative. Je donne vie à des personnages humanoïdes et à des environnements d'un autre monde, je développe des installations interactives et je traite les images de manière expérimentale."
         }   
