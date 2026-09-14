@@ -1,0 +1,985 @@
+{
+    "projects": [
+        
+         {
+            "title": "Your Pulse and Mine",
+            "year": 2026,
+            "filters": [
+                "Robotics",
+                "Creative Coding"
+            ],
+            "category": "Installation",
+            "isDone": "True",
+            "gallery": [
+                {
+                    "dir": "project_data\\YourPulseandMine\\YourPulsandMine_01.webp",
+                    "caption": "Full view of the installation."
+                },
+                {
+                    "dir": "project_data\\YourPulseandMine\\YourPulsandMine_connection.webp",
+                    "caption": "Oximeter sensor interface for biometric data collection."
+                },
+                {
+                    "dir": "project_data\\YourPulseandMine\\YourPulsandMine_detail01.webp",
+                    "caption": "Assembly detail."
+                },
+                {
+                    "dir": "project_data\\YourPulseandMine\\YourPulsandMine_04.webp",
+                    "caption": "Full view of scultpure installed in a darker environement."
+                },
+                {
+                    "dir": "project_data\\YourPulseandMine\\YourPulsandMine_04.webp",
+                    "caption": "Detail of one of three silicone actuator (or organ)."
+                },
+                {
+                    "dir": "project_data\\YourPulseandMine\\YourPulsandMine_05.webp",
+                    "caption": "First schematic, moodboard, and component list (tentative and approximative)."
+                }
+            ],
+            "keywords": [
+                "Soft Robotics;",
+                "Cybernetics;",
+                "Interactivity;",
+                "Scultpture;",
+                "Biometric Data;"
+            ],
+            "description": [
+                "Ton pouls et le miens (Your Pulse and Mine) is a kinetic sculpture brought to life by the biometric information of voluntary participants. The machine breathes through inflating and deflating silicone organs, each one synchronized to the pulses of current and past human partners. Emphasizing the body’s essential rhythms, the installation suggests a short moment of stillness, shifting focus away from the overwhelming reality of our current world.",
+                "The device has three main functions. First, it collects live data using an oximeter sensor attached to a wired limb. Using this interface as a point of contact, a person can offer their heartbeat to power the machine. Then, it records short samples of the previous participants’ paces. Finaly, it blends all the memorized data into an irregular mutated pulse. Accordingly, each of the three air pumps, coupled to as many silicone organs, are activated by a pulse ensuing from one of these processes. ",
+                "Because of these limited functions, the machine becomes both dependant on and shaped by human participants: without their data, it stalls. As such, it offers a general reminder that technology can’t properly function without our human existence. Almost as to give thanks to humans who helped it become animated, the machine remembers a very specific artifact of their presence."
+            ],
+            "tools": [
+                "Blender3d;",
+                "Arduino;"
+            ],
+            "documentation": [
+                {
+                    "tag": "WIP Demo",
+                    "link": "https://www.youtube.com/watch?v=Px9H5s2W8pA"
+                }              
+            ]
+        },
+
+        {
+            "title": "Odo's Mechanical Eye",
+            "year": 2025,
+            "filters": [
+                "3D Animation",
+                "Creative Coding"
+            ],
+            "category": "Installation",
+            "isDone": "True",
+            "gallery": [
+                {
+                    "dir": "project_data\\OdosMechanicalEye\\OdosMechEye_vision_spheres.webp",
+                    "caption": "Wall Installation, Vision Process 1."
+                },
+                {
+                    "dir": "project_data\\OdosMechanicalEye\\OdosMechEye_fullvert.webp",
+                    "caption": "Complete Installation, Vision Process 3."
+                },
+                {
+                    "dir": "project_data\\OdosMechanicalEye\\OdosMechEye_robot_open.webp",
+                    "caption": "Detail of the open Mechanical Eye."
+                },
+                {
+                    "dir": "project_data\\OdosMechanicalEye\\OdosMechEye_robot_close.webp",
+                    "caption": "Detail of the closed Mechanical Eye."
+                },
+                {
+                    "dir": "project_data\\OdosMechanicalEye\\OdosMechEye_spark.webp",
+                    "caption": "Vision Process 1."
+                },
+                {
+                    "dir": "project_data\\OdosMechanicalEye\\OdosMechEye_vision_squares01.webp",
+                    "caption": "Vision Process 2."
+                },
+                {
+                    "dir": "project_data\\OdosMechanicalEye\\OdosMechEye_laptop.webp",
+                    "caption": "Scripts that runs the experiment."
+                },
+                {
+                    "dir": "project_data\\OdosMechanicalEye\\OdosMechEye_vision_data.webp",
+                    "caption": "Vision Process 3."
+                },
+                {
+                    "dir": "project_data\\OdosMechanicalEye\\OdosMechEye_vision_squares02.webp",
+                    "caption": "Vision Process 2."
+                },
+                {
+                    "dir": "project_data\\OdosMechanicalEye\\OdosMechanicalEye_RenderingProcess_01.webp",
+                    "caption": "Three rendering stages: Viewport, Textured, and Post-composited."
+                },
+                {
+                    "dir": "project_data\\OdosMechanicalEye\\OdosMechanicalEye_Rig_01.webp",
+                    "caption": "Animation process (Blender viewport)."
+                },
+                {
+                    "dir": "project_data\\OdosMechanicalEye\\OdosMechanicalEye_Postcomposition_01.webp",
+                    "caption": "Post-composition process (Blender viewport)."
+                },
+                {
+                    "dir": "project_data\\OdosMechanicalEye\\OdosMechanicalEye_Tech.webp",
+                    "caption": "Installation Schematics and Component list."
+                }
+            ],
+            "keywords": [
+                "Computer Vision;",
+                "Personification;",
+                "Perception;",
+                "Robotics"
+            ],
+            "description": [
+                "Digital images are nothing more than an endless array of pixels, each a mere indexed four-digit color code. But we, as humans, see the world in hues, shapes, feelings, and depth. So, how could I give more of a symbolic vision to a machine-character?",
+                "Odo’s Mechanical Eye stages the outcome of a DIY Computer Vision experiment. On the first screen, a non-linear animation shows Odo, the test-subject. The second object is a robotic eye through which Odo experiences the space in front of them. On another screen is the character’s eyesight. Stimuli-data, in the form of a live video feed from the webcam-eye, travels through Odo’s nervous cable-system before being processed by their algorithm-brain. Occasionally, the prosthetic is overloaded, drastically changing the way they see the world. Finally, the scripts running the experiment are displayed on a smaller screen.",
+                "By straying away from widely available AI-powered Computer Vision algorithms, and by writing my own code, I hoped to develop a more intimate process. I believed that the outcome would be a more suitable prosthetic, one capable of reproducing, even slightly, the qualities of human sight. Connecting these components, the anticipated result was to extend the reach of a digital entity from cyberspace into our physical world."
+            ],
+            "tools": [
+                "Nomad Sculpt;",
+                "Blender3d;",
+                "DaVinci Resolve;",
+                "TouchDesigner;",
+                "Python;",
+                "Arduino;"
+            ],
+            "documentation": [
+                {
+                    "tag": "Physical Demo",
+                    "link": "https://youtu.be/FXzSeMvo9Ek"
+                },
+                {
+                    "tag": "Digital Demo",
+                    "link": "https://youtu.be/_Q_4nZnYkhE"
+                }                    
+            ]
+        },
+
+        {
+            "title": "Saturday Sunsets",
+            "year": 2025,
+            "filters": [
+                "Pixel Art"
+            ],
+            "category": "Illustration",
+            "isDone": "True",
+            "gallery": [
+                {
+                    "dir": "project_data\\SaturdaySunsets\\SaturdaySunsets_rs.webp",
+                    "caption": "Digital illustration."
+                },
+                {
+                    "dir": "project_data\\SaturdaySunsets\\SaturdaySunsets_print03.webp",
+                    "caption": "Printed illustration detail."
+                },
+                {
+                    "dir": "project_data\\SaturdaySunsets\\SaturdaySunsets_print01.webp",
+                    "caption": "Printed illustration, 11x6\"."
+                },
+                {
+                    "dir": "project_data\\SaturdaySunsets\\SaturdaySunsets_print02.webp",
+                    "caption": "Printed illustration, 11x6\"."
+                }
+            ],
+            "keywords": [
+                "Pixel Art;",
+                "Print Media;",
+                "Fantasy;"
+            ],
+            "description": [
+                "In this fantasy world, sunsets are countless. Saturday Sunsets illustrates an impossible astral phenomenon happening over a glistening ocean scene."
+            ],
+            "tools": [
+                "Pixaki;",
+                "Adobe Illustrator;"
+            ],
+            "documentation": [
+                {
+                    "tag": "",
+                    "link": ""
+                }                    
+            ]
+        },
+
+        {
+            "title": "All Good.",
+            "year": 2025,
+            "filters": [
+                "Pixel Art"
+            ],
+            "category": "Illustration",
+            "isDone": "True",
+            "gallery": [
+                {
+                    "dir": "project_data\\AllGood\\AllGood_01_rs.webp",
+                    "caption": "Digital illustration."
+                },
+                {
+                    "dir": "project_data\\AllGood\\AllGood_print02.webp",
+                    "caption": "Printed illustration detail."
+                },
+                {
+                    "dir": "project_data\\AllGood\\AllGood_print01.webp",
+                    "caption": "Printed illustration, 4x6\"."
+                },
+                {
+                    "dir": "project_data\\AllGood\\AllGood_print03.webp",
+                    "caption": "Printed illustration, 4x6\"."
+                }
+            ],
+            "keywords": [
+                "Pixel Art;",
+                "Print Media;",
+                "Environment;",
+                "Personification;"
+            ],
+            "description": [
+                "Yeah, everyhting *is* fine... right? We absolutely are taking care of both ourselves, and of the environment! Great, that is sorted. All Good. is a scrawny piece of land that has been exploited and over-industrialized. Using personification, I draw parallels between our (or my own) lack of self-respect and the lack of respect for our natural kin."
+            ],
+            "tools": [
+                "Pixaki;",
+                "Adobe Illustrator;"
+            ],
+            "documentation": [
+                {
+                    "tag": "",
+                    "link": ""
+                }                    
+            ]
+        },
+
+        {
+            "title": "sad fish dinner",
+            "year": 2025,
+            "filters": [
+                "Pixel Art"
+            ],
+            "category": "Illustration",
+            "isDone": "True",
+            "gallery": [
+                {
+                    "dir": "project_data\\sadfishdinner\\SadFishDinner_01_rs.webp",
+                    "caption": "Digital illustration."
+                },
+                {
+                    "dir": "project_data\\sadfishdinner\\SadFishDinner_print03.webp",
+                    "caption": "Printed illustration detail."
+                },
+                {
+                    "dir": "project_data\\sadfishdinner\\SadFishDinner_print01.webp",
+                    "caption": "Printed illustration, 4x6\"."
+                },
+                {
+                    "dir": "project_data\\sadfishdinner\\SadFishDinner_print02.webp",
+                    "caption": "Printed illustration, 4x6\"."
+                }
+            ],
+            "keywords": [
+                "Pixel Art;",
+                "Print Media;",
+                "Recession;"
+            ],
+            "description": [
+                "sad fish dinner illustrates a dinner featuring a single aquarium fish that has been miserably cooked. Perhaps it is an recession indicator, or a depression meal. In any case, this tiny fish does not belong on a plate, and that makes me sad."
+            ],
+            "tools": [
+                "Pixaki;",
+                "Adobe Illustrator;"
+            ],
+            "documentation": [
+                {
+                    "tag": "",
+                    "link": ""
+                }                    
+            ]
+        },
+
+        {
+            "title": "In Training",
+            "year": 2024,
+            "filters": [
+                "3D Animation"
+            ],
+            "category": "Illustration",
+            "isDone": "True",
+            "gallery": [
+                {
+                    "dir": "project_data\\InTraining\\InTraining_03.webp",
+                    "caption": "5x9\" Printed illustrations"
+                },
+                {
+                    "dir": "project_data\\InTraining\\InTraining_04.webp",
+                    "caption": "Illustration close-up"
+                },
+                {
+                    "dir": "project_data\\InTraining\\InTraining_character_render01.webp",
+                    "caption": "Character 3D model"
+                },
+                {
+                    "dir": "project_data\\InTraining\\InTraining_rat_render01.webp",
+                    "caption": "Enemy 3D model"
+                },
+                {
+                    "dir": "project_data\\InTraining\\InTraining_sword_render01.webp",
+                    "caption": "Weapon 3D model"
+                }
+            ],
+            "keywords": [
+                "Video Game Concept;",
+                "Pixel Art;",
+                "3D Modelling;",
+                "Print Media;"
+            ],
+            "description": [
+                "In Training is a duo of illustrations printed on textured cardstock, as well as an online (or local multiplayer arcade) video game concept. Indicated by a shift in the representational digital media, the same characters and objects are travelling between different cyber realities. More specifially, I choose to depict a low-poly 3D world where everyone and everything is waiting in limbo, alongside a relatively high resolution and hyperactive pixelated world.",
+                "As for the game concept, it is pretty simple. As a roughed-up android, you try to defeat as many monsters as possible, coming at you from different angles. The more you defeat, the more points you get. Some enemies are tougher and gives you more points. Whenever you die, your overall score and your personal statistics gets updated. As you get to certain point milestones, you unlock different weapons and enemies."
+            ],
+            "tools": [
+                "Blender3d;",
+                "Pixaki;",
+                "Adobe Illustrator;"
+            ],
+            "documentation": [
+                {
+                    "tag": "Log",
+                    "link": "project_data\\InTraining\\log.txt"
+                }                    
+            ]
+        },
+
+        {
+            "title": "Glitch Armor",
+            "year": 2024,
+            "filters": [
+                "3D Animation",
+                "Interactivity"
+            ],
+            "category": "Installation",
+            "isDone": "True",
+            "gallery": [
+                {
+                    "dir": "project_data\\GiltchArmor\\GlitchArmor_mtlconnect.webp",
+                    "caption": "Documentation of work installed for the Millieux x MTLconnect event (10-2024) - Photo by Ana Isabel Duque."
+                },
+                {
+                    "dir": "project_data\\GiltchArmor\\GlitchArmor_mtlconnect01.webp",
+                    "caption": "Documentation of work presented during the Millieux x MTLconnect event (10-2024) - Photo by Ana Isabel Duque."
+                },
+                {
+                    "dir": "project_data\\GiltchArmor\\GlitchArmor_mtlconnect02.webp",
+                    "caption": "Documentation of work presented during the Millieux x MTLconnect event (10-2024) - Photo by Ana Isabel Duque."
+                },
+                {
+                    "dir": "project_data\\GiltchArmor\\GlitchArmor_composantmachinal01.webp",
+                    "caption": "Installation presented in the Composant Machinal Group Exhibition (07-2024)."
+                },
+                {
+                    "dir": "project_data\\GiltchArmor\\GlitchArmor_composantmachinal02.webp",
+                    "caption": "Installation presented in the Composant Machinal Group Exhibition (07-2024)."
+                },
+                {
+                    "dir": "project_data\\GiltchArmor\\GlitchArmor_composantmachinal03.webp",
+                    "caption": "Installation presented in the Composant Machinal Group Exhibition (07-2024)."
+                },
+                {
+                    "dir": "project_data\\GiltchArmor\\GlitchArmor_tech.webp",
+                    "caption": "Technical drawing of the physical installation."
+                }
+            ],
+            "keywords": [
+                "Character Design;",
+                "VFX;",
+                "Visibility;",
+                "Queer Storytelling;"
+            ],
+            "description": [
+                "Glitch Armor is a protective spell inspired by the nuanced experience of visibility within queer communities. On one hand, being visible allows them to be their full authentic selves, occupy space, exist, and find others alike. On the other hand, being visible exposes them to emotional and physical violence. This 3D animated couple reacts to movement in the room through a live camera feed. In turn, the glitch effect takes place and renders them progressively less visible.",
+                "What if technology had evolved to have human personality traits?",
+                "What if digital characters also had anxiety about being visibly queer?",
+                "Glitch Armor represents an exercise in character design, utilizing interactive technology as another layer for storytelling. As more viewers get closer to the installation, the characters display their personalities, anxiety, and rebellious thoughts."
+            ],
+            "tools": [
+                "TouchDesigner;",
+                "Blender3D;",
+                "Substance Painter;",
+                "MediaPipe;"
+            ],
+            "documentation": [
+                {
+                    "tag": "Web Documentation",
+                    "link": "https://hdmaxi411.wordpress.com"
+                },
+                {
+                    "tag": "Demo",
+                    "link": "https://www.youtube.com/watch?v=QMzflT3d9EA"
+                }                         
+            ]
+        },
+        
+        {
+            "title": "Untitled Game",
+            "year": "2025",
+            "filters": [
+                "Creative Coding",
+                "Video Game",
+                "Interactivity"
+            ],
+            "category": "WIPs",
+            "isDone": "False",
+            "gallery": [
+                {
+                    "dir": "project_data\\UntitledGame\\UntitledGame_01.webp",
+                    "caption": "Imported body part as an .fbx file in TD"
+                },
+                {
+                    "dir": "project_data\\UntitledGame\\UntitledGame_02.webp",
+                    "caption": "Initial paper sketches"
+                }
+            ],
+            "keywords": [
+                "Interactivity;",
+                "Game Design;",
+                "Queer Storytelling;",
+                "Archives"
+            ],
+            "description": [
+                "More information in the associated log.",
+                "A Game about gay people doing gay things (aka random quests around the city), a weird mix of past, present, and future. Dark, Beautiful, Whimsical, Unserious. I'd like to turn this into a research excercice, bringing archival findings to life (TBD).",
+                ""
+            ],
+            "tools": [
+                "Unity;",
+                "C#",
+                "Pixaki;",
+                "Procreate;",
+                "Nomad Sculpt;",
+                "Blender;"                
+            ],
+            "documentation": [
+                {
+                    "tag": "Log",
+                    "link": "project_data\\UntitledGame\\log.txt"
+                }                  
+            ]
+        },
+        
+        {
+            "title": "To Dissect / To Stitch",
+            "year": "2023",
+            "filters": [
+                "Creative Coding",
+                "Interactivity"
+            ],
+            "category": "2D Interactive",
+            "isDone": "True",
+            "gallery": [
+                {
+                    "dir": "project_data\\ToDissectToStitch\\ToDissectToStitch_01.webp",
+                    "caption": "In-progress state of the puzzle"
+                },
+                {
+                    "dir": "project_data\\ToDissectToStitch\\ToDissectToStitch_05.webp",
+                    "caption": "Completed state of the puzzle"
+                },
+                {
+                    "dir": "project_data\\ToDissectToStitch\\ToDissectToStitch_02.webp",
+                    "caption": "Imported body part as an .fbx file in TD"
+                },
+                {
+                    "dir": "project_data\\ToDissectToStitch\\ToDissectToStitch_monitor.webp",
+                    "caption": "Puzzle displayed on a computer monitor"
+                },
+                {
+                    "dir": "project_data\\ToDissectToStitch\\ToDissectToStitch_laptop.webp",
+                    "caption": "Puzzle displayed on a laptop"
+                },
+                {
+                    "dir": "project_data\\ToDissectToStitch\\ToDissectToStitch_04.webp",
+                    "caption": "Opportunity for optimization, all these nodes could be a simpler script"
+                }
+            ],
+            "keywords": [
+                "Interactivity;",
+                "3D Scanning;",
+                "Body Politics;",
+                "Medical Gaze;",
+                "Creative writing;"
+            ],
+            "description": [
+                "In the past few decades, tattooing and piercing have been popularized so much that it is now only perceived as an aesthetic pursuit. But for me, it is a beneficial exercise of letting go, of taking agency over my body, of expressing myself, and of remembering key moments of my life. When I started getting tattooed, I felt an array of different gazes analyzing my appearance. Some people loved it, others hated it, and a whole lot did not understand it. Ultimately, tattooed people are often reduced to bodies you can comment on, and choosing to modify your physical self invites both positive and negative scrutiny. This narrative relates to the not-so-distant history of pathologizing queerness. As a result of medical photography, trans, intersex, and queer people were subjected to a harmful medical gaze, a way to inspect and categorize our bodies with the final intention of diagnosing us as unfit and abnormal.",
+                "To Dissect / To Stitch is a digital puzzle made from my 3D scanned body parts. The visual signifiers from anatomical science and medical photography posits the initial dismembered state as objective. As each piece is replaced, meaningful self-validating affirmations appear in place of the previous descriptions. The resulting manifesto questions the viewer about their personal relationship with their, and one I repeat to myself to validate my desire for an unconventional life."
+            ],
+            "tools": [
+                "TouchDesigner;",
+                "MediaPipe;",
+                "Kiri Engine;",
+                "Blender3D"                
+            ],
+            "documentation": [
+                {
+                    "tag": "Log",
+                    "link": "project_data\\ToDissectToStitch\\log.txt"
+                },
+                {
+                    "tag": "Web Documentation",
+                    "link": "https://hdmaxi410.wordpress.com"
+                }                    
+            ]
+        },
+        
+        {
+            "title": "Post-Apocalyptic Hottie",
+            "year": 2023,
+            "filters": [
+                "3D Animation"
+            ],
+            "category": "Video & Animation",
+            "isDone": "True",
+            "gallery": [
+                {
+                    "dir": "project_data\\PostApocalypticHottie\\PostApocalypticHottie_04.webp",
+                    "caption": "Character in a T-Pose"
+                },
+                {
+                    "dir": "project_data\\PostApocalypticHottie\\PostApocalypticHottie_01.webp",
+                    "caption": "Still from the walking animation"
+                },
+                {
+                    "dir": "project_data\\PostApocalypticHottie\\PostApocalypticHottie_03.webp",
+                    "caption": "Displacement map used for the ground block"
+                }
+            ],
+            "keywords": [
+                "Character Design;",
+                "Motion Capture;",
+                "High-Poly Modelling"
+            ],
+            "description": [
+                "This character tells a futuristic story, where fashion is still a priority even after the environment became hostile. I imagine people in this alternate universe having to cover up entirely to protect themselves from the polluted air and intense UV rays.",
+                "In this character design exercise, the personal protective equipment takes the shape of a pair of plateform boots, a helmet with anti-UV glasses, a skin-tight shirt to show off defined chest muscles, puffy leather pants and gloves. To complete the outfit, a cute shoulder bag that matches the boots and helmet along with a phone capting atmospheric information are added as accessories.",
+                "This high-ploygon count sculpted character is brought to life using Mixamo, a motion capture library. The textures are painted and generated with Substance Designer and Substance Painter."
+            ],
+            "tools": [
+                "Blender3d;",
+                "Substance Painter;",
+                "Substance Designer;",
+                "Mixamo;",
+                "Adobe Premiere"
+            ],
+            "documentation": [
+                {
+                    "tag": "Full Animation",
+                    "link": "https://youtu.be/kZotRX9Zqgo"
+                }                    
+            ]
+        },
+        
+        {
+            "title": "Awakening of the Frog",
+            "year": "2022",
+            "filters":[
+                "3D Animation"
+            ],
+            "category": "Video & Animation",
+            "isDone": "True",
+            "gallery": [
+                {
+                    "dir": "project_data\\AwakeningofTheFrog\\AwakeningofTheFrog_01.webp",
+                    "caption": "Focus on the frog, still from the turntable animation"
+                },
+                {
+                    "dir": "project_data\\AwakeningofTheFrog\\AwakeningofTheFrog_03.webp",
+                    "caption": "Focus on the pond, still from the turntable animation"
+                },
+                {
+                    "dir": "project_data\\AwakeningofTheFrog\\AwakeningofTheFrog_04.webp",
+                    "caption": "Still from the turntable animation"
+                }
+            ],
+            "keywords": [
+                "Low Poly Modelling;",
+                "Particle Systems;",
+                "2D VFX;",
+                "Video Game Concept;",
+                "Visual Storytelling"
+            ],
+            "description": [
+                "In the form of a low-poly animated diorama, Awakening of the Frog tells the story of an adored demon toad, set in a whimsical and mysterious environment. In this creative exploration of a satanical and natural theme, the scene comes alive with carefully designed plants and animals that interact subtly, revealing a rich narrative through their positionning and behavior. The centerpiece, a winged toad with scary teeth, floats in the air while all the attention of the other smaller creatures that inhabit this surreal world is directed on it.",
+                "The diorama features a softly animated backdrop, generated with Substance Designer, to enhance the dreamlike atmosphere. The rest of the environment, including the detailed models, the stylized textures, and the moody lighting, is entirely crafted in Blender 3D. Minimal yet purposeful animations such as blood dripping from the frog breathe life into the scene, inviting viewers to immerse themselves in its story."
+            ],
+            "tools": [
+                "Blender3D;",
+                "Substance Designer;",
+                "Adobe Premiere"
+            ],
+            "documentation": [
+                {
+                    "tag": "Animation",
+                    "link": "https://youtu.be/zROBx7WUO-w"
+                }                    
+            ]
+        },
+
+        {
+            "title": "Les Daltons s'évadent!",
+            "year": "2022",
+            "filters": [
+                "Creative Coding",
+                "Video Game",
+                "Interactivity"
+            ],
+            "category": "2D Interactive",
+            "isDone": "True",
+            "gallery": [
+                {
+                    "dir": "project_data\\LesDaltonsSEvadent\\Daltons_cell.webp",
+                    "caption": "Screen capture of the gameplay"
+                },
+                {
+                    "dir": "project_data\\LesDaltonsSEvadent\\Daltons_cour.webp",
+                    "caption": "Screen capture of the gameplay"
+                },
+                {
+                    "dir": "project_data\\LesDaltonsSEvadent\\Daltons_visite.webp",
+                    "caption": "Screen capture of the gameplay"
+                },
+                {
+                    "dir": "project_data\\LesDaltonsSEvadent\\Daltons_tunnel.webp",
+                    "caption": "Screen capture of the gameplay"
+                }
+            ],
+            "keywords": [
+                "Game Design;",
+                "2D Game;",
+                "Prison Break;",
+                "Nostalgia;"
+            ],
+            "description": [
+                "Les Daltons s'évadent! (The Daltons Escape!) is a 2D game inspired by the action-packed adventures of Lucky Luke, a vintage cartoon about a lone cowboy chasing down the Dalton brothers. These four criminals are always planning their next coup, and are infamous outlaws in the american west. Most often, their ambitious bank robberies put them in trouble, as they always end up back in the state prison, only to plot yet another escape attempt.",
+                "I grew up loving this TV show and couldn’t resist the chance to relive those childhood memories by creating this short narrative prison break game.",
+                "This game was created in the conext of a programming class. Because this is a very simple one, both visually and conceptually, I was able to spend time of animations and composition. This minimalist style is out of my comfort zone, but i find the product very bold and fun."                
+            ],
+            "tools": [
+                "P5.js;",
+                "JavaScript;",
+                "HTML;",
+                "CSS;"
+            ],
+            "documentation": [
+                {
+                    "tag": "Play",
+                    "link": "https://hdmaxi.itch.io/les-daltons-svadent"
+                }                    
+            ]
+        },
+
+        {
+            "title": "bodymod",
+            "year": 2021,
+            "filters": [
+                "Creative Coding",
+                "Video Game",
+                "Interactivity"
+            ],
+            "category": "2D Interactive",
+            "isDone": "True",
+            "gallery": [
+                {
+                    "dir": "project_data\\bodymod\\bodymod_01.webp",
+                    "caption": "Capture of the game when all modifications are discovered"
+                },
+                {
+                    "dir": "project_data\\bodymod\\bodymod_05.webp",
+                    "caption": "Capture of the game when most modifications are unknown"
+                },
+                {
+                    "dir": "project_data\\bodymod\\bodymod_04.webp",
+                    "caption": "Capture of the name input screen."
+                }               
+            ],
+            "keywords": [
+                "Creative coding;",
+                "Video Game Design;",
+                "Body Agency;",
+                "Body Modification;",
+                "Generative Art;"
+            ],
+            "description": [
+                "bodymod is an experimental sandbox 2D game, with a few elements of generative art. It's also a reflection about body modification and body agency. Growing up gay, I've been subjected to a lot of microaggressions and rarely felt pretty and confident. I have often fantasized about being able to completly change the way I look, either to scare others or to be accepted by them.",
+                "Taking agency over how my body looks like made me realize two things. First, I want to look different and I can be different. Second, it's possible to achieve that and have confidence in who I am and how I present myself without the valiation of others. Getting tattoos and piercings, dying my hair, and dressing the way I want felt liberating and powerful at first, and it still feels the same now. This idea of body modification as a way to feel in control of my mental state is the overall message I wanted to convey.",
+                "Overall, I wanted the mood of this game to be dark, mysterious, and unpredictable. I think modifying your body in real life induce similar feelings, as you never fully know what will happen and how you will react. It's exciting and mildly scary… Are you ready to leap into it?"
+            ],
+            "tools": [
+                "JavaScript;",
+                "p5.js;",
+                "HTML"
+            ],
+            "documentation": [
+                {
+                    "tag": "Play",
+                    "link": "https://hdmaxi.itch.io/bodymod-2021"
+                },
+                {
+                    "tag": "Github",
+                    "link": "https://github.com/ShapelessMaxi/cart253/tree/main/projects/mod"
+                }                    
+            ]
+        },
+
+        {
+            "title": "feed... me...",
+            "year": 2021,
+            "filters": [
+                "Creative Coding",
+                "Video Game",
+                "Interactivity"
+            ],
+            "category": "2D Interactive",
+            "isDone": "True",
+            "gallery": [
+                {
+                    "dir": "project_data\\feedme\\feedme_01.webp",
+                    "caption": "Screen capture of the game"
+                },
+                {
+                    "dir": "project_data\\feedme\\feedme_02.webp",
+                    "caption": "Screen capture of the game"
+                },
+                {
+                    "dir": "project_data\\feedme\\feedme_03.webp",
+                    "caption": "Screen capture of the game"
+                }               
+            ],
+            "keywords": [
+                "Creative coding;",
+                "Game Development;"
+            ],
+            "description": [
+                "Who feeds a cat in the afterlife when they reach their limit of nine lives? And what happens when you feed strange things to a dead cat?",
+                "This mini 2D game created with P5.js as a quick exercise in a programming class brings you in an ethereal world where you, a ghost, have the responsibility of taking care of this cat. The backstory and dialogue invite the player to reflect on the mysterious connection between themselves and the cat—what happened in life that brought both of you to this otherworldly place?"
+            ],
+            "tools": [
+                "JavaScript;",
+                "p5.js;",
+                "HTML"
+            ],
+            "documentation": [
+                {
+                    "tag": "Play",
+                    "link": "https://hdmaxi.itch.io/feed-me"
+                },
+                {
+                    "tag": "Github",
+                    "link": "https://github.com/ShapelessMaxi/cart253/tree/main/projects/simulation"
+                }                    
+            ]
+        },
+        
+        {
+            "title": "EFFA",
+            "year": "2020",
+            "filters": [
+                "Graphic Design"
+            ],
+            "category": "Design",
+            "isDone": "True",
+            "gallery": [
+                {
+                    "dir": "project_data\\EFFAGraphicDesign\\Effa_finaldoc_07.webp",
+                    "caption": "Mocked-up poster"
+                },
+                {
+                    "dir": "project_data\\EFFAGraphicDesign\\Effa_finaldoc_08.webp",
+                    "caption": "Mocked-up book cover"
+                },
+                {
+                    "dir": "project_data\\EFFAGraphicDesign\\Effa_finaldoc_01.webp",
+                    "caption": "Exhibition concept summary"
+                },
+                {
+                    "dir": "project_data\\EFFAGraphicDesign\\Effa_finaldoc_02.webp",
+                    "caption": "Words of inspiration"
+                },
+                {
+                    "dir": "project_data\\EFFAGraphicDesign\\Effa_finaldoc_03.webp",
+                    "caption": "Typography moodboard"
+                },
+                {
+                    "dir": "project_data\\EFFAGraphicDesign\\Effa_finaldoc_04.webp",
+                    "caption": "Color moodboard"
+                },
+                {
+                    "dir": "project_data\\EFFAGraphicDesign\\Effa_finaldoc_05.webp",
+                    "caption": "Style and vibe moodboard"
+                },
+                {
+                    "dir": "project_data\\EFFAGraphicDesign\\Effa_finaldoc_06.webp",
+                    "caption": "A few word on the choices of typography, color, and style"
+                },
+                {
+                    "dir": "project_data\\EFFAGraphicDesign\\Effa_AfficheFinale.webp",
+                    "caption": "The final poster"
+                },
+                {
+                    "dir": "project_data\\EFFAGraphicDesign\\Effa_AlbumCoverFinal.webp",
+                    "caption": "The final book cover"
+                }
+            ],
+            "keywords": [
+                "Graphic Design;",
+                "Visual ID;",
+                "Mock-ups;"
+            ],
+            "description": [
+                "This visual identity was developped in the context of a graphic design class during my - unfinished - bachelor degree in Industrial Design at Universié de Montréal. We were all prompted to create posters, book covers, and other merchandise for the next iteration of EFFA (Exposition des finissants de la Faculté de l'aménagement).",
+                "The theme being 'CTRL+S', I went with a design sporting heavy contrast, fine lines, and repeating typography. My inspiration for these choices came from an exploration of the theme that could be resumed in three words: Nervosité, Écho, and Arts Numériques (translation: Nervousness, Echos, and Digital Arts)."
+            ],
+            "tools": [
+                "Adobe Illustrator;",
+                "Adobe InDesign;",
+                "Adobe Photoshop;"
+            ],
+            "documentation": [
+                {
+                    "tag": "",
+                    "link": ""
+                }                    
+            ]
+        },
+
+        {
+            "title": "Pyre",
+            "year": "2019",
+            "filters": [
+                "Product Design"
+            ],
+            "category": "Design",
+            "isDone": "True",
+            "gallery": [
+                {
+                    "dir": "project_data\\Pyre\\Pyre_top.webp",
+                    "caption": "Top view highlighting the branding"
+                },
+                {
+                    "dir": "project_data\\Pyre\\Pyre_AfficheFinale.webp",
+                    "caption": "Final presentation poster"
+                },
+                {
+                    "dir": "project_data\\Pyre\\Pyre_pp.webp",
+                    "caption": "Perspective view"
+                },
+                {
+                    "dir": "project_data\\Pyre\\Pyre_cut.webp",
+                    "caption": "Vertical slice of the product"
+                }
+            ],
+            "keywords": [
+                "Product Design;",
+                "Portable Object;",
+                "Product Concept;",
+                "Brand ID;"
+            ],
+            "description": [
+                "Pyre is a small, portable barbecue concept developed during my (unfinished) degree in Industrial Design at Université de Montréal. This project was created for the Hudson's Bay Company (HBC), with a strong emphasis on branding. It needed to be marketed to their mid-to-high-end customer base, be portable, and above all, safe to use.",
+                "After researching metal sheet bending and assembly, I came up with this sleek and original stackable design. For instance, with just six tabs on the lid and six corresponding notches in the base, the lid securely stays in place. This approach not only provides an elegant form but also ensures that the object's fabrication and assembly are straightforward and cost-effective."
+            ],
+            "tools": [
+                "SolidWorks;",
+                "Adobe Illustrator;",
+                "Adobe Photoshop;"
+            ],
+            "documentation": [
+                {
+                    "tag": "",
+                    "link": ""
+                }            
+            ]
+        },
+
+        
+
+        {
+            "title": "",
+            "year": "",
+            "filters": [
+                "",
+                ""
+            ],
+            "isDone": "True",
+            "category": "",
+            "gallery": [
+                {
+                    "dir": "project_data\\project\\img",
+                    "caption": "png"
+                }
+            ],
+            "keywords": [
+                ";",
+                ";"
+            ],
+            "description": [
+                "",
+                ""
+            ],
+            "tools": [
+                ";",
+                ";"
+            ],
+            "documentation": [
+                {
+                    "tag": "",
+                    "link": ""
+                }                    
+            ]
+        }
+    ],
+
+    "categories": [
+        "Installation",
+        "Video & Animation",
+        "2D Interactive",
+        "Illustration",
+        "Design",
+        "WIPs"
+    ],
+
+    "interests": [
+
+        {
+            "title": "3D Animation",
+            "summary" : "Creating a digital product with 3D software.",
+            "description": "When I say I do 3D animation, I mean mostly everything that can happen in a 3D software. That's modelling, remeshing, UV mapping, texturing, rigging, animating, lighting, simulating physics, and compositing. Not every project requires all steps, but I am familiar with and deeply enjoy this overall process.",
+            "tag": "3D Animation"
+        },
+
+        {
+            "title": "Tattooing",
+            "summary" : "Marking the skin permanently with needles and ink.",
+            "description": "I have always been drawn to the tattoing process, both to decorate my own body and others. I find body modification enticing because it takes effort and pain, making it something significant and giving it grounding properties.",
+            "tag": "3D Animation"
+        },
+
+        {
+            "title": "Creative Coding",
+            "summary" : "Programming as a tool for creative expression.",
+            "description": "I started learning to code a few years ago, and I now am pretty decent at HTML/CSS, Javascript, and Python. These languages opened up so many doors for me, and most of my current projects include some kind of script.",
+            "tag": "Creative Coding"
+        },
+
+        {
+            "title": "Interactive Technologies",
+            "summary" : "Systems, devices, or software designed to enable real-time engagement.",
+            "description": "This is a wide area, but my personal interests lies within cameras (especially webcams), video games, and game mechanics. I experiment with interactive design to tell new kinds of stories that may require more nuance or benefit from multiple states revealed at convenient moments.",
+            "tag": "Interactivity"
+        }
+        
+    ],
+ 
+    "about": [
+        {
+            "bio" : "Maxime Perreault is an emerging multimedia digital artist and tinkerer from Quebec City, now based in Tiohtiá:ke (Montreal). In 2024, he received a Bachelor of Fine Arts specialized in Computation Arts from Concordia University. Driven by experimentation and curiosity, Maxi develops characters and machines, while exploring queer identity, perception, and visibility. His lasting interest in 3D animation, programming, and creative technologies has resulted in a diverse body of work ranging from illustrations and animations, to physical installations.  His latest work engages with ideas surrounding avatar-making, cybernetics, and robotics. In parallel, since 2021, Maxime has been working as a tattoo artist under the alias of hd.maxi.",
+            
+            "statement": "Rooted in queer theory and influenced by my own personal experiences as a queer subject, my work speaks of identity, perception, and visibility. Through the combination of art, technology, and humanities, I want to push the boundaries of conventional artistic expression. Additionally, my love for tattooing allows me to help people define their identity through iconography. It is wildly validating to have people trust me with such permanent decisions and motivates me to be a better artist and person. Body modification serves as a huge inspiration for my digital media pieces, as it is closely tied to some of the recurrent themes I love to explore. My overall goal as an artist is to challenge our preconceived notions of normalcy. To achieve this, I combine a variety of techniques ranging from 3D animation and creative programming. I bring humanoid characters and otherworldly environments to life, I develop interactive installations, and I process images in experimental ways."
+        }   
+    ]
+    
+}

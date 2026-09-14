@@ -2,7 +2,7 @@
 <html>
   <head>
     <!-- this links to css file containing styles -->
-    <link rel="stylesheet" href="index-style.css" />
+    <link rel="stylesheet" href="CSS/styles_about.css" />
 
     <!-- Add your external google fonts here -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -11,88 +11,115 @@
     <link href="https://fonts.googleapis.com/css2?family=Sofia+Sans:wght@200&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Spline+Sans:wght@400;600&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Crimson+Text:wght@400;700&display=swap" rel="stylesheet">
-
+    
+    <!-- external js libraries -->
     <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-
+    
+    <!-- custom scripts -->
+    <script src="JAVASCRIPT/script.js"></script>
+    <script src="JAVASCRIPT/interest.js"></script>
+    <script src="JAVASCRIPT/interestCard.js"></script>
+    
     <!-- this line takes care of special characters in text -->
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
-
+    <!-- this line takes care of responsive viewports -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
     <!-- <!-- this is the tab text -->
+    <link rel="icon" type="image/png" href="/assets/favicon.png">
     <title>
       hd.maxi
     </title>
   </head>
+  
+  <body page="about">
+    <div id="about-container">
+      
+      <div id="navbar">
+        <img id="logo" src="assets\bunny01.png" alt="logo">
+        
+        <a id="portfolio-button" href="/gallery.html">
+          <p> Portfolio </p>
+          <img id="portfolio-star" src="assets\star.png" alt="star">
+        </a>
 
-  <body>
-    <!-- Loading Overlay -->
-    <div class="loading-overlay">
-      <img class="spinner" src="assets\btn_star01.png" alt="button<">
-    </div>
-    
-    <!-- grid/table container -->
-    <div class="wrapper"> 
+        <div id="socials">
+          <a href="https://www.youtube.com/@hd___________maxi" target="_blank">
+            <img id="youtube" src="assets\youtube.png" alt="logo">
+          </a>
+          <a href="https://www.instagram.com/hd.maxi/" target=”_blank”>
+            <img id="insta" src="assets\insta.png" alt="logo">
+          </a>
+          <a onclick="copyEmail()">
+            <img id="mail" src="assets\mail.png" alt="logo">
+          </a>
+        </div>
+
+        <div id="menu-language-box">
+          <a href="" id="menu-language">
+            <span>fr</span>
+            /
+            <span>eng</span>
+          </a>
+        </div>
       
-      <!-- 'bg' box -->
-      <div class="bg">
-        <!-- empty -->
       </div>
-      
-      <!-- 'footer' box -->
-      <div id="index-footer" class="footer">
-        <div class="info-name">
-          <p class="type-altbody">Maxime Perreault</p>
-          <p class="type-display">hd.maxi</p>
+
+      <div id="header">
+        <div id="menu-button">
+          Menu
+        </div>
+        <div id="language-box">
+          <a href="" id="language">
+            <span>fr</span>
+            /
+            <span>eng</span>
+          </a>
+        </div>
+        <div id="name-box">
+          <p id="name">Maxime Perreault</p>
+          <p id="alias">hd.maxi</p>
         </div>
       </div>
-      <div id="relative-pos">
-        <div class="info-description">
-          <p class="type-body">
-            tattoo artist<br>
-            digital multimedia<br>
-            3D animation
-          </p>
+
+      <div id="content">
+        <div id="content-cover"></div>
+
+        <div id="text-box">
+          <div class="inner-wrapper">
+            
+            <div class="about-card">
+              <p class="titles">
+                Biography 
+              </p>
+              <p class="paragraphs">
+              </p>
+            </div>
+            
+            <!-- <div class="about-card">
+              <p class="titles">
+                Statement 
+              </p>
+              <p class="paragraphs">
+              </p>
+            </div> -->
+            
+            </div>
         </div>
+
+        <div id="interest-cards-box">
+        </div>
+        
       </div>
-      
-      <!-- 'navbar' box -->
-      <div id="index-nav" class="nav">
-        <!-- pink background -->
-      </div>
-      <!-- fluid img -->
-      <div id="fluid-img-box">
-        <img id="fluid-img" src="assets/fluid-img.png" alt="Fluid Image">
+
+      <div id="footer">
+        <a href="index.html" id="foot-logo">
+          <img src="assets/bunny01.png" alt="logo">
+        </a>
       </div>
         
-      <!-- 'bunny' box -->
-      <div id="index-bunny" class="bunny">
-      </div>
-
-      <!-- 'buttons' box -->
-      <div id="index-button-box">
-        
-        <div id="index-button-grid" class="button-grid">
-          
-          <div id="index-button-component" class="button-component">
-            <img class="button-img" src="assets\btn_star02.png" alt="button">
-            <p class="button-text">
-              <a href="gallery.html">Gallery</a>
-            </p>
-          </div>
-
-          <div id="index-button-component" class="button-component">
-            <img class="button-img" src="assets\btn_star01.png" alt="button">
-            <p class="button-text">
-              <a href="contact.html">About me</a>
-            </p>
-          </div>
-          
-        </div>
-      </div>
-
     </div>
-
-    <!-- this links to js file containing scripts -->
-    <script src="scripts.js"></script>
 
   </body>
+
 </html>
