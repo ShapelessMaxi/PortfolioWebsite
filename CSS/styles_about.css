@@ -363,9 +363,9 @@ html, body {
 
 /* content: interest cards */
 #content > #interest-cards-box {
+  display: none;
   grid-column: 2 / -2;
   grid-row: 5 / -2;
-  display: flex;
   flex-direction: row;
   gap: 1rem;
   overflow: auto;
