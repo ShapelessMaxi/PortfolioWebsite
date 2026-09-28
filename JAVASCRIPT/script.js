@@ -73,10 +73,10 @@ window.onload = (event) => {
 
         // change titles and other text depending on language
         if (lg === "fr") {
-          document.getElementsByClassName('titles')[0].innerText = "Biographie";
+          document.getElementsByClassName('titles')[0].innerText = "";
           // document.getElementsByClassName('titles')[1].innerText = "Déclaration";
         } else {
-          document.getElementsByClassName('titles')[0].innerText = "Biography";
+          document.getElementsByClassName('titles')[0].innerText = "";
           // document.getElementsByClassName('titles')[1].innerText = "Statement";
         }
         // update the bio and statement text
