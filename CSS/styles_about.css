@@ -311,7 +311,7 @@ html, body {
   flex-direction: column;
   align-items: center;
   width: 100%;
-  background: var(--grey-white);
+  /* background: var(--grey-white); */
   padding-bottom: 0.5rem;
 }
 #content > #text-box > .inner-wrapper > .about-card > .titles { 
@@ -345,7 +345,7 @@ html, body {
   flex: 1;
   min-height: 0; 
   background-color: var(--grey-white);  
-  background-image: linear-gradient(rgba(255, 255, 255, 0) 90%, var(--pink) 150%);
+  /* background-image: linear-gradient(rgba(255, 255, 255, 0) 90%, var(--pink) 150%); */
   columns: 1;
   margin-bottom: 1rem;
   font-size: 1.4rem;
